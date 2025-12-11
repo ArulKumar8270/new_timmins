@@ -1,10 +1,10 @@
 /*================================================================================================
     Start Call Action CSS
 ===================================================================================================*/
-.ed-call-action {
+/* .ed-call-action {
   margin-bottom: -216px;
   z-index: 2;
-}
+} */
 .ed-call-action__inner {
   background: var(--ed-primary-color);
   border-radius: 8px;

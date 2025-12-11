@@ -99,7 +99,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .ed-auth__modal-third-party-list li a {
   width: 64px;

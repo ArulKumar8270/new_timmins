@@ -41,9 +41,11 @@
 .ed-footer__widget-title {
   font-size: 20px;
   line-height: 23px;
-  margin-bottom: 44px;
+  margin-bottom: 29px;
 }
-
+.sticky .ed-topbar__logo img {
+  max-width: 100px;
+}
 .ed-footer__widget-links li {
   margin-bottom: 28px;
 }
@@ -57,10 +59,12 @@
 }
 
 .ed-footer__contact {
-  display: flex;
   gap: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  display: flex;
 }
+
+
 
 .ed-footer__contact-icon img {
   width: 28px;
@@ -194,7 +198,21 @@
   }
 }
 
+.ed-footer__widget {
+  display: flex;
+}
 @media only screen and (max-width: 767px) {
+  .badge-container img {
+    width: 35px;
+    object-fit: contain;
+    margin: 5px;
+}
+p.badge-container {
+  display: flex;
+}
+.ed-footer__widget {
+  display: block !important;
+}
   .ed-footer__top {
     padding: 40px 0px;
   }
@@ -232,7 +250,14 @@
     line-height: 24px;
   }
 }
-
+.ed-footer__widget-links {
+  padding: 0px;
+}
+.fotterbgstyle{
+  background: linear-gradient(179deg, #ffffff 22%, #b4cfe499 73%);
+    border-radius: 18px;
+    margin: 9px 0px;
+}
 /*================================================================================================
     End Footer CSS
 ===================================================================================================*/

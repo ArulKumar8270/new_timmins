@@ -3,7 +3,7 @@
 ===================================================================================================*/
 .ed-testimonial__slider {
   border-radius: 8px;
-  background: var(--ed-white-color);
+  /* background: var(--ed-white-color); */
   padding: 30px;
   margin-top: 50px;
 }

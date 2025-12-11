@@ -280,7 +280,7 @@
 
 /* Course Style 5  */
 .ed-course.ed-course--style-5 {
-  background: #f5f6f1;
+  background: #fff2cc;
   overflow: hidden;
   z-index: 1;
 }
@@ -295,7 +295,7 @@
   background-repeat: no-repeat;
   z-index: -1;
 }
-.ed-course.ed-course--style-5::before {
+/* .ed-course.ed-course--style-5::before {
   top: 0;
   right: -70px;
   background-image: url("../images/course/course-5/pattern-1.svg");
@@ -304,7 +304,7 @@
   bottom: 0;
   left: 0;
   background-image: url("../images/course/course-5/pattern-2.svg");
-}
+} */
 
 .ed-course__shapes .shape-1 {
   position: absolute;
@@ -349,6 +349,7 @@
   z-index: 1;
   padding: 32px 32px 32px 0px;
   background: transparent;
+  align-items: center;
 }
 .ed-course--style-5 .ed-course__card::before {
   position: absolute;

@@ -223,7 +223,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
-  color: var(--ed-title-color);
+  color: black !important;
   padding: 20.5px 0px;
   letter-spacing: -0.14px;
 }
@@ -245,6 +245,21 @@
   transform: scale(1);
   opacity: 1;
   visibility: visible;
+}
+p.badge-container {
+  background: #ffffffa6;
+  width: fit-content;
+  border-radius: 110px;
+  padding: 6px;
+}
+
+.badge-container img {
+  width: 35px;
+}
+.text-decoration-underline {
+  color: #4089c7;
+  border-bottom: 1px solid;
+  width: fit-content;
 }
 .ed-header__menu li .sub-menu {
   position: absolute;

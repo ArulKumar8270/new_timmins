@@ -1,15 +1,41 @@
-import React from 'react'
+"use client";
+
+import React, { useEffect, useState } from 'react'
 
 const Header = () => {
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scroll = window.scrollY || document.documentElement.scrollTop;
+            if (scroll < 100) {
+                setIsSticky(false);
+            } else {
+                setIsSticky(true);
+            }
+        };
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        
+        // Check initial scroll position
+        handleScroll();
+
+        // Cleanup
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
-            <div id="preloader">
+            {/* <div id="preloader">
                 <div id="ed-preloader" className="ed-preloader">
                     <div className="animation-preloader">
                         <div className="spinner" />
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* End Preloader */}
             {/* Custom Cursor Start */}
             <div id="ed-mouse">
@@ -26,7 +52,7 @@ const Header = () => {
                         <div className="modal-header offcanvas-header">
                             {/* Mobile Menu Logo */}
                             <div className="offcanvas-logo">
-                                <a href="index.html">
+                                <a href="#">
                                     <img src="/assets/images/logo.svg" alt="#" />
                                 </a>
                             </div>
@@ -44,18 +70,18 @@ const Header = () => {
                             <nav className="offcanvas__menu">
                                 <ul className="offcanvas__menu_ul">
                                     <li>
-                                        <a className="offcanvas__menu_item" href="index.html">
+                                        <a className="offcanvas__menu_item" href="#">
                                             Home
                                         </a>
                                     </li>
                                     <li className="offcanvas__menu_li">
-                                        <a className="offcanvas__menu_item" href="course-1.html">
+                                        <a className="offcanvas__menu_item" href="#">
                                             About
                                         </a>
                                         <ul className="offcanvas__sub_menu">
                                             <li className="offcanvas__sub_menu_li">
                                                 <a
-                                                    href="course-1.html"
+                                                    href="#"
                                                     className="offcanvas__sub_menu_item"
                                                 >
                                                     Who We Are
@@ -63,7 +89,7 @@ const Header = () => {
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
                                                 <a
-                                                    href="course-2.html"
+                                                    href="#"
                                                     className="offcanvas__sub_menu_item"
                                                 >
                                                     Our Approach
@@ -71,7 +97,7 @@ const Header = () => {
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
                                                 <a
-                                                    href="course-3.html"
+                                                    href="#"
                                                     className="offcanvas__sub_menu_item"
                                                 >
                                                     Our 10 Year Journey
@@ -85,14 +111,14 @@ const Header = () => {
                                         </a>
                                         <ul className="offcanvas__sub_menu">
                                             <li className="offcanvas__sub_menu_li">
-                                                <a href="product.html" className="offcanvas__sub_menu_item">
+                                                <a href="#" className="offcanvas__sub_menu_item">
                                                     Overview
                                                 </a>
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
                                                 <a
                                                     className="offcanvas__sub_menu_item"
-                                                    href="product.html"
+                                                    href="#"
                                                 >
                                                     Fresh Graduate Onboarding
                                                 </a>
@@ -100,7 +126,7 @@ const Header = () => {
                                             <li className="offcanvas__sub_menu_li">
                                                 <a
                                                     className="offcanvas__sub_menu_item"
-                                                    href="product-details.html"
+                                                    href="#"
                                                 >
                                                     Training Needs Assessment
                                                 </a>
@@ -108,18 +134,18 @@ const Header = () => {
                                         </ul>
                                     </li>
                                     <li className="offcanvas__menu_li">
-                                        <a className="offcanvas__menu_item" href="blog.html">
+                                        <a className="offcanvas__menu_item" href="#">
                                             Courses
                                         </a>
                                         <ul className="offcanvas__sub_menu">
                                             <li className="offcanvas__sub_menu_li">
-                                                <a href="blog.html" className="offcanvas__sub_menu_item">
+                                                <a href="#" className="offcanvas__sub_menu_item">
                                                     Overview
                                                 </a>
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
                                                 <a
-                                                    href="blog-details.html"
+                                                    href="#"
                                                     className="offcanvas__sub_menu_item"
                                                 >
                                                     SFAe Certification
@@ -128,24 +154,24 @@ const Header = () => {
                                         </ul>
                                     </li>
                                     <li className="offcanvas__menu_li">
-                                        <a className="offcanvas__menu_item" href="about-1.html">
+                                        <a className="offcanvas__menu_item" href="#">
                                             Training Calendar
                                         </a>
                                     </li>
                                     <li className="offcanvas__menu_li">
-                                        <a className="offcanvas__menu_item" href="contact.html">
+                                        <a className="offcanvas__menu_item" href="#">
                                             Resources
                                             <i className="fi fi-ss-angle-small-down" />
                                         </a>
                                         <ul className="offcanvas__sub_menu">
                                             <li className="offcanvas__sub_menu_li">
-                                                <a href="blog.html" className="offcanvas__sub_menu_item">
+                                                <a href="#" className="offcanvas__sub_menu_item">
                                                     Case Studies
                                                 </a>
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
                                                 <a
-                                                    href="blog-details.html"
+                                                    href="#"
                                                     className="offcanvas__sub_menu_item"
                                                 >
                                                     Blog
@@ -154,7 +180,7 @@ const Header = () => {
                                         </ul>
                                     </li>
                                     <li className="offcanvas__menu_li">
-                                        <a className="offcanvas__menu_item" href="contact.html">
+                                        <a className="offcanvas__menu_item" href="#">
                                             Contact
                                         </a>
                                     </li>
@@ -166,7 +192,7 @@ const Header = () => {
             </div>
             {/* End Mobile Menu Offcanvas */}
             {/* Start Header Area */}
-            <header className="ed-header ed-header--style2">
+            <header className={`ed-header ed-header--style2 ${isSticky ? 'sticky' : ''}`}>
                 <div className="container">
                     <div className="ed-header__inner">
                         <div className="row align-items-center">
@@ -175,7 +201,7 @@ const Header = () => {
                                     <div className="ed-header__left-widget--style2">
                                         {/* Logo  */}
                                         <div className="ed-topbar__logo">
-                                            <a href="index.html">
+                                            <a href="#">
                                                 <img src="/assets/New_images/logo.png" alt="logo" />
                                             </a>
                                         </div>
@@ -201,13 +227,13 @@ const Header = () => {
                                                 </a>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <a href="course-1.html">Who We Are</a>
+                                                        <a href="#">Who We Are</a>
                                                     </li>
                                                     <li>
-                                                        <a href="course-2.html">Our Approach</a>
+                                                        <a href="#">Our Approach</a>
                                                     </li>
                                                     <li>
-                                                        <a href="course-3.html">Our 10 Year Journey</a>
+                                                        <a href="#">Our 10 Year Journey</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -218,13 +244,13 @@ const Header = () => {
                                                 </a>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <a href="faq.html">Overview</a>
+                                                        <a href="#">Overview</a>
                                                     </li>
                                                     <li>
-                                                        <a href="faq.html">Fresh Graduate Onboarding</a>
+                                                        <a href="#">Fresh Graduate Onboarding</a>
                                                     </li>
                                                     <li>
-                                                        <a href="404.html">Training Needs Assessment</a>
+                                                        <a href="#">Training Needs Assessment</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -235,10 +261,10 @@ const Header = () => {
                                                 </a>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <a href="blog.html">Overview </a>
+                                                        <a href="#">Overview </a>
                                                     </li>
                                                     <li>
-                                                        <a href="blog-details.html">SFAe Certification</a>
+                                                        <a href="#">SFAe Certification</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -249,28 +275,28 @@ const Header = () => {
                                                 </a>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <a href="about-1.html">Overview </a>
+                                                        <a href="#">Overview </a>
                                                     </li>
                                                     <li>
-                                                        <a href="about-2.html">SFAe Certification</a>
+                                                        <a href="#">SFAe Certification</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="contact.html">Resources
+                                                <a href="#">Resources
                                                     <i className="fi fi-ss-angle-small-down" />
                                                 </a>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <a href="blog.html">Case Studies</a>
+                                                        <a href="#">Case Studies</a>
                                                     </li>
                                                     <li>
-                                                        <a href="blog-details.html">Blog</a>
+                                                        <a href="#">Blog</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="contact.html">Contact</a>
+                                                <a href="#">Contact</a>
                                             </li>
                                         </ul>
                                     </nav>

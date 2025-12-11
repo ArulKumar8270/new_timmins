@@ -1,5 +1,5 @@
 // =========================================================================================
-// * Project Name :  Eduna - Online Education Courses HTML5 Template.
+// * Project Name :  nickname - Online Education Courses HTML5 Template.
 // * File         :  JS Base
 // * Version      :  1.0.0
 // * Author       :  BizanTheme (https://themeforest.net/user/bizantheme)
@@ -293,16 +293,26 @@
     
     // Retry if libraries not loaded or elements not found (for Next.js)
     if (retryCount < maxRetries) {
-      const owlLoaded = typeof $.fn !== 'undefined' && typeof $.fn.owlCarousel !== 'undefined';
+      // Check if jQuery is available
+      const jQueryAvailable = typeof $ !== 'undefined' && typeof $.fn !== 'undefined';
+      const owlLoaded = jQueryAvailable && typeof $.fn.owlCarousel !== 'undefined';
       const swiperLoaded = typeof Swiper !== 'undefined';
-      const hasOwlElements = $(".ed-hero__slider, .ed-partner__slider, .ed-testimonial__slider").length > 0;
+      
+      // Check for owl elements (use jQuery if available, otherwise use vanilla JS)
+      let hasOwlElements = false;
+      if (jQueryAvailable) {
+        hasOwlElements = $(".ed-hero__slider, .ed-partner__slider, .ed-testimonial__slider").length > 0;
+      } else {
+        hasOwlElements = document.querySelectorAll(".ed-hero__slider, .ed-partner__slider, .ed-testimonial__slider").length > 0;
+      }
+      
       const hasSwiperElements = document.querySelectorAll(".ed-partner__slider-2, .ed-partner__slider-2-reverse, .ed-testimonial__slider-2, .ed-testimonial__slider-3, .ed-category__slider").length > 0;
       
       // Retry if:
-      // 1. owlCarousel library not loaded but we have owl elements
-      // 2. Swiper library not loaded but we have swiper elements
-      // 3. We have elements but libraries aren't ready
-      const needsRetry = (hasOwlElements && !owlLoaded) || (hasSwiperElements && !swiperLoaded) || (!owlLoaded && !swiperLoaded);
+      // 1. jQuery not loaded but we have owl elements
+      // 2. owlCarousel library not loaded but we have owl elements
+      // 3. Swiper library not loaded but we have swiper elements
+      const needsRetry = (!jQueryAvailable && hasOwlElements) || (hasOwlElements && !owlLoaded) || (hasSwiperElements && !swiperLoaded);
       
       if (needsRetry) {
         setTimeout(function() {
@@ -313,7 +323,42 @@
   }
   
   // Make initSliders available globally for manual initialization
-  window.initEdunaSliders = initSliders;
+  window.initnicknameSliders = initSliders;
+  
+  // Auto-initialize sliders when DOM is ready
+  if (typeof $ !== 'undefined') {
+    $(document).ready(function() {
+      initSliders();
+    });
+  } else {
+    // Fallback if jQuery not loaded yet
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        // Wait for jQuery to be available
+        var checkJQuery = setInterval(function() {
+          if (typeof window.jQuery !== 'undefined') {
+            clearInterval(checkJQuery);
+            initSliders();
+          }
+        }, 100);
+        // Stop checking after 5 seconds
+        setTimeout(function() {
+          clearInterval(checkJQuery);
+        }, 5000);
+      });
+    } else {
+      // DOM already loaded, wait for jQuery
+      var checkJQuery = setInterval(function() {
+        if (typeof window.jQuery !== 'undefined') {
+          clearInterval(checkJQuery);
+          initSliders();
+        }
+      }, 100);
+      setTimeout(function() {
+        clearInterval(checkJQuery);
+      }, 5000);
+    }
+  }
   
   $(document).on("ready", function () {
     /*======================================================================================
@@ -419,7 +464,7 @@
   }
   
   // Also expose a function to manually initialize sliders
-  window.initEdunaSliders = initSliders;
+  window.initnicknameSliders = initSliders;
 
   /*======================================================================================
     Custom Cursor JS

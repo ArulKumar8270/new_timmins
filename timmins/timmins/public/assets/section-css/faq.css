@@ -51,6 +51,8 @@
 }
 .ed-faq__accordion-item {
   margin-bottom: 16px;
+  box-shadow: 0px 0px 9px 0px #cbcbcb;
+  border-radius: 16px;
 }
 .ed-faq__accordion-item:last-child {
   margin: 0;

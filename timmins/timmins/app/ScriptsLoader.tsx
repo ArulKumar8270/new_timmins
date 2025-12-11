@@ -38,11 +38,6 @@ export default function ScriptsLoader() {
       "/assets/plugins/js/wow.min.js",
       "/assets/plugins/js/owl.carousel.min.js",
       "/assets/plugins/js/swiper-bundle.min.js",
-      "/assets/plugins/js/magnific-popup.min.js",
-      "/assets/plugins/js/jquery.counterup.min.js",
-      "/assets/plugins/js/waypoints.min.js",
-      "/assets/plugins/js/nice-select.min.js",
-      "/assets/plugins/js/backToTop.js",
       "/assets/plugins/js/active.js",
     ];
 
@@ -73,28 +68,234 @@ export default function ScriptsLoader() {
         }
       }
 
-      // After all scripts are loaded, hide the preloader and initialize sliders
-      // Wait a bit for jQuery and active.js to be fully available
+      // Wait a bit for Next.js to render components
       setTimeout(() => {
-        // Trigger window load event so active.js preloader code runs
-        // This ensures compatibility with the existing preloader logic
-        if (document.readyState === "complete") {
-          window.dispatchEvent(new Event("load"));
+        // After all scripts are loaded, initialize sliders
+        initializeSlidersWithRetry();
+        
+        // Set up MutationObserver to watch for dynamically added elements
+        const observer = new MutationObserver((mutations) => {
+          let shouldReinit = false;
+          mutations.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+              if (node.nodeType === 1) { // Element node
+                const el = node as Element;
+                if (el.classList?.contains('ed-partner__slider') || 
+                    el.classList?.contains('ed-testimonial__slider') || 
+                    el.classList?.contains('ed-hero__slider') ||
+                    el.querySelector?.('.ed-partner__slider') ||
+                    el.querySelector?.('.ed-testimonial__slider') ||
+                    el.querySelector?.('.ed-hero__slider')) {
+                  shouldReinit = true;
+                }
+              }
+            });
+          });
+          
+          if (shouldReinit) {
+            console.log("New slider elements detected, reinitializing...");
+            setTimeout(() => {
+              initializeSlidersWithRetry();
+            }, 200);
+          }
+        });
+        
+        // Start observing
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true
+        });
+        
+        // Stop observing after 10 seconds
+        setTimeout(() => {
+          observer.disconnect();
+        }, 10000);
+      }, 800);
+      
+      // Trigger window load event so active.js preloader code runs
+      if (document.readyState === "complete") {
+        window.dispatchEvent(new Event("load"));
+      }
+      
+      // Hide preloader (will use jQuery if available, otherwise vanilla JS)
+      hidePreloader();
+      
+      function initializeSlidersWithRetry(retryCount = 0) {
+        const maxRetries = 20;
+        const retryDelay = 300;
+        
+        const $ = (window as any).jQuery;
+        const initFn = (window as any).initnicknameSliders;
+        
+        // Check if we have everything we need
+        const hasJQuery = $ && typeof $.fn !== 'undefined';
+        const hasOwlCarousel = hasJQuery && typeof $.fn.owlCarousel !== 'undefined';
+        const hasInitFn = typeof initFn === 'function';
+        
+        // Check if elements exist in DOM
+        const partnerSlider = document.querySelector(".ed-partner__slider");
+        const testimonialSlider = document.querySelector(".ed-testimonial__slider");
+        const heroSlider = document.querySelector(".ed-hero__slider");
+        const hasElements = !!(partnerSlider || testimonialSlider || heroSlider);
+        
+        console.log("Slider initialization attempt:", {
+          attempt: retryCount + 1,
+          hasJQuery,
+          hasOwlCarousel,
+          hasInitFn,
+          hasElements,
+          partnerSlider: !!partnerSlider,
+          testimonialSlider: !!testimonialSlider,
+          heroSlider: !!heroSlider
+        });
+        
+        if (hasJQuery && hasOwlCarousel && hasInitFn) {
+          try {
+            console.log("All requirements met, initializing sliders...");
+            initFn();
+            console.log("Sliders initialized successfully!");
+            
+            // Verify initialization worked
+            setTimeout(() => {
+              const partnerLoaded = partnerSlider?.classList.contains("owl-loaded");
+              const testimonialLoaded = testimonialSlider?.classList.contains("owl-loaded");
+              const heroLoaded = heroSlider?.classList.contains("owl-loaded");
+              
+              console.log("Slider initialization verification:", {
+                partnerLoaded,
+                testimonialLoaded,
+                heroLoaded
+              });
+              
+              // If elements exist but weren't initialized, try direct initialization
+              if (hasElements && !partnerLoaded && !testimonialLoaded && !heroLoaded) {
+                console.log("Direct initialization needed...");
+                directOwlCarouselInit();
+              }
+            }, 500);
+          } catch (error) {
+            console.error("Error calling initnicknameSliders:", error);
+            if (retryCount < maxRetries) {
+              setTimeout(() => initializeSlidersWithRetry(retryCount + 1), retryDelay);
+            }
+          }
+        } else if (retryCount < maxRetries) {
+          // Retry if requirements not met
+          setTimeout(() => initializeSlidersWithRetry(retryCount + 1), retryDelay);
+        } else {
+          console.warn("Max retries reached. Attempting direct initialization...");
+          directOwlCarouselInit();
+        }
+      }
+      
+      function directOwlCarouselInit() {
+        const $ = (window as any).jQuery;
+        if (!$ || typeof $.fn === 'undefined' || typeof $.fn.owlCarousel === 'undefined') {
+          console.error("Cannot initialize owl-carousel: jQuery or owlCarousel not available", {
+            hasJQuery: !!$,
+            hasFn: typeof $.fn !== 'undefined',
+            hasOwlCarousel: typeof $.fn?.owlCarousel !== 'undefined'
+          });
+          return;
         }
         
-        // Manually trigger slider initialization if available (for Next.js)
-        const $ = (window as any).jQuery;
-        if ($ && typeof (window as any).initEdunaSliders === 'function') {
+        // Direct initialization for partner slider
+        const partnerSlider = $(".ed-partner__slider");
+        if (partnerSlider.length > 0 && !partnerSlider.hasClass("owl-loaded")) {
           try {
-            (window as any).initEdunaSliders();
-          } catch (error) {
-            console.error("Error initializing sliders:", error);
+            console.log("Directly initializing partner slider...");
+            partnerSlider.owlCarousel({
+              items: 6,
+              autoplay: true,
+              loop: true,
+              touchDrag: true,
+              mouseDrag: true,
+              autoplayTimeout: 5000,
+              autoplayHoverPause: false,
+              animateOut: "fadeOut",
+              animateIn: "fadeIn",
+              smartSpeed: 500,
+              merge: true,
+              dots: false,
+              nav: false,
+              margin: 24,
+              responsive: {
+                300: { items: 2 },
+                480: { items: 2 },
+                768: { items: 4 },
+                1024: { items: 4 },
+                1200: { items: 6 },
+              },
+            });
+            console.log("Partner slider initialized!");
+          } catch (e) {
+            console.error("Error initializing partner slider:", e);
           }
         }
         
-        // Hide preloader (will use jQuery if available, otherwise vanilla JS)
-        hidePreloader();
-      }, 500);
+        // Direct initialization for testimonial slider
+        const testimonialSlider = $(".ed-testimonial__slider");
+        if (testimonialSlider.length > 0 && !testimonialSlider.hasClass("owl-loaded")) {
+          try {
+            console.log("Directly initializing testimonial slider...");
+            testimonialSlider.owlCarousel({
+              items: 1,
+              autoplay: true,
+              loop: true,
+              touchDrag: true,
+              mouseDrag: true,
+              autoplayTimeout: 5000,
+              autoplayHoverPause: false,
+              smartSpeed: 500,
+              merge: true,
+              margin: 30,
+              dots: false,
+              nav: true,
+              navText: [
+                "<i class='fi fi-rs-arrow-left'></i>",
+                "<i class='fi fi-rs-arrow-right'></i>",
+              ],
+            });
+            console.log("Testimonial slider initialized!");
+          } catch (e) {
+            console.error("Error initializing testimonial slider:", e);
+          }
+        }
+        
+        // Direct initialization for hero slider
+        const heroSlider = $(".ed-hero__slider");
+        if (heroSlider.length > 0 && !heroSlider.hasClass("owl-loaded")) {
+          try {
+            console.log("Directly initializing hero slider...");
+            heroSlider.owlCarousel({
+              items: 1,
+              autoplay: true,
+              loop: true,
+              margin: 0,
+              touchDrag: false,
+              mouseDrag: false,
+              autoplayTimeout: 5000,
+              autoplayHoverPause: false,
+              animateOut: "fadeOut",
+              animateIn: "fadeIn",
+              smartSpeed: 500,
+              merge: true,
+              dots: false,
+              nav: true,
+              navText: [
+                "<i class='fi fi-rs-arrow-left'></i>",
+                "<i class='fi fi-rs-arrow-right'></i>",
+              ],
+            });
+            console.log("Hero slider initialized!");
+          } catch (e) {
+            console.error("Error initializing hero slider:", e);
+          }
+        }
+      }
+      
+      // Make direct initialization available globally for manual triggering
+      (window as any).directOwlCarouselInit = directOwlCarouselInit;
     };
 
     // Start loading scripts

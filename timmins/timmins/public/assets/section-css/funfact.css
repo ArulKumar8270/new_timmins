@@ -59,7 +59,7 @@
   border-radius: 8px;
   background: var(--ed-white-color);
   box-shadow: 5px 20px 51.3px 61px rgba(9, 2, 49, 0.06);
-  padding: 40px 80px 80px 80px;
+  padding: 40px 80px;
 }
 .ed-funfact--style2 .ed-funfact__counter {
   text-align: center;
@@ -71,16 +71,16 @@
   line-height: 40px;
 }
 .ed-funfact--style2 .ed-funfact__counter .color-text-1 {
-  color: #42ac98;
+  color: black;
 }
 .ed-funfact--style2 .ed-funfact__counter .color-text-2 {
-  color: #df4343;
+  color: black;
 }
 .ed-funfact--style2 .ed-funfact__counter .color-text-3 {
-  color: #f39200;
+  color: black;
 }
 .ed-funfact--style2 .ed-funfact__counter .color-text-4 {
-  color: #de1ef9;
+  color: black;
 }
 .ed-funfact--style2 .ed-funfact__counter p {
   color: var(--ed-paragraph-color);
@@ -126,9 +126,9 @@
   .ed-funfact__counter.mg-btm-80 {
     margin-bottom: 40px;
   }
-  .ed-funfact--style2 .ed-funfact__inner {
+  /* .ed-funfact--style2 .ed-funfact__inner {
     padding: 40px 80px 80px 40px;
-  }
+  } */
 }
 
 @media only screen and (max-width: 767px) {

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
 export default function Home() {
   return (
@@ -12,65 +13,41 @@ export default function Home() {
               className="section-bg hero-bg-2 background-image"
               style={{ backgroundImage: 'url("/assets/New_images/hero_2.png")' }}
             >
-              
-                {/* Start Hero Area */}
-                <section className="ed-hero">
-                  <div className="container ed-container-expand">
-                    {/* Hero Element Shape */}
-                    {/* <div className="ed-hero__elements">
-                      <img
-                        className="element-move ed-hero__shape-1"
-                        src="/assets/images/hero/home-1/shape-1.svg"
-                        alt="shape-1"
-                      />
-                      <img
-                        className="element-move ed-hero__shape-2"
-                        src="/assets/images/hero/home-1/shape-2.svg"
-                        alt="shape-1"
-                      />
-                      <img
-                        className="element-move ed-hero__shape-3"
-                        src="/assets/images/hero/home-1/shape-3.svg"
-                        alt="shape-1"
-                      />
-                      <img
-                        className="element-move ed-hero__shape-4"
-                        src="/assets/images/hero/home-1/shape-4.svg"
-                        alt="shape-1"
-                      />
-                      <img
-                        className="element-move ed-hero__shape-5"
-                        src="/assets/images/hero/home-1/shape-5.png"
-                        alt="shape-5"
-                      />
-                    </div> */}
-                    <div className="row align-items-center">
-                      <div className="col-lg-6 col-12">
-                        {/* Hero Content */}
-                        <div className="ed-hero__content">
-                          <h1 className="ed-hero__content-title ed-split-text left">
-                            Building Future-Ready Engineering & Tech Teams
-                          </h1>
-                          <p className="ed-hero__content-text">
-                            Timmins builds practical engineering capability in AI, Embedded Systems, 5G, and enterprise agility for teams across ASEAN and North America with 10+ years experience
-                          </p>
-                          <div className="d-flex gap-3">
-                            <div className="ed-hero__btn ed-btn">
-                              <a href="course-1.html">
-                                For Companies – Explore Solutions
-                              </a>
-                            </div>
-                            <div className="ed-hero__btn ed-btn">
-                              <a href="course-1.html">
-                                For Individuals – Browse Public Classes
-                              </a>
-                            </div>
+
+              {/* Start Hero Area */}
+              <section className="ed-hero">
+                <div className="container ed-container-expand">
+                  <div className="row align-items-center">
+                    <div className="col-lg-6 col-12">
+                      {/* Hero Content */}
+                      <div className="ed-hero__content">
+                        <h1 className="ed-hero__content-title ed-split-text left">
+                          Building Future-Ready Engineering & Tech Teams
+                        </h1>
+                        <p className="ed-hero__content-text">
+                          Timmins builds practical engineering capability in AI, Embedded Systems, 5G, and enterprise agility for teams across ASEAN and North America with 10+ years experience
+                        </p>
+                        <p className="badge-container">
+                          <img src="/assets/New_images/badge.png" alt="hero-image" />
+                          <span>HRDC Claimable Training available for Malaysian employers.</span>
+                        </p>
+                        <div className="d-flex gap-3">
+                          <div className="ed-hero__btn ed-btn">
+                            <a href="#">
+                              For Companies – Explore Solutions
+                            </a>
+                          </div>
+                          <div className="ed-hero__btn ed-btn" style={{ backgroundColor: 'var(--ed-secondary-color)' }}>
+                            <a href="#">
+                              For Individuals – Browse Public Classes
+                            </a>
                           </div>
                         </div>
                       </div>
-
                     </div>
+
                   </div>
+                </div>
               </section>
 
               {/* End Hero Area */}
@@ -155,7 +132,7 @@ export default function Home() {
                           </ul>
                         </div>
                         <div className="ed-about__btn ed-btn">
-                          <a href="course-1.html">
+                          <a href="/#">
                             Explore B2B Solutions
                             {/* <i className="fi fi-rr-arrow-small-right" /> */}
                           </a>
@@ -289,7 +266,7 @@ export default function Home() {
                           </ul>
                         </div>
                         <div className="ed-about__btn ed-btn">
-                          <a href="course-1.html">
+                          <a href="/#">
                             Browse Public Classe
                           </a>
                         </div>
@@ -357,9 +334,9 @@ export default function Home() {
                             </li>
                           </ul>
                         </div>
-                        <div className="ed-about__btn ed-btn">
-                          <a href="course-1.html">
-                          How We Work 
+                        <div className="text-decoration-underline">
+                          <a href="#">
+                            How We Work
                           </a>
                         </div>
                       </div>
@@ -416,6 +393,7 @@ export default function Home() {
                         <h3 className="ed-section-head__title ed-split-text left">
                           Featured Public Classes
                         </h3>
+
                       </div>
                     </div>
                   </div>
@@ -453,7 +431,7 @@ export default function Home() {
                                       <span className="ed-course__type">
                                         Face-to-Face
                                       </span>
-                                      <a href="course-1.html">
+                                      <a href="#">
                                         Embedded Linux System Internals
                                       </a>
                                       <p>
@@ -475,7 +453,7 @@ export default function Home() {
                                     </div>
                                     <div className="ed-course__content">
                                       <span className="ed-course__type">Face-to-Face</span>
-                                      <a href="course-1.html">
+                                      <a href="#">
                                         Power BI: From Data to Decisions
                                       </a>
                                       <p>
@@ -501,7 +479,7 @@ export default function Home() {
                                       <span className="ed-course__type">
                                         Online
                                       </span>
-                                      <a href="course-1.html">
+                                      <a href="#">
                                         Generative AI with LangChain
                                       </a>
                                       <p>
@@ -525,7 +503,7 @@ export default function Home() {
                                     </div>
                                     <div className="ed-course__content">
                                       <span className="ed-course__type">Face-to-Face</span>
-                                      <a href="course-1.html">
+                                      <a href="#">
                                         Kotlin Fundamentals
                                       </a>
                                       <p>
@@ -556,7 +534,7 @@ export default function Home() {
                                       <span className="ed-course__type">
                                         Online + Onsite
                                       </span>
-                                      <a href="course-1.html">
+                                      <a href="#">
                                         Explore Our Undergraduate Programs for Future
                                         Leaders
                                       </a>
@@ -585,7 +563,7 @@ export default function Home() {
                                     </div>
                                     <div className="ed-course__content">
                                       <span className="ed-course__type">Only Online</span>
-                                      <a href="course-1.html">
+                                      <a href="#">
                                         Innovative Graduate Degrees for Career Advancement
                                       </a>
                                       <p>
@@ -613,7 +591,7 @@ export default function Home() {
                                       <span className="ed-course__type">
                                         Online + Onsite
                                       </span>
-                                      <a href="course-1.html">
+                                      <a href="#">
                                         Undergraduate Courses Shaping Tomorrow Visionaries
                                       </a>
                                       <p>
@@ -639,7 +617,7 @@ export default function Home() {
                                     </div>
                                     <div className="ed-course__content">
                                       <span className="ed-course__type">Onsite</span>
-                                      <a href="course-1.html">
+                                      <a href="#">
                                         Graduate Programs Designed for Real-World Success
                                       </a>
                                       <p>
@@ -672,7 +650,7 @@ export default function Home() {
                                       <span className="ed-course__type">
                                         Online + Onsite
                                       </span>
-                                      <a href="course-1.html">
+                                      <a href="#">
                                         Explore Our Undergraduate Programs for Future
                                         Leaders
                                       </a>
@@ -701,7 +679,7 @@ export default function Home() {
                                     </div>
                                     <div className="ed-course__content">
                                       <span className="ed-course__type">Only Online</span>
-                                      <a href="course-1.html">
+                                      <a href="#">
                                         Innovative Graduate Degrees for Career Advancement
                                       </a>
                                       <p>
@@ -729,7 +707,7 @@ export default function Home() {
                                       <span className="ed-course__type">
                                         Online + Onsite
                                       </span>
-                                      <a href="course-1.html">
+                                      <a href="#">
                                         Undergraduate Courses Shaping Tomorrow Visionaries
                                       </a>
                                       <p>
@@ -755,7 +733,7 @@ export default function Home() {
                                     </div>
                                     <div className="ed-course__content">
                                       <span className="ed-course__type">Onsite</span>
-                                      <a href="course-1.html">
+                                      <a href="#">
                                         Graduate Programs Designed for Real-World Success
                                       </a>
                                       <p>
@@ -772,6 +750,12 @@ export default function Home() {
                         </div>
                         {/* End Tab Details */}
                       </div>
+                      <div className="d-flex justify-content-center mt-4">
+                        <p className="badge-container">
+                          <img src="/assets/New_images/badge.png" alt="hero-image" />
+                          <span>HRDC Claimable Training available for Malaysian employers.</span>
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -786,14 +770,13 @@ export default function Home() {
                 <div className="row justify-content-center">
                   <div className="col-lg-6 col-md-8 col-12">
                     <div className="ed-section-head text-center">
-
                       <h3 className="ed-section-head__title ed-split-text left">
                         Proven Results Across Industries
                       </h3>
                     </div>
                   </div>
                 </div>
-                <div className="row">
+                <div className="row justify-content-center">
                   {/* Single Course Card */}
                   <div className="col-lg-6 col-xl-6 col-md-6 col-12">
                     <div
@@ -802,7 +785,7 @@ export default function Home() {
                       data-wow-duration="1s"
                     >
                       <div className="ed-course__head position-relative">
-                        <a href="course-details.html" className="ed-course__img">
+                        <a href="#" className="ed-course__img">
                           <img
                             src="/assets/images/course/course-2/1.png"
                             alt="course-img"
@@ -810,7 +793,7 @@ export default function Home() {
                         </a>
                       </div>
                       <div className="ed-course__body">
-                        <a href="course-details.html" className="ed-course__title">
+                        <a href="#" className="ed-course__title">
                           <h5>
                             Fresh Graduate Onboarding - Semiconductor Engineering
                           </h5>
@@ -833,7 +816,7 @@ export default function Home() {
                       data-wow-duration="1s"
                     >
                       <div className="ed-course__head position-relative">
-                        <a href="course-details.html" className="ed-course__img">
+                        <a href="#" className="ed-course__img">
                           <img
                             src="/assets/images/course/course-2/3.png"
                             alt="course-img"
@@ -842,7 +825,7 @@ export default function Home() {
                       </div>
                       <div className="ed-course__body">
 
-                        <a href="course-details.html" className="ed-course__title">
+                        <a href="#" className="ed-course__title">
                           <h5>AI Transformation - Banking Sector (DBS & Citi)</h5>
                         </a>
                         <div className="ed-course__rattings">
@@ -859,7 +842,7 @@ export default function Home() {
                       data-wow-duration="1s"
                     >
                       <div className="ed-course__head position-relative">
-                        <a href="course-details.html" className="ed-course__img">
+                        <a href="#" className="ed-course__img">
                           <img
                             src="/assets/images/course/course-2/4.png"
                             alt="course-img"
@@ -871,7 +854,7 @@ export default function Home() {
                         <div className="ed-course__lesson">
 
                         </div>
-                        <a href="course-details.html" className="ed-course__title">
+                        <a href="#" className="ed-course__title">
                           <h5>
                             Mobile Development Enablement - Motorola
                           </h5>
@@ -888,14 +871,11 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="row">
-                  <div className="col-12">
-                    <div className="ed-section-bottom-btn">
-                      <a href="course-1.html" className="ed-btn">
-                        View All Courses
-                        <i className="fi fi-rr-arrow-small-right" />
-                      </a>
-                    </div>
+                <div className="row justify-content-center mt-5">
+                  <div className="ed-section-bottom-btn ed-btn w-auto">
+                    <a>
+                      View All Courses
+                    </a>
                   </div>
                 </div>
               </div>
@@ -903,83 +883,79 @@ export default function Home() {
             {/* End Course Area */}
 
             {/* Start Why Choose Area */}
-            <section className="ed-why-choose ed-why-choose--style2 section-gap position-relative">
+            <section className="position-relative">
               <div className="container ed-container position-relative">
-                <div className="ed-w-choose__content">
-                  <div className="row g-0">
-                    <div className="col-lg-6 col-12">
-                      <div className="ed-section-head">
-
-                        <h3 className="ed-section-head__title ed-split-text right">
-                          A Decade of Engineering Impact
-                        </h3>
-
-                      </div>
+                <div className="row justify-content-center">
+                  <div className="col-lg-6 col-md-8 col-12">
+                    <div className="ed-section-head text-center">
+                      <h3 className="ed-section-head__title ed-split-text left">
+                        A Decade of Engineering Impact
+                      </h3>
                     </div>
                   </div>
-                  {/* Start Funfact Area */}
-                  <section className="ed-funfact ed-funfact--style2">
-                    <div className="container ed-container position-relative">
-                      <div className="ed-funfact__inner">
-                        <div className="row g-0 justify-content-between">
-                          {/* Single Counter  */}
-                          <div className="col-xl-auto col-lg-3 col-md-6 col-6">
-                            <div
-                              className="ed-funfact__counter wow fadeInUp"
-                              data-wow-delay=".3s"
-                              data-wow-duration="1s"
-                            >
-                              <h4 className="color-text-1">
-                                <span className="counter">	200+</span>
-                              </h4>
-                              <p>Customized Courses</p>
-                            </div>
+                </div>
+                {/* Start Funfact Area */}
+                <section className="ed-funfact ed-funfact--style2">
+                  <div className="container ed-container position-relative">
+                    <div className="ed-funfact__inner">
+                      <div className="row g-0 justify-content-between">
+                        {/* Single Counter  */}
+                        <div className="col-xl-auto col-lg-3 col-md-6 col-6">
+                          <div
+                            className="ed-funfact__counter wow fadeInUp"
+                            data-wow-delay=".3s"
+                            data-wow-duration="1s"
+                          >
+                            <h4 className="color-text-1">
+                              <span className="counter">	200+</span>
+                            </h4>
+                            <p>Customized Courses</p>
                           </div>
-                          {/* Single Counter  */}
-                          <div className="col-xl-auto col-lg-3 col-md-6 col-6">
-                            <div
-                              className="ed-funfact__counter wow fadeInUp"
-                              data-wow-delay=".5s"
-                              data-wow-duration="1s"
-                            >
-                              <h4 className="color-text-2">
-                                <span className="counter">5,000+</span>
-                              </h4>
-                              <p>Professionals Trained</p>
-                            </div>
+                        </div>
+                        {/* Single Counter  */}
+                        <div className="col-xl-auto col-lg-3 col-md-6 col-6">
+                          <div
+                            className="ed-funfact__counter wow fadeInUp"
+                            data-wow-delay=".5s"
+                            data-wow-duration="1s"
+                          >
+                            <h4 className="color-text-2">
+                              <span className="counter">5,000+</span>
+                            </h4>
+                            <p>Professionals Trained</p>
                           </div>
-                          {/* Single Counter  */}
-                          <div className="col-xl-auto col-lg-3 col-md-6 col-6">
-                            <div
-                              className="ed-funfact__counter wow fadeInUp"
-                              data-wow-delay=".7s"
-                              data-wow-duration="1s"
-                            >
-                              <h4 className="color-text-3">
-                                <span className="counter">	100+</span>
-                              </h4>
-                              <p>Corporate Clients</p>
-                            </div>
+                        </div>
+                        {/* Single Counter  */}
+                        <div className="col-xl-auto col-lg-3 col-md-6 col-6">
+                          <div
+                            className="ed-funfact__counter wow fadeInUp"
+                            data-wow-delay=".7s"
+                            data-wow-duration="1s"
+                          >
+                            <h4 className="color-text-3">
+                              <span className="counter">	100+</span>
+                            </h4>
+                            <p>Corporate Clients</p>
                           </div>
-                          {/* Single Counter  */}
-                          <div className="col-xl-auto col-lg-3 col-md-6 col-6">
-                            <div
-                              className="ed-funfact__counter wow fadeInUp"
-                              data-wow-delay=".9s"
-                              data-wow-duration="1s"
-                            >
-                              <h4 className="color-text-4">
-                                <span className="counter">10+</span>
-                              </h4>
-                              <p>Countries Reached</p>
-                            </div>
+                        </div>
+                        {/* Single Counter  */}
+                        <div className="col-xl-auto col-lg-3 col-md-6 col-6">
+                          <div
+                            className="ed-funfact__counter wow fadeInUp"
+                            data-wow-delay=".9s"
+                            data-wow-duration="1s"
+                          >
+                            <h4 className="color-text-4">
+                              <span className="counter">10+</span>
+                            </h4>
+                            <p>Countries Reached</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </section>
-                  {/* End Funfact Area */}
-                </div>
+                  </div>
+                </section>
+                {/* End Funfact Area */}
                 <div className="ed-w-choose__images ed-w-choose__images--style2">
                   {/* Why Choose Image  */}
                   <div className="ed-w-choose__main-img">
@@ -997,78 +973,73 @@ export default function Home() {
               </div>
             </section>
 
-
-            <>
-              {/* Start Partner Area */}
-              <section className="ed-partner section-gap">
-                <div className="container ed-container">
-                  <div className="row">
-                    <div className="col-12">
-                      <div className="ed-partner__section-head">
-                        <h3 className="ed-partner__section-head-title">
-                          Get in touch with the <span>250+</span> companies who
-                          Collaboration us
-                        </h3>
-                      </div>
+            <section className="ed-partner section-gap">
+              <div className="container ed-container">
+                <div className="row">
+                  {/* <div className="col-12">
+                    <div className="ed-partner__section-head">
+                      <h3 className="ed-partner__section-head-title">
+                        Get in touch with the <span>250+</span> companies who
+                        Collaboration us
+                      </h3>
                     </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-12">
-                      <div className="owl-carousel ed-partner__slider">
-                        {/* Single Slider  */}
-                        <a href="#" target="_blank" className="ed-parnet__brand-logo">
-                          <img
-                            src="assets/images/partner/partner-1/1.svg"
-                            alt="brand-logo"
-                          />
-                        </a>
-                        {/* Single Slider  */}
-                        <a href="#" target="_blank" className="ed-parnet__brand-logo">
-                          <img
-                            src="assets/images/partner/partner-1/2.svg"
-                            alt="brand-logo"
-                          />
-                        </a>
-                        {/* Single Slider  */}
-                        <a href="#" target="_blank" className="ed-parnet__brand-logo">
-                          <img
-                            src="assets/images/partner/partner-1/3.svg"
-                            alt="brand-logo"
-                          />
-                        </a>
-                        {/* Single Slider  */}
-                        <a href="#" target="_blank" className="ed-parnet__brand-logo">
-                          <img
-                            src="assets/images/partner/partner-1/4.svg"
-                            alt="brand-logo"
-                          />
-                        </a>
-                        {/* Single Slider  */}
-                        <a href="#" target="_blank" className="ed-parnet__brand-logo">
-                          <img
-                            src="assets/images/partner/partner-1/5.svg"
-                            alt="brand-logo"
-                          />
-                        </a>
-                        {/* Single Slider  */}
-                        <a href="#" target="_blank" className="ed-parnet__brand-logo">
-                          <img
-                            src="assets/images/partner/partner-1/6.svg"
-                            alt="brand-logo"
-                          />
-                        </a>
-                      </div>
+                  </div> */}
+                </div>
+                <div className="row">
+                  <div className="col-12">
+                    <div className="owl-carousel ed-partner__slider">
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="assets/images/partner/partner-1/1.svg"
+                          alt="brand-logo"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="assets/images/partner/partner-1/2.svg"
+                          alt="brand-logo"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="assets/images/partner/partner-1/3.svg"
+                          alt="brand-logo"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="assets/images/partner/partner-1/4.svg"
+                          alt="brand-logo"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="assets/images/partner/partner-1/5.svg"
+                          alt="brand-logo"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="assets/images/partner/partner-1/6.svg"
+                          alt="brand-logo"
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>
-              </section>
-              {/* End Partner Area */}
-            </>
+              </div>
+            </section>
 
             <div className="section-bg position-relative">
-              <div className="section-bg__img style-2">
+              {/* <div className="section-bg__img style-2">
                 <img src="/assets/images/section-bg-6.png" alt="bg-img" />
-              </div>
+              </div> */}
               {/* Start Testimonial Area */}
               <section className="ed-testimonial ed-testimonial--style2 ed-course ed-course--style-5 section-gap position-relative">
                 <div className="container ed-container">
@@ -1231,15 +1202,16 @@ export default function Home() {
             {/* Start Faq Area */}
             <section className="ed-faq section-gap position-relative">
               <div className="container ed-container">
+                <div className="ed-section-head text-center">
+                  <span className="ed-section-head__sm-title">
+                    FREQUENTLY ASKED QUESTIONS
+                  </span>
+                  <h3 className="ed-section-head__title text-center">
+                    Most Popular Questions About Our Online Courses
+                  </h3>
+                </div>
                 <div className="ed-faq__inner position-relative">
-                  <div className="ed-section-head m-0">
-                    <span className="ed-section-head__sm-title">
-                      FREQUENTLY ASKED QUESTIONS
-                    </span>
-                    <h3 className="ed-section-head__title ed-split-text right">
-                      Most Popular Questions About Our Online Courses
-                    </h3>
-                  </div>
+
                   <div className="row align-items-center">
                     <div className="col-lg-12 col-xl-6 col-12">
                       {/* Faq Images  */}
@@ -1539,250 +1511,8 @@ export default function Home() {
               </div>
             </section>
           </main >
-          <div className="footer-bg position-relative">
-            <div className="footer-bg__img">
-              <img
-                src="/assets/images/footer/footer-2/footer-bg.png"
-                alt="footer-bg-img"
-              />
-            </div>
-            {/* Start Call Action Area */}
-            <section className="ed-call-action position-relative">
-              <div className="container ed-container">
-                <div className="ed-call-action__inner position-relative">
-                  <div className="ed-call-action__shapes">
-                    <img
-                      className="ed-call-action__shape-1 rotate-ani"
-                      src="/assets/images/call-action/call-action-1/shape-1.svg"
-                      alt="shape-1"
-                    />
-                    <img
-                      className="ed-call-action__shape-2"
-                      src="/assets/images/call-action/call-action-1/shape-2.svg"
-                      alt="shape-2"
-                    />
-                    <img
-                      className="ed-call-action__shape-3 updown-ani"
-                      src="/assets/images/call-action/call-action-1/shape-3.svg"
-                      alt="shape-3"
-                    />
-                  </div>
-                  <div className="row">
-                    <div className="col-lg-6 col-12">
-                      <div className="ed-call-action__img">
-                        <img
-                          src="/assets/images/call-action/call-action-1/call-action-img.png"
-                          alt="call-action-img"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-12 order-class">
-                      <div className="ed-call-action__content">
-                        <div className="ed-section-head">
 
-                          <h3 className="ed-section-head__title">
-                            Let’s Build Your Team’s Next Capability
-                          </h3>
-                          <p className="ed-section-head__text">
-                            Whether you're planning a new AI initiative, upgrading your embedded systems team, or preparing engineers for new 5G requirements; we’re here to help.
-                          </p>
-                        </div>
-                        <div className="ed-call-action__content-btn">
-                          <a href="course-1.html" className="ed-btn">
-                            {" "}
-                            Book a Consultation
-                            <i className="fi fi-rr-arrow-small-right" />{" "}
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            {/* End Call Action Area */}
-            {/* Start Footer Area */}
-            <footer className="ed-footer position-relative">
-              {/* Footer Top */}
-              <div className="ed-footer__top position-relative">
-                <div className="ed-footer__shapes">
-
-
-
-                </div>
-                <div className="container ed-container">
-                  <div className="row g-0">
-                    <div className="col-lg-4 col-md-6 col-12">
-                      <div className="ed-footer__widget ed-footer__about">
-                        <a href="index.html" className="ed-footer__logo">
-                          <img src="/assets/Timmins-img/logo.png" alt="footer-logo" />
-                        </a>
-                        <p className="ed-footer__about-text">
-                          Excepteur sint occaecat cupidatat non proident sunt in
-                          culpa qui officia deserunt mollit.
-                        </p>
-                        <ul className="ed-footer__about-social">
-                          <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                              <img
-                                src="/assets/images/icons/icon-dark-facebook.svg"
-                                alt="icon-dark-facebook"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.twitter.com/" target="_blank">
-                              <img
-                                src="/assets/images/icons/icon-dark-twitter.svg"
-                                alt="icon-dark-twitter"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.dribbble.com/" target="_blank">
-                              <img
-                                src="/assets/images/icons/icon-dark-dribbble.svg"
-                                alt="icon-dark-dribbble"
-                              />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://www.instagram.com/" target="_blank">
-                              <img
-                                src="/assets/images/icons/icon-dark-instagram.svg"
-                                alt="icon-dark-instagram"
-                              />
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="col-lg-2 col-md-6 col-12">
-                      <div className="ed-footer__widget">
-                        <h4 className="ed-footer__widget-title">Links</h4>
-                        <ul className="ed-footer__widget-links">
-                          <li>
-                            <a href="about-1.html">Home</a>
-                          </li>
-                          <li>
-                            <a href="course-1.html">About</a>
-                          </li>
-                          <li>
-                            <a href="#">Solution</a>
-                          </li>
-                          <li>
-                            <a href="contact.html">Course</a>
-                          </li>
-                          <li>
-                            <a href="blog.html">Training Calender</a>
-                          </li>
-                          <li>
-                            <a href="faq.html">Resources</a>
-                          </li>
-                          <li>
-                            <a href="faq.html">Contact</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6 col-12">
-                      <div className="ed-footer__widget contact-widget">
-                        <h4 className="ed-footer__widget-title">Contact</h4>
-                        {/* Single Info  */}
-                        <div className="ed-footer__contact">
-                          <div className="ed-footer__contact-icon">
-                            <img
-                              src="/assets/images/icons/icon-phone-blue.svg"
-                              alt="icon-phone-blue"
-                            />
-                          </div>
-                          <div className="ed-footer__contact-info">
-                            <span>24/7 Support</span>
-                            <a href="tel:+532 321 33 33">+532 321 33 33</a>
-                          </div>
-                        </div>
-                        {/* Single Info  */}
-                        <div className="ed-footer__contact">
-                          <div className="ed-footer__contact-icon">
-                            <img
-                              src="/assets/images/icons/icon-envelope-blue.svg"
-                              alt="icon-envelope-blue"
-                            />
-                          </div>
-                          <div className="ed-footer__contact-info">
-                            <span>Send Message</span>
-                            <a href="mailto:eduna@gmail.com">eduna@gmail.com</a>
-                          </div>
-                        </div>
-                        {/* Single Info  */}
-                        <div className="ed-footer__contact">
-                          <div className="ed-footer__contact-icon">
-                            <img
-                              src="/assets/images/icons/icon-location-blue.svg"
-                              alt="icon-location-blue"
-                            />
-                          </div>
-                          <div className="ed-footer__contact-info">
-                            <span>Our Locati0n</span>
-                            <a href="#" target="_blank">
-                              32/Jenin, London
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6 col-12">
-                      <div className="ed-footer__widget newsletter-widget">
-                        <h4 className="ed-footer__widget-title">Subscribe</h4>
-                        <div className="ed-footer__newsletter">
-                          <p className="ed-footer__about-text">
-                            Enter your email address to register to our newsletter
-                            subscription
-                          </p>
-                          <form
-                            action="#"
-                            method="post"
-                            className="ed-footer__newsletter-form"
-                          >
-                            <input
-                              type="email"
-                              name="email"
-                              placeholder="Enter email"
-                              required=""
-                            />
-                            <button type="submit" className="ed-btn">
-                              Subscribe Now
-                              <i className="fi fi-rr-arrow-small-right" />
-                            </button>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Footer Bottom */}
-              <div className="ed-footer__bottom">
-                <div className="container ed-container">
-                  <div className="row">
-                    <div className="col-12">
-                      <p className="ed-footer__copyright-text">
-                        Copyright 2024&nbsp;Eduna&nbsp;| Developed By
-                        <a
-                          href="https://themeforest.net/user/bizantheme"
-                          target="_blank"
-                        >
-                          BizanTheme
-                        </a>
-                        . All Rights Reserved
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </footer>
-            {/* End Footer Area  */}
-          </div>
+          <Footer />
         </div >
       </div >
       {/* Start Login Modal */}
