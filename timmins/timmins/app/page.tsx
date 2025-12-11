@@ -87,7 +87,7 @@ export default function Home() {
                   <div className="row justify-content-center pb-4">
                     <div className="col-lg-8 col-12">
                       <div className="ed-section-head text-center">
-                        <h3 className="ed-section-head__title m-0 ed-split-text left">
+                        <h3 className="ed-section-head__title ed-split-text left">
                           Learn the Way That Fits You
                         </h3>
                         <p className="ed-section-head__text">
