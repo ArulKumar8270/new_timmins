@@ -1,11 +1,10 @@
 import Image from "next/image";
-import Header from "./Componets/Header";
+import Header from "./Components/Header";
 
 export default function Home() {
   return (
     <>
       <Header />
-
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
@@ -13,56 +12,60 @@ export default function Home() {
               className="section-bg hero-bg-2 background-image"
               style={{ backgroundImage: 'url("/assets/images/section-bg-4.png")' }}
             >
-              <>
-                {/* Start Hero Area */}
-                <section className="ed-hero">
-                  <div className="container ed-container-expand">
-                    {/* Hero Element Shape */}
-                    <div className="ed-hero__elements">
-                      <img
-                        className="element-move ed-hero__shape-1"
-                        src="/assets/images/hero/home-1/shape-1.svg"
-                        alt="shape-1"
-                      />
-                      <img
-                        className="element-move ed-hero__shape-2"
-                        src="/assets/images/hero/home-1/shape-2.svg"
-                        alt="shape-1"
-                      />
-                      <img
-                        className="element-move ed-hero__shape-3"
-                        src="/assets/images/hero/home-1/shape-3.svg"
-                        alt="shape-1"
-                      />
-                      <img
-                        className="element-move ed-hero__shape-4"
-                        src="/assets/images/hero/home-1/shape-4.svg"
-                        alt="shape-1"
-                      />
-                      <img
-                        className="element-move ed-hero__shape-5"
-                        src="/assets/images/hero/home-1/shape-5.png"
-                        alt="shape-5"
-                      />
-                    </div>
-                    <div className="row align-items-center">
-                      <div className="col-lg-6 col-12">
-                        {/* Hero Content */}
-                        <div className="ed-hero__content">
-                          <h1 className="ed-hero__content-title ed-split-text left">
-                            Best <span>Online</span> Platform to Learn Everything
-                          </h1>
-                          <p className="ed-hero__content-text">
-                            Excedteur sint occaecat cupidatat non proident sunt in culpa qui
-                            officia deserunt mollit.
-                          </p>
-                          <div className="ed-hero__btn">
-                            <a href="course-1.html" className="ed-btn">
-                              Find Courses
-                              <i className="fi fi-rr-arrow-small-right" />
-                            </a>
-                          </div>
+              {/* Start Hero Area */}
+              <section className="ed-hero">
+                <div className="container ed-container-expand">
+                  {/* Hero Element Shape */}
+                  <div className="ed-hero__elements">
+                    <img
+                      className="element-move ed-hero__shape-1"
+                      src="assets/images/hero/home-1/shape-1.svg"
+                      alt="shape-1"
+                    />
+                    <img
+                      className="element-move ed-hero__shape-2"
+                      src="assets/images/hero/home-1/shape-2.svg"
+                      alt="shape-1"
+                    />
+                    <img
+                      className="element-move ed-hero__shape-3"
+                      src="assets/images/hero/home-1/shape-3.svg"
+                      alt="shape-1"
+                    />
+                    <img
+                      className="element-move ed-hero__shape-4"
+                      src="assets/images/hero/home-1/shape-4.svg"
+                      alt="shape-1"
+                    />
+                    <img
+                      className="element-move ed-hero__shape-5"
+                      src="assets/images/hero/home-1/shape-5.png"
+                      alt="shape-5"
+                    />
+                  </div>
+                  <div className="row align-items-center">
+                    <div className="col-lg-6 col-12">
+                      {/* Hero Content */}
+                      <div className="ed-hero__content">
+                        <h1 className="ed-hero__content-title ed-split-text left">
+                          Best <span>Online</span> Platform to Learn Everything
+                        </h1>
+                        <p className="ed-hero__content-text">
+                          Excedteur sint occaecat cupidatat non proident sunt in culpa qui
+                          officia deserunt mollit.
+                        </p>
+                        <div className="ed-hero__btn">
+                          <a href="course-1.html" className="ed-btn">
+                            Find Courses
+                            <i className="fi fi-rr-arrow-small-right" />
+                          </a>
                         </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 col-12">
+                      {/* Hero Image */}
+                      <div className="ed-hero__image">
+                        <img src="assets/images/hero/home-1/hero-img.png" alt="hero-img" />
                       </div>
                       <div className="col-lg-6 col-12">
                         {/* Hero Image */}
@@ -72,10 +75,10 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </section>
-                {/* End Hero Area */}
-              </>
+                </div>
+              </section>
 
+              {/* End Hero Area */}
             </div>
             <div className="row justify-content-center">
               <div className="col-lg-8 col-12">
@@ -423,9 +426,9 @@ export default function Home() {
                   <div className="row justify-content-center">
                     <div className="col-lg-6 col-md-8 col-12">
                       <div className="ed-section-head text-center">
-                        <span className="ed-section-head__sm-title">ONLINE COURSES</span>
+
                         <h3 className="ed-section-head__title ed-split-text left">
-                          Get Your Programs With Us
+                          Featured Public Classes
                         </h3>
                       </div>
                     </div>
@@ -433,39 +436,7 @@ export default function Home() {
                   <div className="row">
                     <div className="col-12">
                       <div className="ed-course__tab">
-                        {/* Tab Menu */}
-                        <div
-                          className="ed-course__tab-menu tab-menu wow fadeInUp"
-                          data-wow-delay=".3s"
-                          data-wow-duration="1s"
-                        >
-                          <div className="list-group" id="list-tab" role="tablist">
-                            <a
-                              className="list-group-item active"
-                              data-bs-toggle="list"
-                              href="#courseTab1"
-                              role="tab"
-                            >
-                              Undergraduate
-                            </a>
-                            <a
-                              className="list-group-item"
-                              data-bs-toggle="list"
-                              href="#courseTab2"
-                              role="tab"
-                            >
-                              Graduate
-                            </a>
-                            <a
-                              className="list-group-item"
-                              data-bs-toggle="list"
-                              href="#courseTab3"
-                              role="tab"
-                            >
-                              Online
-                            </a>
-                          </div>
-                        </div>
+
                         {/* Tab Details */}
                         <div
                           className="ed-course__tab-details tab-details wow fadeInUp"
@@ -484,27 +455,23 @@ export default function Home() {
                                 <div className="col-lg-6 col-12">
                                   <div className="ed-course__card">
                                     <div className="ed-course__image">
-                                      <span className="ed-course__price">Free</span>
                                       <div className="ed-course__main-img">
                                         <img
                                           src="assets/images/course/course-5/1.png"
                                           alt="course-img"
                                         />
                                       </div>
-                                      <span className="ed-course__category">Business</span>
+
                                     </div>
                                     <div className="ed-course__content">
                                       <span className="ed-course__type">
-                                        Online + Onsite
+                                        Face-to-Face
                                       </span>
                                       <a href="course-1.html">
-                                        Explore Our Undergraduate Programs for Future
-                                        Leaders
+                                        Embedded Linux System Internals
                                       </a>
                                       <p>
-                                        Excepteur sint occaecat cupidatat non proident sunt
-                                        in culpa qui officia deserunt mollite excepteur
-                                        sint.
+                                        5 days
                                       </p>
                                     </div>
                                   </div>
@@ -513,26 +480,20 @@ export default function Home() {
                                 <div className="col-lg-6 col-12">
                                   <div className="ed-course__card">
                                     <div className="ed-course__image">
-                                      <span className="ed-course__price">$97</span>
                                       <div className="ed-course__main-img">
                                         <img
                                           src="assets/images/course/course-5/2.png"
                                           alt="course-img"
                                         />
                                       </div>
-                                      <span className="ed-course__category">
-                                        Motivation
-                                      </span>
                                     </div>
                                     <div className="ed-course__content">
-                                      <span className="ed-course__type">Only Online</span>
+                                      <span className="ed-course__type">Face-to-Face</span>
                                       <a href="course-1.html">
-                                        Innovative Graduate Degrees for Career Advancement
+                                        Power BI: From Data to Decisions
                                       </a>
                                       <p>
-                                        Excepteur sint occaecat cupidatat non proident sunt
-                                        in culpa qui officia deserunt mollite excepteur
-                                        sint.
+                                        2 Days
                                       </p>
                                     </div>
                                   </div>
@@ -541,26 +502,24 @@ export default function Home() {
                                 <div className="col-lg-6 col-12">
                                   <div className="ed-course__card">
                                     <div className="ed-course__image">
-                                      <span className="ed-course__price">$38</span>
+
                                       <div className="ed-course__main-img">
                                         <img
                                           src="assets/images/course/course-5/3.png"
                                           alt="course-img"
                                         />
                                       </div>
-                                      <span className="ed-course__category">Design</span>
+
                                     </div>
                                     <div className="ed-course__content">
                                       <span className="ed-course__type">
-                                        Online + Onsite
+                                        Online
                                       </span>
                                       <a href="course-1.html">
-                                        Undergraduate Courses Shaping Tomorrow Visionaries
+                                        Generative AI with LangChain
                                       </a>
                                       <p>
-                                        Excepteur sint occaecat cupidatat non proident sunt
-                                        in culpa qui officia deserunt mollite excepteur
-                                        sint.
+                                        2 days
                                       </p>
                                     </div>
                                   </div>
@@ -569,24 +528,22 @@ export default function Home() {
                                 <div className="col-lg-6 col-12">
                                   <div className="ed-course__card">
                                     <div className="ed-course__image">
-                                      <span className="ed-course__price">$63</span>
+
                                       <div className="ed-course__main-img">
                                         <img
                                           src="assets/images/course/course-5/4.png"
                                           alt="course-img"
                                         />
                                       </div>
-                                      <span className="ed-course__category">Marketing</span>
+
                                     </div>
                                     <div className="ed-course__content">
-                                      <span className="ed-course__type">Onsite</span>
+                                      <span className="ed-course__type">Face-to-Face</span>
                                       <a href="course-1.html">
-                                        Graduate Programs Designed for Real-World Success
+                                        Kotlin Fundamentals
                                       </a>
                                       <p>
-                                        Excepteur sint occaecat cupidatat non proident sunt
-                                        in culpa qui officia deserunt mollite excepteur
-                                        sint.
+                                        4 Days
                                       </p>
                                     </div>
                                   </div>
@@ -843,11 +800,9 @@ export default function Home() {
                 <div className="row justify-content-center">
                   <div className="col-lg-6 col-md-8 col-12">
                     <div className="ed-section-head text-center">
-                      <span className="ed-section-head__sm-title">
-                        ONLINE COURSES
-                      </span>
+
                       <h3 className="ed-section-head__title ed-split-text left">
-                        Get Your Course With Us
+                        Proven Results Across Industries
                       </h3>
                     </div>
                   </div>
@@ -867,131 +822,23 @@ export default function Home() {
                             alt="course-img"
                           />
                         </a>
-                        <a href="course-1.html" className="ed-course__tag">
-                          Marketing
-                        </a>
-                        <a href="#" className="ed-course__bookmarked">
-                          <i className="fi fi-rr-bookmark" />
-                        </a>
                       </div>
                       <div className="ed-course__body">
-                        <div className="ed-course__lesson">
-                          <div className="ed-course__part">
-                            <i className="fi-rr-book" />
-                            <p>04 Lessons</p>
-                          </div>
-                          <div className="ed-course__teacher">
-                            <i className="fi-rr-user" />
-                            <p>Lucas Brooks</p>
-                          </div>
-                        </div>
                         <a href="course-details.html" className="ed-course__title">
                           <h5>
-                            Grow Personal Financial Security Thinking &amp;
-                            Principles
+                            Fresh Graduate Onboarding - Semiconductor Engineering
                           </h5>
                         </a>
                         <div className="ed-course__rattings">
-                          <ul>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <span>(67 Reviews)</span>
-                            </li>
-                          </ul>
+
+                          <span>A 10-year partnership enabling 3,000+ engineers to become project-ready in embedded, mobile, 5G, AI, and RF.</span>
+
                         </div>
-                        <div className="ed-course__bottom">
-                          <span className="ed-course__price">$383.00</span>
-                          <div className="ed-course__students">
-                            <i className="fi fi-rr-graduation-cap" />
-                            <p>356 Students</p>
-                          </div>
-                        </div>
+
                       </div>
                     </div>
                   </div>
-                  {/* Single Course Card */}
-                  <div className="col-lg-6 col-xl-6 col-md-6 col-12">
-                    <div
-                      className="ed-course__card ed-course__card--style2 wow fadeInUp"
-                      data-wow-delay=".5s"
-                      data-wow-duration="1s"
-                    >
-                      <div className="ed-course__head position-relative">
-                        <a href="course-details.html" className="ed-course__img">
-                          <img
-                            src="/assets/images/course/course-2/2.png"
-                            alt="course-img"
-                          />
-                        </a>
-                        <a href="course-1.html" className="ed-course__tag">
-                          Development
-                        </a>
-                        <a href="#" className="ed-course__bookmarked">
-                          <i className="fi fi-rr-bookmark" />
-                        </a>
-                      </div>
-                      <div className="ed-course__body">
-                        <div className="ed-course__lesson">
-                          <div className="ed-course__part">
-                            <i className="fi-rr-book" />
-                            <p>98 Lessons</p>
-                          </div>
-                          <div className="ed-course__teacher">
-                            <i className="fi-rr-user" />
-                            <p>John Smith</p>
-                          </div>
-                        </div>
-                        <a href="course-details.html" className="ed-course__title">
-                          <h5>
-                            Data Competitive Strategy law and Organization Course
-                          </h5>
-                        </a>
-                        <div className="ed-course__rattings">
-                          <ul>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <span>(09 Reviews)</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="ed-course__bottom">
-                          <span className="ed-course__price">$383.00</span>
-                          <div className="ed-course__students">
-                            <i className="fi fi-rr-graduation-cap" />
-                            <p>553 Students</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+
                   {/* Single Course Card */}
                   <div className="col-lg-6 col-xl-6 col-md-6 col-12">
                     <div
@@ -1006,55 +853,14 @@ export default function Home() {
                             alt="course-img"
                           />
                         </a>
-                        <a href="course-1.html" className="ed-course__tag">
-                          Design
-                        </a>
-                        <a href="#" className="ed-course__bookmarked">
-                          <i className="fi fi-rr-bookmark" />
-                        </a>
                       </div>
                       <div className="ed-course__body">
-                        <div className="ed-course__lesson">
-                          <div className="ed-course__part">
-                            <i className="fi-rr-book" />
-                            <p>87 Lessons</p>
-                          </div>
-                          <div className="ed-course__teacher">
-                            <i className="fi-rr-user" />
-                            <p>Alexander Wells</p>
-                          </div>
-                        </div>
+
                         <a href="course-details.html" className="ed-course__title">
-                          <h5>Voices from the Learning Manage Education Hub</h5>
+                          <h5>AI Transformation - Banking Sector (DBS & Citi)</h5>
                         </a>
                         <div className="ed-course__rattings">
-                          <ul>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <span>(23 Reviews)</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="ed-course__bottom">
-                          <span className="ed-course__price">$944.00</span>
-                          <div className="ed-course__students">
-                            <i className="fi fi-rr-graduation-cap" />
-                            <p>234 Students</p>
-                          </div>
+                          <span>7-year capability development in applied AI, analytics, and automation — 50–80% performance improvement.</span>
                         </div>
                       </div>
                     </div>
@@ -1073,57 +879,24 @@ export default function Home() {
                             alt="course-img"
                           />
                         </a>
-                        <a href="course-1.html" className="ed-course__tag">
-                          Business
-                        </a>
-                        <a href="#" className="ed-course__bookmarked">
-                          <i className="fi fi-rr-bookmark" />
-                        </a>
+
                       </div>
                       <div className="ed-course__body">
                         <div className="ed-course__lesson">
-                          <div className="ed-course__part">
-                            <i className="fi-rr-book" />
-                            <p>90 Lessons</p>
-                          </div>
-                          <div className="ed-course__teacher">
-                            <i className="fi-rr-user" />
-                            <p>Oliver Knight</p>
-                          </div>
+
                         </div>
                         <a href="course-details.html" className="ed-course__title">
                           <h5>
-                            The Complete Guide to Build RESTful API Application
+                            Mobile Development Enablement - Motorola
                           </h5>
                         </a>
                         <div className="ed-course__rattings">
-                          <ul>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <i className="icofont-star" />
-                            </li>
-                            <li>
-                              <span>(34 Reviews)</span>
-                            </li>
-                          </ul>
+
+                          <span>Mobile Development Enablement - Motorola</span>
+
                         </div>
                         <div className="ed-course__bottom">
-                          <span className="ed-course__price">$855.00</span>
-                          <div className="ed-course__students">
-                            <i className="fi fi-rr-graduation-cap" />
-                            <p>313 Students</p>
-                          </div>
+
                         </div>
                       </div>
                     </div>
@@ -1150,18 +923,11 @@ export default function Home() {
                   <div className="row g-0">
                     <div className="col-lg-6 col-12">
                       <div className="ed-section-head">
-                        <span className="ed-section-head__sm-title">
-                          WHY CHOOSE US
-                        </span>
+
                         <h3 className="ed-section-head__title ed-split-text right">
-                          Transform Your Best Practice <br />
-                          with Our Online Course
+                          A Decade of Engineering Impact
                         </h3>
-                        <p className="ed-section-head__text">
-                          Excepteur sint occaecat cupidatat non proident sunt in
-                          culpa qui officia deserunt mollit. Excepteur sint
-                          occaecat.
-                        </p>
+
                       </div>
                     </div>
                   </div>
@@ -1178,9 +944,9 @@ export default function Home() {
                               data-wow-duration="1s"
                             >
                               <h4 className="color-text-1">
-                                <span className="counter">534</span>+
+                                <span className="counter">	200+</span>
                               </h4>
-                              <p>Student enrolled</p>
+                              <p>Customized Courses</p>
                             </div>
                           </div>
                           {/* Single Counter  */}
@@ -1191,9 +957,9 @@ export default function Home() {
                               data-wow-duration="1s"
                             >
                               <h4 className="color-text-2">
-                                <span className="counter">643</span>+
+                                <span className="counter">5,000+</span>
                               </h4>
-                              <p>Classes completed</p>
+                              <p>Professionals Trained</p>
                             </div>
                           </div>
                           {/* Single Counter  */}
@@ -1204,9 +970,9 @@ export default function Home() {
                               data-wow-duration="1s"
                             >
                               <h4 className="color-text-3">
-                                <span className="counter">744</span>+
+                                <span className="counter">	100+</span>
                               </h4>
-                              <p>Top instructors</p>
+                              <p>Corporate Clients</p>
                             </div>
                           </div>
                           {/* Single Counter  */}
@@ -1217,9 +983,9 @@ export default function Home() {
                               data-wow-duration="1s"
                             >
                               <h4 className="color-text-4">
-                                <span className="counter">922</span>+
+                                <span className="counter">10+</span>
                               </h4>
-                              <p>Learners report</p>
+                              <p>Countries Reached</p>
                             </div>
                           </div>
                         </div>
@@ -1231,10 +997,7 @@ export default function Home() {
                 <div className="ed-w-choose__images ed-w-choose__images--style2">
                   {/* Why Choose Image  */}
                   <div className="ed-w-choose__main-img">
-                    <img
-                      src="/assets/images/why-choose/why-choose-2/why-choose-img.png"
-                      alt="why-choose-img"
-                    />
+
                   </div>
                   {/* Shapes Elements */}
                   <div className="ed-w-choose__shapes">
@@ -1348,21 +1111,13 @@ export default function Home() {
                               </li>
                             </ul>
                             <p className="ed-testimonial__text">
-                              “ Attending EduVibe School of Business was one of the
-                              best decisions I've ever made. The curriculum was
-                              practical and industry-focused, and I was able to apply
-                              what I learned in the classroom.”
+                              “At Linux Driver Development session, there were many hands-on training sessions that can help to easily relate to info shared from the trainer. The trainer is passionately guiding us to resolve blockers we met along the exercises."
                             </p>
                             <div className="ed-testimonial__author">
-                              <div className="ed-testimonial__author-img">
-                                <img
-                                  src="/assets/images/testimonial/testimonial-1/author-1.png"
-                                  alt="author-img"
-                                />
-                              </div>
+
                               <div className="ed-testimonial__author-info">
-                                <h5>John Smith</h5>
-                                <p>Science Student</p>
+                                <h5>Engineer at Motorola</h5>
+
                               </div>
                             </div>
                           </div>
@@ -1386,21 +1141,97 @@ export default function Home() {
                               </li>
                             </ul>
                             <p className="ed-testimonial__text">
-                              “ Attending EduVibe School of Business was one of the
-                              best decisions I've ever made. The curriculum was
-                              practical and industry-focused, and I was able to apply
-                              what I learned in the classroom.”
+                              “There were multiple key takeaways that I had from the Embedded Linux session. It was detailed and well presented.  Really happy with the trainer who could very smoothly and gently explain the entire subject matter with much clarity.”
                             </p>
                             <div className="ed-testimonial__author">
-                              <div className="ed-testimonial__author-img">
-                                <img
-                                  src="/assets/images/testimonial/testimonial-1/author-1.png"
-                                  alt="author-img"
-                                />
-                              </div>
+
                               <div className="ed-testimonial__author-info">
-                                <h5>John Smith</h5>
-                                <p>Science Student</p>
+                                <h5>L&D at Qualcomm</h5>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Single Testimonial  */}
+                          <div className="ed-testimonial__slider-item">
+                            <ul className="ed-testimonial__rattings">
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                            </ul>
+                            <p className="ed-testimonial__text">
+                              At SAFe certifications training, the trainer and the activities done during the training. The PI planning activity really helped in understanding it better. The trainer was doing a recap of the modules discussed after a few lessons which helped to remember the points learnt.
+                            </p>
+                            <div className="ed-testimonial__author">
+
+                              <div className="ed-testimonial__author-info">
+                                <h5>Engineer at Citibank</h5>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Single Testimonial  */}
+                          <div className="ed-testimonial__slider-item">
+                            <ul className="ed-testimonial__rattings">
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                            </ul>
+                            <p className="ed-testimonial__text">
+                              “The session gave a very deep knowledge of RUST. With this knowledge, we can effectively understand our application's existing code and make meaningful changes in it, knowing what we are actually doing instead of just going around compiler issues and making the code to run. The SerDes part was very helpful.”
+                            </p>
+                            <div className="ed-testimonial__author">
+                              <div className="ed-testimonial__author-info">
+                                <h5>Engineer at Motorola</h5>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Single Testimonial  */}
+                          <div className="ed-testimonial__slider-item">
+                            <ul className="ed-testimonial__rattings">
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                              <li>
+                                <i className="icofont-star" />
+                              </li>
+                            </ul>
+                            <p className="ed-testimonial__text">
+                              “One of my main takeaways from the Python training was learning how to write more simplified and efficient functions compared to my current approach. The examples and explanations helped me understand how to streamline logic and improve code readability, which I can apply to my day-to-day tasks.”
+                            </p>
+                            <div className="ed-testimonial__author">
+                              <div className="ed-testimonial__author-info">
+                                <h5>Engineer at Citibank</h5>
                               </div>
                             </div>
                           </div>
@@ -1415,57 +1246,19 @@ export default function Home() {
             <section className="ed-faq section-gap position-relative">
               <div className="container ed-container">
                 <div className="ed-faq__inner position-relative">
+                  <div className="ed-section-head m-0">
+                    <span className="ed-section-head__sm-title">
+                      FREQUENTLY ASKED QUESTIONS
+                    </span>
+                    <h3 className="ed-section-head__title ed-split-text right">
+                      Most Popular Questions About Our Online Courses
+                    </h3>
+                  </div>
                   <div className="row align-items-center">
                     <div className="col-lg-12 col-xl-6 col-12">
                       {/* Faq Images  */}
-                      <div className="ed-faq__images position-relative">
-                        <div className="ed-faq__images-group">
-                          <div className="ed-faq__image-group-1">
-                            <img
-                              className="faq-img-1"
-                              src="/assets/images/faq/faq-1/faq-img-1.png"
-                              alt="faq-img-1"
-                            />
-                          </div>
-                          <div className="ed-faq__image-group-2">
-                            <img
-                              className="faq-img-2"
-                              src="/assets/images/faq/faq-1/faq-img-2.png"
-                              alt="faq-img-2"
-                            />
-                            <img
-                              className="faq-img-3"
-                              src="/assets/images/faq/faq-1/faq-img-3.png"
-                              alt="faq-img-2"
-                            />
-                          </div>
-                        </div>
-                        {/* Shape Elemets  */}
-                        <div className="ed-faq__shapes">
-                          <img
-                            className="ed-faq__shape-1"
-                            src="/assets/images/faq/faq-1/shape-1.svg"
-                            alt="shape-1"
-                          />
-                          <img
-                            className="ed-faq__shape-2"
-                            src="/assets/images/faq/faq-1/shape-2.svg"
-                            alt="shape-2"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-12 col-xl-6 col-12">
-                      {/* Faq Content  */}
                       <div className="ed-faq__content">
-                        <div className="ed-section-head m-0">
-                          <span className="ed-section-head__sm-title">
-                            FREQUENTLY ASKED QUESTIONS
-                          </span>
-                          <h3 className="ed-section-head__title ed-split-text right">
-                            Most Popular Questions About Our Online Courses
-                          </h3>
-                        </div>
+
                         <div
                           className="ed-faq__accordion faq-inner accordion"
                           id="accordionExample"
@@ -1481,7 +1274,7 @@ export default function Home() {
                                 aria-expanded="true"
                                 aria-controls="collapseOne"
                               >
-                                How can I start with your online class?
+                                1. What is the best embedded systems training for beginners?
                               </button>
                             </h2>
                             <div
@@ -1492,38 +1285,7 @@ export default function Home() {
                             >
                               <div className="ed-faq__accordion-body">
                                 <p className="ed-faq__accordion-text">
-                                  Excepteur sint occaecat cupidatat non proident
-                                  sunta in culpa qui officia for this is a for
-                                  that tempor.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          {/* Single Faq */}
-                          <div className="ed-faq__accordion-item">
-                            <h2 className="accordion-header" id="headingTwo">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo"
-                                aria-expanded="false"
-                                aria-controls="collapseTwo"
-                              >
-                                How can I register to your website to learn?
-                              </button>
-                            </h2>
-                            <div
-                              id="collapseTwo"
-                              className="accordion-collapse collapse"
-                              aria-labelledby="headingTwo"
-                              data-bs-parent="#accordionExample"
-                            >
-                              <div className="ed-faq__accordion-body">
-                                <p className="ed-faq__accordion-text">
-                                  Excepteur sint occaecat cupidatat non proident
-                                  sunta in culpa qui officia for this is a for
-                                  that tempor.
+                                  For new engineers, foundational Embedded Linux and embedded programming training provide the fastest capability lift
                                 </p>
                               </div>
                             </div>
@@ -1539,7 +1301,7 @@ export default function Home() {
                                 aria-expanded="false"
                                 aria-controls="collapseThree"
                               >
-                                Can i get lifetime access for your any courses?
+                                2. Does Timmins offer AI consulting or only training?
                               </button>
                             </h2>
                             <div
@@ -1550,9 +1312,61 @@ export default function Home() {
                             >
                               <div className="ed-faq__accordion-body">
                                 <p className="ed-faq__accordion-text">
-                                  Excepteur sint occaecat cupidatat non proident
-                                  sunta in culpa qui officia for this is a for
-                                  that tempor.
+                                  Yes. Timmins provides AI consulting, AI consultation, and full capability-building programs for enterprise AI transformation.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Single Faq */}
+                          <div className="ed-faq__accordion-item">
+                            <h2 className="accordion-header" id="headingTwo">
+                              <button
+                                className="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="collapseTwo"
+                              >
+                                3. Are your programs HRDC Claimable?
+                              </button>
+                            </h2>
+                            <div
+                              id="collapseTwo"
+                              className="accordion-collapse collapse"
+                              aria-labelledby="headingTwo"
+                              data-bs-parent="#accordionExample"
+                            >
+                              <div className="ed-faq__accordion-body">
+                                <p className="ed-faq__accordion-text">
+                                  Yes, for Malaysian employers only. Many AI, embedded, 5G, and corporate training Malaysia programs qualify.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Single Faq */}
+                          <div className="ed-faq__accordion-item">
+                            <h2 className="accordion-header" id="headingThree">
+                              <button
+                                className="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree"
+                                aria-expanded="false"
+                                aria-controls="collapseThree"
+                              >
+                                4. Do you provide customized training for engineering teams?
+                              </button>
+                            </h2>
+                            <div
+                              id="collapseThree"
+                              className="accordion-collapse collapse"
+                              aria-labelledby="headingThree"
+                              data-bs-parent="#accordionExample"
+                            >
+                              <div className="ed-faq__accordion-body">
+                                <p className="ed-faq__accordion-text">
+                                  Yes. We specialize in custom training pathways for embedded systems, 5G, AI, and software engineering
                                 </p>
                               </div>
                             </div>
@@ -1568,7 +1382,7 @@ export default function Home() {
                                 aria-expanded="false"
                                 aria-controls="collapseFour"
                               >
-                                How can I contact a school directly?
+                                5. Are 5G training courses available online?
                               </button>
                             </h2>
                             <div
@@ -1579,9 +1393,154 @@ export default function Home() {
                             >
                               <div className="ed-faq__accordion-body">
                                 <p className="ed-faq__accordion-text">
-                                  Excepteur sint occaecat cupidatat non proident
-                                  sunta in culpa qui officia for this is a for
-                                  that tempor.
+                                  Yes. We offer both online and on-site 5G training certification and 5G technician training programs.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div className="col-lg-12 col-xl-6 col-12">
+                      {/* Faq Content  */}
+                      <div className="ed-faq__content">
+
+                        <div
+                          className="ed-faq__accordion faq-inner accordion"
+                          id="accordionExample"
+                        >
+                          {/* Single Faq */}
+                          <div className="ed-faq__accordion-item">
+                            <h2 className="accordion-header" id="headingOne">
+                              <button
+                                className="accordion-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne"
+                                aria-expanded="true"
+                                aria-controls="collapseOne"
+                              >
+                                6. How can I start with your online class?
+                              </button>
+                            </h2>
+                            <div
+                              id="collapseOne"
+                              className="accordion-collapse collapse show"
+                              aria-labelledby="headingOne"
+                              data-bs-parent="#accordionExample"
+                            >
+                              <div className="ed-faq__accordion-body">
+                                <p className="ed-faq__accordion-text">
+                                  Semiconductors, telecom, manufacturing, banking, digital platforms, and tech-driven enterprises.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Single Faq */}
+                          <div className="ed-faq__accordion-item">
+                            <h2 className="accordion-header" id="headingTwo">
+                              <button
+                                className="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="collapseTwo"
+                              >
+                                7. Do you provide corporate training outside Malaysia?
+                              </button>
+                            </h2>
+                            <div
+                              id="collapseTwo"
+                              className="accordion-collapse collapse"
+                              aria-labelledby="headingTwo"
+                              data-bs-parent="#accordionExample"
+                            >
+                              <div className="ed-faq__accordion-body">
+                                <p className="ed-faq__accordion-text">
+                                  Yes. We deliver programs across Singapore, India, Vietnam, the US, and Canada.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Single Faq */}
+                          <div className="ed-faq__accordion-item">
+                            <h2 className="accordion-header" id="headingThree">
+                              <button
+                                className="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree"
+                                aria-expanded="false"
+                                aria-controls="collapseThree"
+                              >
+                                8.How is Timmins different from other corporate training providers?
+                              </button>
+                            </h2>
+                            <div
+                              id="collapseThree"
+                              className="accordion-collapse collapse"
+                              aria-labelledby="headingThree"
+                              data-bs-parent="#accordionExample"
+                            >
+                              <div className="ed-faq__accordion-body">
+                                <p className="ed-faq__accordion-text">
+                                  We’re practitioner-led, engineering-grade, and deeply specialized in advanced technical capability, not generic soft skills.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Single Faq */}
+                          <div className="ed-faq__accordion-item">
+                            <h2 className="accordion-header" id="headingThree">
+                              <button
+                                className="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree"
+                                aria-expanded="false"
+                                aria-controls="collapseThree"
+                              >
+                                9. Do you offer embedded programming training for IoT or device teams?
+                              </button>
+                            </h2>
+                            <div
+                              id="collapseThree"
+                              className="accordion-collapse collapse"
+                              aria-labelledby="headingThree"
+                              data-bs-parent="#accordionExample"
+                            >
+                              <div className="ed-faq__accordion-body">
+                                <p className="ed-faq__accordion-text">
+                                  Yes. Including kernel, drivers, BSP, Yocto, debugging, and system-level engineering.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Single Faq */}
+                          <div className="ed-faq__accordion-item">
+                            <h2 className="accordion-header" id="headingFour">
+                              <button
+                                className="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour"
+                                aria-expanded="false"
+                                aria-controls="collapseFour"
+                              >
+                                10. Can Timmins design onboarding programs for fresh graduates?
+                              </button>
+                            </h2>
+                            <div
+                              id="collapseFour"
+                              className="accordion-collapse collapse"
+                              aria-labelledby="headingFour"
+                              data-bs-parent="#accordionExample"
+                            >
+                              <div className="ed-faq__accordion-body">
+                                <p className="ed-faq__accordion-text">
+                                  Absolutely. We’ve built multi-year onboarding academies for semiconductor and telecom companies.
                                 </p>
                               </div>
                             </div>
@@ -1593,7 +1552,7 @@ export default function Home() {
                 </div>
               </div>
             </section>
-          </main>
+          </main >
           <div className="footer-bg position-relative">
             <div className="footer-bg__img">
               <img
@@ -1634,23 +1593,18 @@ export default function Home() {
                     <div className="col-lg-6 col-12 order-class">
                       <div className="ed-call-action__content">
                         <div className="ed-section-head">
-                          <span className="ed-section-head__sm-title">
-                            GET STARTED NOW
-                          </span>
+
                           <h3 className="ed-section-head__title">
-                            Affordable Your Online Courses <br />
-                            &amp; Learning Opportunities
+                            Let’s Build Your Team’s Next Capability
                           </h3>
                           <p className="ed-section-head__text">
-                            Excepteur sint occaecat cupidatat non proident sunt in
-                            culpa qui officia deserunt mollit. Excepteur sint
-                            occaecat.
+                            Whether you're planning a new AI initiative, upgrading your embedded systems team, or preparing engineers for new 5G requirements; we’re here to help.
                           </p>
                         </div>
                         <div className="ed-call-action__content-btn">
                           <a href="course-1.html" className="ed-btn">
                             {" "}
-                            Start Learning Today
+                            Book a Consultation
                             <i className="fi fi-rr-arrow-small-right" />{" "}
                           </a>
                         </div>
@@ -1666,28 +1620,16 @@ export default function Home() {
               {/* Footer Top */}
               <div className="ed-footer__top position-relative">
                 <div className="ed-footer__shapes">
-                  <img
-                    className="ed-footer__shape-1"
-                    src="/assets/images/footer/footer-1/shape-1.svg"
-                    alt="shape-1"
-                  />
-                  <img
-                    className="ed-footer__shape-2 rotate-ani"
-                    src="/assets/images/footer/footer-1/shape-2.svg"
-                    alt="shape-2"
-                  />
-                  <img
-                    className="ed-footer__shape-3"
-                    src="/assets/images/footer/footer-1/shape-3.svg"
-                    alt="shape-3"
-                  />
+
+
+
                 </div>
                 <div className="container ed-container">
                   <div className="row g-0">
                     <div className="col-lg-4 col-md-6 col-12">
                       <div className="ed-footer__widget ed-footer__about">
                         <a href="index.html" className="ed-footer__logo">
-                          <img src="/assets/images/logo.svg" alt="footer-logo" />
+                          <img src="/assets/Timmins-img/logo.png" alt="footer-logo" />
                         </a>
                         <p className="ed-footer__about-text">
                           Excepteur sint occaecat cupidatat non proident sunt in
@@ -1734,22 +1676,25 @@ export default function Home() {
                         <h4 className="ed-footer__widget-title">Links</h4>
                         <ul className="ed-footer__widget-links">
                           <li>
-                            <a href="about-1.html">About Us</a>
+                            <a href="about-1.html">Home</a>
                           </li>
                           <li>
-                            <a href="course-1.html">Our Courses</a>
+                            <a href="course-1.html">About</a>
                           </li>
                           <li>
-                            <a href="#">Pricing Plan</a>
+                            <a href="#">Solution</a>
                           </li>
                           <li>
-                            <a href="contact.html">Contact Us</a>
+                            <a href="contact.html">Course</a>
                           </li>
                           <li>
-                            <a href="blog.html">Our News</a>
+                            <a href="blog.html">Training Calender</a>
                           </li>
                           <li>
-                            <a href="faq.html">FAQ’s</a>
+                            <a href="faq.html">Resources</a>
+                          </li>
+                          <li>
+                            <a href="faq.html">Contact</a>
                           </li>
                         </ul>
                       </div>
@@ -1852,8 +1797,8 @@ export default function Home() {
             </footer>
             {/* End Footer Area  */}
           </div>
-        </div>
-      </div>
+        </div >
+      </div >
       {/* Start Login Modal */}
     </>
 
