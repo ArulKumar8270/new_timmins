@@ -1,5 +1,5 @@
 // =========================================================================================
-// * Project Name :  Eduna - Online Education Courses HTML5 Template.
+// * Project Name :  nickname - Online Education Courses HTML5 Template.
 // * File         :  JS Base
 // * Version      :  1.0.0
 // * Author       :  BizanTheme (https://themeforest.net/user/bizantheme)
