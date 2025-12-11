@@ -14,8 +14,8 @@
   justify-content: space-between;
 }
 .ed-topbar__logo img {
-  max-width: 140px;
-  height: 34px;
+  max-width: 124px;
+  /* height: 34px; */
   object-fit: contain;
 }
 .ed-topbar__search {
@@ -260,6 +260,7 @@
   transform: scaleY(0);
   transform-origin: 0 0;
   border-radius: 0px 0px 4px 4px;
+  padding: 0px;
   border-top: 2px solid var(--ed-primary-color);
 }
 

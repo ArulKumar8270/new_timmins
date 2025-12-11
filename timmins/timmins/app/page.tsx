@@ -10,112 +10,102 @@ export default function Home() {
           <main>
             <div
               className="section-bg hero-bg-2 background-image"
-              style={{ backgroundImage: 'url("/assets/images/section-bg-4.png")' }}
+              style={{ backgroundImage: 'url("/assets/New_images/hero_2.png")' }}
             >
-              {/* Start Hero Area */}
-              <section className="ed-hero">
-                <div className="container ed-container-expand">
-                  {/* Hero Element Shape */}
-                  <div className="ed-hero__elements">
-                    <img
-                      className="element-move ed-hero__shape-1"
-                      src="assets/images/hero/home-1/shape-1.svg"
-                      alt="shape-1"
-                    />
-                    <img
-                      className="element-move ed-hero__shape-2"
-                      src="assets/images/hero/home-1/shape-2.svg"
-                      alt="shape-1"
-                    />
-                    <img
-                      className="element-move ed-hero__shape-3"
-                      src="assets/images/hero/home-1/shape-3.svg"
-                      alt="shape-1"
-                    />
-                    <img
-                      className="element-move ed-hero__shape-4"
-                      src="assets/images/hero/home-1/shape-4.svg"
-                      alt="shape-1"
-                    />
-                    <img
-                      className="element-move ed-hero__shape-5"
-                      src="assets/images/hero/home-1/shape-5.png"
-                      alt="shape-5"
-                    />
-                  </div>
-                  <div className="row align-items-center">
-                    <div className="col-lg-6 col-12">
-                      {/* Hero Content */}
-                      <div className="ed-hero__content">
-                        <h1 className="ed-hero__content-title ed-split-text left">
-                          Best <span>Online</span> Platform to Learn Everything
-                        </h1>
-                        <p className="ed-hero__content-text">
-                          Excedteur sint occaecat cupidatat non proident sunt in culpa qui
-                          officia deserunt mollit.
-                        </p>
-                        <div className="ed-hero__btn">
-                          <a href="course-1.html" className="ed-btn">
-                            Find Courses
-                            <i className="fi fi-rr-arrow-small-right" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-12">
-                      {/* Hero Image */}
-                      <div className="ed-hero__image">
-                        <img src="assets/images/hero/home-1/hero-img.png" alt="hero-img" />
-                      </div>
+              
+                {/* Start Hero Area */}
+                <section className="ed-hero">
+                  <div className="container ed-container-expand">
+                    {/* Hero Element Shape */}
+                    {/* <div className="ed-hero__elements">
+                      <img
+                        className="element-move ed-hero__shape-1"
+                        src="/assets/images/hero/home-1/shape-1.svg"
+                        alt="shape-1"
+                      />
+                      <img
+                        className="element-move ed-hero__shape-2"
+                        src="/assets/images/hero/home-1/shape-2.svg"
+                        alt="shape-1"
+                      />
+                      <img
+                        className="element-move ed-hero__shape-3"
+                        src="/assets/images/hero/home-1/shape-3.svg"
+                        alt="shape-1"
+                      />
+                      <img
+                        className="element-move ed-hero__shape-4"
+                        src="/assets/images/hero/home-1/shape-4.svg"
+                        alt="shape-1"
+                      />
+                      <img
+                        className="element-move ed-hero__shape-5"
+                        src="/assets/images/hero/home-1/shape-5.png"
+                        alt="shape-5"
+                      />
+                    </div> */}
+                    <div className="row align-items-center">
                       <div className="col-lg-6 col-12">
-                        {/* Hero Image */}
-                        <div className="ed-hero__image">
-                          <img src="/assets/images/hero/home-1/hero-img.png" alt="hero-img" />
+                        {/* Hero Content */}
+                        <div className="ed-hero__content">
+                          <h1 className="ed-hero__content-title ed-split-text left">
+                            Building Future-Ready Engineering & Tech Teams
+                          </h1>
+                          <p className="ed-hero__content-text">
+                            Timmins builds practical engineering capability in AI, Embedded Systems, 5G, and enterprise agility for teams across ASEAN and North America with 10+ years experience
+                          </p>
+                          <div className="d-flex gap-3">
+                            <div className="ed-hero__btn ed-btn">
+                              <a href="course-1.html">
+                                For Companies – Explore Solutions
+                              </a>
+                            </div>
+                            <div className="ed-hero__btn ed-btn">
+                              <a href="course-1.html">
+                                For Individuals – Browse Public Classes
+                              </a>
+                            </div>
+                          </div>
                         </div>
                       </div>
+
                     </div>
                   </div>
-                </div>
               </section>
 
               {/* End Hero Area */}
             </div>
-            <div className="row justify-content-center">
-              <div className="col-lg-8 col-12">
-                <div className="ed-section-head text-center">
-                  <span className="ed-section-head__sm-title">
-                    COURSE CATEGORIES
-                  </span>
-                  <h3 className="ed-section-head__title m-0 ed-split-text left">
-                    Top Categories You Want to&nbsp;Learn
-                  </h3>
-                </div>
-              </div>
-            </div>
+
             <div
               className="section-bg background-image"
-              style={{ backgroundImage: 'url("/assets/images/section-bg-5.png")' }}
+            // style={{ backgroundImage: 'url("/assets/images/section-bg-5.png")' }}
             >
 
               {/* Start About Area */}
-              <section className="ed-about ed-about--style2 section-gap pt-0 position-relative">
+              <section className="ed-about ed-about--style2 section-gap  position-relative">
                 <div className="container ed-container">
-
-                  <div className="row align-items-center">
+                  <div className="row justify-content-center pb-4">
+                    <div className="col-lg-8 col-12">
+                      <div className="ed-section-head text-center">
+                        <h3 className="ed-section-head__title m-0 ed-split-text left">
+                          Learn the Way That Fits You
+                        </h3>
+                        <p className="ed-section-head__text">
+                          Whether you’re an organization building full-team capability or an individual upgrading your technical career, Timmins offers two learning paths:                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row align-items-center serviceBox">
                     <div className="col-lg-6 col-12">
                       {/* About Content  */}
                       <div className="ed-about__content">
                         <div className="ed-section-head">
-                          <span className="ed-section-head__sm-title">
-                            ABOUT OUR COURSES
-                          </span>
                           <h3 className="ed-section-head__title ed-split-text right">
-                            Digital Online Academy: Your <br />
-                            Path to Creative Excellence
+                            For Companies
                           </h3>
                           <p className="ed-section-head__text">
-                            Excepteur sint occaecat cupidatat non proident sunt in
-                            culpa qui officia deserunt mollit.
+                            Build team-wide capability in AI, embedded systems, and 5G through customized corporate training and consulting. Popular corporate programs:
+
                           </p>
                         </div>
                         <div className="ed-about__feature">
@@ -125,7 +115,7 @@ export default function Home() {
                                 src="/assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Our Expert Trainers
+                              Embedded Systems Engineering
                             </li>
                             <li>
                               <img
@@ -139,21 +129,35 @@ export default function Home() {
                                 src="/assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Easy to follow curriculum
+                              5G R&D & Technician Upskilling
                             </li>
                             <li>
                               <img
                                 src="/assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Lifetime Access
+                              AI Consulting & Applied AI
+                            </li>
+                            <li>
+                              <img
+                                src="/assets/images/icons/icon-check-blue.svg"
+                                alt="icon-check-blue"
+                              />
+                              Customized Technical Training
+                            </li>
+                            <li>
+                              <img
+                                src="/assets/images/icons/icon-check-blue.svg"
+                                alt="icon-check-blue"
+                              />
+                              Corporate Training Malaysia (HRDC Claimable)
                             </li>
                           </ul>
                         </div>
-                        <div className="ed-about__btn">
-                          <a href="course-1.html" className="ed-btn">
-                            Start Learning
-                            <i className="fi fi-rr-arrow-small-right" />
+                        <div className="ed-about__btn ed-btn">
+                          <a href="course-1.html">
+                            Explore B2B Solutions
+                            {/* <i className="fi fi-rr-arrow-small-right" /> */}
                           </a>
                         </div>
                       </div>
@@ -172,17 +176,6 @@ export default function Home() {
                             src="/assets/images/about/about-2/about-img-2.png"
                             alt="about-img-1"
                           />
-                        </div>
-                        <div className="counter-card updown-ani">
-                          <div className="counter-card__icon">
-                            <i className="fi fi-rr-graduation-cap" />
-                          </div>
-                          <div className="counter-card__info">
-                            <h4>
-                              <span className="counter">9394</span>+
-                            </h4>
-                            <p>Enrolled Learners</p>
-                          </div>
                         </div>
                         <div className="ed-about__shapes">
                           <img
@@ -204,7 +197,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="row align-items-center">
+                  <div className="row align-items-center serviceBox">
 
                     <div className="col-lg-6 col-12">
                       {/* About Images  */}
@@ -220,17 +213,6 @@ export default function Home() {
                             src="/assets/images/about/about-2/about-img-2.png"
                             alt="about-img-1"
                           />
-                        </div>
-                        <div className="counter-card updown-ani">
-                          <div className="counter-card__icon">
-                            <i className="fi fi-rr-graduation-cap" />
-                          </div>
-                          <div className="counter-card__info">
-                            <h4>
-                              <span className="counter">9394</span>+
-                            </h4>
-                            <p>Enrolled Learners</p>
-                          </div>
                         </div>
                         <div className="ed-about__shapes">
                           <img
@@ -255,16 +237,13 @@ export default function Home() {
                       {/* About Content  */}
                       <div className="ed-about__content">
                         <div className="ed-section-head">
-                          <span className="ed-section-head__sm-title">
-                            ABOUT OUR COURSES
-                          </span>
                           <h3 className="ed-section-head__title ed-split-text right">
-                            Digital Online Academy: Your <br />
-                            Path to Creative Excellence
+                            For Individuals (Public Classes)
+
                           </h3>
                           <p className="ed-section-head__text">
-                            Excepteur sint occaecat cupidatat non proident sunt in
-                            culpa qui officia deserunt mollit.
+                            Technical courses designed for engineers, fresh graduates, and career switchers. Popular public classes:
+
                           </p>
                         </div>
                         <div className="ed-about__feature">
@@ -274,35 +253,44 @@ export default function Home() {
                                 src="/assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Our Expert Trainers
+                              Embedded Linux Fundamentals
+
                             </li>
                             <li>
                               <img
                                 src="/assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Online Remote Learning
+                              Generative AI & LangChain
+
                             </li>
                             <li>
                               <img
                                 src="/assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Easy to follow curriculum
+                              Android/Kotlin Development
+
                             </li>
                             <li>
                               <img
                                 src="/assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Lifetime Access
+                              5G Fundamentals
+                            </li>
+                            <li>
+                              <img
+                                src="/assets/images/icons/icon-check-blue.svg"
+                                alt="icon-check-blue"
+                              />
+                              SAFe® Scrum Master Certification
                             </li>
                           </ul>
                         </div>
-                        <div className="ed-about__btn">
-                          <a href="course-1.html" className="ed-btn">
-                            Start Learning
-                            <i className="fi fi-rr-arrow-small-right" />
+                        <div className="ed-about__btn ed-btn">
+                          <a href="course-1.html">
+                            Browse Public Classe
                           </a>
                         </div>
                       </div>
@@ -314,7 +302,7 @@ export default function Home() {
             </div>
             <>
               {/* Start About Area */}
-              <section className="ed-about section-gap position-relative">
+              <section className="ed-about position-relative pb-5">
                 <div className="container ed-container">
                   <div className="row align-items-center">
                     <div className="col-lg-6 col-12">
@@ -322,15 +310,15 @@ export default function Home() {
                       <div className="ed-about__content p-0">
                         <div className="ed-section-head">
                           <span className="ed-section-head__sm-title">
-                            WHY CHOOSE EDUNA
+                            Why Timmins
                           </span>
                           <h3 className="ed-section-head__title ed-split-text left">
-                            Digital Online Academy: Your <br />
-                            Path to Creative Excellence
+                            Real engineers. Real practice. Real capability.
+
                           </h3>
                           <p className="ed-section-head__text">
-                            Excedteur sint occaecat cupidatat non proident sunt in culpa qui
-                            officia deserunt mollit.
+                            We are not a generic training vendor. Every program is designed and delivered by practitioners with deep field experience in engineering, telecom, manufacturing, and digital banking.
+
                           </p>
                         </div>
                         <div className="ed-about__feature">
@@ -340,30 +328,39 @@ export default function Home() {
                                 src="assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Our Expert Trainers
+                              Practitioner-Led Delivery — trainers who build systems, not just teach them.
+
                             </li>
                             <li>
                               <img
                                 src="assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Online Remote Learning
+                              Engineering-Grade Depth — technical rigor for real-world complexity.
+
                             </li>
                             <li>
                               <img
                                 src="assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Easy to follow curriculum
+                              Hands-On Learning — labs, debugging, system workflows, AI pipelines, firmware tools.
+
                             </li>
                             <li>
                               <img
                                 src="assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Lifetime Access
+                              Measurable Capability Growth — assessments, dashboards, and skill-mapping.
+
                             </li>
                           </ul>
+                        </div>
+                        <div className="ed-about__btn ed-btn">
+                          <a href="course-1.html">
+                          How We Work 
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -375,17 +372,6 @@ export default function Home() {
                             src="assets/images/about/about-3/about-img.png"
                             alt="about-img"
                           />
-                        </div>
-                        <div className="counter-card updown-ani">
-                          <div className="counter-card__icon">
-                            <i className="fi fi-rr-graduation-cap" />
-                          </div>
-                          <div className="counter-card__info">
-                            <h4>
-                              <span className="counter">3458</span>+
-                            </h4>
-                            <p>Satisfied Students</p>
-                          </div>
                         </div>
                         <div className="ed-about__shapes">
                           <img

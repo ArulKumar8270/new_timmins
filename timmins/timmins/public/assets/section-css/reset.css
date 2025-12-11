@@ -1275,17 +1275,20 @@ p {
 
 /* Theme Button */
 .ed-btn {
-  display: inline-block;
-  padding: 16px 67px 16px 30px;
   background: var(--ed-primary-color);
   color: var(--ed-white-color);
+  border-radius: 52px;
+  height: 52px;
+  padding: 0px 15px;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  border-radius: 52px;
+  transition: all .4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  height: 52px;
-  transition: all 0.4s ease;
+  width: fit-content;
 }
 .ed-btn i {
   position: absolute;

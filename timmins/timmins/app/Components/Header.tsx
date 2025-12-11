@@ -3,7 +3,6 @@ import React from 'react'
 const Header = () => {
     return (
         <>
-
             <div id="preloader">
                 <div id="ed-preloader" className="ed-preloader">
                     <div className="animation-preloader">
@@ -44,44 +43,14 @@ const Header = () => {
                             {/* Mobile Menu Navigation */}
                             <nav className="offcanvas__menu">
                                 <ul className="offcanvas__menu_ul">
-                                    <li className="offcanvas__menu_li">
-                                        <a className="offcanvas__menu_item active" href="index.html">
+                                    <li>
+                                        <a className="offcanvas__menu_item" href="index.html">
                                             Home
                                         </a>
-                                        <ul className="offcanvas__sub_menu">
-                                            <li className="offcanvas__sub_menu_li">
-                                                <a href="index.html" className="offcanvas__sub_menu_item">
-                                                    Home One
-                                                </a>
-                                            </li>
-                                            <li className="offcanvas__sub_menu_li">
-                                                <a
-                                                    href="index-2.html"
-                                                    className="offcanvas__sub_menu_item active"
-                                                >
-                                                    Home Two
-                                                </a>
-                                            </li>
-                                            <li className="offcanvas__sub_menu_li">
-                                                <a href="index-3.html" className="offcanvas__sub_menu_item">
-                                                    Home Three
-                                                </a>
-                                            </li>
-                                            <li className="offcanvas__sub_menu_li">
-                                                <a href="index-4.html" className="offcanvas__sub_menu_item">
-                                                    Home Four
-                                                </a>
-                                            </li>
-                                            <li className="offcanvas__sub_menu_li">
-                                                <a href="index-5.html" className="offcanvas__sub_menu_item">
-                                                    Home Five
-                                                </a>
-                                            </li>
-                                        </ul>
                                     </li>
                                     <li className="offcanvas__menu_li">
                                         <a className="offcanvas__menu_item" href="course-1.html">
-                                            Courses
+                                            About
                                         </a>
                                         <ul className="offcanvas__sub_menu">
                                             <li className="offcanvas__sub_menu_li">
@@ -89,7 +58,7 @@ const Header = () => {
                                                     href="course-1.html"
                                                     className="offcanvas__sub_menu_item"
                                                 >
-                                                    Course One
+                                                    Who We Are
                                                 </a>
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
@@ -97,7 +66,7 @@ const Header = () => {
                                                     href="course-2.html"
                                                     className="offcanvas__sub_menu_item"
                                                 >
-                                                    Course Two
+                                                    Our Approach
                                                 </a>
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
@@ -105,106 +74,47 @@ const Header = () => {
                                                     href="course-3.html"
                                                     className="offcanvas__sub_menu_item"
                                                 >
-                                                    Course Three
-                                                </a>
-                                            </li>
-                                            <li className="offcanvas__sub_menu_li">
-                                                <a
-                                                    href="course-details.html"
-                                                    className="offcanvas__sub_menu_item"
-                                                >
-                                                    Course Details
+                                                    Our 10 Year Journey
                                                 </a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li className="offcanvas__menu_li">
                                         <a className="offcanvas__menu_item" href="javascript:void(0)">
-                                            Pages
+                                            Solutions
                                         </a>
                                         <ul className="offcanvas__sub_menu">
                                             <li className="offcanvas__sub_menu_li">
                                                 <a href="product.html" className="offcanvas__sub_menu_item">
-                                                    Products
-                                                </a>
-                                                <ul className="offcanvas__sub_menu">
-                                                    <li className="offcanvas__sub_menu_li">
-                                                        <a
-                                                            className="offcanvas__sub_menu_item"
-                                                            href="product.html"
-                                                        >
-                                                            Product
-                                                        </a>
-                                                    </li>
-                                                    <li className="offcanvas__sub_menu_li">
-                                                        <a
-                                                            className="offcanvas__sub_menu_item"
-                                                            href="product-details.html"
-                                                        >
-                                                            Product Details
-                                                        </a>
-                                                    </li>
-                                                    <li className="offcanvas__sub_menu_li">
-                                                        <a
-                                                            className="offcanvas__sub_menu_item"
-                                                            href="cart.html"
-                                                        >
-                                                            Product Cart
-                                                        </a>
-                                                    </li>
-                                                    <li className="offcanvas__sub_menu_li">
-                                                        <a
-                                                            className="offcanvas__sub_menu_item"
-                                                            href="checkout.html"
-                                                        >
-                                                            Product Checkout
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li className="offcanvas__sub_menu_li">
-                                                <a href="teacher.html" className="offcanvas__sub_menu_item">
-                                                    Teacher{" "}
-                                                </a>
-                                                <ul className="offcanvas__sub_menu">
-                                                    <li className="offcanvas__sub_menu_li">
-                                                        <a
-                                                            className="offcanvas__sub_menu_item"
-                                                            href="teacher.html"
-                                                        >
-                                                            Teacher
-                                                        </a>
-                                                    </li>
-                                                    <li className="offcanvas__sub_menu_li">
-                                                        <a
-                                                            className="offcanvas__sub_menu_item"
-                                                            href="teacher-details.html"
-                                                        >
-                                                            Teacher Details
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li className="offcanvas__sub_menu_li">
-                                                <a href="faq.html" className="offcanvas__sub_menu_item">
-                                                    Faq
+                                                    Overview
                                                 </a>
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
-                                                <a href="404.html" className="offcanvas__sub_menu_item">
-                                                    404 Error
+                                                <a
+                                                    className="offcanvas__sub_menu_item"
+                                                    href="product.html"
+                                                >
+                                                    Fresh Graduate Onboarding
+                                                </a>
+                                            </li>
+                                            <li className="offcanvas__sub_menu_li">
+                                                <a
+                                                    className="offcanvas__sub_menu_item"
+                                                    href="product-details.html"
+                                                >
+                                                    Training Needs Assessment
                                                 </a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li className="offcanvas__menu_li">
                                         <a className="offcanvas__menu_item" href="blog.html">
-                                            News
+                                            Courses
                                         </a>
                                         <ul className="offcanvas__sub_menu">
                                             <li className="offcanvas__sub_menu_li">
                                                 <a href="blog.html" className="offcanvas__sub_menu_item">
-                                                    Blog
+                                                    Overview
                                                 </a>
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
@@ -212,24 +122,33 @@ const Header = () => {
                                                     href="blog-details.html"
                                                     className="offcanvas__sub_menu_item"
                                                 >
-                                                    Blog Details
+                                                    SFAe Certification
                                                 </a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li className="offcanvas__menu_li">
                                         <a className="offcanvas__menu_item" href="about-1.html">
-                                            About
+                                            Training Calendar
+                                        </a>
+                                    </li>
+                                    <li className="offcanvas__menu_li">
+                                        <a className="offcanvas__menu_item" href="contact.html">
+                                            Resources
+                                            <i className="fi fi-ss-angle-small-down" />
                                         </a>
                                         <ul className="offcanvas__sub_menu">
                                             <li className="offcanvas__sub_menu_li">
-                                                <a href="about-1.html" className="offcanvas__sub_menu_item">
-                                                    About One
+                                                <a href="blog.html" className="offcanvas__sub_menu_item">
+                                                    Case Studies
                                                 </a>
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
-                                                <a href="about-2.html" className="offcanvas__sub_menu_item">
-                                                    About Two
+                                                <a
+                                                    href="blog-details.html"
+                                                    className="offcanvas__sub_menu_item"
+                                                >
+                                                    Blog
                                                 </a>
                                             </li>
                                         </ul>
@@ -248,34 +167,31 @@ const Header = () => {
             {/* End Mobile Menu Offcanvas */}
             {/* Start Header Area */}
             <header className="ed-header ed-header--style2">
-                <div className="container ed-container-expand">
+                <div className="container">
                     <div className="ed-header__inner">
                         <div className="row align-items-center">
-                            <div className="col-lg-2 col-2">
+                            <div className="col-lg-3 col-3">
                                 <div className="ed-header__left--style2">
                                     <div className="ed-header__left-widget--style2">
                                         {/* Logo  */}
                                         <div className="ed-topbar__logo">
                                             <a href="index.html">
-                                                <img src="/assets/Timmins-img/logo.png" alt="logo" />
+                                                <img src="/assets/New_images/logo.png" alt="logo" />
                                             </a>
                                         </div>
-                                        {/* Category Dropdown */}
-
                                     </div>
-                                    {/* Navigation Menu */}
-
                                 </div>
                             </div>
-                            <div className="col-lg-10 col-10">
+                            <div className="col-lg-9 col-9">
                                 {/* Header Right */}
                                 <div className="ed-header__right">
+
+                                    {/* Navigation Menu */}
                                     <nav className="ed-header__navigation">
                                         <ul className="ed-header__menu">
                                             <li className="active">
                                                 <a href="javascript:void(0)">
                                                     Home
-
                                                 </a>
                                             </li>
                                             <li>
@@ -288,39 +204,33 @@ const Header = () => {
                                                         <a href="course-1.html">Who We Are</a>
                                                     </li>
                                                     <li>
-                                                        <a href="course-2.html">our Approach</a>
+                                                        <a href="course-2.html">Our Approach</a>
                                                     </li>
                                                     <li>
-                                                        <a href="course-3.html">Our 10 Years Journey</a>
+                                                        <a href="course-3.html">Our 10 Year Journey</a>
                                                     </li>
-
                                                 </ul>
                                             </li>
                                             <li>
                                                 <a href="javascript:void(0)">
-                                                    Solution
+                                                    Solutions
                                                     <i className="fi fi-ss-angle-small-down" />
                                                 </a>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <a href="javascript:void(0)">
-                                                            Overview
-
-                                                        </a>
+                                                        <a href="faq.html">Overview</a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0)">
-                                                            Fresh Graduate Onboarding
-                                                        </a>
+                                                        <a href="faq.html">Fresh Graduate Onboarding</a>
                                                     </li>
                                                     <li>
-                                                        <a href="faq.html">Training Needs Assignment</a>
+                                                        <a href="404.html">Training Needs Assessment</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
                                                 <a href="javascript:void(0)">
-                                                    Course
+                                                    Courses
                                                     <i className="fi fi-ss-angle-small-down" />
                                                 </a>
                                                 <ul className="sub-menu">
@@ -328,47 +238,40 @@ const Header = () => {
                                                         <a href="blog.html">Overview </a>
                                                     </li>
                                                     <li>
-                                                        <a href="blog-details.html">Domain 1 <i className="fi fi-ss-angle-small-right" /></a>
-
-                                                    </li>
-                                                    <ul>
-                                                        <li>
-                                                            <a href="">Flagship course</a>
-                                                        </li>
-                                                    </ul>
-                                                    <li>
-                                                        <a href="blog-details.html">Safe Certification</a>
+                                                        <a href="blog-details.html">SFAe Certification</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
                                                 <a href="javascript:void(0)">
-                                                    Training Calender
+                                                    Training Calendar
                                                     <i className="fi fi-ss-angle-small-down" />
                                                 </a>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <a href="about-1.html">Month </a>
+                                                        <a href="about-1.html">Overview </a>
                                                     </li>
-                                                    <ul>
-                                                        <li>
-                                                            <a href="about-1.html">Course 1</a>
-                                                        </li>
-                                                    </ul>
+                                                    <li>
+                                                        <a href="about-2.html">SFAe Certification</a>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="contact.html">Resources <i className="fi fi-ss-angle-small-down" /></a>
-
-                                                <ul>
-                                                    <li><a href="contact.htm">Case Studies</a></li>
-                                                    <li><a href="contact.htm">Blog</a></li>
-
+                                                <a href="contact.html">Resources
+                                                    <i className="fi fi-ss-angle-small-down" />
+                                                </a>
+                                                <ul className="sub-menu">
+                                                    <li>
+                                                        <a href="blog.html">Case Studies</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-details.html">Blog</a>
+                                                    </li>
                                                 </ul>
-
                                             </li>
-
-                                            <li><a href="contact.html"> Contact</a></li>
+                                            <li>
+                                                <a href="contact.html">Contact</a>
+                                            </li>
                                         </ul>
                                     </nav>
                                     {/* Mobile Menu Button */}
@@ -384,14 +287,11 @@ const Header = () => {
                                     </button>
                                     {/* End Mobile Menu Button */}
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
-            {/* End Header Area */}
         </>
     )
 }
