@@ -132,7 +132,7 @@ export default function Home() {
                           </ul>
                         </div>
                         <div className="ed-about__btn ed-btn">
-                          <a href="/#">
+                          <a href="course-1.html">
                             Explore B2B Solutions
                             {/* <i className="fi fi-rr-arrow-small-right" /> */}
                           </a>
@@ -141,77 +141,6 @@ export default function Home() {
                     </div>
                     <div className="col-lg-6 col-12">
                       {/* About Images  */}
-                      <div className="ed-about__images ed-about__images--style2">
-                        <div className="ed-about__main-img-style2">
-                          <img
-                            className="ed-about__main-img-1"
-                            src="/assets/images/about/about-2/about-img-1.png"
-                            alt="about-img-1"
-                          />
-                          <img
-                            className="ed-about__main-img-2"
-                            src="/assets/images/about/about-2/about-img-2.png"
-                            alt="about-img-1"
-                          />
-                        </div>
-                        <div className="ed-about__shapes">
-                          <img
-                            className="ed-about__shape-1"
-                            src="/assets/images/about/about-2/shape-1.svg"
-                            alt="shape-1"
-                          />
-                          <img
-                            className="ed-about__shape-2"
-                            src="/assets/images/about/about-2/shape-2.svg"
-                            alt="shape-2"
-                          />
-                          <img
-                            className="ed-about__shape-3 rotate-ani"
-                            src="/assets/images/about/about-2/shape-3.svg"
-                            alt="shape-3"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="row align-items-center serviceBox">
-
-                    <div className="col-lg-6 col-12">
-                      {/* About Images  */}
-                      <div className="ed-about__images ed-about__images--style2">
-                        <div className="ed-about__main-img-style2">
-                          <img
-                            className="ed-about__main-img-1"
-                            src="/assets/images/about/about-2/about-img-1.png"
-                            alt="about-img-1"
-                          />
-                          <img
-                            className="ed-about__main-img-2"
-                            src="/assets/images/about/about-2/about-img-2.png"
-                            alt="about-img-1"
-                          />
-                        </div>
-                        <div className="ed-about__shapes">
-                          <img
-                            className="ed-about__shape-1"
-                            src="/assets/images/about/about-2/shape-1.svg"
-                            alt="shape-1"
-                          />
-                          <img
-                            className="ed-about__shape-2"
-                            src="/assets/images/about/about-2/shape-2.svg"
-                            alt="shape-2"
-                          />
-                          <img
-                            className="ed-about__shape-3 rotate-ani"
-                            src="/assets/images/about/about-2/shape-3.svg"
-                            alt="shape-3"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 col-12">
-                      {/* About Content  */}
                       <div className="ed-about__content">
                         <div className="ed-section-head">
                           <h3 className="ed-section-head__title ed-split-text right">
@@ -266,16 +195,18 @@ export default function Home() {
                           </ul>
                         </div>
                         <div className="ed-about__btn ed-btn">
-                          <a href="/#">
+                          <a href="course-1.html">
                             Browse Public Classe
                           </a>
                         </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
+
               </section>
-              {/* End About Area */}
+
             </div>
             <>
               {/* Start About Area */}
@@ -286,9 +217,9 @@ export default function Home() {
                       {/* About Content  */}
                       <div className="ed-about__content p-0">
                         <div className="ed-section-head">
-                          <span className="ed-section-head__sm-title">
+                          <h2 className="ed-section-head__sm-title">
                             Why Timmins
-                          </span>
+                          </h2>
                           <h3 className="ed-section-head__title ed-split-text left">
                             Real engineers. Real practice. Real capability.
 
@@ -298,42 +229,147 @@ export default function Home() {
 
                           </p>
                         </div>
-                        <div className="ed-about__feature">
-                          <ul className="ed-about__features-list">
-                            <li>
-                              <img
-                                src="assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              Practitioner-Led Delivery — trainers who build systems, not just teach them.
+                        <section className="ed-category section-gap">
+                          <div className="container ed-container">
+                            <div className="row justify-content-center">
+                              <div className="col-lg-8 col-12">
+                                <div className="ed-section-head text-center">
+                                  <span className="ed-section-head__sm-title">COURSE CATEGORIES</span>
+                                  <h3 className="ed-section-head__title m-0 ed-split-text left">
+                                    Top Categories You Want to&nbsp;Learn
+                                  </h3>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="row">
+                              <div className="col-12">
+                                <div className="ed-category__wrapper">
+                                  {/* Single Coure Card  */}
+                                  <a
+                                    href="course-1.html"
+                                    className="ed-category__card wow fadeInUp"
+                                    data-wow-delay=".3s"
+                                    data-wow-duration="1s"
+                                  >
+                                    <div className="ed-category__icon bg-1">
+                                      <img src="assets/images/category/category-1/1.svg" alt="icon" />
+                                    </div>
+                                    <div className="ed-category__info">
+                                      <h4>Business</h4>
+                                      <p>04 Courses</p>
+                                    </div>
+                                  </a>
+                                  {/* Single Coure Card  */}
+                                  <a
+                                    href="course-1.html"
+                                    className="ed-category__card wow fadeInUp"
+                                    data-wow-delay=".5s"
+                                    data-wow-duration="1s"
+                                  >
+                                    <div className="ed-category__icon bg-2">
+                                      <img src="assets/images/category/category-1/2.svg" alt="icon" />
+                                    </div>
+                                    <div className="ed-category__info">
+                                      <h4>Marketing</h4>
+                                      <p>88 Courses</p>
+                                    </div>
+                                  </a>
+                                  {/* Single Coure Card  */}
+                                  <a
+                                    href="course-1.html"
+                                    className="ed-category__card wow fadeInUp"
+                                    data-wow-delay=".7s"
+                                    data-wow-duration="1s"
+                                  >
+                                    <div className="ed-category__icon bg-3">
+                                      <img src="assets/images/category/category-1/3.svg" alt="icon" />
+                                    </div>
+                                    <div className="ed-category__info">
+                                      <h4>Design</h4>
+                                      <p>23 Courses</p>
+                                    </div>
+                                  </a>
+                                  {/* Single Coure Card  */}
+                                  <a
+                                    href="course-1.html"
+                                    className="ed-category__card wow fadeInUp"
+                                    data-wow-delay=".9s"
+                                    data-wow-duration="1s"
+                                  >
+                                    <div className="ed-category__icon bg-4">
+                                      <img src="assets/images/category/category-1/4.svg" alt="icon" />
+                                    </div>
+                                    <div className="ed-category__info">
+                                      <h4>Finance</h4>
+                                      <p>02 Courses</p>
+                                    </div>
+                                  </a>
+                                  {/* Single Coure Card  */}
+                                  <a
+                                    href="course-1.html"
+                                    className="ed-category__card wow fadeInUp"
+                                    data-wow-delay=".3s"
+                                    data-wow-duration="1s"
+                                  >
+                                    <div className="ed-category__icon bg-5">
+                                      <img src="assets/images/category/category-1/5.svg" alt="icon" />
+                                    </div>
+                                    <div className="ed-category__info">
+                                      <h4>Lifestyle</h4>
+                                      <p>29 Courses</p>
+                                    </div>
+                                  </a>
+                                  {/* Single Coure Card  */}
+                                  <a
+                                    href="course-1.html"
+                                    className="ed-category__card wow fadeInUp"
+                                    data-wow-delay=".5s"
+                                    data-wow-duration="1s"
+                                  >
+                                    <div className="ed-category__icon bg-6">
+                                      <img src="assets/images/category/category-1/6.svg" alt="icon" />
+                                    </div>
+                                    <div className="ed-category__info">
+                                      <h4>Cyber</h4>
+                                      <p>45 Courses</p>
+                                    </div>
+                                  </a>
+                                  {/* Single Coure Card  */}
+                                  <a
+                                    href="course-1.html"
+                                    className="ed-category__card wow fadeInUp"
+                                    data-wow-delay=".7s"
+                                    data-wow-duration="1s"
+                                  >
+                                    <div className="ed-category__icon bg-7">
+                                      <img src="assets/images/category/category-1/7.svg" alt="icon" />
+                                    </div>
+                                    <div className="ed-category__info">
+                                      <h4>Development</h4>
+                                      <p>28 Courses</p>
+                                    </div>
+                                  </a>
+                                  {/* Single Coure Card  */}
+                                  <a
+                                    href="course-1.html"
+                                    className="ed-category__card wow fadeInUp"
+                                    data-wow-delay=".9s"
+                                    data-wow-duration="1s"
+                                  >
+                                    <div className="ed-category__icon bg-8">
+                                      <img src="assets/images/category/category-1/8.svg" alt="icon" />
+                                    </div>
+                                    <div className="ed-category__info">
+                                      <h4>Photography</h4>
+                                      <p>03 Courses</p>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
 
-                            </li>
-                            <li>
-                              <img
-                                src="assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              Engineering-Grade Depth — technical rigor for real-world complexity.
-
-                            </li>
-                            <li>
-                              <img
-                                src="assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              Hands-On Learning — labs, debugging, system workflows, AI pipelines, firmware tools.
-
-                            </li>
-                            <li>
-                              <img
-                                src="assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              Measurable Capability Growth — assessments, dashboards, and skill-mapping.
-
-                            </li>
-                          </ul>
-                        </div>
                         <div className="text-decoration-underline">
                           <a href="#">
                             How We Work
