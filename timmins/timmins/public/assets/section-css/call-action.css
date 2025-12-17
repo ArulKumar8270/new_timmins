@@ -40,10 +40,12 @@
   text-align: center;
 }
 .ed-call-action__img img {
-  width: 332px;
-  height: 448px;
   object-fit: cover;
+  padding: 15px;
+  border-radius: 30px;
 }
+
+
 .ed-call-action__img::before {
   position: absolute;
   content: "";

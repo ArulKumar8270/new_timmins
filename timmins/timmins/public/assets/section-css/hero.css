@@ -28,7 +28,7 @@
   content: '';
   width: 100%;
   position: absolute;
-  background: linear-gradient(291deg, #00000000 83% 2%, #ffffffc7 92% -22px);
+  background: linear-gradient(291deg, #f9f9f91c 83% 2%, #ffffffb0 92% -22px);
   top: 0;
   bottom: 0;
 }
@@ -99,7 +99,7 @@
 }
 
 .ed-hero__btn {
-  margin-top: 45px;
+  margin-top: 25px;
 }
 
 .ed-hero__image {
@@ -337,7 +337,7 @@
 .ed-hero.ed-hero--style4 {
   padding-top: 0px;
   margin-top: -128px;
-  background: #ebf5eb;
+  background: var( --bg-light);
   height: 836px;
 }
 

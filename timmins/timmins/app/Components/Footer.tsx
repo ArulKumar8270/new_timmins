@@ -1,52 +1,184 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
+import Script from 'next/script'
 
 const Footer = () => {
+    const [openAccordion, setOpenAccordion] = useState<string | null>(null)
+
+    const toggleAccordion = (section: string) => {
+        setOpenAccordion(openAccordion === section ? null : section)
+    }
+
+    const footerSchema = {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Timmins Training Consulting Sdn. Bhd.",
+        "url": "https://consult-timmins.com",
+        "logo": "https://consult-timmins.com/assets/logo.png",
+        "areaServed": ["MY", "ID", "CA"],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+60327850737",
+            "email": "info@consult-timmins.com",
+            "contactType": "customer service"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/timmins-training-consulting",
+            "https://www.facebook.com/consulttimmins",
+            "https://www.instagram.com/consulttimmins",
+            "https://www.youtube.com/@consulttimmins"
+        ]
+    }
+
     return (
-        <div className="footer-bg position-relative">
-            <section className="ed-call-action position-relative">
-                <div className="container ed-container">
-                    <div className="ed-call-action__inner position-relative">
-                        <div className="ed-call-action__shapes">
-                            <img
-                                className="ed-call-action__shape-1 rotate-ani"
-                                src="/assets/images/call-action/call-action-1/shape-1.svg"
-                                alt="shape-1"
-                            />
-                            <img
-                                className="ed-call-action__shape-2"
-                                src="/assets/images/call-action/call-action-1/shape-2.svg"
-                                alt="shape-2"
-                            />
-                            <img
-                                className="ed-call-action__shape-3 updown-ani"
-                                src="/assets/images/call-action/call-action-1/shape-3.svg"
-                                alt="shape-3"
-                            />
+        <>
+            <footer className="timmins-footer">
+                {/* Top Bar - HRDC Trust Strip */}
+                <div className="footer-trust-bar">
+                    <div className="container ed-container">
+                        <div className="trust-bar-content">
+                            <div className="trust-badges">
+                                <span className="trust-badge">HRDC Registered</span>
+                                <span className="trust-separator">•</span>
+                                <span className="trust-badge">Trusted</span>
+                                <span className="trust-separator">•</span>
+                                <span className="trust-badge">Global</span>
+                            </div>
+                            <div className="trust-message">
+                                <p>
+                                    Every Timmins course is HRDC-claimable — with complete documentation and claim support.
+                                </p>
+                            </div>
+                            <div className="trust-features">
+                                <span className="trust-feature">
+                                    <span className="trust-icon">📄</span> Documentation
+                                </span>
+                                <span className="trust-feature">
+                                    <span className="trust-icon">🧾</span> Claim Support
+                                </span>
+                                <span className="trust-feature">
+                                    <span className="trust-icon">📊</span> Training Reports
+                                </span>
+                            </div>
+                            <div className="trust-ctas">
+                                <a href="/courses" className="cta-button primary">
+                                    📘 View Course Calendar
+                                </a>
+                                <a href="/contact" className="cta-button secondary">
+                                    💬 Contact Us
+                                </a>
+                            </div>
                         </div>
-                        <div className="row">
-                            <div className="col-lg-6 col-12">
-                                <div className="ed-call-action__img">
-                                    <img
-                                        src="/assets/images/call-action/call-action-1/call-action-img.png"
-                                        alt="call-action-img"
-                                    />
+                    </div>
+                </div>
+
+                {/* Main Footer - 4 Columns */}
+                <div className="footer-main">
+                    <div className="container ed-container">
+                        <div className="footer-grid">
+                            {/* Company Column */}
+                            <div className="footer-column">
+                                <button 
+                                    className="footer-column-title mobile-only"
+                                    onClick={() => toggleAccordion('company')}
+                                    aria-expanded={openAccordion === 'company'}
+                                >
+                                    Company
+                                    <span className="accordion-icon">{openAccordion === 'company' ? '−' : '+'}</span>
+                                </button>
+                                <h4 className="footer-column-title desktop-only">Company</h4>
+                                <div className={`footer-column-content ${openAccordion === 'company' ? 'open' : ''}`}>
+                                    <ul className="footer-links">
+                                        <li><a href="/about">About Us</a></li>
+                                        <li><a href="/about#journey">Our Journey (10 Years)</a></li>
+                                        <li><a href="/contact">Contact Us</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-6 col-12 order-class">
-                                <div className="ed-call-action__content">
-                                    <div className="ed-section-head">
 
-                                        <h3 className="ed-section-head__title">
-                                            Let’s Build Your Team’s Next Capability
-                                        </h3>
-                                        <p className="ed-section-head__text">
-                                            Whether you're planning a new AI initiative, upgrading your embedded systems team, or preparing engineers for new 5G requirements; we’re here to help.
-                                        </p>
+                            {/* Solutions Column */}
+                            <div className="footer-column">
+                                <button 
+                                    className="footer-column-title mobile-only"
+                                    onClick={() => toggleAccordion('solutions')}
+                                    aria-expanded={openAccordion === 'solutions'}
+                                >
+                                    Solutions
+                                    <span className="accordion-icon">{openAccordion === 'solutions' ? '−' : '+'}</span>
+                                </button>
+                                <h4 className="footer-column-title desktop-only">Solutions</h4>
+                                <div className={`footer-column-content ${openAccordion === 'solutions' ? 'open' : ''}`}>
+                                    <ul className="footer-links">
+                                        <li><a href="/courses#onboarding">Fresh Graduate Onboarding</a></li>
+                                        <li><a href="/courses#tech-stack">Technology Stack Programs</a></li>
+                                        <li><a href="/courses#ai-consulting">AI Consulting</a></li>
+                                        <li><a href="/courses#safe">SAFe® Certification</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            {/* Resources Column */}
+                            <div className="footer-column">
+                                <button 
+                                    className="footer-column-title mobile-only"
+                                    onClick={() => toggleAccordion('resources')}
+                                    aria-expanded={openAccordion === 'resources'}
+                                >
+                                    Resources
+                                    <span className="accordion-icon">{openAccordion === 'resources' ? '−' : '+'}</span>
+                                </button>
+                                <h4 className="footer-column-title desktop-only">Resources</h4>
+                                <div className={`footer-column-content ${openAccordion === 'resources' ? 'open' : ''}`}>
+                                    <ul className="footer-links">
+                                        <li><a href="/courses">Courses</a></li>
+                                        <li><a href="/courses#calendar">Training Calendar</a></li>
+                                        <li><a href="/insights">Insights & Case Studies</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            {/* Offices Column */}
+                            <div className="footer-column">
+                                <button 
+                                    className="footer-column-title mobile-only"
+                                    onClick={() => toggleAccordion('offices')}
+                                    aria-expanded={openAccordion === 'offices'}
+                                >
+                                    Offices
+                                    <span className="accordion-icon">{openAccordion === 'offices' ? '−' : '+'}</span>
+                                </button>
+                                <h4 className="footer-column-title desktop-only">Offices</h4>
+                                <div className={`footer-column-content ${openAccordion === 'offices' ? 'open' : ''}`}>
+                                    <div className="footer-offices">
+                                        <div className="office-item">
+                                            <span className="office-flag">🇲🇾</span>
+                                            <div className="office-details">
+                                                <strong>Malaysia</strong>
+                                                <p>Kuala Lumpur & Penang</p>
+                                            </div>
+                                        </div>
+                                        <div className="office-item">
+                                            <span className="office-flag">🇮🇩</span>
+                                            <div className="office-details">
+                                                <strong>Indonesia</strong>
+                                                <p>Jakarta Selatan</p>
+                                            </div>
+                                        </div>
+                                        <div className="office-item">
+                                            <span className="office-flag">🇨🇦</span>
+                                            <div className="office-details">
+                                                <strong>Canada</strong>
+                                                <p>Toronto, Ontario</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="ed-call-action__content-btn ed-btn" style={{ backgroundColor: 'var(--ed-secondary-color)' }}>
-                                        <a href="#" >
-                                            {" "}
-                                            Book a Consultation
+                                    <div className="footer-contact-info">
+                                        <a href="mailto:info@consult-timmins.com" className="contact-link">
+                                            ✉️ info@consult-timmins.com
+                                        </a>
+                                        <a href="tel:+60327850737" className="contact-link">
+                                            📞 +60 3 2785 0737
                                         </a>
                                     </div>
                                 </div>
@@ -54,141 +186,80 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-            <div className="footer-bg__img">
-                <img
-                    src="/assets/images/footer/footer-2/footer-bg.png"
-                    alt="footer-bg-img"
-                />
-            </div>
-            {/* Start Call Action Area */}
 
-            {/* End Call Action Area */}
-            <div className="footer-bg position-relative">
-                <div className="footer-bg__img">
-                    <img
-                        src="/assets/New_images/footerbg.jpg"
-                        alt="footer-bg-img"
-                    />
+                {/* Bottom Bar - Social & Legal */}
+                <div className="footer-bottom">
+                    <div className="container ed-container">
+                        <div className="footer-bottom-content">
+                            <div className="footer-social">
+                                <a 
+                                    href="https://www.linkedin.com/company/timmins-training-consulting" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    aria-label="LinkedIn Page"
+                                    className="social-link"
+                                >
+                                    🔗 LinkedIn
+                                </a>
+                                <a 
+                                    href="https://www.instagram.com/consulttimmins" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    aria-label="Instagram Page"
+                                    className="social-link"
+                                >
+                                    🔗 Instagram
+                                </a>
+                                <a 
+                                    href="https://www.facebook.com/consulttimmins" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    aria-label="Facebook Page"
+                                    className="social-link"
+                                >
+                                    🔗 Facebook
+                                </a>
+                                <a 
+                                    href="https://www.youtube.com/@consulttimmins" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    aria-label="YouTube Channel"
+                                    className="social-link"
+                                >
+                                    🔗 YouTube
+                                </a>
+                            </div>
+                            <div className="footer-certifications">
+                                <span className="cert-badge">
+                                    🏅 Bronze Partner – Scaled Agile Inc.
+                                </span>
+                                <span className="cert-separator">|</span>
+                                <span className="cert-badge">
+                                    🏛️ HRDC Registered
+                                </span>
+                                <span className="cert-separator">|</span>
+                                <span className="cert-badge">
+                                    🌍 Global Capability Partner
+                                </span>
+                            </div>
+                            <p className="footer-copyright">
+                                © 2015–2025 Timmins Training Consulting Sdn. Bhd. | All Rights Reserved
+                            </p>
+                        </div>
+                    </div>
                 </div>
+            </footer>
 
-                {/* Footer Links Section */}
-                <footer className="ed-footer position-relative">
-                    <div className="position-relative">
-                        <div className="container ed-container">
-                            {/* Top Section - HRDC Badge */}
-                            <div className="border-b">
-                                <div className="container ed-container pb-4 pt-5">
-                                    <div className="text-center max-w-4xl mx-auto">
-                                        <h3 className="text-2xl sm:text-3xl font-bold mb-4 ">
-                                            Registered. Reliable. Ready.
-                                        </h3>
-                                        <p className="text-base sm:text-lg /90 mb-6 flex items-center justify-center gap-2">
-                                            Your Trusted HRD Corp Registered Training Provider
-                                            <span className="inline-flex items-center justify-center w-6 h-6 bg-green-500 rounded  text-sm">
-                                                ✓
-                                            </span>
-                                        </p>
-                                        <p className="text-sm sm:text-base /70 mb-8 leading-relaxed">
-                                            Every Timmins course is HRDC-claimable — Complete with documentation, Claim Support, and Attendance Reporting.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr className='my-0' />
-                            <div className="row fotterbgstyle">
-                                <div className="col-12 col-md-6">
-                                    <div className="ed-footer__widget contact-widgetjustify-content-between">
-                                        <div className="ed-footer__contact">
-                                            <div className="ed-footer__contact-icon">
-                                                <span className="text-xl">🇲🇾</span>
-                                            </div>
-                                            <div className="ed-footer__contact-info">
-                                                <span>Malaysia</span>
-                                                <a href="#">Kuala Lumpur & Penang</a>
-                                            </div>
-                                        </div>
-                                        <div className="ed-footer__contact">
-                                            <div className="ed-footer__contact-icon">
-                                                <span className="text-xl">🇮🇩</span>
-                                            </div>
-                                            <div className="ed-footer__contact-info">
-                                                <span>Indonesia</span>
-                                                <a href="#">Jakarta Selatan</a>
-                                            </div>
-                                        </div>
-                                        <div className="ed-footer__contact">
-                                            <div className="ed-footer__contact-icon">
-                                                <span className="text-xl">🇨🇦</span>
-                                            </div>
-                                            <div className="ed-footer__contact-info">
-                                                <span>Canada</span>
-                                                <a href="#">Toronto, Ontario</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-12 col-md-6">
-                                    <div className="ed-footer__widget contact-widget justify-content-between">
-                                        <div className="d-flex flex-column gap-2 mb-2">
-                                            <label className="text-sm text-white/60">Email</label>
-                                            <a href="mailto:nickname@gmail.com">nickname@gmail.com</a>
-                                        </div>
-                                        <div className="d-flex flex-column gap-2">
-                                            <label className="text-sm text-white/60">Phone</label>
-                                            <a href="tel:+60327850737">+60 3 2785 0737</a>
-                                        </div>
-                                        <div className="ed-auth__modal-third-party">
-                                            <ul className="ed-auth__modal-third-party-list">
-                                                <li>
-                                                    <a className="google-login" href="https://www.google.com/"><img src="assets/images/icons/icon-color-google.svg" alt="icon-color-google" /></a>
-                                                </li>
-
-                                                <li>
-                                                    <a className="facebook-login" href="https://facebook.com/"><img src="assets/images/icons/icon-color-facebook.svg" alt="icon-color-facebook" /></a>
-                                                </li>
-                                                <li>
-                                                    <a className="linkedin-login" href="https://www.linkedin.com/"><img src="assets/images/icons/icon-color-linkedin.svg" alt="icon-color-linkedin" /></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Footer Bottom */}
-                    <div className="ed-footer__bottom">
-                        <div className="container ed-container">
-                            <div className="row">
-                                <div className="col-12">
-                                    <p className="ed-footer__copyright-text">
-                                        © 2015–2025 Timmins Training Consulting Sdn. Bhd. All Rights Reserved.
-                                    </p>
-                                    <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-white/60 mt-3">
-                                        <span className="flex items-center gap-2">
-                                            <i className="fas fa-award text-[#faaa2e] text-sm"></i>
-                                            Bronze Partner – Scaled Agile Inc.
-                                        </span>
-                                        <span className="hidden sm:inline text-white/30">|</span>
-                                        <span className="flex items-center gap-2">
-                                            <i className="fas fa-building text-[#faaa2e] text-sm"></i>
-                                            HRDC Registered
-                                        </span>
-                                        <span className="hidden sm:inline text-white/30">|</span>
-                                        <span className="flex items-center gap-2">
-                                            <i className="fas fa-globe text-[#faaa2e] text-sm"></i>
-                                            Global Capability Partner
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </div>
+            {/* Schema Markup */}
+            <Script
+                id="footer-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(footerSchema)
+                }}
+            />
+        </>
     )
 }
+
 export default Footer

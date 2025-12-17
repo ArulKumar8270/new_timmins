@@ -280,9 +280,9 @@
 
 /* Course Style 5  */
 .ed-course.ed-course--style-5 {
-  background: #fff2cc;
-  overflow: hidden;
   z-index: 1;
+  overflow: hidden;
+  background: #eee3f4;
 }
 .ed-course.ed-course--style-5::before,
 .ed-course.ed-course--style-5::after {
@@ -347,7 +347,7 @@
   gap: 32px;
   position: relative;
   z-index: 1;
-  padding: 32px 32px 32px 0px;
+  padding: 16px 34px 15px 0;
   background: transparent;
   align-items: center;
 }

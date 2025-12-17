@@ -11,7 +11,7 @@ export default function Home() {
           <main>
             <div
               className="section-bg hero-bg-2 background-image"
-              style={{ backgroundImage: 'url("/assets/New_images/hero_2.png")' }}
+              style={{ backgroundImage: 'url("/assets/New_images/hero_2.jpg")' }}
             >
 
               {/* Start Hero Area */}
@@ -27,7 +27,7 @@ export default function Home() {
                         <p className="ed-hero__content-text">
                           Timmins builds practical engineering capability in AI, Embedded Systems, 5G, and enterprise agility for teams across ASEAN and North America with 10+ years experience
                         </p>
-                        <p className="badge-container">
+                        <p className="badge-container mt-2">
                           <img src="/assets/New_images/badge.png" alt="hero-image" />
                           <span>HRDC Claimable Training available for Malaysian employers.</span>
                         </p>
@@ -53,6 +53,208 @@ export default function Home() {
               {/* End Hero Area */}
             </div>
 
+            <section className="ed-partner mt-5">
+              <div className="container ed-container">
+                <div className="row">
+                  {/* <div className="col-12">
+                    <div className="ed-partner__section-head">
+                      <h3 className="ed-partner__section-head-title">
+                        Get in touch with the <span>250+</span> companies who
+                        Collaboration us
+                      </h3>
+                    </div>
+                  </div> */}
+                </div>
+                <div className="row">
+                  <div className="col-12">
+                    <div className="owl-carousel ed-partner__slider">
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/Cisco_logo_blue_2016.svg.png"
+                          alt="Cisco"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/citigroup.png"
+                          alt="Citigroup"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/dbs.png"
+                          alt="DBS"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/digi company.jpeg"
+                          alt="Digi"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/dxc tech.jpeg"
+                          alt="DXC Technology"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/elnusa.png"
+                          alt="Elnusa"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/enquest.jpeg"
+                          alt="Enquest"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/epsilon.jpeg"
+                          alt="Epsilon"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/german_malaysian_institute_logo.jpeg"
+                          alt="German Malaysian Institute"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/GKL1_Telkomsel - Koleksilogo.com.jpg"
+                          alt="Telkomsel"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/hongleong bank.jpg"
+                          alt="Hong Leong Bank"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/indosar-ooredoo-l-min.jpg"
+                          alt="Indosat Ooredoo"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/infineon.png"
+                          alt="Infineon"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/maxis-logo.jpg"
+                          alt="Maxis"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/micost.png"
+                          alt="Micost"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/mof khazanah treasury.png"
+                          alt="MOF Khazanah Treasury"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/motorola-logo-png_seeklogo-95176.png"
+                          alt="Motorola"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/olx.png"
+                          alt="OLX"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/qualcomm.png"
+                          alt="Qualcomm"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/telecom malaysia.png"
+                          alt="Telekom Malaysia"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/telkom metra.png"
+                          alt="Telkom Metra"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/telkomsat.png"
+                          alt="Telkomsat"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/umobile.png"
+                          alt="U Mobile"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/uniKL.jpeg"
+                          alt="UniKL"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/Webe-with-TM-Group_01.png"
+                          alt="Webe TM Group"
+                        />
+                      </a>
+                      {/* Single Slider  */}
+                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
+                        <img
+                          src="/assets/New_images/clients/YTL_Corporation_Berhad_Logo_(former).svg.png"
+                          alt="YTL Corporation"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
             <div
               className="section-bg background-image"
             // style={{ backgroundImage: 'url("/assets/images/section-bg-5.png")' }}
@@ -72,7 +274,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="row align-items-center serviceBox">
+                  <div className="row serviceBox">
                     <div className="col-lg-6 col-12">
                       {/* About Content  */}
                       <div className="ed-about__content">
@@ -132,7 +334,7 @@ export default function Home() {
                           </ul>
                         </div>
                         <div className="ed-about__btn ed-btn">
-                          <a href="course-1.html">
+                          <a href="/courses">
                             Explore B2B Solutions
                             {/* <i className="fi fi-rr-arrow-small-right" /> */}
                           </a>
@@ -195,7 +397,7 @@ export default function Home() {
                           </ul>
                         </div>
                         <div className="ed-about__btn ed-btn">
-                          <a href="course-1.html">
+                          <a href="#">
                             Browse Public Classe
                           </a>
                         </div>
@@ -210,198 +412,85 @@ export default function Home() {
             </div>
             <>
               {/* Start About Area */}
-              <section className="ed-about position-relative pb-5">
-                <div className="container ed-container">
-                  <div className="row align-items-center">
-                    <div className="col-lg-6 col-12">
-                      {/* About Content  */}
-                      <div className="ed-about__content p-0">
-                        <div className="ed-section-head">
-                          <h2 className="ed-section-head__sm-title">
-                            Why Timmins
-                          </h2>
-                          <h3 className="ed-section-head__title ed-split-text left">
-                            Real engineers. Real practice. Real capability.
-
-                          </h3>
-                          <p className="ed-section-head__text">
-                            We are not a generic training vendor. Every program is designed and delivered by practitioners with deep field experience in engineering, telecom, manufacturing, and digital banking.
-
-                          </p>
-                        </div>
-                        <section className="ed-category section-gap">
-                          <div className="container ed-container">
-                            <div className="row justify-content-center">
-                              <div className="col-lg-8 col-12">
-                                <div className="ed-section-head text-center">
-                                  <span className="ed-section-head__sm-title">COURSE CATEGORIES</span>
-                                  <h3 className="ed-section-head__title m-0 ed-split-text left">
-                                    Top Categories You Want to&nbsp;Learn
-                                  </h3>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="row">
-                              <div className="col-12">
-                                <div className="ed-category__wrapper">
-                                  {/* Single Coure Card  */}
-                                  <a
-                                    href="course-1.html"
-                                    className="ed-category__card wow fadeInUp"
-                                    data-wow-delay=".3s"
-                                    data-wow-duration="1s"
-                                  >
-                                    <div className="ed-category__icon bg-1">
-                                      <img src="assets/images/category/category-1/1.svg" alt="icon" />
-                                    </div>
-                                    <div className="ed-category__info">
-                                      <h4>Business</h4>
-                                      <p>04 Courses</p>
-                                    </div>
-                                  </a>
-                                  {/* Single Coure Card  */}
-                                  <a
-                                    href="course-1.html"
-                                    className="ed-category__card wow fadeInUp"
-                                    data-wow-delay=".5s"
-                                    data-wow-duration="1s"
-                                  >
-                                    <div className="ed-category__icon bg-2">
-                                      <img src="assets/images/category/category-1/2.svg" alt="icon" />
-                                    </div>
-                                    <div className="ed-category__info">
-                                      <h4>Marketing</h4>
-                                      <p>88 Courses</p>
-                                    </div>
-                                  </a>
-                                  {/* Single Coure Card  */}
-                                  <a
-                                    href="course-1.html"
-                                    className="ed-category__card wow fadeInUp"
-                                    data-wow-delay=".7s"
-                                    data-wow-duration="1s"
-                                  >
-                                    <div className="ed-category__icon bg-3">
-                                      <img src="assets/images/category/category-1/3.svg" alt="icon" />
-                                    </div>
-                                    <div className="ed-category__info">
-                                      <h4>Design</h4>
-                                      <p>23 Courses</p>
-                                    </div>
-                                  </a>
-                                  {/* Single Coure Card  */}
-                                  <a
-                                    href="course-1.html"
-                                    className="ed-category__card wow fadeInUp"
-                                    data-wow-delay=".9s"
-                                    data-wow-duration="1s"
-                                  >
-                                    <div className="ed-category__icon bg-4">
-                                      <img src="assets/images/category/category-1/4.svg" alt="icon" />
-                                    </div>
-                                    <div className="ed-category__info">
-                                      <h4>Finance</h4>
-                                      <p>02 Courses</p>
-                                    </div>
-                                  </a>
-                                  {/* Single Coure Card  */}
-                                  <a
-                                    href="course-1.html"
-                                    className="ed-category__card wow fadeInUp"
-                                    data-wow-delay=".3s"
-                                    data-wow-duration="1s"
-                                  >
-                                    <div className="ed-category__icon bg-5">
-                                      <img src="assets/images/category/category-1/5.svg" alt="icon" />
-                                    </div>
-                                    <div className="ed-category__info">
-                                      <h4>Lifestyle</h4>
-                                      <p>29 Courses</p>
-                                    </div>
-                                  </a>
-                                  {/* Single Coure Card  */}
-                                  <a
-                                    href="course-1.html"
-                                    className="ed-category__card wow fadeInUp"
-                                    data-wow-delay=".5s"
-                                    data-wow-duration="1s"
-                                  >
-                                    <div className="ed-category__icon bg-6">
-                                      <img src="assets/images/category/category-1/6.svg" alt="icon" />
-                                    </div>
-                                    <div className="ed-category__info">
-                                      <h4>Cyber</h4>
-                                      <p>45 Courses</p>
-                                    </div>
-                                  </a>
-                                  {/* Single Coure Card  */}
-                                  <a
-                                    href="course-1.html"
-                                    className="ed-category__card wow fadeInUp"
-                                    data-wow-delay=".7s"
-                                    data-wow-duration="1s"
-                                  >
-                                    <div className="ed-category__icon bg-7">
-                                      <img src="assets/images/category/category-1/7.svg" alt="icon" />
-                                    </div>
-                                    <div className="ed-category__info">
-                                      <h4>Development</h4>
-                                      <p>28 Courses</p>
-                                    </div>
-                                  </a>
-                                  {/* Single Coure Card  */}
-                                  <a
-                                    href="course-1.html"
-                                    className="ed-category__card wow fadeInUp"
-                                    data-wow-delay=".9s"
-                                    data-wow-duration="1s"
-                                  >
-                                    <div className="ed-category__icon bg-8">
-                                      <img src="assets/images/category/category-1/8.svg" alt="icon" />
-                                    </div>
-                                    <div className="ed-category__info">
-                                      <h4>Photography</h4>
-                                      <p>03 Courses</p>
-                                    </div>
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-
-                        <div className="text-decoration-underline">
-                          <a href="#">
-                            How We Work
-                          </a>
-                        </div>
+              <section className="ed-about position-relative section-gap pt-0">
+                <div className="container-fluid">
+                  <div className="row justify-content-center pb-4">
+                    <div className="col-lg-8 col-12">
+                      <div className="ed-section-head text-center">
+                        <h2 className="ed-section-head__title ed-split-text left">
+                          Why Timmins
+                        </h2>
+                        <p>Real engineers. Real practice. Real capability.</p>
+                        <p className="ed-section-head__text">
+                          We are not a generic training vendor. Every program is designed and delivered by practitioners with deep field experience in engineering, telecom, manufacturing, and digital banking.
+                        </p>
                       </div>
                     </div>
-                    <div className="col-lg-6 col-12">
-                      {/* About Images  */}
-                      <div className="ed-about__images">
-                        <div className="ed-about__main-img">
-                          <img
-                            src="assets/images/about/about-3/about-img.png"
-                            alt="about-img"
-                          />
-                        </div>
-                        <div className="ed-about__shapes">
-                          <img
-                            className="ed-about__shape-1"
-                            src="assets/images/about/about-1/shape-1.svg"
-                            alt="shape-1"
-                          />
-                          <img
-                            className="ed-about__shape-2"
-                            src="assets/images/about/about-1/shape-2.svg"
-                            alt="shape-2"
-                          />
-                          <img
-                            className="ed-about__shape-3 rotate-ani"
-                            src="assets/images/about/about-1/shape-3.svg"
-                            alt="shape-3"
-                          />
+                    <div className="row">
+                      <div className="col-12">
+                        <div className="ed-category__wrapper">
+                          {/* Single Coure Card  */}
+                          <a
+                            href="/courses"
+                            className="ed-category__card wow fadeInUp"
+                            data-wow-delay=".3s"
+                            data-wow-duration="1s"
+                          >
+                            {/* <div className="ed-category__icon bg-1">
+                              <img src="assets/images/category/category-1/1.svg" alt="icon" />
+                            </div> */}
+                            <div className="ed-category__info">
+                              <h4>Practitioner-Led Delivery</h4>
+                              <p>trainers who build systems, not just teach them.</p>
+                            </div>
+                          </a>
+                          {/* Single Coure Card  */}
+                          <a
+                            href="/courses"
+                            className="ed-category__card wow fadeInUp"
+                            data-wow-delay=".5s"
+                            data-wow-duration="1s"
+                          >
+                            {/* <div className="ed-category__icon bg-2">
+                              <img src="assets/images/category/category-1/2.svg" alt="icon" />
+                            </div> */}
+                            <div className="ed-category__info">
+                              <h4>Engineering-Grade Depth</h4>
+                              <p>technical rigor for real-world complexity.                              </p>
+                            </div>
+                          </a>
+                          {/* Single Coure Card  */}
+                          <a
+                            href="/courses"
+                            className="ed-category__card wow fadeInUp"
+                            data-wow-delay=".7s"
+                            data-wow-duration="1s"
+                          >
+                            {/* <div className="ed-category__icon bg-3">
+                              <img src="assets/images/category/category-1/3.svg" alt="icon" />
+                            </div> */}
+                            <div className="ed-category__info">
+                              <h4>Hands-On Learning</h4>
+                              <p>labs, debugging, system workflows, AI pipelines, firmware tools.
+                              </p>
+                            </div>
+                          </a>
+                          {/* Single Coure Card  */}
+                          <a
+                            href="/courses"
+                            className="ed-category__card wow fadeInUp"
+                            data-wow-delay=".9s"
+                            data-wow-duration="1s"
+                          >
+                            {/* <div className="ed-category__icon bg-4">
+                              <img src="assets/images/category/category-1/4.svg" alt="icon" />
+                            </div> */}
+                            <div className="ed-category__info">
+                              <h4>Measurable Capability Growth</h4>
+                              <p> assessments, dashboards, and skill-mapping.</p>
+                            </div>
+                          </a>
+
                         </div>
                       </div>
                     </div>
@@ -457,7 +546,7 @@ export default function Home() {
                                     <div className="ed-course__image">
                                       <div className="ed-course__main-img">
                                         <img
-                                          src="assets/images/course/course-5/1.png"
+                                          src="/assets/New_images/Embedded Linux public class at Timmins.jpg"
                                           alt="course-img"
                                         />
                                       </div>
@@ -482,7 +571,7 @@ export default function Home() {
                                     <div className="ed-course__image">
                                       <div className="ed-course__main-img">
                                         <img
-                                          src="assets/images/course/course-5/2.png"
+                                          src="/assets/New_images/Power BI public class at timmins.jpg"
                                           alt="course-img"
                                         />
                                       </div>
@@ -505,7 +594,7 @@ export default function Home() {
 
                                       <div className="ed-course__main-img">
                                         <img
-                                          src="assets/images/course/course-5/3.png"
+                                          src="/assets/New_images/Generative AI public class at Timmins.jpg"
                                           alt="course-img"
                                         />
                                       </div>
@@ -531,7 +620,7 @@ export default function Home() {
 
                                       <div className="ed-course__main-img">
                                         <img
-                                          src="assets/images/course/course-5/4.png"
+                                          src="/assets/New_images/kotlin fundamentals public class at Timmins.jpg"
                                           alt="course-img"
                                         />
                                       </div>
@@ -550,238 +639,6 @@ export default function Home() {
                                 </div>
                               </div>
                             </div>
-                            {/* Tab Two */}
-                            <div className="tab-pane fade" id="courseTab2" role="tabpanel">
-                              <div className="row">
-                                {/* Single Course  */}
-                                <div className="col-lg-6 col-12">
-                                  <div className="ed-course__card">
-                                    <div className="ed-course__image">
-                                      <span className="ed-course__price">Free</span>
-                                      <div className="ed-course__main-img">
-                                        <img
-                                          src="assets/images/course/course-5/1.png"
-                                          alt="course-img"
-                                        />
-                                      </div>
-                                      <span className="ed-course__category">Business</span>
-                                    </div>
-                                    <div className="ed-course__content">
-                                      <span className="ed-course__type">
-                                        Online + Onsite
-                                      </span>
-                                      <a href="#">
-                                        Explore Our Undergraduate Programs for Future
-                                        Leaders
-                                      </a>
-                                      <p>
-                                        Excepteur sint occaecat cupidatat non proident sunt
-                                        in culpa qui officia deserunt mollite excepteur
-                                        sint.
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                {/* Single Course  */}
-                                <div className="col-lg-6 col-12">
-                                  <div className="ed-course__card">
-                                    <div className="ed-course__image">
-                                      <span className="ed-course__price">$97</span>
-                                      <div className="ed-course__main-img">
-                                        <img
-                                          src="assets/images/course/course-5/2.png"
-                                          alt="course-img"
-                                        />
-                                      </div>
-                                      <span className="ed-course__category">
-                                        Motivation
-                                      </span>
-                                    </div>
-                                    <div className="ed-course__content">
-                                      <span className="ed-course__type">Only Online</span>
-                                      <a href="#">
-                                        Innovative Graduate Degrees for Career Advancement
-                                      </a>
-                                      <p>
-                                        Excepteur sint occaecat cupidatat non proident sunt
-                                        in culpa qui officia deserunt mollite excepteur
-                                        sint.
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                {/* Single Course  */}
-                                <div className="col-lg-6 col-12">
-                                  <div className="ed-course__card">
-                                    <div className="ed-course__image">
-                                      <span className="ed-course__price">$38</span>
-                                      <div className="ed-course__main-img">
-                                        <img
-                                          src="assets/images/course/course-5/3.png"
-                                          alt="course-img"
-                                        />
-                                      </div>
-                                      <span className="ed-course__category">Design</span>
-                                    </div>
-                                    <div className="ed-course__content">
-                                      <span className="ed-course__type">
-                                        Online + Onsite
-                                      </span>
-                                      <a href="#">
-                                        Undergraduate Courses Shaping Tomorrow Visionaries
-                                      </a>
-                                      <p>
-                                        Excepteur sint occaecat cupidatat non proident sunt
-                                        in culpa qui officia deserunt mollite excepteur
-                                        sint.
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                {/* Single Course  */}
-                                <div className="col-lg-6 col-12">
-                                  <div className="ed-course__card">
-                                    <div className="ed-course__image">
-                                      <span className="ed-course__price">$63</span>
-                                      <div className="ed-course__main-img">
-                                        <img
-                                          src="assets/images/course/course-5/4.png"
-                                          alt="course-img"
-                                        />
-                                      </div>
-                                      <span className="ed-course__category">Marketing</span>
-                                    </div>
-                                    <div className="ed-course__content">
-                                      <span className="ed-course__type">Onsite</span>
-                                      <a href="#">
-                                        Graduate Programs Designed for Real-World Success
-                                      </a>
-                                      <p>
-                                        Excepteur sint occaecat cupidatat non proident sunt
-                                        in culpa qui officia deserunt mollite excepteur
-                                        sint.
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            {/* Tab Three */}
-                            <div className="tab-pane fade" id="courseTab3" role="tabpanel">
-                              <div className="row">
-                                {/* Single Course  */}
-                                <div className="col-lg-6 col-12">
-                                  <div className="ed-course__card">
-                                    <div className="ed-course__image">
-                                      <span className="ed-course__price">Free</span>
-                                      <div className="ed-course__main-img">
-                                        <img
-                                          src="assets/images/course/course-5/1.png"
-                                          alt="course-img"
-                                        />
-                                      </div>
-                                      <span className="ed-course__category">Business</span>
-                                    </div>
-                                    <div className="ed-course__content">
-                                      <span className="ed-course__type">
-                                        Online + Onsite
-                                      </span>
-                                      <a href="#">
-                                        Explore Our Undergraduate Programs for Future
-                                        Leaders
-                                      </a>
-                                      <p>
-                                        Excepteur sint occaecat cupidatat non proident sunt
-                                        in culpa qui officia deserunt mollite excepteur
-                                        sint.
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                {/* Single Course  */}
-                                <div className="col-lg-6 col-12">
-                                  <div className="ed-course__card">
-                                    <div className="ed-course__image">
-                                      <span className="ed-course__price">$97</span>
-                                      <div className="ed-course__main-img">
-                                        <img
-                                          src="assets/images/course/course-5/2.png"
-                                          alt="course-img"
-                                        />
-                                      </div>
-                                      <span className="ed-course__category">
-                                        Motivation
-                                      </span>
-                                    </div>
-                                    <div className="ed-course__content">
-                                      <span className="ed-course__type">Only Online</span>
-                                      <a href="#">
-                                        Innovative Graduate Degrees for Career Advancement
-                                      </a>
-                                      <p>
-                                        Excepteur sint occaecat cupidatat non proident sunt
-                                        in culpa qui officia deserunt mollite excepteur
-                                        sint.
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                {/* Single Course  */}
-                                <div className="col-lg-6 col-12">
-                                  <div className="ed-course__card">
-                                    <div className="ed-course__image">
-                                      <span className="ed-course__price">$38</span>
-                                      <div className="ed-course__main-img">
-                                        <img
-                                          src="assets/images/course/course-5/3.png"
-                                          alt="course-img"
-                                        />
-                                      </div>
-                                      <span className="ed-course__category">Design</span>
-                                    </div>
-                                    <div className="ed-course__content">
-                                      <span className="ed-course__type">
-                                        Online + Onsite
-                                      </span>
-                                      <a href="#">
-                                        Undergraduate Courses Shaping Tomorrow Visionaries
-                                      </a>
-                                      <p>
-                                        Excepteur sint occaecat cupidatat non proident sunt
-                                        in culpa qui officia deserunt mollite excepteur
-                                        sint.
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                                {/* Single Course  */}
-                                <div className="col-lg-6 col-12">
-                                  <div className="ed-course__card">
-                                    <div className="ed-course__image">
-                                      <span className="ed-course__price">$63</span>
-                                      <div className="ed-course__main-img">
-                                        <img
-                                          src="assets/images/course/course-5/4.png"
-                                          alt="course-img"
-                                        />
-                                      </div>
-                                      <span className="ed-course__category">Marketing</span>
-                                    </div>
-                                    <div className="ed-course__content">
-                                      <span className="ed-course__type">Onsite</span>
-                                      <a href="#">
-                                        Graduate Programs Designed for Real-World Success
-                                      </a>
-                                      <p>
-                                        Excepteur sint occaecat cupidatat non proident sunt
-                                        in culpa qui officia deserunt mollite excepteur
-                                        sint.
-                                      </p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
                           </div>
                         </div>
                         {/* End Tab Details */}
@@ -791,6 +648,14 @@ export default function Home() {
                           <img src="/assets/New_images/badge.png" alt="hero-image" />
                           <span>HRDC Claimable Training available for Malaysian employers.</span>
                         </p>
+
+                      </div>
+                      <div className="d-flex justify-content-center">
+                        <div className="ed-hero__btn ed-btn">
+                          <a href="#">
+                            View Training Calendar
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -839,7 +704,7 @@ export default function Home() {
                           <span>A 10-year partnership enabling 3,000+ engineers to become project-ready in embedded, mobile, 5G, AI, and RF.</span>
 
                         </div>
-
+                        <div className="text-decoration-underline"><a href="#">See All Case Studies</a></div>
                       </div>
                     </div>
                   </div>
@@ -854,7 +719,7 @@ export default function Home() {
                       <div className="ed-course__head position-relative">
                         <a href="#" className="ed-course__img">
                           <img
-                            src="/assets/images/course/course-2/3.png"
+                            src="/assets/New_images/AI Transformation training at Timmins.jpg"
                             alt="course-img"
                           />
                         </a>
@@ -867,6 +732,7 @@ export default function Home() {
                         <div className="ed-course__rattings">
                           <span>7-year capability development in applied AI, analytics, and automation — 50–80% performance improvement.</span>
                         </div>
+                        <div className="text-decoration-underline"><a href="#">See All Case Studies</a></div>
                       </div>
                     </div>
                   </div>
@@ -880,7 +746,7 @@ export default function Home() {
                       <div className="ed-course__head position-relative">
                         <a href="#" className="ed-course__img">
                           <img
-                            src="/assets/images/course/course-2/4.png"
+                            src="/assets/New_images/Mobile development training at Timmins.jpg"
                             alt="course-img"
                           />
                         </a>
@@ -900,14 +766,12 @@ export default function Home() {
                           <span>Mobile Development Enablement - Motorola</span>
 
                         </div>
-                        <div className="ed-course__bottom">
-
-                        </div>
+                        <div className="text-decoration-underline"><a href="#">See All Case Studies</a></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="row justify-content-center mt-5">
+                <div className="row justify-content-center">
                   <div className="ed-section-bottom-btn ed-btn w-auto">
                     <a>
                       View All Courses
@@ -919,7 +783,7 @@ export default function Home() {
             {/* End Course Area */}
 
             {/* Start Why Choose Area */}
-            <section className="position-relative">
+            <section className="position-relative section-gap pt-0">
               <div className="container ed-container position-relative">
                 <div className="row justify-content-center">
                   <div className="col-lg-6 col-md-8 col-12">
@@ -927,6 +791,7 @@ export default function Home() {
                       <h3 className="ed-section-head__title ed-split-text left">
                         A Decade of Engineering Impact
                       </h3>
+                      <p>Languages Delivered: English & Mandarin</p>
                     </div>
                   </div>
                 </div>
@@ -1009,68 +874,7 @@ export default function Home() {
               </div>
             </section>
 
-            <section className="ed-partner section-gap">
-              <div className="container ed-container">
-                <div className="row">
-                  {/* <div className="col-12">
-                    <div className="ed-partner__section-head">
-                      <h3 className="ed-partner__section-head-title">
-                        Get in touch with the <span>250+</span> companies who
-                        Collaboration us
-                      </h3>
-                    </div>
-                  </div> */}
-                </div>
-                <div className="row">
-                  <div className="col-12">
-                    <div className="owl-carousel ed-partner__slider">
-                      {/* Single Slider  */}
-                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
-                        <img
-                          src="assets/images/partner/partner-1/1.svg"
-                          alt="brand-logo"
-                        />
-                      </a>
-                      {/* Single Slider  */}
-                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
-                        <img
-                          src="assets/images/partner/partner-1/2.svg"
-                          alt="brand-logo"
-                        />
-                      </a>
-                      {/* Single Slider  */}
-                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
-                        <img
-                          src="assets/images/partner/partner-1/3.svg"
-                          alt="brand-logo"
-                        />
-                      </a>
-                      {/* Single Slider  */}
-                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
-                        <img
-                          src="assets/images/partner/partner-1/4.svg"
-                          alt="brand-logo"
-                        />
-                      </a>
-                      {/* Single Slider  */}
-                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
-                        <img
-                          src="assets/images/partner/partner-1/5.svg"
-                          alt="brand-logo"
-                        />
-                      </a>
-                      {/* Single Slider  */}
-                      <a href="#" target="_blank" className="ed-parnet__brand-logo">
-                        <img
-                          src="assets/images/partner/partner-1/6.svg"
-                          alt="brand-logo"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+
 
             <div className="section-bg position-relative">
               {/* <div className="section-bg__img style-2">
@@ -1235,15 +1039,72 @@ export default function Home() {
                 </div>
               </section>
             </div>
+
+            <section className="ed-call-action position-relative section-gap pb-0">
+              <div className="container ed-container">
+                <div className="ed-call-action__inner position-relative">
+                  <div className="ed-call-action__shapes">
+                    <img
+                      className="ed-call-action__shape-1 rotate-ani"
+                      src="/assets/images/call-action/call-action-1/shape-1.svg"
+                      alt="shape-1"
+                    />
+                    <img
+                      className="ed-call-action__shape-2"
+                      src="/assets/images/call-action/call-action-1/shape-2.svg"
+                      alt="shape-2"
+                    />
+                    <img
+                      className="ed-call-action__shape-3 updown-ani"
+                      src="/assets/images/call-action/call-action-1/shape-3.svg"
+                      alt="shape-3"
+                    />
+                  </div>
+                  <div className="row">
+                    <div className="col-lg-6 col-12">
+                      <div className="ed-call-action__img">
+                        <img
+                          src="/assets/New_images/final cta section.jpg"
+                          alt="call-action-img"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-6 col-12 order-class">
+                      <div className="ed-call-action__content">
+                        <div className="ed-section-head">
+
+                          <h3 className="ed-section-head__title">
+                            Let’s Build Your Team’s Next Capability
+                          </h3>
+                          <p className="ed-section-head__text">
+                            Whether you're planning a new AI initiative, upgrading your embedded systems team, or preparing engineers for new 5G requirements; we’re here to help.
+                          </p>
+                        </div>
+                        <div className="ed-call-action__content-btn ed-btn" style={{ backgroundColor: 'var(--ed-secondary-color)' }}>
+                          <a href="#" >
+                            {" "}
+                            Book a Consultation
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+
+            <section className="section-gap map-section pb-0">
+              <img src="/assets/New_images/map.png" alt="clients" />
+            </section>
             {/* Start Faq Area */}
             <section className="ed-faq section-gap position-relative">
               <div className="container ed-container">
                 <div className="ed-section-head text-center">
-                  <span className="ed-section-head__sm-title">
-                    FREQUENTLY ASKED QUESTIONS
-                  </span>
+
                   <h3 className="ed-section-head__title text-center">
-                    Most Popular Questions About Our Online Courses
+                    Frequently Asked Questions
                   </h3>
                 </div>
                 <div className="ed-faq__inner position-relative">

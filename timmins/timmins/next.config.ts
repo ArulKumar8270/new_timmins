@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  
+  trailingSlash: false,
   // Image optimization
   images: {
     unoptimized: false, // Enable Next.js image optimization

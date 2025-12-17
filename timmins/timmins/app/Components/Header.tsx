@@ -53,7 +53,7 @@ const Header = () => {
                             {/* Mobile Menu Logo */}
                             <div className="offcanvas-logo">
                                 <a href="#">
-                                    <img src="/assets/images/logo.svg" alt="#" />
+                                    <img src="/assets/New_images/logo.png" alt="#" />
                                 </a>
                             </div>
                             <button

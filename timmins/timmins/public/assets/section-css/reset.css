@@ -25,6 +25,7 @@
   --ed-border-color: #f0f2f2;
   --ed-font-family: "Poppins", sans-serif;
   --ed-font-family-2: Aeonik Pro TRIAL, sans-serif;
+  --bg-light: #b3dbee
 }
 
 a {
@@ -1521,6 +1522,21 @@ p {
   }
 }
 
+
+.map-section {
+  width: 95%;
+  margin: auto;
+  /* height: 200px; */
+  padding: 70px 0px 0px;
+}
+.map-section img {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 0px 17px 0px #cfcfcf;
+  margin: 10px 0px;
+}
 /*============================================================================================
 	End Theme Reset
 ==============================================================================================*/

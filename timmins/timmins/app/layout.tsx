@@ -265,6 +265,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/plugins/css/nice-select.min.css" />
         <link rel="stylesheet" href="/assets/plugins/css/icofont.css" />
         <link rel="stylesheet" href="/assets/plugins/css/uicons.css" />
+        <link rel="stylesheet" href="/assets/section-css/timmins-footer.css" />
       </head>
       <body className="element-wrapper">
         {children}

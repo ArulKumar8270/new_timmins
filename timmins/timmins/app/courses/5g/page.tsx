@@ -1,54 +1,214 @@
 import React from 'react'
-import Header from '../Components/Header'
-import Footer from '../Components/Footer'
+import Header from '../../Components/Header'
+import Footer from '../../Components/Footer'
+
+export const metadata = {
+    title: "5G Engineering Training & Private 5G Deployment | Practitioner-Led | Timmins",
+    description: "Build real 5G deployment capability: RAN, Core, slicing, MEC, private 5G, and latency engineering. Practitioner-led, engineering-grade. HRDC claimable for Malaysia-based employers; global delivery available (ID, CA, US).",
+    keywords: "5G training certification, 5g training courses online, 5g technician training, HRDC claimable training, HRD Corp training provider, Corporate training Malaysia, Embedded systems training",
+    openGraph: {
+        title: "5G Engineering Training & Private 5G Deployment | Practitioner-Led | Timmins",
+        description: "Build real 5G deployment capability: RAN, Core, slicing, MEC, private 5G, and latency engineering. Practitioner-led, engineering-grade. HRDC claimable for Malaysia-based employers; global delivery available (ID, CA, US).",
+        url: "https://timmins-consulting.com/courses/5g",
+        siteName: "Timmins Training Consulting",
+        type: "website",
+    },
+}
+
+const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "EducationalService",
+            "name": "5G Engineering Capability",
+            "url": "https://timmins-consulting.com/courses/5g",
+            "description": "Practitioner-led 5G capability covering NR, RAN, Core, network slicing, O-RAN, NSA to SA migration, and live simulation labs. HRDC claimable for Malaysia-based employers only.",
+            "provider": {
+                "@type": "Organization",
+                "name": "Timmins",
+                "url": "https://timmins-consulting.com",
+                "logo": "https://timmins-consulting.com/logo.png"
+            },
+            "areaServed": [
+                { "@type": "Country", "name": "Malaysia" },
+                { "@type": "Country", "name": "Indonesia" },
+                { "@type": "Country", "name": "Canada" },
+                { "@type": "Country", "name": "United States" }
+            ],
+            "audience": {
+                "@type": "EducationalAudience",
+                "audienceType": "Telecom Engineers, RF/RAN Specialists, Core Engineers, Network Architects, O&M Teams"
+            },
+            "offers": {
+                "@type": "Offer",
+                "eligibleRegion": [
+                    {
+                        "@type": "Country",
+                        "name": "Malaysia",
+                        "disambiguatingDescription": "HRDC claimable for Malaysia-based employers only"
+                    },
+                    { "@type": "Country", "name": "Indonesia" },
+                    { "@type": "Country", "name": "Canada" },
+                    { "@type": "Country", "name": "United States" }
+                ]
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Courses",
+                    "item": "https://timmins-consulting.com/courses"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "5G Engineering Capability",
+                    "item": "https://timmins-consulting.com/courses/5g"
+                }
+            ]
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is the real performance difference between 5G and LTE?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "5G delivers significantly lower latency and higher bandwidth due to NR and 5G Core architecture, while LTE relies on EPC and does not support slicing or ultra-low latency."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does 5G work without Standalone (SA)?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, via NSA. However, full 5G capabilities like slicing and URLLC require SA with 5G Core."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is network slicing deployable or mostly theoretical?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "It is deployable but depends on SA readiness, orchestration maturity, and operator capability."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is 5G reliable enough for industrial IoT?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes in SA environments with QoS slicing and URLLC. Reliability depends on rollout maturity and spectrum configuration."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How does 5G NR improve coverage versus mmWave?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "NR enables flexible spectrum use, while mmWave provides high throughput but needs dense cell planning due to limited range."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do I need LTE or RF background before 5G training?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Not required for fundamentals. RF/LTE experience helps for advanced RAN optimization tracks."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is 5G training hands-on or slide-based?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Training includes live 5G simulation covering NR, RAN, Core, slicing, and O-RAN, ensuring operational capability beyond theory."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does 5G training include NSA to SA migration topics?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Topics include coexistence, EPC versus 5G Core transition, and operational migration paths."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does Timmins provide live 5G RAN, Core, and slicing simulations?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Labs include NR simulation, Core emulation, slicing orchestration, O-RAN components, and KPI fault scenarios."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is HRDC funding available for Timmins 5G training, and who is eligible?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "HRDC applies only to Malaysia-based employers. Global participants may attend under standard billing without HRDC coverage."
+                    }
+                }
+            ]
+        }
+    ]
+}
 
 const page = () => {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+            />
             <Header />
 
             <section className="ed-hero ed-hero--style4">
                 {/* Hero Image One  */}
                 <div className="ed-hero__image--style-4 left-img">
-                    <img src="assets/images/hero/home-4/hero-img-1.png" alt="hero-img-1" />
+                    <img src="/assets/images/hero/home-4/hero-img-1.png" alt="hero-img-1" />
                 </div>
                 {/* Hero Elements Move  */}
                 <div className="ed-hero__elements--style-2">
                     <img
                         className="shape-1 element-move"
-                        src="assets/images/hero/home-4/elements-move/shape-1.svg"
+                        src="/assets/images/hero/home-4/elements-move/shape-1.svg"
                         alt="shape-1"
                     />
                     <img
                         className="shape-2 element-move"
-                        src="assets/images/hero/home-4/elements-move/shape-2.svg"
+                        src="/assets/images/hero/home-4/elements-move/shape-2.svg"
                         alt="shape-2"
                     />
                     <img
                         className="shape-3 element-move"
-                        src="assets/images/hero/home-4/elements-move/shape-3.svg"
+                        src="/assets/images/hero/home-4/elements-move/shape-3.svg"
                         alt="shape-3"
                     />
                     <img
                         className="shape-4 element-move"
-                        src="assets/images/hero/home-4/elements-move/shape-4.svg"
+                        src="/assets/images/hero/home-4/elements-move/shape-4.svg"
                         alt="shape-4"
                     />
                 </div>
                 <div className="ed-hero__fixed-shape">
                     <img
                         className="shape-1"
-                        src="assets/images/hero/home-4/shape-1.svg"
+                        src="/assets/images/hero/home-4/shape-1.svg"
                         alt="shape-1"
                     />
                     <img
                         className="shape-2"
-                        src="assets/images/hero/home-4/vector-1.svg"
+                        src="/assets/images/hero/home-4/vector-1.svg"
                         alt="vector-1"
                     />
                     <img
                         className="shape-3"
-                        src="assets/images/hero/home-4/shape-3.svg"
+                        src="/assets/images/hero/home-4/shape-3.svg"
                         alt="shape-3"
                     />
                 </div>
@@ -67,15 +227,11 @@ const page = () => {
                                     From RAN to Core, slicing to latency engineering, device-to-edge performance, and enterprise-grade private 5G. Timmins builds operational 5G capability for real-world networks.
                                 </p>
 
-                                <div className="ed-hero__btn">
-                                    <a href="course-1.html" className="ed-btn1">
-                                        Contact
-
-                                    </a>
-                                </div>
+                                <span className="ed-hero__content-sm-title mt-3">Book Capability Consultation (button to /contact)</span>
 
                                 <p className="ed-hero__content-text p-0">
-                                    From RAN to Core, slicing to latency engineering, device-to-edge performance, and enterprise-grade private 5G. Timmins builds operational 5G capability for real-world networks.
+                                    HRDC Claimable, Malaysia-Based Employers Only
+                                    Global Delivery Available: Malaysia • Indonesia • Canada • United States
                                 </p>
 
 
@@ -88,66 +244,25 @@ const page = () => {
                     <div className="ed-hero__image-shape">
                         <img
                             className="rotate-ani"
-                            src="assets/images/hero/home-4/shape-2.svg"
+                            src="/assets/images/hero/home-4/shape-2.svg"
                             alt="shape-2"
                         />
                     </div>
                     <div className="ed-hero__image-main">
-                        <img src="assets/images/hero/home-4/hero-img-2.png" alt="hero-img-2" />
+                        <img src="/assets/images/hero/home-4/hero-img-2.png" alt="hero-img-2" />
                     </div>
                 </div>
             </section>
 
 
-            <section className="ed-about ed-about__page section-gap position-relative">
+            <section className="ed-about ed-about__page section-gap position-relative ">
                 <div className="container ed-container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6 col-12">
-                            {/* About Images  */}
-                            <div className="ed-about__images">
-                                <div className="ed-about__main-img">
-                                    <img
-                                        src="assets/images/about/about-1/about-img.png"
-                                        alt="about-img"
-                                    />
-                                </div>
-                                <div className="counter-card updown-ani">
-                                    <div className="counter-card__icon">
-                                        <i className="fi fi-rr-graduation-cap" />
-                                    </div>
-                                    <div className="counter-card__info">
-                                        <h4>
-                                            <span className="counter">9394</span>+
-                                        </h4>
-                                        <p>Enrolled Learners</p>
-                                    </div>
-                                </div>
-                                <div className="ed-about__shapes">
-                                    <img
-                                        className="ed-about__shape-1"
-                                        src="assets/images/about/about-1/shape-1.svg"
-                                        alt="shape-1"
-                                    />
-                                    <img
-                                        className="ed-about__shape-2"
-                                        src="assets/images/about/about-1/shape-2.svg"
-                                        alt="shape-2"
-                                    />
-                                    <img
-                                        className="ed-about__shape-3 rotate-ani"
-                                        src="assets/images/about/about-1/shape-3.svg"
-                                        alt="shape-3"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 col-12">
+                    <div className="row">
+
+                        <div className="col-lg-6 col-12 about-sectionstyle">
                             {/* About Content  */}
-                            <div className="ed-about__content">
+                            <div className="">
                                 <div className="ed-section-head">
-                                    <span className="ed-section-head__sm-title">
-                                        WELCOME TO nickname
-                                    </span>
                                     <h3 className="ed-section-head__title ed-split-text right">
                                         Why 5G Capability Matters for Modern Engineering Teams
                                     </h3>
@@ -159,35 +274,35 @@ const page = () => {
                                     <ul className="ed-about__features-list">
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             ultra-low latency for robotics & automation
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             deterministic networking for manufacturing lines
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             high-density IoT orchestration
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             edge-based compute reliability
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             enterprise private networks for OT security
@@ -195,63 +310,13 @@ const page = () => {
                                     </ul>
 
                                 </div>
+                                <p className="ed-section-head__text pt-4">Teams that see 5G as speed will deploy wrong. Teams that see 5G as a network + compute + orchestration layer will deliver transformation in banking, smart factories, transport, medical instrumentation, and defense.
+                                </p>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <img
-                    className="ed-about__shape-4"
-                    src="assets/images/abstracts/abstract-element-regular.svg"
-                    alt="shape-4"
-                />
-            </section>
-
-
-            <section className="ed-about ed-about__page section-gap position-relative">
-                <div className="container ed-container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6 col-12">
+                        <div className="col-lg-6 col-12 about-sectionstyle1">
                             {/* About Images  */}
-                            <div className="ed-about__images">
-                                <div className="ed-about__main-img">
-                                    <img
-                                        src="assets/images/about/about-1/about-img.png"
-                                        alt="about-img"
-                                    />
-                                </div>
-                                <div className="counter-card updown-ani">
-                                    <div className="counter-card__icon">
-                                        <i className="fi fi-rr-graduation-cap" />
-                                    </div>
-                                    <div className="counter-card__info">
-                                        <h4>
-                                            <span className="counter">9394</span>+
-                                        </h4>
-                                        <p>Enrolled Learners</p>
-                                    </div>
-                                </div>
-                                <div className="ed-about__shapes">
-                                    <img
-                                        className="ed-about__shape-1"
-                                        src="assets/images/about/about-1/shape-1.svg"
-                                        alt="shape-1"
-                                    />
-                                    <img
-                                        className="ed-about__shape-2"
-                                        src="assets/images/about/about-1/shape-2.svg"
-                                        alt="shape-2"
-                                    />
-                                    <img
-                                        className="ed-about__shape-3 rotate-ani"
-                                        src="assets/images/about/about-1/shape-3.svg"
-                                        alt="shape-3"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 col-12">
-                            {/* About Content  */}
-                            <div className="ed-about__content">
+                            <div className="">
                                 <div className="ed-section-head">
 
                                     <h3 className="ed-section-head__title ed-split-text right">
@@ -267,237 +332,143 @@ const page = () => {
                                     <ul className="ed-about__features-list">
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             led by practitioners who deploy 5G, not talk about it
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             covers RAN → Core → MEC → devices → ops
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             embeds telco + manufacturing + banking use cases
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             goes beyond certification to live network behavior, load, jitter, QoS & slicing
                                         </li>
                                     </ul>
-                                    <span className="ed-section-head__sm-title">
+                                    <p className="ed-section-head__text pt-4">
                                         This is not a 5G classroom. This is 5G as multi-industry infrastructure maturity.
 
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <img
-                    className="ed-about__shape-4"
-                    src="assets/images/abstracts/abstract-element-regular.svg"
-                    alt="shape-4"
-                />
-            </section>
-
-
-            <section className="ed-why-choose ed-why-choose--style3 section-gap position-relative">
-                <div className="container ed-container">
-                    <div className="row">
-                        <div className="col-lg-6 col-12">
-                            <div className="ed-w-choose__content">
-                                <div className="ed-section-head">
-
-                                    <h3 className="ed-section-head__title ed-split-text left">
-                                        How Teams Grow in 5G
-                                    </h3>
-                                    <p className="ed-section-head__text">
-                                        Stage & Capability Lift
                                     </p>
                                 </div>
-                                <div className="ed-w-choose__info">
-                                    {/* Single Info  */}
-                                    <div className="ed-w-choose__info-single">
-                                        <div className="ed-w-choose__info-head">
-
-                                            <h5>RF & RAN foundations</h5>
-                                        </div>
-                                        <div className="ed-w-choose__info-bottom">
-                                            <p>
-                                                spectrum, throughput shaping, interference
-                                            </p>
-                                        </div>
-                                    </div>
-                                    {/* Single Info  */}
-                                    <div className="ed-w-choose__info-single">
-                                        <div className="ed-w-choose__info-head">
-
-                                            <h5>5G NR architecture</h5>
-                                        </div>
-                                        <div className="ed-w-choose__info-bottom">
-                                            <p>
-                                                RAN split, QoS, scheduling, massive MIMO
-                                            </p>
-                                        </div>
-                                    </div>
-                                    {/* Single Info  */}
-                                    <div className="ed-w-choose__info-single">
-                                        <div className="ed-w-choose__info-head">
-
-                                            <h5>5G Core</h5>
-                                        </div>
-                                        <div className="ed-w-choose__info-bottom">
-                                            <p>
-                                                AMF, SMF, UPF, slices, SA/NSA modes
-                                            </p>
-                                        </div>
-                                    </div>
-                                    {/* Single Info  */}
-                                    <div className="ed-w-choose__info-single">
-                                        <div className="ed-w-choose__info-head">
-
-                                            <h5>MEC & Edge</h5>
-                                        </div>
-                                        <div className="ed-w-choose__info-bottom">
-                                            <p>
-                                                compute gating, real-time workloads
-                                            </p>
-                                        </div>
-                                    </div>
-                                    {/* Single Info  */}
-                                    <div className="ed-w-choose__info-single">
-                                        <div className="ed-w-choose__info-head">
-
-                                            <h5>Private 5G</h5>
-                                        </div>
-                                        <div className="ed-w-choose__info-bottom">
-                                            <p>
-                                                enterprise network hardening & multi-slice ops
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                    {/* Single Info  */}
-                                    <div className="ed-w-choose__info-single">
-                                        <div className="ed-w-choose__info-head">
-
-                                            <h5>Ops & telemetry</h5>
-                                        </div>
-                                        <div className="ed-w-choose__info-bottom">
-                                            <p>
-                                                jitter, outage triage, QoS enforcement
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <p>Teams graduate not with certificates, but deployment fluency.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 col-12">
-                            <div className="ed-w-choose__images ed-w-choose__images--style3 position-relative">
-                                {/* Why Choose Image  */}
-                                <div className="ed-w-choose__main-img--style2 position-relative">
-                                    <img
-                                        className="why-choose-img-1"
-                                        src="assets/images/why-choose/why-choose-3/img-1.png"
-                                        alt="why-choose-img-1"
-                                    />
-                                    <img
-                                        className="why-choose-img-2"
-                                        src="assets/images/why-choose/why-choose-3/img-2.png"
-                                        alt="why-choose-img-2"
-                                    />
-                                </div>
-                                {/* Counter Card */}
-                                <div className="counter-card updown-ani">
-                                    <div className="counter-card__icon">
-                                        <i className="fi fi-rr-graduation-cap" />
-                                    </div>
-                                    <div className="counter-card__info">
-                                        <h4>
-                                            <span className="counter">9394</span>+
-                                        </h4>
-                                        <p>Enrolled Learners</p>
-                                    </div>
-                                </div>
-                                {/* Shapes Elements */}
-                                <div className="ed-w-choose__shapes">
-                                    <img
-                                        className="ed-w-choose__shape-1 rotate-ani"
-                                        src="assets/images/why-choose/why-choose-3/shape-1.svg"
-                                        alt="shape-1"
-                                    />
-
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-
-
-            <section className="ed-about ed-about__page section-gap position-relative">
+            <section className="ed-course  section-gap position-relative pt-0">
                 <div className="container ed-container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6 col-12">
-                            {/* About Images  */}
-                            <div className="ed-about__images">
-                                <div className="ed-about__main-img">
-                                    <img
-                                        src="assets/images/about/about-1/about-img.png"
-                                        alt="about-img"
-                                    />
-                                </div>
-                                <div className="counter-card updown-ani">
-                                    <div className="counter-card__icon">
-                                        <i className="fi fi-rr-graduation-cap" />
-                                    </div>
-                                    <div className="counter-card__info">
-                                        <h4>
-                                            <span className="counter">9394</span>+
-                                        </h4>
-                                        <p>Enrolled Learners</p>
-                                    </div>
-                                </div>
-                                <div className="ed-about__shapes">
-                                    <img
-                                        className="ed-about__shape-1"
-                                        src="assets/images/about/about-1/shape-1.svg"
-                                        alt="shape-1"
-                                    />
-                                    <img
-                                        className="ed-about__shape-2"
-                                        src="assets/images/about/about-1/shape-2.svg"
-                                        alt="shape-2"
-                                    />
-                                    <img
-                                        className="ed-about__shape-3 rotate-ani"
-                                        src="assets/images/about/about-1/shape-3.svg"
-                                        alt="shape-3"
-                                    />
-                                </div>
+                    <div className="row justify-content-center mb-4">
+                        <div className="col-lg-8 col-12">
+                            <div className="ed-section-head text-center">
+                                <h3 className="ed-section-head__title ed-split-text left">
+                                    How Teams Grow in 5G
+                                </h3>
                             </div>
                         </div>
-                        <div className="col-lg-6 col-12">
-                            {/* About Content  */}
-                            <div className="ed-about__content">
-                                <div className="ed-section-head">
+                    </div>
+                    <div className="row justify-content-center">
+                        <div className="col-12">
 
-                                    <h3 className="ed-section-head__title ed-split-text right">
-                                        5G Technical Scope & Stack Coverage
-                                    </h3>
+                            <div className="table-responsive" style={{ marginBottom: '2rem' }}>
+                                <table className="ed-growth-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Stage</th>
+                                            <th>Capability Lift</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h5>RF & RAN foundations</h5>
+                                            </td>
+                                            <td>
+                                                <p>Spectrum, throughput shaping, interference</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5>5G NR architecture</h5>
+                                            </td>
+                                            <td>
+                                                <p>RAN split, QoS, scheduling, massive MIMO</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5>5G Core</h5>
+                                            </td>
+                                            <td>
+                                                <p>AMF, SMF, UPF, slices, SA/NSA modes</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5>MEC & Edge</h5>
+                                            </td>
+                                            <td>
+                                                <p>compute gating, real-time workloads</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5>Private 5G</h5>
+                                            </td>
+                                            <td>
+                                                <p>enterprise network hardening & multi-slice ops</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h5>Ops & telemetry</h5>
+                                            </td>
+                                            <td>
+                                                <p>jitter, outage triage, QoS enforcement</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p className="ed-section-head__text pt-4 text-center">Teams graduate not with certificates, but deployment fluency.</p>
+                        </div>
+                    </div>
+                </div>
+            </section >
+
+
+
+            <section className="ed-about ed-about__page section-gap position-relative py-0">
+                <div className="container ed-container">
+                    <div className="row justify-content-center mb-4">
+                        <div className="col-lg-8 col-12">
+                            <div className="ed-section-head text-center">
+                                <h3 className="ed-section-head__title ed-split-text left">
+                                    5G Technical Scope & Stack Coverage
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-6 col-12">
+
+                            {/* About Content  */}
+                            <div className="detailsSection">
+                                <div className="ed-section-head">
                                     <h6 className="ed-section-head__sm-title">
                                         Android Mobile App Development
                                     </h6>
@@ -506,46 +477,49 @@ const page = () => {
                                     <ul className="ed-about__features-list">
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             5G NR (New Radio) Architecture
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             5G Network Planning & Optimization
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             5G RAN Engineering
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             Telco-grade RF Optimization & Interference Management
                                         </li>
                                     </ul>
                                 </div>
-                                <br />
-                                <br />
+                            </div>
+
+                        </div>
+                        <div className="col-lg-6 col-12">
+                            <div className="detailsSection">
                                 <div className="ed-section-head">
                                     <h6 className="ed-section-head__sm-title">
-                                        Domain:
+                                        Domain
                                     </h6>
                                 </div>
                                 <div className="ed-about__feature">
                                     <ul className="ed-about__features-list">
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             RAN optimization, RF propagation, MIMO, beamforming
@@ -553,42 +527,42 @@ const page = () => {
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             Core slicing, QoS tiers, traffic segmentation
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             MEC workload orchestration & edge compute
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             SA/NSA deployment models
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             Latency engineering for automation & robotics
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             Interference & spectrum governance
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             Load calculations for 10k–1M device densities
@@ -599,59 +573,15 @@ const page = () => {
                         </div>
                     </div>
                 </div>
-                <img
-                    className="ed-about__shape-4"
-                    src="assets/images/abstracts/abstract-element-regular.svg"
-                    alt="shape-4"
-                />
             </section>
-
 
             <section className="ed-about ed-about__page section-gap position-relative">
                 <div className="container ed-container">
                     <div className="row align-items-center">
-                        <div className="col-lg-6 col-12">
-                            {/* About Images  */}
-                            <div className="ed-about__images">
-                                <div className="ed-about__main-img">
-                                    <img
-                                        src="assets/images/about/about-1/about-img.png"
-                                        alt="about-img"
-                                    />
-                                </div>
-                                <div className="counter-card updown-ani">
-                                    <div className="counter-card__icon">
-                                        <i className="fi fi-rr-graduation-cap" />
-                                    </div>
-                                    <div className="counter-card__info">
-                                        <h4>
-                                            <span className="counter">9394</span>+
-                                        </h4>
-                                        <p>Enrolled Learners</p>
-                                    </div>
-                                </div>
-                                <div className="ed-about__shapes">
-                                    <img
-                                        className="ed-about__shape-1"
-                                        src="assets/images/about/about-1/shape-1.svg"
-                                        alt="shape-1"
-                                    />
-                                    <img
-                                        className="ed-about__shape-2"
-                                        src="assets/images/about/about-1/shape-2.svg"
-                                        alt="shape-2"
-                                    />
-                                    <img
-                                        className="ed-about__shape-3 rotate-ani"
-                                        src="assets/images/about/about-1/shape-3.svg"
-                                        alt="shape-3"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 col-12">
+
+                        <div className="col-lg-6 col-12 about-sectionstyle">
                             {/* About Content  */}
-                            <div className="ed-about__content">
+                            <div className="">
                                 <div className="ed-section-head">
                                     <h3 className="ed-section-head__title ed-split-text right">
                                         5G Competencies:
@@ -664,49 +594,49 @@ const page = () => {
                                     <ul className="ed-about__features-list">
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             network slicing design & enforcement
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             deterministic latency & jitter shaping
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             private 5G fleet deployment frameworks
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             RF interference modeling & optimization
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             telemetry & outage triage standards
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             secure industrial IoT 5G backbone
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             enterprise 5G release governance
@@ -714,24 +644,86 @@ const page = () => {
                                     </ul>
                                 </div>
                                 <div className="ed-section-head">
-
-                                    <h6 className="ed-section-head__sm-title">
+                                    <h6 className="ed-section-head__sm-title mt-4">
                                         This is network systems engineering, not radio overview.
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 col-12 about-sectionstyle1">
+                            <div className="">
+                                <div className="ed-section-head">
+                                    <h3 className="ed-section-head__title ed-split-text right">
+                                        Tools & Engineering Environment for 5G
+                                    </h3>
+
+                                </div>
+                                <div className="ed-about__feature">
+                                    <ul className="ed-about__features-list">
+                                        <li>
+                                            <img
+                                                src="/assets/images/icons/icon-check-blue.svg"
+                                                alt="icon-check-blue"
+                                            />
+                                            RF simulation suites
+                                        </li>
+                                        <li>
+                                            <img
+                                                src="/assets/images/icons/icon-check-blue.svg"
+                                                alt="icon-check-blue"
+                                            />
+                                            5G NR network planners
+                                        </li>
+                                        <li>
+                                            <img
+                                                src="/assets/images/icons/icon-check-blue.svg"
+                                                alt="icon-check-blue"
+                                            />
+                                            Core slice orchestration dashboards
+                                        </li>
+                                        <li>
+                                            <img
+                                                src="/assets/images/icons/icon-check-blue.svg"
+                                                alt="icon-check-blue"
+                                            />
+                                            Edge compute QoS profilers
+                                        </li>
+                                        <li>
+                                            <img
+                                                src="/assets/images/icons/icon-check-blue.svg"
+                                                alt="icon-check-blue"
+                                            />
+                                            MEC traffic shaping tools
+                                        </li>
+                                        <li>
+                                            <img
+                                                src="/assets/images/icons/icon-check-blue.svg"
+                                                alt="icon-check-blue"
+                                            />
+                                            Live telemetry triage environment
+                                        </li>
+                                        <li>
+                                            <img
+                                                src="/assets/images/icons/icon-check-blue.svg"
+                                                alt="icon-check-blue"
+                                            />
+                                            Private 5G sandbox (enterprise config)
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="ed-section-head">
+                                    <h6 className="ed-section-head__sm-title mt-4">
+                                        Everything is deploy-analyze-correct, not watch-slide-repeat.
                                     </h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <img
-                    className="ed-about__shape-4"
-                    src="assets/images/abstracts/abstract-element-regular.svg"
-                    alt="shape-4"
-                />
             </section>
 
 
-            <section className="ed-about ed-about__page section-gap position-relative">
+            <section className="ed-about ed-about__page position-relative pb-5">
                 <div className="container ed-container">
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-12">
@@ -739,35 +731,24 @@ const page = () => {
                             <div className="ed-about__images">
                                 <div className="ed-about__main-img">
                                     <img
-                                        src="assets/images/about/about-1/about-img.png"
+                                        src="/assets/images/about/about-1/about-img.png"
                                         alt="about-img"
                                     />
-                                </div>
-                                <div className="counter-card updown-ani">
-                                    <div className="counter-card__icon">
-                                        <i className="fi fi-rr-graduation-cap" />
-                                    </div>
-                                    <div className="counter-card__info">
-                                        <h4>
-                                            <span className="counter">9394</span>+
-                                        </h4>
-                                        <p>Enrolled Learners</p>
-                                    </div>
                                 </div>
                                 <div className="ed-about__shapes">
                                     <img
                                         className="ed-about__shape-1"
-                                        src="assets/images/about/about-1/shape-1.svg"
+                                        src="/assets/images/about/about-1/shape-1.svg"
                                         alt="shape-1"
                                     />
                                     <img
                                         className="ed-about__shape-2"
-                                        src="assets/images/about/about-1/shape-2.svg"
+                                        src="/assets/images/about/about-1/shape-2.svg"
                                         alt="shape-2"
                                     />
                                     <img
                                         className="ed-about__shape-3 rotate-ani"
-                                        src="assets/images/about/about-1/shape-3.svg"
+                                        src="/assets/images/about/about-1/shape-3.svg"
                                         alt="shape-3"
                                     />
                                 </div>
@@ -786,49 +767,49 @@ const page = () => {
                                     <ul className="ed-about__features-list">
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             RF simulation suites
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             5G NR network planners
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             Core slice orchestration dashboards
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             Edge compute QoS profilers
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             MEC traffic shaping tools
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             Live telemetry triage environment
                                         </li>
                                         <li>
                                             <img
-                                                src="assets/images/icons/icon-check-blue.svg"
+                                                src="/assets/images/icons/icon-check-blue.svg"
                                                 alt="icon-check-blue"
                                             />
                                             Private 5G sandbox (enterprise config)
@@ -837,7 +818,7 @@ const page = () => {
                                 </div>
                                 <div className="ed-section-head">
 
-                                    <h6 className="ed-section-head__sm-title">
+                                    <h6 className="ed-section-head__sm-title mt-4">
                                         Everything is deploy-analyze-correct, not watch-slide-repeat.
                                     </h6>
                                 </div>
@@ -847,7 +828,7 @@ const page = () => {
                 </div>
                 <img
                     className="ed-about__shape-4"
-                    src="assets/images/abstracts/abstract-element-regular.svg"
+                    src="/assets/images/abstracts/abstract-element-regular.svg"
                     alt="shape-4"
                 />
             </section>
@@ -855,7 +836,7 @@ const page = () => {
 
             <section
                 className="ed-course ed-course--style2 section-gap position-relative background-image"
-                style={{ backgroundImage: 'url("assets/images/section-bg-7.png")' }}
+            // style={{ backgroundImage: 'url("assets/images/section-bg-7.png")' }}
             >
                 <div className="container ed-container">
                     <div className="row justify-content-center">
@@ -867,8 +848,6 @@ const page = () => {
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </section>
 
@@ -877,8 +856,17 @@ const page = () => {
                 <img src="/assets/images/section-bg-6.png" alt="bg-img" />
               </div> */}
                 {/* Start Testimonial Area */}
-                <section className="ed-testimonial ed-testimonial--style2 ed-course ed-course--style-5 section-gap position-relative">
+                <section className="ed-testimonial ed-testimonial--style2 ed-course section-gap position-relative pt-0">
                     <div className="container ed-container">
+                        <div className="row justify-content-center mb-4">
+                            <div className="col-lg-12 col-12">
+                                <div className="ed-section-head text-center">
+                                    <h3 className="ed-section-head__title ed-split-text left">
+                                        Who Already Builds 5G Capability with Timmins
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
                         <div className="row align-items-center">
                             <div className="col-12">
                                 {/* Testimonial Content  */}
@@ -1036,50 +1024,47 @@ const page = () => {
                 </section>
             </div>
 
-
-            <section className="ed-call-action position-relative">
+            <section className="ed-call-action position-relative section-gap p-0">
                 <div className="container ed-container">
                     <div className="ed-call-action__inner position-relative">
                         <div className="ed-call-action__shapes">
                             <img
                                 className="ed-call-action__shape-1 rotate-ani"
-                                src="assets/images/call-action/call-action-1/shape-1.svg"
+                                src="/assets/images/call-action/call-action-1/shape-1.svg"
                                 alt="shape-1"
                             />
                             <img
                                 className="ed-call-action__shape-2"
-                                src="assets/images/call-action/call-action-1/shape-2.svg"
+                                src="/assets/images/call-action/call-action-1/shape-2.svg"
                                 alt="shape-2"
                             />
                             <img
                                 className="ed-call-action__shape-3 updown-ani"
-                                src="assets/images/call-action/call-action-1/shape-3.svg"
+                                src="/assets/images/call-action/call-action-1/shape-3.svg"
                                 alt="shape-3"
                             />
                         </div>
-                        <div className="row">
+                        <div className="row align-items-center">
                             <div className="col-lg-6 col-12">
                                 <div className="ed-call-action__img">
                                     <img
-                                        src="assets/images/call-action/call-action-1/call-action-img.png"
+                                        src="/assets/New_images/final cta section.jpg"
                                         alt="call-action-img"
                                     />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-12 order-class">
-                                <div className="ed-call-action__content">
+                                <div className="">
                                     <div className="ed-section-head">
 
                                         <h3 className="ed-section-head__title">
                                             Build Real 5G Capability, Not 5G Terminology
                                         </h3>
-
                                     </div>
-                                    <div className="ed-call-action__content-btn">
-                                        <a href="course-1.html" className="ed-btn">
+                                    <div className="ed-call-action__content-btn ed-btn" style={{ backgroundColor: 'var(--ed-secondary-color)' }}>
+                                        <a href="#" >
                                             {" "}
-                                            Conatct
-
+                                            Book Capability Consultation
                                         </a>
                                     </div>
                                 </div>
@@ -1093,11 +1078,8 @@ const page = () => {
             <section className="ed-faq section-gap position-relative">
                 <div className="container ed-container">
                     <div className="ed-section-head text-center">
-                        <span className="ed-section-head__sm-title">
-                            FREQUENTLY ASKED QUESTIONS
-                        </span>
                         <h3 className="ed-section-head__title text-center">
-                            Most Popular Questions About Our Online Courses
+                            FREQUENTLY ASKED QUESTIONS
                         </h3>
                     </div>
                     <div className="ed-faq__inner position-relative">
@@ -1405,21 +1387,6 @@ const page = () => {
             </section>
 
             <Footer />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         </>
