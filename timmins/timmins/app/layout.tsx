@@ -246,17 +246,17 @@ export default function RootLayout({
         <meta property="og:url" content={metadata.openGraph.url} />
         <meta property="og:site_name" content={metadata.openGraph.siteName} />
         <meta property="og:type" content={metadata.openGraph.type} />
-        
+
         {/* Preload critical resources */}
         <link rel="preload" href="/assets/plugins/css/bootstrap.min.css" as="style" />
         <link rel="preload" href="/assets/New_images/hero_2.png" as="image" />
-        
+
         {/* Critical CSS - Load immediately */}
         <link rel="stylesheet" href="/assets/plugins/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/section-css/reset.css" />
         <link rel="stylesheet" href="/assets/section-css/header.css" />
         <link rel="stylesheet" href="/assets/section-css/hero.css" />
-        
+
         {/* Non-critical CSS - Load normally */}
         <link rel="stylesheet" href="/assets/plugins/css/animate.min.css" />
         <link rel="stylesheet" href="/assets/plugins/css/owl.carousel.min.css" />
@@ -266,12 +266,14 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/plugins/css/icofont.css" />
         <link rel="stylesheet" href="/assets/plugins/css/uicons.css" />
         <link rel="stylesheet" href="/assets/section-css/timmins-footer.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
       </head>
       <body className="element-wrapper">
         {children}
         {/* Scripts Loader - Loads all scripts in order */}
         <ScriptsLoader />
-        
+
         {/* JSON-LD Schema */}
         <Script
           id="schema-org"

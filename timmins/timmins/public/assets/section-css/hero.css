@@ -3,7 +3,7 @@
 ===================================================================================================*/
 
 .section-bg.hero-bg {
-  padding-top: 142px;
+  padding-top: 0px;
 }
 
 .section-bg.hero-bg-2 {
@@ -337,7 +337,7 @@
 .ed-hero.ed-hero--style4 {
   padding-top: 0px;
   margin-top: -128px;
-  background: var( --bg-light);
+  background: var(--bg-light);
   height: 836px;
 }
 

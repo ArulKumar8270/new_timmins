@@ -986,7 +986,10 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
 }
+
+
 
 /* Section Gap */
 .section-gap {
@@ -1529,6 +1532,7 @@ p {
   /* height: 200px; */
   padding: 70px 0px 0px;
 }
+
 .map-section img {
   height: 400px;
   object-fit: cover;
@@ -1537,6 +1541,7 @@ p {
   box-shadow: 0px 0px 17px 0px #cfcfcf;
   margin: 10px 0px;
 }
+
 /*============================================================================================
 	End Theme Reset
 ==============================================================================================*/
