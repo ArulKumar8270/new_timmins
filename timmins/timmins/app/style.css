@@ -77,7 +77,7 @@
 }
 
 .timmins-journey {
-    background: linear-gradient(135deg, #f8f9ff, #eef1ff);
+    background: #eaf4fa;
 }
 
 .timmins-journey h2 {
@@ -150,7 +150,7 @@
 .about-card {
     background: #fff;
     border-radius: 18px;
-    padding: 29px 0px;
+    padding: 29px 10px;
     box-shadow: 0 20px 50px #00000014;
 }
 
@@ -175,7 +175,7 @@
 }
 
 .purpose-section {
-    background: linear-gradient(135deg, #f8f9ff, #eef1ff);
+    background: #eaf4fa;
     /* purple */
     padding: 50px 0;
     overflow: hidden;
@@ -268,12 +268,12 @@
 
 .mission-only {
     padding: 100px 0;
-    background: linear-gradient(135deg, #f8f9ff, #eef1ff);
+    background: #eaf4fa;
 }
 
 .mission-tag {
     display: inline-block;
-    color: #5b4ae3;
+    color: #7e478c;
     font-weight: 600;
     letter-spacing: 1px;
     font-size: 14px;
@@ -320,7 +320,7 @@
 
 /* Header */
 .approach-tag {
-    color: #5b4ae3;
+    color: #7e478c;
     font-weight: 600;
     letter-spacing: 1px;
     font-size: 14px;
@@ -353,7 +353,7 @@
     top: 0;
     width: 2px;
     height: 100%;
-    background: #dcdcff;
+    background: #7e478c;
 }
 
 /* Step */
@@ -367,7 +367,7 @@
 .step-dot {
     width: 30px;
     height: 30px;
-    background: #5b4ae3;
+    background: #7e478c;
     color: #fff;
     border-radius: 50%;
     font-weight: 600;
@@ -375,7 +375,7 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    box-shadow: 0 8px 20px rgba(91, 74, 227, 0.4);
+    box-shadow: 0 8px 20px #7e478c;
 }
 
 .step-content {
@@ -420,7 +420,7 @@
 
 .case-impact {
     padding: 100px 0;
-    background: linear-gradient(135deg, #f8f9ff, #eef1ff);
+    background: none;
 }
 
 /* Header */
@@ -444,16 +444,17 @@
 }
 
 .stat-card {
-    background: #ffffff;
-    padding: 30px 20px;
+    background: #fff;
     border-radius: 16px;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    padding: 50px 20px;
+    box-shadow: 0 18px 40px #00000014;
+    height: 183px;
 }
 
 .stat-card h3 {
     font-size: 40px;
     font-weight: 800;
-    color: #5b4ae3;
+    color: #7e478c;
 }
 
 .stat-card p {
@@ -493,7 +494,7 @@
 
 .impact-tags span {
     background: #eef1ff;
-    color: #5b4ae3;
+    color: #7e478c;
     padding: 8px 16px;
     border-radius: 50px;
     font-size: 14px;
@@ -512,8 +513,14 @@
 }
 
 .case-study-section {
+    background: #eaf4fa;
+}
+
+.case-study-section-1 {
     background: none;
 }
+
+
 
 /* Role List */
 .role-list li {
@@ -562,7 +569,7 @@
 }
 
 .case-study-section {
-    background: #f8f9fc;
+    background: #eaf4fa;
 }
 
 /* List Styling */
@@ -592,7 +599,7 @@
 }
 
 .case-study-section {
-    background: #f8f9fc;
+    background: #eaf4fc;
 }
 
 /* Highlight Card */
@@ -789,10 +796,11 @@
 }
 
 .rd-scope div {
-    background: rgb(5, 2, 2);
+    background: #eef1f6;
     padding: 14px 16px;
     border-radius: 14px;
     font-size: 14px;
+    color: black;
 }
 
 /* Button */
@@ -809,10 +817,11 @@
 
 /* Impact Card */
 .rd-impact {
-    background: #b3dbee;
+    background: none;
     padding: 40px;
     border-radius: 26px;
     backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px #0000001a;
 }
 
 .rd-outcome {

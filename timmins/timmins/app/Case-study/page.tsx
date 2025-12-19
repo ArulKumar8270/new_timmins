@@ -8,17 +8,18 @@ const page = () => {
 
             <Header />
 
+
             <div className="section-bg hero-bg">
                 {/* Start Bredcrumbs Area */}
                 <section
-                    className="ed-breadcrumbs background-image-2"
-                    style={{ backgroundImage: 'url("assets/images/breadcrumbs-bg.png")' }}
+                    className="ed-breadcrumbs background-image"
+                    style={{ background: '#eaf4fa' }}
                 >
                     <div className="container">
                         <div className="row justify-content-center">
                             <div className="col-lg-6 col-md-6 col-12">
                                 <div className="ed-breadcrumbs__content">
-                                    <h3 className="ed-breadcrumbs__title-2">About Us</h3>
+                                    <h3 className="ed-breadcrumbs__title">About Us</h3>
                                     <ul className="ed-breadcrumbs__menu">
                                         <li className="active">
                                             <a href="index.html">Home</a>
@@ -33,6 +34,7 @@ const page = () => {
                 </section>
                 {/* End Bredcrumbs Area */}
             </div>
+
 
 
             {/* Start Why Choose Area */}
@@ -50,20 +52,20 @@ const page = () => {
                         </p>
                     </div>
                     {/* Stats */}
-                    <div className="row text-center impact-stats">
-                        <div className="col-md-4">
+                    <div className="row text-center justify-content-center impact-stats">
+                        <div className="col-md-3 py-2">
                             <div className="stat-card">
                                 <h3>10+</h3>
                                 <p>Years of Partnerships</p>
                             </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-3 py-2">
                             <div className="stat-card">
                                 <h3>5,000+</h3>
                                 <p>Professionals Trained</p>
                             </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-3 py-2">
                             <div className="stat-card">
                                 <h3>200+</h3>
                                 <p>Programs Delivered</p>
@@ -176,7 +178,7 @@ const page = () => {
                 </div>
             </section>
 
-            <section className="case-study-section py-5">
+            <section className="case-study-section-1 py-5">
                 <div className="container">
                     <div className="row align-items-start g-4">
                         {/* Left Content */}
@@ -289,11 +291,11 @@ const page = () => {
             </section>
 
 
-            <section className="case-study-premium py-5">
+            <section className="case-study-section-1 py-5">
                 <div className="container">
                     <div className="row g-4 align-items-center">
                         {/* Left Content */}
-                        <div className="col-lg-7">
+                        <div className="col-lg-8">
 
                             <h2 className="fw-bold mb-3">
                                 Motorola – Mobile Development Enablement
@@ -318,7 +320,7 @@ const page = () => {
                             </div>
                         </div>
                         {/* Right Card */}
-                        <div className="col-lg-5">
+                        <div className="col-lg-4">
                             <div className="case-metrics-card">
                                 <h5 className="fw-bold mb-4">Key Highlights</h5>
                                 <div className="metric">
@@ -335,7 +337,7 @@ const page = () => {
                                 </div>
                                 <div className="ed-hero__btn ed-btn">
                                     <a href="#">
-                                        📘 [Request Case Study Copy]
+                                        Request Case Study Copy
                                     </a>
                                 </div>
                             </div>
@@ -348,47 +350,54 @@ const page = () => {
 
 
 
-            <section className="case-study-rd">
+            <section className="case-study-section py-5">
                 <div className="container">
-                    <div className="row g-5 align-items-center">
+                    <div className="row g-4 align-items-center">
                         {/* Left Content */}
-                        <div className="col-lg-7">
+                        <div className="col-lg-8">
 
-                            <h1 className="rd-title">5G SoC R&amp;D Enablement</h1>
-                            <p className="rd-subtitle">(Confidential Semiconductor Client)</p>
-                            <p className="rd-intro">
-                                Timmins supported global R&amp;D teams in strengthening
-                                <strong>5G SoC architecture and testing capability</strong>, enabling
-                                faster, higher-quality development of next-generation 5G devices.
+                            <h2 className="fw-bold mb-3">
+                                5G SoC R&D Enablement (Confidential Semiconductor Client)
+
+                            </h2>
+                            <p className="lead text-muted">
+                                We supported global R&D teams in strengthening 5G SoC architecture and testing capability.
+                                Training and consulting covered:
                             </p>
-                            <h6 className="fw-semibold mt-4">Training &amp; Consulting Scope</h6>
-                            <div className="rd-scope">
-                                <div>5G Modem Design Fundamentals</div>
-                                <div>Power Optimization Strategies</div>
-                                <div>mmWave Integration</div>
-                                <div>RF Testing Workflows</div>
+
+                            <h6 className="fw-semibold mt-4">Training Areas:</h6>
+                            <div className="tech-tags">
+                                <span>5G modem design fundamentals</span>
+                                <span>Power optimization strategies</span>
+                                <span>mmWave integration</span>
+                                <span>RF testing workflows</span>
+
                             </div>
-                            <div className="ed-hero__btn ed-btn">
-                                <a href="#">
-                                    📘 Download Full Case Study
-                                </a>
-                            </div>
+                            <br />
+                            <p>
+                                Results include improved design efficiency, higher testing accuracy, and faster time-to-market for next-generation 5G devices.
+                            </p>
                         </div>
-                        {/* Right Impact Card */}
-                        <div className="col-lg-5">
-                            <div className="rd-impact">
-                                <h4 className="fw-bold mb-4">Key Outcomes</h4>
-                                <div className="rd-outcome">
-                                    <h3>Faster</h3>
-                                    <p>Release Cycles</p>
+                        {/* Right Card */}
+                        <div className="col-lg-4">
+                            <div className="case-metrics-card">
+                                <h5 className="fw-bold mb-4"> Highlights</h5>
+                                <div className="metric">
+
+                                    <p>✔ Accelerated release cycles </p>
                                 </div>
-                                <div className="rd-outcome">
-                                    <h3>Higher</h3>
-                                    <p>Engineering Quality</p>
+                                <div className="metric">
+
+                                    <p>✔ Improved engineering quality</p>
                                 </div>
-                                <div className="rd-outcome">
-                                    <h3>Global</h3>
-                                    <p>Multi-site Implementation</p>
+                                <div className="metric">
+
+                                    <p>✔ Global multi-site implementation</p>
+                                </div>
+                                <div className="ed-hero__btn ed-btn">
+                                    <a href="#">
+                                        Download Full Case Study
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -399,7 +408,7 @@ const page = () => {
 
 
 
-            <section className="ed-call-action position-relative section-gap pb-0">
+            <section className="ed-call-action position-relative section-gap pb-10">
                 <div className="container ed-container">
                     <div className="ed-call-action__inner position-relative">
                         <div className="ed-call-action__shapes">
@@ -473,9 +482,14 @@ const page = () => {
                                         </ul>
 
                                     </div>
-                                    <div className="text-decoration-underline">
-                                        <a href="#"> [Book a Consultation]</a>
+                                    <br />
+                                    <div
+                                        className="ed-call-action__content-btn ed-btn"
+                                        style={{ backgroundColor: "var(--ed-secondary-color)" }}
+                                    >
+                                        <a href="#"> {/* */}Book a Consultation</a>
                                     </div>
+
                                 </div>
                             </div>
                         </div>

@@ -5,6 +5,7 @@
   z-index: 2;
   overflow: hidden;
 }
+
 .ed-about__images {
   position: relative;
   z-index: 2;
@@ -13,36 +14,43 @@
 .ed-about__main-img {
   text-align: right;
 }
+
 .ed-about__main-img img {
   width: 482px;
   height: 486px;
   border-radius: 8px 8px 140px 8px;
   object-fit: cover;
 }
+
 .ed-about__shape-1,
 .ed-about__shape-2,
 .ed-about__shape-3,
 .ed-about__shape-4 {
   position: absolute;
 }
+
 .ed-about__shape-1 {
   top: 40%;
   left: 4%;
 }
+
 .ed-about__shape-2 {
   right: -12%;
   bottom: 25%;
   z-index: -1;
 }
+
 .ed-about__shape-3 {
   right: 4%;
   bottom: 0;
 }
+
 .ed-about__shape-4 {
   right: 80px;
   bottom: 16%;
   z-index: -1;
 }
+
 .counter-card {
   border-radius: 6px;
   background: var(--ed-white-color);
@@ -55,6 +63,7 @@
   bottom: 92px;
   left: 0;
 }
+
 .counter-card__icon {
   width: 64px;
   height: 64px;
@@ -65,31 +74,38 @@
   font-size: 28px;
   color: #df4343;
 }
+
 .counter-card__info h4 {
   color: #df4343;
   font-size: 28px;
   letter-spacing: -0.28px;
   margin-bottom: 8px;
 }
+
 .counter-card__info p {
   line-height: 120%;
 }
+
 .ed-about__content {
   padding-left: 72px;
 }
+
 .ed-about__feature {
   margin-top: 14px;
 }
+
 .ed-about__features-list li {
   margin-bottom: 24px;
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--ed-title-color);
+  color: white;
 }
+
 .ed-about__features-list li:last-child {
   margin: 0;
 }
+
 .ed-about__btn {
   margin-top: 45px;
 }
@@ -99,17 +115,20 @@
   padding-left: 0;
   padding-right: 15px;
 }
+
 .ed-about__main-img-style2 {
   display: flex;
   justify-content: center;
   gap: 28px;
 }
+
 .ed-about__main-img-1 {
   width: 258px;
   height: 440px;
   object-fit: cover;
   border-radius: 0px 86px 0px 86px;
 }
+
 .ed-about__main-img-2 {
   width: 258px;
   height: 370px;
@@ -117,19 +136,23 @@
   border-radius: 86px 0px 86px 0px;
   margin-top: 248px;
 }
+
 .ed-about__images--style2 .counter-card {
   bottom: 44px;
   left: 72px;
 }
+
 .ed-about__images--style2 .ed-about__shape-1 {
   top: 72%;
   left: -12%;
 }
+
 .ed-about__images--style2 .ed-about__shape-2 {
   right: 30%;
   bottom: auto;
   top: 5%;
 }
+
 .ed-about__images--style2 .ed-about__shape-3 {
   right: 10%;
   bottom: auto;
@@ -145,32 +168,38 @@
   gap: 40px;
   margin-bottom: 120px;
 }
+
 .ed-about--style-3 .ed-about__head-title {
   font-size: 36px;
   line-height: 50px;
   letter-spacing: -0.36px;
   margin: 0;
 }
+
 .ed-about--style-3 .ed-about__award {
   display: flex;
   align-items: center;
   gap: 40px;
 }
+
 .ed-about--style-3 .ed-about__award img {
   width: 90px;
   height: 90px;
   object-fit: contain;
 }
+
 .ed-about--style-3 .ed-about__image-main img {
   width: 624px;
   height: 600px;
   object-fit: cover;
   border-radius: 8px;
 }
+
 .ed-about--style-3 .ed-about__image {
   width: 624px;
   position: relative;
 }
+
 .ed-about--style-3 .ed-about__counter {
   display: flex;
   align-items: center;
@@ -178,6 +207,7 @@
   margin-top: 80px;
   margin-left: 74px;
 }
+
 .ed-about--style-3 .ed-about__counter-item h4 {
   color: var(--ed-primary-color);
   font-size: 36px;
@@ -186,26 +216,31 @@
   letter-spacing: -0.36px;
   margin-bottom: 20px;
 }
+
 .ed-about--style-3 .ed-about__counter-item p {
   margin: 0;
   line-height: 18px;
 }
+
 .ed-about--style-3 .ed-about__image-shapes .shape-1 {
   position: absolute;
   top: -60px;
   left: -82px;
   z-index: -1;
 }
+
 .ed-about--style-3 .ed-about__image-shapes .shape-2 {
   position: absolute;
   bottom: 38%;
   left: -14%;
 }
+
 .ed-about--style-3 .ed-about__content .list-group {
   flex-direction: row;
   gap: 90px;
   margin-bottom: 60px;
 }
+
 .ed-about--style-3 .ed-about__content .list-group-item {
   background-color: transparent !important;
   font-family: "Aeonik Pro TRIAL";
@@ -219,10 +254,12 @@
   padding: 0;
   padding-bottom: 10px;
 }
+
 .ed-about--style-3 .ed-about__content .list-group-item.active {
   color: var(--ed-title-color);
   border-color: var(--ed-title-color) !important;
 }
+
 .ed-about--style-3 .ed-about__content {
   width: 630px;
   min-height: 760px;
@@ -238,17 +275,21 @@
 .ed-about--style-3 .ed-about__image {
   min-width: 624px;
 }
+
 .ed-about--style-3 .ed-about__inner {
   display: flex;
 }
+
 .ed-about--style-3 .ed-about__tab-info {
   display: flex;
   align-items: center;
   gap: 55px;
 }
+
 .ed-about--style-3 .ed-about__tab-info-content {
   margin-top: 24px;
 }
+
 .ed-about--style-3 .ed-about__tab-info-content h4 {
   font-family: var(--ed-font-family-2);
   font-size: 20px;
@@ -256,22 +297,26 @@
   line-height: 24px;
   margin-bottom: 16px;
 }
+
 .ed-about--style-3 .ed-about__shapes .shape-1 {
   position: absolute;
   right: 0;
   top: 156px;
 }
+
 .ed-about--style-3 .ed-about__shapes .shape-2 {
   position: absolute;
   right: 0;
   top: 22%;
 }
+
 .ed-about--style-3 .ed-about__content-shapes .shape-1 {
   position: absolute;
   bottom: -9%;
   right: -12%;
   z-index: -1;
 }
+
 .ed-about--style-3 .ed-about__content-shapes .shape-2 {
   position: absolute;
   bottom: 80px;
@@ -283,17 +328,21 @@
   .ed-about__content {
     padding-left: 0;
   }
+
   .ed-about__shape-2 {
     right: -2%;
     display: none;
   }
+
   .ed-section-head__title br {
     display: none;
   }
+
   .ed-about--style-3 .ed-about__head {
     display: block;
     margin-bottom: 50px;
   }
+
   .ed-about--style-3 .ed-about__award {
     margin-top: 40px;
   }
@@ -311,9 +360,11 @@
   .ed-about--style-3 .ed-about__content .list-group {
     gap: 32px;
   }
+
   .ed-about--style-3 .ed-about__content .list-group {
     margin-bottom: 40px;
   }
+
   .ed-about--style-3 .ed-about__image-shapes .shape-2 {
     left: -5%;
   }
@@ -323,32 +374,41 @@
   .ed-about__main-img {
     text-align: center;
   }
+
   .ed-about__images {
     margin-top: 40px;
   }
+
   .ed-about__shape-2 {
     right: 8%;
   }
+
   .ed-about__shape-4 {
     display: none;
   }
+
   .counter-card {
     bottom: 40px;
     left: 10%;
   }
+
   .ed-about__shape-3 {
     right: 20%;
   }
+
   .ed-about__shape-1 {
     left: 10%;
   }
+
   .ed-about__images--style2 .ed-about__shape-1 {
     top: 52%;
     left: 8%;
   }
+
   .ed-about.ed-about__page {
     padding: 40px 0px 80px;
   }
+
   .ed-about.ed-about__page .ed-about__content {
     margin-top: 40px;
   }
@@ -361,6 +421,7 @@
   .ed-about--style-3 .ed-about__tab-info {
     display: block;
   }
+
   .ed-about__tab-info-card {
     margin-top: 32px;
   }
@@ -389,38 +450,47 @@
     flex-wrap: wrap;
     margin-top: 24px;
   }
+
   .ed-about--style-3 .ed-about__award img {
     width: 80px;
     height: 80px;
   }
+
   .ed-about--style-3 .ed-about__image-main img {
     width: 100%;
     height: auto;
   }
+
   .ed-about--style-3 .ed-about__counter {
     gap: 40px;
     margin-top: 40px;
     margin-left: 0px;
   }
+
   .ed-about--style-3 .ed-about__image {
     min-width: 100%;
   }
+
   .ed-about--style-3 .ed-about__image {
     width: 100%;
   }
+
   .ed-about--style-3 .ed-about__inner {
     display: block;
   }
+
   .ed-about--style-3 .ed-about__content {
     width: 100%;
     min-height: auto;
     padding: 24px;
     margin-left: 0px;
   }
+
   .ed-about--style-3 .ed-about__content .list-group {
     gap: 24px;
     margin-bottom: 40px;
   }
+
   .ed-about--style-3 .ed-about__content .list-group-item {
     font-size: 16px;
   }
@@ -431,37 +501,47 @@
     width: 100%;
     height: 320px;
   }
+
   .ed-about__main-img {
     text-align: center;
   }
+
   .ed-about__shape-1 {
     top: -5%;
   }
+
   .counter-card {
     bottom: 0;
   }
+
   .counter-card__info h4 {
     font-size: 24px;
   }
+
   .counter-card__icon {
     width: 56px;
     height: 56px;
     line-height: 63px;
     font-size: 24px;
   }
+
   .ed-about__shape-3 {
     right: -4%;
     bottom: 23%;
   }
+
   .ed-about__content {
     padding-left: 0;
   }
+
   .ed-about__shape-4 {
     display: none;
   }
+
   .ed-about__features-list li {
     margin-bottom: 16px;
   }
+
   .ed-about__images {
     margin-top: 40px;
   }
@@ -469,37 +549,47 @@
   .ed-about--style2 .ed-about__content {
     padding-right: 0;
   }
+
   .ed-about__main-img-1 {
     width: 100%;
     height: 320px;
   }
+
   .ed-about__main-img-2 {
     display: none;
   }
+
   .counter-card__info p {
     font-size: 14px !important;
   }
+
   .ed-about__images--style2 .ed-about__shape-1 {
     top: auto;
     left: 0;
     bottom: 0;
   }
+
   .ed-about__images--style2 .ed-about__shape-3 {
     top: 0;
     right: 0;
   }
+
   .ed-about__images--style2 .ed-about__shape-2 {
     display: none;
   }
+
   .ed-about__main-img-style2 {
     display: block;
   }
+
   .ed-about__page .ed-about__content {
     margin-top: 40px;
   }
+
   .ed-about__page .ed-about__images {
     margin-top: 0;
   }
+
   .ed-about__shape-2 {
     display: none;
   }
@@ -512,6 +602,7 @@
   .ed-about--style-3 .ed-about__tab-info {
     display: block;
   }
+
   .ed-about__tab-info-card {
     margin-top: 32px;
   }
@@ -540,38 +631,47 @@
     flex-wrap: wrap;
     margin-top: 24px;
   }
+
   .ed-about--style-3 .ed-about__award img {
     width: 80px;
     height: 80px;
   }
+
   .ed-about--style-3 .ed-about__image-main img {
     width: 100%;
     height: auto;
   }
+
   .ed-about--style-3 .ed-about__counter {
     gap: 40px;
     margin-top: 40px;
     margin-left: 0px;
   }
+
   .ed-about--style-3 .ed-about__image {
     min-width: 100%;
   }
+
   .ed-about--style-3 .ed-about__image {
     width: 100%;
   }
+
   .ed-about--style-3 .ed-about__inner {
     display: block;
   }
+
   .ed-about--style-3 .ed-about__content {
     width: 100%;
     min-height: auto;
     padding: 24px;
     margin-left: 0px;
   }
+
   .ed-about--style-3 .ed-about__content .list-group {
     gap: 24px;
     margin-bottom: 40px;
   }
+
   .ed-about--style-3 .ed-about__content .list-group-item {
     font-size: 16px;
   }
