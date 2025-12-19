@@ -1,10 +1,81 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
+import Script from 'next/script'
+
+export const metadata = {
+    title: "About Timmins – Advanced Tech Capability Partner Led by Real Engineers (HRDC Registered)",
+    description: "Timmins is a boutique, practitioner-led advanced tech training and capability partner for engineering, manufacturing, and financial services teams globally. We deliver industry-grade programs in Embedded Systems, AI/ML, 5G, Cloud, and DevOps. All HRDC-claimable for Malaysian companies and trusted by 5,000+ professionals.",
+    keywords: "Corporate training provider, Corporate training Malaysia, Customized training, AI training Malaysia, Embedded systems training",
+    openGraph: {
+        title: "About Timmins – Advanced Tech Capability Partner Led by Real Engineers",
+        description: "Timmins is a boutique, practitioner-led advanced tech training and capability partner for engineering, manufacturing, and financial services teams globally.",
+        url: "https://timmins-consulting.com/about",
+        siteName: "Timmins Training Consulting",
+        type: "website",
+    },
+}
+
+const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Timmins – Advanced Tech Capability Partner",
+    "description": "Timmins is a boutique, practitioner-led advanced tech capability partner serving engineering, manufacturing, and financial services organizations across ASEAN and North America. We deliver industry-grade programs in Embedded Systems, AI/ML, Cloud, 5G, and DevOps.",
+    "url": "https://timmins-consulting.com/about",
+    "mainEntity": {
+        "@type": ["Organization", "EducationalOrganization"],
+        "name": "Timmins Training Consulting",
+        "alternateName": "Timmins",
+        "url": "https://timmins-consulting.com",
+        "logo": "https://timmins-consulting.com/assets/logo.png",
+        "foundingDate": "2015",
+        "foundingLocation": "Malaysia",
+        "description": "A boutique advanced tech capability partner delivering practitioner-led engineering training in Embedded Systems, AI/ML, Cloud, 5G, and Telecom for organizations across ASEAN and North America.",
+        "areaServed": [
+            "Malaysia",
+            "Indonesia",
+            "Singapore",
+            "Vietnam",
+            "Thailand",
+            "Philippines",
+            "United States",
+            "Canada"
+        ],
+        "sameAs": [
+            "https://www.linkedin.com/company/timmins-training-consulting/"
+        ],
+        "award": [
+            {
+                "@type": "Award",
+                "name": "HRDC Registered Training Provider",
+                "description": "Certified by Malaysia's Human Resource Development Corporation (HRD Corp). HRDC No: 1166573-D."
+            }
+        ]
+    },
+    "hasPart": [
+        {
+            "@type": "Event",
+            "name": "Timmins 10-Year Anniversary",
+            "startDate": "2025-01-01",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "description": "Celebrating a decade of practitioner-led engineering capability building across ASEAN and North America.",
+            "location": {
+                "@type": "Place",
+                "name": "ASEAN & North America",
+                "address": "Virtual and onsite delivery across multiple regions"
+            }
+        }
+    ]
+}
 
 const page = () => {
     return (
         <>
+            <Script
+                id="about-page-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+            />
             <Header />
 
 
@@ -22,7 +93,7 @@ const page = () => {
                                     <h3 className="ed-breadcrumbs__title">About Us</h3>
                                     <ul className="ed-breadcrumbs__menu">
                                         <li className="active">
-                                            <a href="index.html">Home</a>
+                                            <a href="#">Home</a>
                                         </li>
                                         <li>/</li>
                                         <li>ABOUT US</li>
@@ -42,7 +113,7 @@ const page = () => {
                     <section className="about-timmins py-5">
                         <div className="container">
                             <div className="text-center mb-5">
-                                <h2 className="fw-bold">About Timmins Training</h2>
+                                <h1 className="fw-bold">About Timmins Training Consulting</h1>
                             </div>
                             <div className="about-card">
                                 <div className="row align-items-center g-4">
@@ -50,7 +121,7 @@ const page = () => {
                                     <div className="col-lg-4 col-md-12 text-center">
 
                                         <img
-                                            src="assets/images/about/about-3/about-img.png"
+                                            src="/assets/images/about/about-3/about-img.png"
                                             alt="Timmins Consulting"
                                             className="img-fluid about-img"
                                         />
@@ -103,7 +174,7 @@ const page = () => {
                         <div className="purpose-content">
 
                             <h2>
-                                OUR PURPOSE
+                                Our Purpose
                             </h2>
                             <p>
                                 Timmins was founded to tackle a clear problem, which was that most
