@@ -148,14 +148,10 @@
 }
 
 .about-card {
-    background: #ffffff;
-    padding: 40px;
+    background: #fff;
     border-radius: 18px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-}
-
-.about-img {
-    max-height: 320px;
+    padding: 29px 0px;
+    box-shadow: 0 20px 50px #00000014;
 }
 
 .consulting-badge {
@@ -168,9 +164,10 @@
 }
 
 .about-timmins p {
+    color: #334155;
     font-size: 16px;
     line-height: 1.7;
-    color: #334155;
+    margin-bottom: 13px;
 }
 
 .highlight {

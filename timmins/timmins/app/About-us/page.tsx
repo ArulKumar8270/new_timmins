@@ -13,7 +13,7 @@ const page = () => {
                 {/* Start Bredcrumbs Area */}
                 <section
                     className="ed-breadcrumbs background-image"
-                    style={{ backgroundImage: 'url("assets/images/breadcrumbs-bg.png")' }}
+                    style={{ background: '#eaf4fa' }}
                 >
                     <div className="container">
                         <div className="row justify-content-center">
@@ -47,7 +47,7 @@ const page = () => {
                             <div className="about-card">
                                 <div className="row align-items-center g-4">
                                     {/* Left Image */}
-                                    <div className="col-lg-5 col-md-12 text-center">
+                                    <div className="col-lg-4 col-md-12 text-center">
 
                                         <img
                                             src="assets/images/about/about-3/about-img.png"
@@ -61,29 +61,29 @@ const page = () => {
                                             <strong>Timmins</strong> is a boutique advanced tech capability
                                             partner that helps engineering, manufacturing, and banking
                                             organizations build future-ready teams through
-                                            <strong>practitioner-led, industry-grade training</strong>
+                                            <strong> practitioner-led, industry-grade training </strong>
                                             and advisory.
                                         </p>
                                         <p>
                                             We specialize in closing the gap between
-                                            <strong>emerging technologies</strong> and real-world capability,
+                                            <strong> emerging technologies </strong> and real-world capability,
                                             from AI, Embedded Systems, Cloud, 5G, to modern software{" "}
-                                            <strong>engineering</strong>.
+                                            <strong> engineering</strong>.
                                         </p>
                                         <p>
                                             Our programs are <strong>hands-on</strong>,{" "}
                                             <strong>customized</strong>, and designed to create{" "}
-                                            <strong>measurable improvement</strong>
+                                            <strong>measurable improvement </strong>
                                             in how teams think, build, and deliver.
                                         </p>
                                         <p>
                                             For the <strong>past decade</strong>, we’ve supported thousands of
                                             engineers, developers, analysts, and
-                                            <strong>technical leaders</strong> across Asia.
+                                            <strong> technical leaders</strong> across Asia.
                                         </p>
                                         <p className="fw-semibold">
                                             All with one commitment: training that actually
-                                            <span className="highlight">transforms capability</span>, not just
+                                            <span className="highlight"> transforms capability</span>, not just
                                             fulfills hours.
                                         </p>
                                     </div>
@@ -390,9 +390,9 @@ const page = () => {
                                 </div>
                                 {/* Right Logo / Badge */}
                                 <div className="col-lg-4 col-md-12 text-center">
-                                    <div className="hrdc-badge">
+                                    <div>
                                         <img
-                                            src="../assets/images/New_images/badge.png"
+                                            src="/assets/New_images/badge.png"
                                             alt="HRDC Claimable"
                                             className="img-fluid"
                                         />
