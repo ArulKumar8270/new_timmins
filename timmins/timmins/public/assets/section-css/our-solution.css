@@ -1,0 +1,76 @@
+/* SOLUTIONS HERO */
+.solutions-hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6%;
+    /* background: url("/assets/New_images/Approach.jpg") center/cover no-repeat; */
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Overlay */
+.solutions-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(65, 152, 200, 0.9),
+            rgba(65, 152, 200, 0.9));
+}
+
+/* Content */
+.solutions-hero-content {
+    position: relative;
+    max-width: 900px;
+}
+
+/* H1 */
+.solutions-hero-content h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    /* design guide */
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 26px;
+    color: #f4f7fb;
+}
+
+/* Description */
+.hero-description {
+    font-size: 18px;
+    /* design guide */
+    line-height: 1.7;
+    color: #eef3f8;
+    margin-bottom: 36px;
+}
+
+/* CTA */
+.hero-cta {
+    display: inline-block;
+    background: #ec5339;
+    /* Coral */
+    color: #ffffff;
+    padding: 14px 34px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .solutions-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+}

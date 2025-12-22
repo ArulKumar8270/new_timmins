@@ -1,0 +1,86 @@
+.hero {
+    background: linear-gradient(120deg, var(--gold), var(--orange));
+    color: var(--white);
+    text-align: center;
+    padding: 120px 6%;
+}
+
+.hero span {
+    font-size: 14px;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+
+.hero h1 {
+    font-size: 56px;
+    margin: 20px 0;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+}
+
+.timeline-card {
+    min-width: 300px;
+    background: var(--white);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-card h3 {
+    color: var(--blue-main);
+    font-size: 20px;
+}
+
+/* ---------- MAP ---------- */
+.map-section {
+    background: var(--bg-light);
+    text-align: center;
+}
+
+.map-section img {
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+/* ---------- IMPACT ---------- */
+.impact {
+    background: var(--blue-main);
+    color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    text-align: center;
+}
+
+.impact h2 {
+    font-size: 40px;
+}
+
+.impact p {
+    opacity: 0.9;
+}
+
+/* ---------- QUOTES ---------- */
+.quotes {
+    background: var(--white);
+}
+
+.quote-card {
+    background: var(--bg-light);
+    padding: 32px;
+    border-left: 5px solid var(--purple);
+    margin-bottom: 24px;
+    border-radius: 10px;
+}
