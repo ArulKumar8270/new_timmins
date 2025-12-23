@@ -5,9 +5,23 @@
     align-items: center;
     justify-content: center;
     padding: 0 8%;
-    background: linear-gradient(rgba(65, 152, 200, 0.9),
-            rgba(65, 152, 200, 0.9)),
-        url("/images/approach-hero.jpg");
+    background: #eaf4fa;
+
+    /* optional real training image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.approach-hero-1 {
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8%;
+    background: #eaf4fa;
+
     /* optional real training image */
     background-size: cover;
     background-position: center;
@@ -34,7 +48,7 @@
     font-size: 22px;
     font-weight: 500;
     margin-bottom: 28px;
-    color: #f1f6fb;
+    color: black;
 }
 
 /* Body text */
@@ -43,7 +57,7 @@
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 22px;
-    color: #f4f7fb;
+    color: black;
 }
 
 /* Highlight principle */
@@ -84,7 +98,8 @@
 
 /* Soft background variation (design guide) */
 .co-design {
-    background: #f6f8fa;
+    background: #eaf4fa;
+    padding: 40px;
 }
 
 /* SECTION 3 BACKGROUND */
@@ -97,7 +112,7 @@
 /* COMMON APPROACH SECTION */
 .approach-section {
     padding: 90px 6%;
-    background: #ffffff;
+    background: #eaf4fa;
 }
 
 .approach-container {
@@ -187,7 +202,7 @@
 
 .measure-section {
     padding: 80px 20px;
-    background: #ffffff;
+    background: #eaf4fa;
     text-align: center;
 }
 
@@ -363,7 +378,7 @@
 
 .measure-section {
     padding: 80px 0;
-    background: #ffffff;
+    background: #eaf4fa;
 }
 
 .measure-container {

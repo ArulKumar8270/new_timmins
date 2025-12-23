@@ -31,54 +31,71 @@ const page = () => {
                 </div>
             </section>
 
-            <section className="contact-info">
-                <div className="contact-info-wrapper">
-                    <h2>📞 Get in Touch</h2>
-                    <div className="contact-cards">
-                        {/* Malaysia */}
-                        <div className="contact-card">
-                            <h3>Malaysia (Head Office)</h3>
-                            <p className="company">Timmins Training Consulting Sdn. Bhd.</p>
-                            <p>
-                                Suite 3A–05, Level 3A, Wisma Fiamma
-                                <br />
-                                No. 20, Jalan 7A/62A, Bandar Manjalara,
-                                <br />
+            <section className="container py-5">
+                <h2 className="text-center fw-bold mb-5"> Get in Touch</h2>
+
+                <div className="row justify-content-center g-4">
+
+                    {/* Malaysia */}
+                    <div className="col-md-4">
+                        <div className="contact-card h-100 text-center">
+                            <h5 className="contact-title">Malaysia (Head Office)</h5>
+
+                            <p className="contact-text">
+                                Timmins Training Consulting Sdn. Bhd.
+                            </p>
+
+                            <p className="contact-text">
+                                Suite 3A–05, Level 3A, Wisma Fiamma<br />
+                                No. 20, Jalan 7A/62A, Bandar Manjalara<br />
                                 52200 Kuala Lumpur, Malaysia
                             </p>
-                            <p>
-                                📱 +60 3-2785 0737
-                                <br />
+
+                            <p className="contact-text">
+                                📞 +60 3-2785 0737<br />
                                 WhatsApp: +60 11-1667 4727
                             </p>
-                            <p>✉️ hello@consult-timmins.com</p>
+
+                            <p className="contact-email">
+                                ✉️ hello@consult-timmins.com
+                            </p>
                         </div>
-                        {/* Penang */}
-                        <div className="contact-card">
-                            <h3>Penang Training Center</h3>
-                            <p>
-                                Bayan Lepas Industrial Park,
-                                <br />
+                    </div>
+
+                    {/* Penang */}
+                    <div className="col-md-4">
+                        <div className="contact-card h-100 text-center">
+                            <h5 className="contact-title">Penang Training Center</h5>
+
+                            <p className="contact-text">
+                                Bayan Lepas Industrial Park<br />
                                 Penang
                             </p>
-                            <p>
-                                📅 Training Hours
-                                <br />
-                                9:00 AM – 5:30 PM (Mon–Fri)
+
+                            <p className="contact-text">
+                                🕘 9:00 AM – 5:30 PM (Mon–Fri)
                             </p>
                         </div>
-                        {/* Canada */}
-                        <div className="contact-card">
-                            <h3>Canada (Representative Office)</h3>
-                            <p>
-                                Toronto, Ontario,
-                                <br />
+                    </div>
+
+                    {/* Canada */}
+                    <div className="col-md-4">
+                        <div className="contact-card h-100 text-center">
+                            <h5 className="contact-title">
+                                Canada (Representative Office)
+                            </h5>
+
+                            <p className="contact-text">
+                                Toronto, Ontario<br />
                                 Canada
                             </p>
                         </div>
                     </div>
+
                 </div>
             </section>
+
+
 
 
             <section className="appointment-section" id="calendly">
@@ -89,7 +106,7 @@ const page = () => {
                         <br />
                         Schedule a short consultation with our practitioners, whether you need:
                     </p>
-                    <ul className="appointment-list">
+                    <ul className="outcomes-list">
                         <li>AI Consultants for an Artificial Intelligence transformation</li>
                         <li>Advice on HRDC Claimable Training</li>
                         <li>Recommendations for Technical Upskilling programs</li>
@@ -98,15 +115,15 @@ const page = () => {
                     </ul>
                     <p className="appointment-note">Use the calendar below to choose a time.</p>
                     {/* Calendly Embed */}
-                    <div className="calendly-embed">
-                        {/* Replace URL with your real Calendly link */}
+                    {/* <div className="calendly-embed">
+                         Replace URL with your real Calendly link 
                         <iframe
                             src="https://calendly.com/your-calendly-link"
                             width="100%"
                             height={650}
                             frameBorder={0}
                         ></iframe>
-                    </div>
+                    </div> */}
                     <p className="response-note">We respond within one business day.</p>
                 </div>
             </section>
@@ -144,7 +161,13 @@ const page = () => {
                                 <option>Embedded Systems</option>
                                 <option>5G Training</option>
                             </select>
+
+
                         </div>
+                        <div> <a href="/solutions/tna" className="primary-btn">
+                            Send  Us  Message
+                        </a></div>
+
                     </form>
                 </div>
             </section>
@@ -152,7 +175,7 @@ const page = () => {
 
             <section className="map-section">
                 <div className="map-wrapper">
-                    <h2>📍 Find Us</h2>
+                    <h2> Find Us</h2>
                     <p className="map-title">Timmins Training Center – Penang</p>
                     <div className="map-embed">
                         {/* Replace src with your actual Google Maps embed */}
@@ -172,7 +195,7 @@ const page = () => {
 
             <section className="soft-cta">
                 <div className="soft-cta-wrapper">
-                    <h2>💬 Still Deciding?</h2>
+                    <h2> Still Deciding?</h2>
                     <p className="soft-cta-text">
                         That’s okay. Capability building takes thought, not pressure.
                     </p>

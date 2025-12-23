@@ -5,8 +5,7 @@
     justify-content: center;
     /* ⭐ center horizontally */
     padding: 0 8%;
-    background: linear-gradient(rgba(65, 152, 200, 0.92),
-            rgba(65, 152, 200, 0.92));
+    background: #eaf4fa;
 
 
     color: #ffffff;
@@ -33,12 +32,12 @@
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 18px;
-    color: #f4f7fb;
+    color: black;
 }
 
 .hero-subtext {
     font-size: 16px;
-    color: #eef3f8;
+    color: black;
 }
 
 /* CTA */

@@ -1,76 +1,82 @@
-/* SOLUTIONS HERO */
-.solutions-hero {
-    position: relative;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 6%;
-    /* background: url("/assets/New_images/Approach.jpg") center/cover no-repeat; */
-    color: #ffffff;
+.onboarding-section {
     text-align: center;
-}
-
-/* Overlay */
-.solutions-hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(rgba(65, 152, 200, 0.9),
-            rgba(65, 152, 200, 0.9));
-}
-
-/* Content */
-.solutions-hero-content {
-    position: relative;
+    padding: 80px 20px;
     max-width: 900px;
+    margin: 0 auto;
 }
 
-/* H1 */
-.solutions-hero-content h1 {
-    font-family: "Inter", sans-serif;
-    font-size: 40px;
-    /* design guide */
+.onboarding-section h2 {
+    font-size: 34px;
     font-weight: 700;
-    margin-bottom: 18px;
+    color: #15314E;
+    margin-bottom: 10px;
 }
 
-/* Subtitle */
-.hero-subtitle {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 26px;
-    color: #f4f7fb;
-}
-
-/* Description */
-.hero-description {
+.onboarding-section h4 {
     font-size: 18px;
-    /* design guide */
-    line-height: 1.7;
-    color: #eef3f8;
-    margin-bottom: 36px;
+    font-weight: 500;
+    color: #15314E;
+    margin-bottom: 24px;
 }
 
-/* CTA */
-.hero-cta {
-    display: inline-block;
-    background: #ec5339;
-    /* Coral */
-    color: #ffffff;
-    padding: 14px 34px;
-    border-radius: 12px;
-    text-decoration: none;
+.onboarding-section .intro {
     font-size: 16px;
-    font-weight: 600;
+    color: #15314E;
+    line-height: 1.7;
+    margin-bottom: 24px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .solutions-hero-content h1 {
-        font-size: 32px;
-    }
+.onboarding-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 30px;
+    max-width: 520px;
+}
 
-    .hero-subtitle {
-        font-size: 18px;
-    }
+.onboarding-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: #15314E;
+    font-size: 16px;
+}
+
+.onboarding-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #EC5339;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.features-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 40px 0 20px;
+    color: #15314E;
+}
+
+.highlight {
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #15314E;
+}
+
+.primary-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 32px;
+    background-color: #4198C8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #FAAF2D;
+    color: #15314E;
 }

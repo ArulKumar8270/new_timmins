@@ -7,78 +7,76 @@ const page = () => {
         <>
 
             <Header />
-
             <section className="safe-hero">
-                <div className="safe-hero-inner">
+                <div className="container">
+                    <div className="row justify-content-center text-center">
+                        <div className="col-lg-9">
 
-                    <h1>Scaled Agile (SAFe®) Certification</h1>
+                            <h1 className="safe-title">
+                                Scaled Agile (SAFe®) Certification
+                            </h1>
 
-                    <p className="safe-subtitle">
-                        Enterprise agility for engineering, telecom, manufacturing, and banking organizations.
-                    </p>
+                            <p className="safe-subtitle">
+                                Enterprise agility for engineering, telecom, manufacturing, and banking organizations.
+                            </p>
 
-                    <p className="safe-desc">
-                        Timmins is not a generic Agile training vendor. As a <strong>Bronze Scaled Agile Partner</strong>,
-                        we deliver SAFe® Agile Certification programs that help engineering-driven organizations
-                        scale with confidence, combining enterprise agility with technical excellence.
-                    </p>
+                            <p className="safe-desc">
+                                Timmins is not a generic Agile training vendor. As a <strong>Bronze Scaled Agile Partner</strong>,
+                                we deliver SAFe® Agile Certification programs that help engineering-driven organizations
+                                scale with confidence, combining enterprise agility with technical excellence.
+                            </p>
 
-                    <a href="/contact" className="safe-btn">
-                        Book Capability Consultation
-                    </a>
+                            <div className="button-row">
+                                <a href="/solutions/consulting" className="btn-primary">
+                                    Book Capability Consultation
+                                </a>
+                            </div>
 
-                    <p className="safe-note">
-                        HRDC Claimable, Malaysia-Based Employers Only
-                    </p>
+                            <div className="safe-meta">
+                                <p className="safe-note">
+                                    HRDC Claimable, Malaysia-Based Employers Only
+                                </p>
+                                <p className="safe-geo">
+                                    Global Delivery Available: Malaysia • Indonesia • Canada • United States
+                                </p>
+                            </div>
 
-                    <p className="safe-global">
-                        Global Delivery Available: Malaysia • Indonesia • Canada • United States
-                    </p>
-
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section className="safe-why">
-                <div className="safe-why-inner">
-                    <h2>Why Scaled Agile (SAFe®)?</h2>
 
-                    <p className="safe-why-intro">
-                        Agile is no longer a team-level framework — it’s an enterprise strategy.
-                    </p>
+            <section className="onboarding-section">
+                <h2>Why Scaled Agile (SAFe®)?</h2>
+                <p><strong>Agile is no longer a team-level framework, it’s an enterprise strategy.</strong></p>
+                <br />
+                <p>The Scaled Agile Framework (SAFe®) brings agility to complex, multi-team environments such as engineering, IT, operations, and product development. SAFe® helps organizations:</p>
+                <ul className="outcomes-list">
+                    <li>align teams around shared objectives</li>
+                    <li>improve delivery predictability and speed</li>
+                    <li>remove organizational silos</li>
+                    <li>empower leaders with data-driven insights</li>
+                    <li>scale Agile across portfolios, programs, and engineering teams
+                    </li>
+                </ul>
 
-                    <p className="safe-why-desc">
-                        The Scaled Agile Framework (SAFe®) brings agility to complex, multi-team
-                        environments such as engineering, IT, operations, and product development.
-                        SAFe® helps organizations:
-                    </p>
-
-                    <ul className="safe-why-list">
-                        <li>Align teams around shared objectives</li>
-                        <li>Improve delivery predictability and speed</li>
-                        <li>Remove organizational silos</li>
-                        <li>Empower leaders with data-driven insights</li>
-                        <li>Scale Agile across portfolios, programs, and engineering teams</li>
-                    </ul>
-
-                    <p className="safe-why-outro">
-                        This is why SAFe® has become the global standard for large-scale
-                        transformation across industries.
-                    </p>
-                </div>
+                <p>
+                    This is why SAFe® has become the global standard for large-scale transformation across industries.
+                </p>
             </section>
 
-            <section className="safe-programs">
-                <div className="safe-programs-inner">
-                    <h2>SAFe® Certification Programs We Offer</h2>
 
-                    <p className="safe-programs-desc">
-                        All programs are delivered by certified SAFe® trainers with real enterprise
-                        transformation experience in engineering, manufacturing, telecom, and
-                        digital banking.
+            <section className="safe-programs-section text-center">
+                <div className="container">
+                    <h2 className="fw-bold mb-3">SAFe® Certification Programs We Offer</h2>
+                    <p className="mb-4">
+                        All programs are delivered by <strong>certified SAFe® trainers</strong> with real
+                        enterprise transformation experience in engineering, manufacturing,
+                        telecom, and digital banking.
                     </p>
-
-                    <div className="safe-table-wrapper">
-                        <table className="safe-table">
+                    <div className="table-responsive">
+                        <table className="table table-bordered align-middle safe-table">
                             <thead>
                                 <tr>
                                     <th>Category</th>
@@ -87,7 +85,6 @@ const page = () => {
                                     <th>Format</th>
                                 </tr>
                             </thead>
-
                             <tbody>
                                 <tr>
                                     <td>Leadership</td>
@@ -137,208 +134,406 @@ const page = () => {
                 </div>
             </section>
 
-            <section className="safe-why-timmins">
-                <div className="safe-why-timmins-inner">
-                    <h2>Why Choose Timmins for SAFe®?</h2>
 
-                    <p className="safe-why-timmins-intro">
-                        We don’t just teach Agile, we build the capability to scale it.
-                    </p>
+            <section className="onboarding-section">
+                <h2>Why Choose Timmins for SAFe®?</h2>
+                <p>We don’t just teach Agile, we build the capability to scale it.</p>
+                <ul className="outcomes-list">
+                    <li><strong>Bronze Scaled Agile Partner</strong></li>
+                    <li> <strong>Practitioner-led trainers</strong> with deep transformation experience</li>
+                    <li> <strong>Multi-industry applicability</strong> (engineering, telecom, manufacturing, banking)</li>
+                    <li><strong>
+                        Customizable in-house and public batches
+                    </strong></li>
+                    <li>Delivered in <strong>10+ countries</strong> </li>
+                    <li>Tailored coaching for engineering teams</li>
+                    <li>Real case studies and enterprise simulations</li>
+                </ul>
 
-                    <ul className="safe-why-timmins-list">
-                        <li>Bronze Scaled Agile Partner</li>
-                        <li>Practitioner-led trainers with deep transformation experience</li>
-                        <li>Multi-industry applicability (engineering, telecom, manufacturing, banking)</li>
-                        <li>Customizable in-house and public batches</li>
-                        <li>Delivered in 10+ countries</li>
-                        <li>Tailored coaching for engineering teams</li>
-                        <li>Real case studies and enterprise simulations</li>
-                    </ul>
-
-                    <p className="safe-why-timmins-outro">
-                        When enterprises need engineering-aware agility, they come to Timmins.
-                    </p>
-                </div>
+                <p>
+                    When enterprises need <strong>engineering-aware agility</strong> , they come to Timmins.
+                </p>
             </section>
 
-            <section className="safe-batches">
-                <div className="safe-batches-inner">
-                    <h2>Upcoming Public Batches (2026)</h2>
-
-                    <p className="safe-batches-desc">
+            <section className="upcoming-batches py-5">
+                <div className="container text-center">
+                    <h2 className="fw-bold mb-3">Upcoming Public Batches (2026)</h2>
+                    <p className="mb-2">
                         Our next SAFe® certification batches will be available in:
                     </p>
-
-                    <ul className="safe-batches-locations">
-                        <li>Kuala Lumpur</li>
-                        <li>Penang</li>
-                    </ul>
-
-                    <p className="safe-batches-schedule">
-                        📅 Schedule Release: <strong>Q1 2026</strong>
+                    <p className="fw-semibold mb-1">Kuala Lumpur • Penang</p>
+                    <p className="mb-4">
+                        📅 <strong>Schedule Release:</strong> Q1 2026
                     </p>
-
-                    <a href="/contact" className="safe-batches-btn">
+                    <a href="#" className="btn btn-primary rounded-pill px-4 py-2">
                         Pre-Register for a SAFe® Class
                     </a>
                 </div>
             </section>
 
 
-            <section className="safe-hrdc">
-                <div className="safe-hrdc-inner">
-                    <h2>HRDC-Claimable Training (Malaysia Only)</h2>
-
-                    <p className="safe-hrdc-desc">
-                        All Timmins SAFe® certification programs delivered in Malaysia are
-                        <strong> HRDC Claimable Training</strong>. We provide full documentation,
-                        attendance tracking, and claim support.
-                    </p>
-
-                    <p className="safe-hrdc-note">
-                        (This benefit applies exclusively to Malaysian employers.)
-                    </p>
-                </div>
-            </section>
-
-            <section className="safe-engineering">
-                <div className="safe-engineering-inner">
-                    <h2>Engineering-Focused SAFe® Delivery</h2>
-
-                    <p className="safe-engineering-intro">
-                        Most SAFe® classes teach frameworks. We teach implementation, especially
-                        for engineering-driven systems.
-                    </p>
-
-                    <p className="safe-engineering-desc">
-                        Our approach integrates:
-                    </p>
-
-                    <ul className="safe-engineering-list">
-                        <li>Engineering workflows</li>
-                        <li>DevOps and automation pipelines</li>
-                        <li>Software &amp; hardware delivery cycles</li>
-                        <li>Telecom &amp; manufacturing constraints</li>
-                        <li>Cross-functional dependencies</li>
-                        <li>System-level architecture thinking</li>
-                    </ul>
-
-                    <p className="safe-engineering-outro">
-                        This is SAFe® for real-world engineering environments, not theory.
-                    </p>
-                </div>
+            <section className="safe-section text-center section gap">
+                <h2>HRDC-Claimable Training (Malaysia Only)</h2>
+                <p>
+                    All Timmins SAFe® certification programs delivered in Malaysia are HRDC
+                    Claimable Training. We provide full documentation, attendance tracking, and
+                    claim support.
+                </p>
+                <p className="fw-bold">
+                    (This benefit applies exclusively to Malaysian employers.)
+                </p>
             </section>
 
 
-            <section className="safe-final-cta">
-                <div className="safe-final-cta-inner">
-                    <h2>Ready to Scale?</h2>
 
-                    <p className="safe-final-cta-desc">
-                        Let’s design the right Agile transformation pathway for your organization.
-                    </p>
+            <section className="onboarding-section-1 section gap">
+                <h2>Engineering-Focused SAFe® Delivery</h2>
 
-                    <a href="/contact" className="safe-final-cta-btn">
-                        Speak to Our Agile Team
-                    </a>
-                </div>
+                <p className="intro">
+                    Most SAFe® classes teach frameworks. We teach implementation, especially for engineering-driven systems. Our approach integrates::
+
+                </p>
+                <ul className="outcomes-list">
+                    <li>engineering workflows</li>
+                    <li>DevOps and automation pipelines</li>
+                    <li>software & hardware delivery cycles</li>
+                    <li>telecom & manufacturing constraints</li>
+                    <li>cross-functional dependencies</li>
+                    <li>system-level architecture thinking</li>
+
+                </ul>
+
+                <p className="highlight">
+                    This is SAFe® for real-world engineering environments, not theory.
+                </p>
+
+                <a href="/solutions/tna" className="primary-btn">
+                    Build Your Skill Matrix
+                </a>
             </section>
 
 
-            <section className="safe-faq">
-                <div className="safe-faq-inner">
-                    <h2>Frequently Asked Questions</h2>
+            <section className="safe-section text-center section gap">
+                <h2>Ready to Scale?</h2>
+                <p>
+                    Let’s design the right Agile transformation pathway for your organization.
+                </p>
+                <a href="/solutions/tna" className="primary-btn">
+                    Speak to Our Agile Team
+                </a>
+            </section>
 
-                    <ol className="safe-faq-list">
-                        <li>
-                            <strong>What is SAFe Agile Certification?</strong>
-                            <p>
-                                SAFe Agile Certification is a globally recognized credential for
-                                professionals working in large-scale Agile environments. It validates
-                                enterprise agility, Lean principles, and SAFe® practices.
-                            </p>
-                        </li>
 
-                        <li>
-                            <strong>Is SAFe Scrum Master Certification worth it?</strong>
-                            <p>
-                                Yes. It is one of the most in-demand pathways for organizations using
-                                SAFe®, increasing career opportunities in enterprise Agile teams.
-                            </p>
-                        </li>
+            <section className="ed-faq section-gap position-relative">
+                <div className="container ed-container">
+                    <div className="ed-section-head text-center">
 
-                        <li>
-                            <strong>
-                                What is the difference between Scrum Master Certification and SAFe Scrum Master?
-                            </strong>
-                            <p>
-                                Scrum Master focuses on team-level Scrum, while SAFe Scrum Master
-                                expands into multi-team, multi-ART enterprise environments.
-                            </p>
-                        </li>
+                        <h3 className="ed-section-head__title text-center">
+                            Frequently Asked Questions
+                        </h3>
+                    </div>
+                    <div className="ed-faq__inner position-relative">
 
-                        <li>
-                            <strong>Which SAFe Certification is best for beginners?</strong>
-                            <p>
-                                Leading SAFe® and SAFe® Scrum Master (SSM) are the most beginner-friendly
-                                certifications.
-                            </p>
-                        </li>
+                        <div className="row align-items-center">
+                            <div className="col-lg-12 col-xl-6 col-12">
+                                {/* Faq Images  */}
+                                <div className="ed-faq__content">
 
-                        <li>
-                            <strong>How long does it take to get SAFe certified?</strong>
-                            <p>
-                                Most SAFe® certifications take 2–3 days of training followed by an
-                                online exam.
-                            </p>
-                        </li>
+                                    <div
+                                        className="ed-faq__accordion faq-inner accordion"
+                                        id="accordionExample"
+                                    >
+                                        {/* Single Faq */}
+                                        <div className="ed-faq__accordion-item">
+                                            <h2 className="accordion-header" id="headingOne">
+                                                <button
+                                                    className="accordion-button"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne"
+                                                    aria-expanded="true"
+                                                    aria-controls="collapseOne"
+                                                >
+                                                    1. What is SAFe Agile Certification?
+                                                </button>
+                                            </h2>
+                                            <div
+                                                id="collapseOne"
+                                                className="accordion-collapse collapse show"
+                                                aria-labelledby="headingOne"
+                                                data-bs-parent="#accordionExample"
+                                            >
+                                                <div className="ed-faq__accordion-body">
+                                                    <p className="ed-faq__accordion-text">
+                                                        SAFe Agile Certification is a globally recognized credential for professionals working in large-scale Agile environments. It helps validate your knowledge in enterprise agility, Lean principles, and SAFe® practices.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/* Single Faq */}
+                                        <div className="ed-faq__accordion-item">
+                                            <h2 className="accordion-header" id="headingThree">
+                                                <button
+                                                    className="accordion-button collapsed"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThree"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseThree"
+                                                >
+                                                    2. Is SAFe Scrum Master Certification worth it?
+                                                </button>
+                                            </h2>
+                                            <div
+                                                id="collapseThree"
+                                                className="accordion-collapse collapse"
+                                                aria-labelledby="headingThree"
+                                                data-bs-parent="#accordionExample"
+                                            >
+                                                <div className="ed-faq__accordion-body">
+                                                    <p className="ed-faq__accordion-text">
+                                                        Yes. SAFe Scrum Master Certification is one of the most in-demand Scrum Master pathways for organizations using the Scaled Agile Framework. It increases career opportunities in enterprise-level Agile teams
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/* Single Faq */}
+                                        <div className="ed-faq__accordion-item">
+                                            <h2 className="accordion-header" id="headingTwo">
+                                                <button
+                                                    className="accordion-button collapsed"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwo"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseTwo"
+                                                >
+                                                    3. What is the difference between Scrum Master Certification and SAFe Scrum Master?
+                                                </button>
+                                            </h2>
+                                            <div
+                                                id="collapseTwo"
+                                                className="accordion-collapse collapse"
+                                                aria-labelledby="headingTwo"
+                                                data-bs-parent="#accordionExample"
+                                            >
+                                                <div className="ed-faq__accordion-body">
+                                                    <p className="ed-faq__accordion-text">
+                                                        Scrum Master Certification focuses on team-level Scrum. SAFe Scrum Master Certification expands this into multi-team, multi-ART environments with cross-functional coordination.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/* Single Faq */}
+                                        <div className="ed-faq__accordion-item">
+                                            <h2 className="accordion-header" id="headingThree">
+                                                <button
+                                                    className="accordion-button collapsed"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThree"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseThree"
+                                                >
+                                                    4. Which SAFe Certification is best for beginners?
+                                                </button>
+                                            </h2>
+                                            <div
+                                                id="collapseThree"
+                                                className="accordion-collapse collapse"
+                                                aria-labelledby="headingThree"
+                                                data-bs-parent="#accordionExample"
+                                            >
+                                                <div className="ed-faq__accordion-body">
+                                                    <p className="ed-faq__accordion-text">
+                                                        Leading SAFe® and SAFe® Scrum Master (SSM) are the most beginner-friendly certifications, suitable for new Agile leaders, Scrum Masters, and engineers.   Yes. We specialize in custom training pathways for embedded systems, 5G, AI, and software engineering
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/* Single Faq */}
+                                        <div className="ed-faq__accordion-item">
+                                            <h2 className="accordion-header" id="headingFour">
+                                                <button
+                                                    className="accordion-button collapsed"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseFour"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseFour"
+                                                >
+                                                    5. How long does it take to get SAFe certified?
+                                                </button>
+                                            </h2>
+                                            <div
+                                                id="collapseFour"
+                                                className="accordion-collapse collapse"
+                                                aria-labelledby="headingFour"
+                                                data-bs-parent="#accordionExample"
+                                            >
+                                                <div className="ed-faq__accordion-body">
+                                                    <p className="ed-faq__accordion-text">
+                                                        Most SAFe® certifications take 2–3 days of training, followed by an online exam hosted by Scaled Agile Inc.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                        <li>
-                            <strong>Is SAFe 6.0 Training still relevant?</strong>
-                            <p>
-                                Yes. SAFe 6.0 is the latest version aligned with Lean-Agile principles
-                                and continuous learning culture.
-                            </p>
-                        </li>
+                            </div>
+                            <div className="col-lg-12 col-xl-6 col-12">
+                                {/* Faq Content  */}
+                                <div className="ed-faq__content">
 
-                        <li>
-                            <strong>What industries use SAFe?</strong>
-                            <p>
-                                Engineering, telecom, manufacturing, finance, and software industries
-                                widely use SAFe®.
-                            </p>
-                        </li>
-
-                        <li>
-                            <strong>Is HRDC Claimable Training available for SAFe?</strong>
-                            <p>
-                                Yes, but only for Malaysian employers.
-                            </p>
-                        </li>
-
-                        <li>
-                            <strong>Can SAFe be applied in engineering and hardware teams?</strong>
-                            <p>
-                                Absolutely. SAFe supports complex hardware, firmware, embedded, and
-                                telecom systems.
-                            </p>
-                        </li>
-
-                        <li>
-                            <strong>Does Timmins offer in-house SAFe classes?</strong>
-                            <p>
-                                Yes. We provide private corporate SAFe® classes customized to your
-                                organization’s goals.
-                            </p>
-                        </li>
-                    </ol>
+                                    <div
+                                        className="ed-faq__accordion faq-inner accordion"
+                                        id="accordionExample"
+                                    >
+                                        {/* Single Faq */}
+                                        <div className="ed-faq__accordion-item">
+                                            <h2 className="accordion-header" id="headingOne">
+                                                <button
+                                                    className="accordion-button"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne"
+                                                    aria-expanded="true"
+                                                    aria-controls="collapseOne"
+                                                >
+                                                    6. Is SAFe 6.0 Training still relevant?
+                                                </button>
+                                            </h2>
+                                            <div
+                                                id="collapseOne"
+                                                className="accordion-collapse collapse show"
+                                                aria-labelledby="headingOne"
+                                                data-bs-parent="#accordionExample"
+                                            >
+                                                <div className="ed-faq__accordion-body">
+                                                    <p className="ed-faq__accordion-text">
+                                                        Yes. SAFe 6.0 is the latest version of the Scaled Agile Framework, fully aligned with Lean-Agile principles, organizational flow, and continuous learning culture.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/* Single Faq */}
+                                        <div className="ed-faq__accordion-item">
+                                            <h2 className="accordion-header" id="headingTwo">
+                                                <button
+                                                    className="accordion-button collapsed"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwo"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseTwo"
+                                                >
+                                                    7. What industries use SAFe?
+                                                </button>
+                                            </h2>
+                                            <div
+                                                id="collapseTwo"
+                                                className="accordion-collapse collapse"
+                                                aria-labelledby="headingTwo"
+                                                data-bs-parent="#accordionExample"
+                                            >
+                                                <div className="ed-faq__accordion-body">
+                                                    <p className="ed-faq__accordion-text">
+                                                        SAFe is widely used in engineering, telecom, manufacturing, finance, and software companies to manage large-scale programs and cross-team dependencies.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/* Single Faq */}
+                                        <div className="ed-faq__accordion-item">
+                                            <h2 className="accordion-header" id="headingThree">
+                                                <button
+                                                    className="accordion-button collapsed"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThree"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseThree"
+                                                >
+                                                    8. Is HRDC Claimable Training available for SAFe?
+                                                </button>
+                                            </h2>
+                                            <div
+                                                id="collapseThree"
+                                                className="accordion-collapse collapse"
+                                                aria-labelledby="headingThree"
+                                                data-bs-parent="#accordionExample"
+                                            >
+                                                <div className="ed-faq__accordion-body">
+                                                    <p className="ed-faq__accordion-text">
+                                                        Yes, but only for Malaysian employers. All Timmins SAFe® programs delivered in Malaysia are HRDC-claimable.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/* Single Faq */}
+                                        <div className="ed-faq__accordion-item">
+                                            <h2 className="accordion-header" id="headingThree">
+                                                <button
+                                                    className="accordion-button collapsed"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThree"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseThree"
+                                                >
+                                                    9. Can SAFe be applied in engineering and hardware teams?
+                                                </button>
+                                            </h2>
+                                            <div
+                                                id="collapseThree"
+                                                className="accordion-collapse collapse"
+                                                aria-labelledby="headingThree"
+                                                data-bs-parent="#accordionExample"
+                                            >
+                                                <div className="ed-faq__accordion-body">
+                                                    <p className="ed-faq__accordion-text">
+                                                        Absolutely. SAFe is designed for complex systems, including hardware, firmware, embedded, telecom, and manufacturing workflows.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/* Single Faq */}
+                                        <div className="ed-faq__accordion-item">
+                                            <h2 className="accordion-header" id="headingFour">
+                                                <button
+                                                    className="accordion-button collapsed"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseFour"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseFour"
+                                                >
+                                                    10. Does Timmins offer in-house SAFe classes for companies?
+                                                </button>
+                                            </h2>
+                                            <div
+                                                id="collapseFour"
+                                                className="accordion-collapse collapse"
+                                                aria-labelledby="headingFour"
+                                                data-bs-parent="#accordionExample"
+                                            >
+                                                <div className="ed-faq__accordion-body">
+                                                    <p className="ed-faq__accordion-text">
+                                                        Yes. Timmins provides private corporate classes tailored to your teams, roles, and transformation goals.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <Footer />
-
-
-
 
 
 

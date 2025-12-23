@@ -9,7 +9,7 @@ const page = () => {
             <Header />
 
 
-            <section className="approach-hero">
+            <section className="approach-hero py-5">
                 <div className="approach-hero-content">
                     <h1>Our Approach</h1>
                     <h3>Engineering-grade. Practitioner-led. Designed for real capability.</h3>
@@ -27,13 +27,15 @@ const page = () => {
                             environment.
                         </strong>
                     </p>
-                    <a href="/courses" className="hero-btn">
-                        Explore Our Courses
-                    </a>
+                    <div className="button-row">
+                        <a href="/solutions/consulting" className="btn-primary">
+                            For Companies – Explore Solutions
+                        </a>
+                    </div>
                 </div>
             </section>
 
-            <section className="approach-section listen-first">
+            <section className="approach-section-1 listen-first section gap">
                 <div className="approach-container">
                     {/* LEFT CONTENT */}
                     <div className="approach-text">
@@ -92,7 +94,7 @@ const page = () => {
                 </div>
             </section>
 
-            <section className="approach-section deliver-experts">
+            <section className="approach-section-1 deliver-experts section gap">
                 <div className="approach-container">
                     {/* LEFT CONTENT */}
                     <div className="approach-text">
@@ -170,7 +172,7 @@ const page = () => {
 
 
 
-            <section className="approach-section stay-connected">
+            <section className="approach-section-1 stay-connected section gap">
                 <div className="approach-container">
                     {/* LEFT CONTENT */}
                     <div className="approach-text">
@@ -227,13 +229,13 @@ const page = () => {
                     <br />
                     <h5>Ready to Build Capability?</h5>
                     <div className="final-cta">
-                        <a href="/solutions" className="btn-outline">
+                        <a href="/solutions" className="btn-primary">
                             Explore Technical Solutions
                         </a>
-                        <a href="/courses" className="btn-primary">
+                        <a href="/courses" className="btn-secondary">
                             View Courses
                         </a>
-                        <a href="/contact" className="btn-outline">
+                        <a href="/contact" className="btn-primary">
                             Speak to Our Team
                         </a>
                         <br />

@@ -252,6 +252,11 @@ export default function RootLayout({
         <link rel="preload" href="/assets/New_images/hero_2.png" as="image" />
 
         {/* Critical CSS - Load immediately */}
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+
         <link rel="stylesheet" href="/assets/plugins/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/section-css/reset.css" />
         <link rel="stylesheet" href="/assets/section-css/header.css" />
