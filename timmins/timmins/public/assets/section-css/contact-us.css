@@ -65,7 +65,7 @@
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 48px;
-    color: #035357;
+    color: black;
     text-align: center;
 }
 
@@ -118,7 +118,7 @@
 /* APPOINTMENT SECTION */
 .appointment-section {
     padding: 90px 6%;
-    background: #f8fafc;
+    background: #eaf4fa;
 }
 
 .appointment-wrapper {
@@ -133,7 +133,7 @@
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #035357;
+    color: black;
 }
 
 /* Intro text */
@@ -221,7 +221,7 @@
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 16px;
-    color: #035357;
+    color: black;
 }
 
 /* Intro */
@@ -320,7 +320,7 @@
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 12px;
-    color: #035357;
+    color: black;
 }
 
 /* Location title */
@@ -359,7 +359,7 @@
     font-size: 34px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #035357;
+    color: black;
 }
 
 /* Main text */

@@ -699,6 +699,31 @@ p.badge-container {
     justify-content: right;
     gap: 12px;
   }
+  .ed-topbar__logo img {
+    max-width: 54px;
+    /* height: 34px; */
+    object-fit: contain;
+}
+.sticky .ed-topbar__logo img {
+  max-width: 55px;
+}
+.offcanvas__menu_item {
+  display: flex;
+  justify-content: space-between;
+}
+.offcanvas__menu_item i {
+  border: 1px solid white;
+  /* padding: 1px; */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.offcanvas__sub_menu_toggle {
+  display: none;
+}
   .ed-topbar__info-buttons button {
     padding: 12px 16px;
   }

@@ -27,7 +27,7 @@ const page = () => {
                             </p>
 
                             <div className="button-row">
-                                <a href="/solutions/consulting" className="btn-primary">
+                                <a href="/solutions/consulting" className="btn-primary text-white">
                                     Book Capability Consultation
                                 </a>
                             </div>
@@ -47,7 +47,7 @@ const page = () => {
             </section>
 
 
-            <section className="onboarding-section">
+            <section className="onboarding-section listStyle bgBlue">
                 <h2>Why Scaled Agile (SAFe®)?</h2>
                 <p><strong>Agile is no longer a team-level framework, it’s an enterprise strategy.</strong></p>
                 <br />
@@ -135,7 +135,7 @@ const page = () => {
             </section>
 
 
-            <section className="onboarding-section">
+            <section className="onboarding-section  listStyle bgBlue">
                 <h2>Why Choose Timmins for SAFe®?</h2>
                 <p>We don’t just teach Agile, we build the capability to scale it.</p>
                 <ul className="outcomes-list">
@@ -165,7 +165,7 @@ const page = () => {
                     <p className="mb-4">
                         📅 <strong>Schedule Release:</strong> Q1 2026
                     </p>
-                    <a href="#" className="btn btn-primary rounded-pill px-4 py-2">
+                    <a href="#" className="btn btn-primary text-white rounded-pill px-4 py-2">
                         Pre-Register for a SAFe® Class
                     </a>
                 </div>
@@ -186,14 +186,14 @@ const page = () => {
 
 
 
-            <section className="onboarding-section-1 section gap">
+            <section className="onboarding-section-1 section gap listStyle">
                 <h2>Engineering-Focused SAFe® Delivery</h2>
 
                 <p className="intro">
                     Most SAFe® classes teach frameworks. We teach implementation, especially for engineering-driven systems. Our approach integrates::
 
                 </p>
-                <ul className="outcomes-list">
+                <ul className="outcomes-list witthautoStyle">
                     <li>engineering workflows</li>
                     <li>DevOps and automation pipelines</li>
                     <li>software & hardware delivery cycles</li>
@@ -207,7 +207,7 @@ const page = () => {
                     This is SAFe® for real-world engineering environments, not theory.
                 </p>
 
-                <a href="/solutions/tna" className="primary-btn">
+                <a href="/solutions/tna" className="primary-btn text-white">
                     Build Your Skill Matrix
                 </a>
             </section>
@@ -218,7 +218,7 @@ const page = () => {
                 <p>
                     Let’s design the right Agile transformation pathway for your organization.
                 </p>
-                <a href="/solutions/tna" className="primary-btn">
+                <a href="/solutions/tna" className="primary-btn text-white">
                     Speak to Our Agile Team
                 </a>
             </section>

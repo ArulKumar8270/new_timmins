@@ -39,7 +39,8 @@ const page = () => {
                     {/* Malaysia */}
                     <div className="col-md-4">
                         <div className="contact-card h-100 text-center">
-                            <h5 className="contact-title">Malaysia (Head Office)</h5>
+                            <h2>Malaysia</h2>
+                            <h5 className="contact-title"> (Head Office)</h5>
 
                             <p className="contact-text">
                                 Timmins Training Consulting Sdn. Bhd.
@@ -64,31 +65,37 @@ const page = () => {
 
                     {/* Penang */}
                     <div className="col-md-4">
-                        <div className="contact-card h-100 text-center">
-                            <h5 className="contact-title">Penang Training Center</h5>
+                        <div className="contact-card h-100 text-center justify-content-center">
+                            <div>
+                                <h5 className="contact-title">Penang Training Center</h5>
 
-                            <p className="contact-text">
-                                Bayan Lepas Industrial Park<br />
-                                Penang
-                            </p>
 
-                            <p className="contact-text">
-                                🕘 9:00 AM – 5:30 PM (Mon–Fri)
-                            </p>
+                                <p className="contact-text">
+                                    Bayan Lepas Industrial Park<br />
+                                    Penang
+                                </p>
+
+                                <p className="contact-text">
+                                    🕘 9:00 AM – 5:30 PM (Mon–Fri)
+                                </p>
+                            </div>
                         </div>
                     </div>
 
                     {/* Canada */}
                     <div className="col-md-4">
-                        <div className="contact-card h-100 text-center">
-                            <h5 className="contact-title">
-                                Canada (Representative Office)
-                            </h5>
+                        <div className="contact-card h-100 text-center justify-content-center">
+                            <div>
+                                <h2 >Canada </h2>
+                                <h5 className="contact-title">
+                                    (Representative Office)
+                                </h5>
 
-                            <p className="contact-text">
-                                Toronto, Ontario<br />
-                                Canada
-                            </p>
+                                <p className="contact-text">
+                                    Toronto, Ontario<br />
+                                    Canada
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -99,7 +106,7 @@ const page = () => {
 
 
             <section className="appointment-section" id="calendly">
-                <div className="appointment-wrapper">
+                <div className="appointment-wrapper listStyle">
                     <h2>Book an Appointment</h2>
                     <p className="appointment-intro">
                         Not sure where to begin?
@@ -164,7 +171,7 @@ const page = () => {
 
 
                         </div>
-                        <div> <a href="/solutions/tna" className="primary-btn">
+                        <div > <a href="/solutions/tna" className="primary-btn text-white">
                             Send  Us  Message
                         </a></div>
 
@@ -173,12 +180,11 @@ const page = () => {
             </section>
 
 
-            <section className="map-section">
+            {/* <section className="map-section">
                 <div className="map-wrapper">
                     <h2> Find Us</h2>
                     <p className="map-title">Timmins Training Center – Penang</p>
                     <div className="map-embed">
-                        {/* Replace src with your actual Google Maps embed */}
                         <iframe
                             src="https://www.google.com/maps?q=Bayan%20Lepas%20Industrial%20Park%20Penang&output=embed"
                             width="100%"
@@ -190,7 +196,7 @@ const page = () => {
                         ></iframe>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
 
             <section className="soft-cta">

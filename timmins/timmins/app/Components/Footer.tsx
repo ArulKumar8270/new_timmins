@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Script from 'next/script'
+import Link from 'next/link'
 
 const Footer = () => {
     const [openAccordion, setOpenAccordion] = useState<string | null>(null)
@@ -62,12 +63,12 @@ const Footer = () => {
                                 </span>
                             </div>
                             <div className="trust-ctas">
-                                <a href="/courses" className="cta-button primary">
+                                <Link href="/Contact-us" className="cta-button primary">
                                     📘 View Course Calendar
-                                </a>
-                                <a href="/contact" className="cta-button secondary">
+                                </Link>
+                                <Link href="/Contact-us" className="cta-button secondary">
                                     💬 Contact Us
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -90,9 +91,9 @@ const Footer = () => {
                                 <h4 className="footer-column-title desktop-only">Company</h4>
                                 <div className={`footer-column-content ${openAccordion === 'company' ? 'open' : ''}`}>
                                     <ul className="footer-links">
-                                        <li><a href="/about">About Us</a></li>
-                                        <li><a href="/about#journey">Our Journey (10 Years)</a></li>
-                                        <li><a href="/contact">Contact Us</a></li>
+                                        <li><Link href="/About-us">About Us</Link></li>
+                                        <li><Link href="/10-Years">Our Journey (10 Years)</Link></li>
+                                        <li><Link href="/Contact-us">Contact Us</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -110,10 +111,10 @@ const Footer = () => {
                                 <h4 className="footer-column-title desktop-only">Solutions</h4>
                                 <div className={`footer-column-content ${openAccordion === 'solutions' ? 'open' : ''}`}>
                                     <ul className="footer-links">
-                                        <li><a href="/courses#onboarding">Fresh Graduate Onboarding</a></li>
-                                        <li><a href="/courses#tech-stack">Technology Stack Programs</a></li>
-                                        <li><a href="/courses#ai-consulting">AI Consulting</a></li>
-                                        <li><a href="/courses#safe">SAFe® Certification</a></li>
+                                        <li><Link href="/Our-Solution">Fresh Graduate Onboarding</Link></li>
+                                        <li><Link href="/Our-Solution">Technology Stack Programs</Link></li>
+                                        <li><Link href="/Our-Solution">AI Consulting</Link></li>
+                                        <li><Link href="/Scaled-Agile">SAFe® Certification</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -131,9 +132,9 @@ const Footer = () => {
                                 <h4 className="footer-column-title desktop-only">Resources</h4>
                                 <div className={`footer-column-content ${openAccordion === 'resources' ? 'open' : ''}`}>
                                     <ul className="footer-links">
-                                        <li><a href="/courses">Courses</a></li>
-                                        <li><a href="/courses#calendar">Training Calendar</a></li>
-                                        <li><a href="/insights">Insights & Case Studies</a></li>
+                                        <li><Link href="/">Courses</Link></li>
+                                        <li><Link href="/Contact-us">Training Calendar</Link></li>
+                                        <li><Link href="/Case-study">Insights & Case Studies</Link></li>
                                     </ul>
                                 </div>
                             </div>

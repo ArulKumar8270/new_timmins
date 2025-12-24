@@ -28,7 +28,7 @@ export default function TenYearsPage() {
 
                 <section className="ten-years-page-1">
                     <div className="journey-hero-inner">
-                        <h1>2015–2017 - Where It All Began</h1>
+                        <h1> Where It All Began - (2015 – 2017)</h1>
 
                         <p className="journey-hero-year">2015</p>
                         <p> Timmins Training Consulting was officially registered as a corporate training provider in Malaysia. The founding purpose was clear from day one:</p>
@@ -47,7 +47,7 @@ export default function TenYearsPage() {
 
                 <section className="ten-years-page">
 
-                    <div className="journey-block">
+                    <div className="journey-block listStyle">
                         <h2>Reinvention Through Disruption (2018–2019)</h2>
 
                         <p>
@@ -78,7 +78,7 @@ export default function TenYearsPage() {
 
                 <section className="ten-years-page-1">
 
-                    <div className="journey-block">
+                    <div className="journey-block listStyle bgBlue">
                         <h2>Reinvention Through Disruption (2020–2022)
                         </h2>
 
@@ -108,7 +108,7 @@ export default function TenYearsPage() {
 
                 <section className="ten-years-page">
 
-                    <div className="journey-block">
+                    <div className="journey-block listStyle">
                         <h2>Global Reach, Engineering Depth, and HRDC Recognition (2023–2025)</h2>
 
                         <p>

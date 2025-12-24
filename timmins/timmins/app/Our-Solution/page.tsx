@@ -23,7 +23,7 @@ const page = () => {
                 </div>
             </section>
 
-            <section className="onboarding-section">
+            <section className="onboarding-section listStyle bgBlue">
                 <h2>Fresh Graduate Onboarding Programs</h2>
                 <h4>From fresh talent to project-ready engineers.</h4>
                 <p className="intro">
@@ -50,12 +50,12 @@ const page = () => {
                     📌 Over a decade of onboarding success for manufacturing, telecom, and
                     banking enterprises.
                 </p>
-                <a href="/solutions/tna" className="primary-btn">
+                <a href="/solutions/tna" className="primary-btn text-white">
                     Explore Technology Programs
                 </a>
             </section>
 
-            <section className="tech-stack-section">
+            <section className="tech-stack-sectionb">
                 <div className="container text-center">
                     <h2>Technology Stack Programs</h2>
                     <h4>End-to-end skill mastery for technical teams.</h4>
@@ -81,13 +81,13 @@ const page = () => {
                         <li>Reduced dependency on external vendors</li>
                         <li>Consistent skill standards across teams</li>
                     </ul>
-                    <a href="/solutions/technology-stacks" className="tech-btn">
+                    <a href="/solutions/technology-stacks" className="tech-btn text-white">
                         See Technical Stacks
                     </a>
                 </div>
             </section>
 
-            <section className="onboarding-section">
+            <section className="onboarding-section listStyle bgBlue">
                 <h2>Professional Development Stack</h2>
                 <h4>Human capability for engineering-driven organizations.</h4>
                 <p className="intro">
@@ -105,20 +105,20 @@ const page = () => {
                 <p className="highlight">
                     This stack is designed for <strong>engineers, analysts, managers, and cross-functional teams</strong> across industries.
                 </p>
-                <a href="/solutions/tna" className="primary-btn">
+                <a href="/solutions/tna" className="primary-btn text-white">
                     Explore Professional Development
                 </a>
             </section>
 
 
-            <section className="onboarding-section-1">
+            <section className="onboarding-section-1 listStyle">
                 <h2>Training Needs Assessment & Skill Matrix</h2>
                 <h4>Measure. Benchmark. Transform.</h4>
                 <p className="intro">
                     We help organizations evaluate capability objectively through:
 
                 </p>
-                <ul className="outcomes-list">
+                <ul className="outcomes-list witthautoStyle">
                     <li>role-based skills mapping</li>
                     <li>engineering vs non-engineering segmentation</li>
                     <li>prerequisite tracking</li>
@@ -131,7 +131,7 @@ const page = () => {
                 <p className="highlight">
                     This brings clarity to your training needs assessment, customized training plans, and professional development training roadmap
                 </p>
-                <a href="/solutions/tna" className="primary-btn">
+                <a href="/solutions/tna" className="primary-btn text-white">
                     Build Your Skill Matrix
                 </a>
             </section>
@@ -174,20 +174,20 @@ const page = () => {
                             uplift.
                         </strong>
                     </p>
-                    <a href="/solutions/consulting" className="primary-btn">
+                    <a href="/solutions/consulting" className="primary-btn text-white">
                         View Consulting Services
                     </a>
                 </div>
             </section>
 
 
-            <section className="onboarding-section-1">
+            <section className="onboarding-section-1 listStyle">
                 <h2>Scaled Agile Certification (SAFe®) - Bronze Partner</h2>
                 <h4>Enterprise agility for multi-industry transformation.</h4>
                 <p className="intro">
                     As an Official <strong>Scaled Agile Bronze Partner</strong>, we deliver SAFe® certification programs for manufacturing, telecom, banking, and large-scale engineering organizations. Popular certifications:
                 </p>
-                <ul className="outcomes-list">
+                <ul className="outcomes-list witthautoStyle">
                     <li>SAFe® 6.0 Training</li>
                     <li>Leading SAFe (SAFe Agilist)</li>
                     <li>SAFe Scrum Master (SSM)</li>
@@ -199,19 +199,19 @@ const page = () => {
                     <li>SAFe Agile Product Management</li>
                 </ul>
                 <h3 className="features-title">Features:</h3>
-                <ul className="outcomes-list">
+                <ul className="outcomes-list witthautoStyle">
                     <li>delivered by certified SAFe® trainers</li>
                     <li>private corporate batches</li>
                     <li><strong>HRDC Claimable Training</strong> (Malaysia only)</li>
                 </ul>
-                <a href="/solutions/tna" className="primary-btn">
+                <a href="/solutions/tna" className="primary-btn text-white">
                     Explore SAFe® Certifications
                 </a>
             </section>
 
-            <section className="onboarding-section">
+            <section className="onboarding-section listStyle bgBlue">
                 <h2>Why Organizations Choose Timmins</h2>
-                <ul className="outcomes-list">
+                <ul className="outcomes-list witthautoStyle">
                     <li>practitioner-led, engineering-grade programs</li>
                     <li>relevant across industries (manufacturing, telecom, banking, engineering)</li>
                     <li>5,000+ professionals trained</li>
@@ -235,7 +235,7 @@ const page = () => {
                 <br />
 
                 <div className="button-row">
-                    <a href="/solutions/consulting" className="btn-primary">
+                    <a href="/solutions/consulting" className="btn-primary text-white">
                         For Companies – Explore Solutions
                     </a>
                     <a href="/courses" className="btn-secondary">

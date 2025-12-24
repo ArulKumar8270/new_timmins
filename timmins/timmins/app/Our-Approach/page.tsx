@@ -228,7 +228,7 @@ const page = () => {
                     </p>
                     <br />
                     <h5>Ready to Build Capability?</h5>
-                    <div className="final-cta">
+                    <div className="final-cta text-white">
                         <a href="/solutions" className="btn-primary">
                             Explore Technical Solutions
                         </a>
