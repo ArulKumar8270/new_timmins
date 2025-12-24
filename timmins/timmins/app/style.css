@@ -460,6 +460,9 @@
     background-color: #4198C8;
     padding: 60px 20px;
 }
+.impact-stats h3, .impact-stats p {
+    color: white;
+}
 
 .impact-grid {
     max-width: 1200px;

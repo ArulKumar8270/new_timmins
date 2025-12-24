@@ -130,7 +130,7 @@ const page = () => {
                         </div>
                     </div>
                     {/* Content Box */}
-                    <div className="impact-card mt-5">
+                    <div className="impact-card mt-5 text-center">
                         <p className="impact-quote">
                             Every transformation story begins with a simple principle:
                             <strong>real capabilities are built through real practice.</strong>
