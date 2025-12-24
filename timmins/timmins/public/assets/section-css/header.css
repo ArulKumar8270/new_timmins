@@ -700,12 +700,12 @@ p.badge-container {
     gap: 12px;
   }
   .ed-topbar__logo img {
-    max-width: 54px;
+    max-width: 54px !important;
     /* height: 34px; */
     object-fit: contain;
 }
 .sticky .ed-topbar__logo img {
-  max-width: 55px;
+  max-width: 55px !important;
 }
 .offcanvas__menu_item {
   display: flex;
