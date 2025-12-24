@@ -459,6 +459,7 @@
 .impact-stats {
     background-color: #4198C8;
     padding: 60px 20px;
+    border-radius: 15px;
 }
 .impact-stats h3, .impact-stats p {
     color: white;

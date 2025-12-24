@@ -1,0 +1,66 @@
+# Cache headers for static assets
+# This file is used by Netlify, Vercel, and other static hosting providers
+
+# Images - 1 year cache
+/assets/New_images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Fonts - 1 year cache
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/plugins/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS - 1 year cache
+/assets/plugins/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/section-css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScript - 1 year cache
+/assets/plugins/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML - 1 hour cache (shorter for content updates)
+/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Specific image extensions
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.eot
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+

@@ -13,6 +13,8 @@ export default function Home() {
               className="section-bg hero-bg-2 background-image"
               style={{ backgroundImage: 'url("/assets/New_images/hero_2.jpg")' }}
             >
+              {/* Preload hero image for faster LCP */}
+              <link rel="preload" as="image" href="/assets/New_images/hero_2.jpg" />
 
               {/* Start Hero Area */}
               <section className="ed-hero">
@@ -28,7 +30,13 @@ export default function Home() {
                           Timmins builds practical engineering capability in AI, Embedded Systems, 5G, and enterprise agility for teams across ASEAN and North America with 10+ years experience
                         </p>
                         <p className="badge-container mt-2">
-                          <img src="/assets/New_images/badge.png" alt="hero-image" />
+                          <Image 
+                            src="/assets/New_images/badge.png" 
+                            alt="HRDC Claimable Training badge" 
+                            width={120}
+                            height={120}
+                            priority
+                          />
                           <span>HRDC Claimable Training available for Malaysian employers.</span>
                         </p>
                         <div className="d-flex gap-3">

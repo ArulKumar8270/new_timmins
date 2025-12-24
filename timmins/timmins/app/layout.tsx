@@ -249,7 +249,10 @@ export default function RootLayout({
 
         {/* Preload critical resources */}
         <link rel="preload" href="/assets/plugins/css/bootstrap.min.css" as="style" />
-        <link rel="preload" href="/assets/New_images/hero_2.png" as="image" />
+        <link rel="preload" href="/assets/New_images/hero_2.jpg" as="image" />
+        <link rel="preload" href="/assets/New_images/badge.png" as="image" />
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+        <link rel="dns-prefetch" href="https://www.linkedin.com" />
 
         {/* Critical CSS - Load immediately */}
         <link
