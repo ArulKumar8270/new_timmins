@@ -36,7 +36,7 @@ const Footer = () => {
         <>
             <footer className="timmins-footer">
                 {/* Top Bar - HRDC Trust Strip */}
-                <div className="footer-trust-bar">
+                {/* <div className="footer-trust-bar">
                     <div className="container ed-container">
                         <div className="trust-bar-content">
                             <div className="trust-badges">
@@ -72,7 +72,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Main Footer - 4 Columns */}
                 <div className="footer-main">
@@ -80,7 +80,7 @@ const Footer = () => {
                         <div className="footer-grid">
                             {/* Company Column */}
                             <div className="footer-column">
-                                <button 
+                                <button
                                     className="footer-column-title mobile-only"
                                     onClick={() => toggleAccordion('company')}
                                     aria-expanded={openAccordion === 'company'}
@@ -100,7 +100,7 @@ const Footer = () => {
 
                             {/* Solutions Column */}
                             <div className="footer-column">
-                                <button 
+                                <button
                                     className="footer-column-title mobile-only"
                                     onClick={() => toggleAccordion('solutions')}
                                     aria-expanded={openAccordion === 'solutions'}
@@ -121,7 +121,7 @@ const Footer = () => {
 
                             {/* Resources Column */}
                             <div className="footer-column">
-                                <button 
+                                <button
                                     className="footer-column-title mobile-only"
                                     onClick={() => toggleAccordion('resources')}
                                     aria-expanded={openAccordion === 'resources'}
@@ -141,7 +141,7 @@ const Footer = () => {
 
                             {/* Offices Column */}
                             <div className="footer-column">
-                                <button 
+                                <button
                                     className="footer-column-title mobile-only"
                                     onClick={() => toggleAccordion('offices')}
                                     aria-expanded={openAccordion === 'offices'}
@@ -193,41 +193,46 @@ const Footer = () => {
                     <div className="container ed-container">
                         <div className="footer-bottom-content">
                             <div className="footer-social">
-                                <a 
-                                    href="https://www.linkedin.com/company/timmins-training-consulting" 
-                                    target="_blank" 
+
+                                <a
+                                    href="https://www.linkedin.com/company/timmins-training-consulting"
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="LinkedIn Page"
                                     className="social-link"
                                 >
-                                    🔗 LinkedIn
+                                    <i className="bi bi-linkedin" />
+
+                                    LinkedIn
                                 </a>
-                                <a 
-                                    href="https://www.instagram.com/consulttimmins" 
-                                    target="_blank" 
+                                <a
+                                    href="https://www.instagram.com/consulttimmins"
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="Instagram Page"
                                     className="social-link"
                                 >
-                                    🔗 Instagram
+                                    <i className="bi bi-instagram" />
+                                    Instagram
                                 </a>
-                                <a 
-                                    href="https://www.facebook.com/consulttimmins" 
-                                    target="_blank" 
+                                <a
+                                    href="https://www.facebook.com/consulttimmins"
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="Facebook Page"
                                     className="social-link"
                                 >
-                                    🔗 Facebook
+                                    <i className="bi bi-facebook" />
+                                    Facebook
                                 </a>
-                                <a 
-                                    href="https://www.youtube.com/@consulttimmins" 
-                                    target="_blank" 
+                                <a
+                                    href="https://www.youtube.com/@consulttimmins"
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="YouTube Channel"
                                     className="social-link"
                                 >
-                                    🔗 YouTube
+                                    <i className="bi bi-youtube" /> YouTube
                                 </a>
                             </div>
                             <div className="footer-certifications">

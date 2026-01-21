@@ -9,41 +9,33 @@ const page = () => {
             <Header />
 
 
-            <section className="approach-hero py-5">
-                <div className="approach-hero-content">
-                    <h1>Our Approach</h1>
-                    <h3>Engineering-grade. Practitioner-led. Designed for real capability.</h3>
-                    <p>
-                        We are a practitioner-led advanced tech capability partner, helping
-                        organizations build real engineering, technical, and digital capability
-                        through customized, hands-on learning designed by people who’ve done the
-                        work.
-                    </p>
-                    <p className="hero-highlight">
-                        Our methodology follows one principle:
-                        <br />
-                        <strong>
-                            People learn effectively when training reflects the real engineering
-                            environment.
-                        </strong>
-                    </p>
-                    <div className="button-row">
-                        <a href="/solutions/consulting" className="btn-primary">
-                            For Companies – Explore Solutions
-                        </a>
+            <section className="approach-listen case-hero py-5">
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-9 text-center">
+
+                            <h1 className="case-hero-title mb-3">
+                                Our Approach
+                            </h1>
+
+                            <p className="case-hero-desc mb-4">
+                                Practitioner-led, engineering-grade learning designed to build real technical and digital capability in environments that reflect real-world engineering.
+                            </p>
+
+
+                        </div>
+
                     </div>
                 </div>
             </section>
 
-            <section className="approach-section-1 listen-first section gap">
+            <section className=" approach-section-1  listen-first section gap">
                 <div className="approach-container">
                     {/* LEFT CONTENT */}
                     <div className="approach-text">
                         <h2>We Listen First</h2>
                         <p>
-                            Every partnership begins with understanding. We start by listening to
-                            your business goals, your team’s skill gaps, and your organization’s
-                            challenges. This includes:
+                            Every partnership begins with understanding. We start by listening to your business goals, your team’s skill gaps, and your organization’s challenges. This includes:
                         </p>
                         <ul>
                             <li>Skill gap mapping</li>
@@ -141,27 +133,27 @@ const page = () => {
                 <div className="measure-grid">
                     <div className="measure-card">
                         <h4>Pre / Post Assessments</h4>
-                        <p>Clear benchmarking of skill levels before and after training.</p>
+                        {/* <p>Clear benchmarking of skill levels before and after training.</p> */}
                     </div>
 
                     <div className="measure-card">
                         <h4>Individual Skill Progression</h4>
-                        <p>Track how each learner improves across defined competencies.</p>
+                        {/* <p>Track how each learner improves across defined competencies.</p> */}
                     </div>
 
                     <div className="measure-card">
                         <h4>Team Capability Uplift</h4>
-                        <p>Aggregate reporting showing capability growth at team level.</p>
+                        {/* <p>Aggregate reporting showing capability growth at team level.</p> */}
                     </div>
 
                     <div className="measure-card">
                         <h4>Stakeholder Summaries</h4>
-                        <p>Clear executive-ready insights aligned to business goals.</p>
+                        {/* <p>Clear executive-ready insights aligned to business goals.</p> */}
                     </div>
 
                     <div className="measure-card">
                         <h4>Recommended Next Steps</h4>
-                        <p>Actionable guidance for continued capability development.</p>
+                        {/* <p>Actionable guidance for continued capability development.</p> */}
                     </div>
                 </div>
 
@@ -227,22 +219,47 @@ const page = () => {
                         capability.
                     </p>
                     <br />
-                    <h5>Ready to Build Capability?</h5>
-                    <div className="final-cta text-white">
-                        <a href="/solutions" className="btn-primary">
-                            Explore Technical Solutions
-                        </a>
-                        <a href="/courses" className="btn-secondary">
-                            View Courses
-                        </a>
-                        <a href="/contact" className="btn-primary">
-                            Speak to Our Team
-                        </a>
-                        <br />
-                        <p>Let’s design a solution that fits your engineering and business needs.</p>
+
+                </div>
+            </section>
+
+            <section className="approach-cta py-5">
+                <div className="container">
+                    <div className="row justify-content-center text-center">
+                        <div className="col-lg-8">
+
+                            <h2 className="mb-3 fw-bold">
+                                Ready to Build Capability?
+                            </h2>
+
+                            <p className="mb-4 text-muted">
+                                Let’s design a solution that fits your engineering and business needs.
+                            </p>
+
+                            <div className="d-flex justify-content-center gap-3 flex-wrap">
+
+                                {/* PRIMARY */}
+                                <a href="/solutions" className="btn btn-cta-primary">
+                                    Explore Technical Solutions →
+                                </a>
+
+                                {/* SECONDARY */}
+                                <a href="/courses" className="btn btn-cta-outline">
+                                    View Courses →
+                                </a>
+
+                                {/* TERTIARY */}
+                                <a href="/contact" className="btn btn-cta-soft">
+                                    Speak to Our Team →
+                                </a>
+
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </section>
+
 
 
             <Footer />

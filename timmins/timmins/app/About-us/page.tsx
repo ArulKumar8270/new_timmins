@@ -80,40 +80,35 @@ const page = () => {
 
 
 
-            <div className="section-bg hero-bg">
-                {/* Start Bredcrumbs Area */}
-                <section
-                    className="ed-breadcrumbs background-image"
-                    style={{ background: '#eaf4fa' }}
-                >
+
+
+            <>
+
+                <section className="about-hero py-5">
                     <div className="container">
                         <div className="row justify-content-center">
-                            <div className="col-lg-6 col-md-6 col-12">
-                                <div className="ed-breadcrumbs__content">
-                                    <h3 className="ed-breadcrumbs__title">About Us</h3>
-                                    <ul className="ed-breadcrumbs__menu">
-                                        <li className="active">
-                                            <a href="#">Home</a>
-                                        </li>
-                                        <li>/</li>
-                                        <li>ABOUT US</li>
-                                    </ul>
-                                </div>
+                            <div className="col-lg-8 text-center">
+
+                                <h1 className="about-hero-title mb-3">
+                                    About Timmins Training Consulting
+                                </h1>
+
+                                <p className="about-hero-desc">
+                                    A boutique advanced tech capability partner helping teams turn technology
+                                    into real-world delivery capability.
+                                </p>
+
                             </div>
                         </div>
                     </div>
                 </section>
-                {/* End Bredcrumbs Area */}
-            </div>
-
-            <>
                 {/* Start About Area */}
                 <>
                     {/* About Timmins Training */}
-                    <section className="about-timmins py-5">
+                    <section className="about-timmins py- section-gap">
                         <div className="container">
                             <div className="text-center mb-5">
-                                <h1 className="fw-bold">About Timmins Training Consulting</h1>
+                                <h2 className="fw-bold">Our Purpose & Mission</h2>
                             </div>
                             <div className="about-card">
                                 <div className="row align-items-center g-4">
@@ -128,35 +123,16 @@ const page = () => {
                                     </div>
                                     {/* Right Content */}
                                     <div className="col-lg-7 col-md-12">
+                                        <h6>Our Purpose:</h6>
                                         <p>
-                                            <strong>Timmins</strong> is a boutique advanced tech capability
-                                            partner that helps engineering, manufacturing, and banking
-                                            organizations build future-ready teams through
-                                            <strong> practitioner-led, industry-grade training </strong>
-                                            and advisory.
+                                            Timmins exists to deliver practitioner-led, engineering-grade training that keeps pace with modern technology and translates directly into real-world impact.
+
                                         </p>
+                                        <h6>Our Mission:</h6>
                                         <p>
-                                            We specialize in closing the gap between
-                                            <strong> emerging technologies </strong> and real-world capability,
-                                            from AI, Embedded Systems, Cloud, 5G, to modern software{" "}
-                                            <strong> engineering</strong>.
+                                            Our mission is to enable organizations to stay competitive in a rapidly evolving tech landscape through practitioner-led training and engineering-grade capability building..
                                         </p>
-                                        <p>
-                                            Our programs are <strong>hands-on</strong>,{" "}
-                                            <strong>customized</strong>, and designed to create{" "}
-                                            <strong>measurable improvement </strong>
-                                            in how teams think, build, and deliver.
-                                        </p>
-                                        <p>
-                                            For the <strong>past decade</strong>, we’ve supported thousands of
-                                            engineers, developers, analysts, and
-                                            <strong> technical leaders</strong> across Asia.
-                                        </p>
-                                        <p className="fw-semibold">
-                                            All with one commitment: training that actually
-                                            <span className="highlight"> transforms capability</span>, not just
-                                            fulfills hours.
-                                        </p>
+
                                     </div>
                                 </div>
                             </div>
@@ -166,30 +142,6 @@ const page = () => {
 
 
 
-                {/* Start Why Choose Area */}
-                <section className="purpose-section">
-                    <div className="purpose-container">
-
-                        {/* Right Content */}
-                        <div className="purpose-content">
-
-                            <h2>
-                                Our Purpose
-                            </h2>
-                            <p>
-                                Timmins was founded to tackle a clear problem, which was that most
-                                corporate training was generic, outdated, and disconnected from the pace
-                                of modern technology.
-                            </p>
-                            <p>
-                                We set out to create learning that is current, engineering-grade, and
-                                designed with industry practitioners. We ensure every participant walks
-                                away with skills they can apply on the job immediately, not someday.
-                            </p>
-
-                        </div>
-                    </div>
-                </section>
 
 
                 <>
@@ -263,33 +215,6 @@ const page = () => {
 
 
 
-                <section className="mission-only">
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-9 text-center">
-
-                                <h2 className="mission-title">
-                                    OUR MISSION
-                                </h2>
-                                <span className="mission-tag">OUR MISSION IS SIMPLE:</span>
-                                <p className="mission-text">
-
-                                    <strong>
-                                        To enable organizations to adopt and excel in emerging technologies
-                                    </strong>
-                                    so they remain competitive in the global tech landscape.
-                                </p>
-                                <p className="mission-text">
-                                    We do this by delivering advanced, practitioner-led training,
-                                    supported by advisory and capability-building frameworks tailored for
-                                    engineering-intensive industries.
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
 
 
 
@@ -298,12 +223,8 @@ const page = () => {
                     <div className="container">
                         {/* Header */}
                         <div className="text-center mb-5">
-                            <span className="approach-tag">OUR APPROACH</span>
-                            <h2 className="approach-title">
-                                Capability Building as a System,
-                                <br />
-                                Not a One-Off Event
-                            </h2>
+                            <h1 className="mission-title">Our Approach</h1>
+
                             <p className="approach-intro">
                                 We treat capability building as a system, not a one-off event.
                             </p>
@@ -314,10 +235,9 @@ const page = () => {
                             <div className="approach-step">
                                 <div className="step-dot">1</div>
                                 <div className="step-content">
-                                    <h4>Context First</h4>
+                                    <h4>Custom Training Programs</h4>
                                     <p>
-                                        We begin with an assessment of your business needs, team readiness,
-                                        and required skill depth.
+                                        Tailored content to match your business needs, team readiness, and required skill depth.
                                     </p>
                                 </div>
                             </div>
@@ -325,11 +245,10 @@ const page = () => {
                             <div className="approach-step">
                                 <div className="step-dot">2</div>
                                 <div className="step-content">
-                                    <h4>Customized, Engineering-Grade Design</h4>
+                                    <h4>Practitioner-Led Live Sessions</h4>
                                     <p>
-                                        Programs are tailored with hands-on labs, real-world cases, and
-                                        tools used by actual practitioners. Teams learn by doing, not by
-                                        listening.
+                                        Contextual, real-world examples delivered by subject matter experts with real-world delivery experience
+
                                     </p>
                                 </div>
                             </div>
@@ -337,10 +256,9 @@ const page = () => {
                             <div className="approach-step">
                                 <div className="step-dot">3</div>
                                 <div className="step-content">
-                                    <h4>Guided by Practitioners</h4>
+                                    <h4>Project-Based Assessments</h4>
                                     <p>
-                                        Every course is led by engineers with real field experience in AI,
-                                        embedded systems, telecom, software, and cloud infrastructure.
+                                        Hands-on labs, mini-projects, or applied challenges integrated into every course
                                     </p>
                                 </div>
                             </div>
@@ -348,19 +266,18 @@ const page = () => {
                             <div className="approach-step">
                                 <div className="step-dot">4</div>
                                 <div className="step-content">
-                                    <h4>Impact, Not Guesswork</h4>
+                                    <h4>Structured Reporting</h4>
                                     <p>
-                                        Post-training, we deliver measurable insights: capability uplift,
-                                        learning gaps, and recommendations for next-step development.
+                                        Every program includes post-training reports with analytics and insights, including pre- and post-assessment comparisons, engagement data, manager feedback, and suggested follow-up actions
                                     </p>
                                 </div>
                             </div>
                         </div>
                         {/* Footer Note */}
-                        <div className="approach-footer">
+                        {/* <div className="approach-footer">
                             This systematic approach ensures your organization builds capability with
                             clarity, confidence, and sustained momentum.
-                        </div>
+                        </div> */}
                     </div>
                 </section>
 
@@ -372,29 +289,24 @@ const page = () => {
                                 {/* Left Content */}
                                 <div className="col-lg-8 col-md-12">
                                     <h2 className="fw-bold mb-3">
-                                        10 Years of Timmins: Engineering Capability, Built Over a Decade
+                                        10 Years of Building Engineering Capability
                                     </h2>
                                     <p className="text-muted">
-                                        From a small consulting practice in Malaysia to a capability partner
-                                        trusted in 10+ countries, Timmins has trained over
-                                        <strong>5,000 professionals</strong> across engineering,
-                                        manufacturing, and financial services.
+                                        From a small consulting practice in Malaysia to a capability partner, Timmins has trained professionals across engineering, manufacturing, financial services, and universities. We support teams across the full lifecycle of modern systems, from design and implementation to real-world delivery and operations.
                                     </p>
                                     <p className="text-muted">
-                                        Our work spans advanced domains including
-                                        <strong>
-                                            AI, 5G, Embedded Systems, Cloud, Data Analytics, and enterprise
-                                            software engineering
-                                        </strong>
+                                        Ten years later, our belief remains the same: the right training builds real capability and drives lasting organizational impact.
+
                                         .
                                     </p>
-                                    <p className="fw-semibold">
+                                    <br />
+                                    <p>
                                         Ten years later, our belief remains the same: the right training can
                                         transform an entire organization.
                                     </p>
                                     <div className="ed-hero__btn ed-btn">
                                         <a href="#">
-                                            For Companies – Explore Solutions
+                                            Explore Our Journey →
                                         </a>
                                     </div>
 
@@ -403,7 +315,7 @@ const page = () => {
                                 {/* Right Highlight Box */}
                                 <div className="col-lg-4 col-md-12 mt-4 mt-lg-0">
                                     <div className="stats-box text-center">
-                                        <h1>10+</h1>
+                                        <h1>12</h1>
                                         <p>Countries</p>
                                         <h1>5000+</h1>
                                         <p>Professionals Trained</p>
@@ -419,61 +331,102 @@ const page = () => {
 
                 <>
                     {/* HRDC Claimable Section */}
-                    <section className="hrdc-section-2 section-gap">
+                    <section className="about-hrdc py-5">
                         <div className="container">
-                            <div className="row align-items-center g-4">
-                                {/* Left Content */}
-                                <div className="col-lg-8 col-md-12">
-                                    <div className="d-flex align-items-start gap-3 mb-3">
-                                        <div className="hrdc-icon">
-                                            <i className="bi bi-award" />
-                                        </div>
-                                        <h2 className="fw-bold mb-0">
-                                            HRDC-Claimable
-                                            <p className="text-muted fs-5"><b>(For Malaysian Clients)</b></p>
-                                        </h2>
-                                    </div>
-                                    <p className="text-muted">
-                                        All Timmins programs are fully <strong>HRDC-claimable</strong> for
-                                        Malaysian organizations. We support your team with end-to-end
-                                        documentation, attendance tracking, and reporting, so you can stay
-                                        focused on capability building while compliance stays effortless.
+                            <div className="row justify-content-center text-center">
+                                <div className="col-lg-8">
+
+                                    <h2 className="mb-2">HRDC-Claimable</h2>
+                                    <p className="fw-medium">(For Malaysian Clients)</p>
+
+                                    <p className="mt-3">
+                                        Many of our programs are HRDC-funded. We also help clients structure
+                                        partial or company-funded options when full coverage isn’t available.
                                     </p>
-                                    <p className="small text-muted fst-italic">
+
+                                    <p className="text-muted">
                                         (Note: HRDC eligibility applies to Malaysian employers only.)
                                     </p>
-                                    <hr />
-                                    <h5 className="fw-semibold mt-4">
-                                        We’re more than a corporate training provider, we’re your capability
-                                        partner.
-                                    </h5>
-                                    <p className="text-muted">
-                                        Whether you need <strong>AI training</strong>,{" "}
-                                        <strong>embedded systems training</strong>, or fully customized
-                                        corporate training; we help your teams build real skills for the
-                                        technologies shaping tomorrow.
-                                    </p>
-                                    <div className="ed-hero__btn ed-btn">
-                                        <a href="#">
-                                            For Companies – Explore Solutions
-                                        </a>
-                                    </div>
-                                </div>
-                                {/* Right Logo / Badge */}
-                                <div className="col-lg-4 col-md-12 text-center">
-                                    <div>
+
+                                    {/* HRDC BADGES */}
+                                    <div className="badge-container d-flex justify-content-center gap-3 mt-4">
                                         <img
                                             src="/assets/New_images/badge.png"
                                             alt="HRDC Claimable"
-                                            className="img-fluid"
+                                            height="28"
+                                        />
+                                        <img
+                                            src="/assets/New_images/badge.png"
+                                            alt="HRDC Registered Training Provider"
+                                            height="28"
                                         />
                                     </div>
+
                                 </div>
-
-
                             </div>
                         </div>
                     </section>
+
+
+
+
+
+
+                    <section className="ed-call-action position-relative section-gap pb-5">
+                        <div className="container ed-container">
+                            <div className="ed-call-action__inner position-relative">
+                                <div className="ed-call-action__shapes">
+                                    <img
+                                        className="ed-call-action__shape-1 rotate-ani"
+                                        src="/assets/images/call-action/call-action-1/shape-1.svg"
+                                        alt="shape-1"
+                                    />
+                                    <img
+                                        className="ed-call-action__shape-2"
+                                        src="/assets/images/call-action/call-action-1/shape-2.svg"
+                                        alt="shape-2"
+                                    />
+                                    <img
+                                        className="ed-call-action__shape-3 updown-ani"
+                                        src="/assets/images/call-action/call-action-1/shape-3.svg"
+                                        alt="shape-3"
+                                    />
+                                </div>
+                                <div className="row">
+                                    <div className="col-lg-6 col-12">
+                                        <div className="ed-call-action__img">
+                                            <img
+                                                src="/assets/New_images/final cta section.jpg"
+                                                alt="call-action-img"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6 col-12 order-class">
+                                        <div className="ed-call-action__content">
+                                            <div className="ed-section-head">
+                                                <p className="ed-section-head__text ">
+                                                    We’re more than a corporate training provider, we’re your capability partner.
+                                                    Whether you need AI training, embedded systems training, or fully customized corporate
+                                                    training; we help your teams build real skills for the technologies shaping tomorrow.
+                                                </p>
+                                                <br />
+                                                <p className="ed-section-head__text">Ready to build engineering capability that lasts?
+                                                </p>
+                                            </div>
+                                            <div className="ed-call-action__content-btn ed-btn" style={{ backgroundColor: 'var(--ed-secondary-color)' }}>
+                                                <a href="#" >
+                                                    {" "}
+                                                    Book a Consultation
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
                 </>
 
 

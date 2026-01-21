@@ -66,96 +66,71 @@ const page = () => {
             <Header />
 
 
-            <div className="section-bg hero-bg">
-                {/* Start Bredcrumbs Area */}
-                <section
-                    className="ed-breadcrumbs background-image"
-                    style={{ background: '#eaf4fa' }}
-                >
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-6 col-md-6 col-12">
-                                <div className="ed-breadcrumbs__content">
-                                    <h3 className="ed-breadcrumbs__title">Case Studies</h3>
-                                    <ul className="ed-breadcrumbs__menu">
-                                        <li className="active">
-                                            <a href="#">Home</a>
-                                        </li>
-                                        <li>/</li>
-                                        <li>CASE STUDIES</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/* End Bredcrumbs Area */}
-            </div>
 
-
-
-            {/* Start Why Choose Area */}
-            <section className="case-impact">
+            <section className="case-hero py-5">
                 <div className="container">
-                    {/* Header */}
-                    <div className="text-center mb-5">
-                        <h2 className="impact-title">Real Results. Proven Impact.</h2>
-                        <p className="impact-subtitle">
-                            From semiconductors to digital banking, Timmins Training Consulting
-                            helps organizations across Asia and North America build advanced tech
-                            capability — through engineered learning solutions, AI consulting, 5G
-                            certification programs, embedded systems training, and technical
-                            upskilling designed for real-world outcomes.
-                        </p>
+                    <div className="row justify-content-center">
+                        <div className="col-lg-9 text-center">
+
+                            <h1 className="case-hero-title mb-3">
+                                Case Studies
+                            </h1>
+
+                            <p className="case-hero-desc mb-4">
+                                How Timmins partners with organizations to build advanced technology
+                                capability through real-world, practitioner-led learning and delivery.
+                            </p>
+
+                            <p className="case-hero-impact">
+                                10+ years of partnerships • 5,000+ professionals trained • 200+ programs delivered
+                            </p>
+
+                        </div>
+
                     </div>
-                    {/* Stats */}
-                    <div className="row text-center justify-content-center impact-stats">
-                        <div className="col-md-3 py-2">
-                            <div className="stat-card">
+                </div>
+            </section>
+
+
+            <section className="case-impact-section py-4">
+                <div className="container">
+                    <div className="row text-center">
+
+                        <div className="col-md-4 mb-3 mb-md-0">
+                            <div className="impact-item card-3d">
+                                <span className="impact-icon">🤝</span>
                                 <h3>10+</h3>
                                 <p>Years of Partnerships</p>
                             </div>
                         </div>
-                        <div className="col-md-3 py-2">
-                            <div className="stat-card">
+
+                        <div className="col-md-4 mb-3 mb-md-0">
+                            <div className="impact-item card-3d">
+                                <span className="impact-icon">👥</span>
                                 <h3>5,000+</h3>
                                 <p>Professionals Trained</p>
                             </div>
                         </div>
-                        <div className="col-md-3 py-2">
-                            <div className="stat-card">
+
+                        <div className="col-md-4">
+                            <div className="impact-item card-3d">
+                                <span className="impact-icon">⚙️</span>
                                 <h3>200+</h3>
                                 <p>Programs Delivered</p>
                             </div>
                         </div>
-                    </div>
-                    {/* Content Box */}
-                    <div className="impact-card mt-5 text-center">
-                        <p className="impact-quote">
-                            Every transformation story begins with a simple principle:
-                            <strong>real capabilities are built through real practice.</strong>
-                        </p>
-                        <p>
-                            We partner deeply with engineering and business teams to understand
-                            their systems, challenges, and goals. Then, we co-create learning and
-                            consulting programs that deliver measurable, long-term impact.
-                        </p>
-                        <p>
-                            Whether it’s AI consultation for banking, embedded Linux consulting, 5G
-                            R&amp;D enablement, or a fully customized onboarding academy, our
-                            approach blends <strong>practitioner-led expertise</strong> with
-                            <strong>outcome-driven design</strong>.
-                        </p>
-                        {/* Services */}
-                        <div className="impact-tags">
-                            <span>AI Consulting</span>
-                            <span>Embedded Systems Training</span>
-                            <span>5G Technician Training</span>
-                            <span>Onboarding Academy</span>
-                        </div>
+
                     </div>
                 </div>
             </section>
+
+
+
+
+
+
+
+
 
 
             <section className="case-study-section section-gap
@@ -165,30 +140,36 @@ const page = () => {
                         {/* Left Content */}
                         <div className="col-lg-8">
 
-                            <h2 className="fw-bold mt-2">Fresh Graduate Onboarding</h2>
+                            <h2 className="fw-bold mt-2">Fresh Graduate Onboarding </h2>
                             <p className="text-muted">
                                 <em>(Confidential US-Based Semiconductor Company)</em>
                             </p>
+                            <h6 className="fw-semibold mt-4">The Challenge:</h6>
                             <p className="mt-3">
-                                For over a decade, Timmins has partnered with a leading US-based
-                                semiconductor company to build a global onboarding academy for fresh
-                                graduates entering complex engineering roles.
+                                A semiconductor company needed to bridge the gap between academic learning  and industry-ready engineering skills by onboarding fresh graduates into complex technical roles and enabling contribution in real-world environments.
                             </p>
-                            <p>
-                                Hundreds of engineers each year are trained in Embedded Linux,
-                                Android, 5G, RF, AI fundamentals, and chipset engineering through a
-                                rigorous, multi-phase curriculum.
-                            </p>
+
                             <h6 className="fw-semibold mt-4">Our role covers:</h6>
+                            <p className="mt-3">Timmins enabled 350+ fresh graduates to become industry-ready engineers through customized onboarding. The program covered core engineering domains including Embedded Linux, Android, 5G, VLSI chip design, and AI fundamentals, supported by:</p>
                             <ul className="list-unstyled role-list">
-                                <li>✔ Skill matrix mapping &amp; technical readiness assessments</li>
+                                <li>✔ Skill gap assessment</li>
                                 <li>
-                                    ✔ Customized bootcamps for embedded, mobile, and connectivity
-                                    engineering
+                                    ✔ Customized course design
                                 </li>
-                                <li>✔ Post-assessment analytics &amp; performance dashboards</li>
-                                <li>✔ Outcome validation and team-level reporting</li>
+                                <li>✔ Hands-on, structured delivery</li>
+                                <li>✔Ongoing assessment and engagement</li>
                             </ul>
+
+                            <h6 className="fw-semibold mt-4">Key Results</h6>
+                            <div className="tech-tags">
+                                <span>End-to-end 5G SoC capability strengthened</span>
+                                <span>Higher cross-domain engineering readiness</span>
+                                <span>Global, multi-site scalability
+                                </span>
+
+
+                            </div>
+
                             <div className="quote-box mt-4">
                                 <p>
                                     “Significant skill development, high engagement, and positive
@@ -225,9 +206,14 @@ const page = () => {
                                     </li>
                                 </ul>
                                 <div className="ed-hero__btn ed-btn">
-                                    <a href="#">
-                                        Discuss Similar Onboarding Program
+                                    <a
+                                        href="#"
+                                        className="case-download-link"
+
+                                    >
+                                        Download Full Case Study (via Form)
                                     </a>
+
                                 </div>
                             </div>
                         </div>
@@ -241,27 +227,38 @@ const page = () => {
                         {/* Left Content */}
                         <div className="col-lg-8">
 
-                            <h2 className="fw-bold mt-2">DBS Bank – AI Transformation Journey</h2>
+                            <h2 className="fw-bold mt-2">Machine Learning Program for Data Analytics</h2>
+                            <p className="text-muted">
+                                <em>(DBS Bank )</em>
+                            </p>
+                            <h6 className="fw-semibold mt-4">The Challenge</h6>
                             <p className="mt-3">
-                                A seven-year partnership supporting one of Asia’s most innovative
-                                banks in adopting Artificial Intelligence at scale.
+                                The bank needed to build stronger in-house data analytics and machine learning capability for real banking use cases.
                             </p>
+                            <h6 className="fw-semibold mt-4">Our Solution</h6>
                             <p>
-                                Timmins designed and delivered a multi-phase transformation covering
-                                advanced analytics, applied AI, and generative AI adoption across both
-                                technical and business teams.
+                                Timmins designed and delivered a customized Machine Learning program for the bank’s in-house data analytics engineers, combining training and consulting tailored to real banking use cases. The program focused on:
                             </p>
-                            <h6 className="fw-semibold mt-4">Transformation Focus Areas:</h6>
                             <ul className="list-unstyled role-list">
-                                <li>✔ Data analytics &amp; machine learning</li>
-                                <li>✔ Applied AI for risk, compliance, and fraud detection</li>
-                                <li>✔ Generative AI workflow integration</li>
-                                <li>✔ Capability building for technical &amp; business roles</li>
+                                <li>✔ Data analytics and machine learning foundations for banking</li>
+                                <li>✔ Applied analytics for customer insights and decision support</li>
+                                <li>✔ Customer sentiment analysis and service improvement
+                                </li>
+                                <li>✔ Analytics-enabled security use cases
+                                </li>
+                                <li>✔ Hands-on implementation using Python and existing enterprise systems
+                                </li>
+
                             </ul>
-                            <p className="mt-4">
-                                This long-term AI transformation helped thousands of employees embed
-                                data-driven decision-making into their daily operations.
-                            </p>
+                            <h6 className="fw-semibold mt-4">Key Results</h6>
+                            <div className="tech-tags">
+                                <span>End-to-end 5G SoC capability strengthened</span>
+                                <span>Higher cross-domain engineering readiness</span>
+                                <span>Global, multi-site scalability
+                                </span>
+
+
+                            </div>
                         </div>
                         {/* Right Highlights Card */}
                         <div className="col-lg-4">
@@ -284,11 +281,11 @@ const page = () => {
                                         Skill improvement
                                     </li>
                                 </ul>
-                                <div className="ed-hero__btn ed-btn">
-                                    <a href="#">
-                                        Discuss Similar Onboarding Program
-                                    </a>
-                                </div>
+
+                                <a href="#" className="case-download-link   underline mt-3 d-inline-block">
+                                    Download Full Case Study (via Form)
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -302,18 +299,36 @@ const page = () => {
                         <div className="col-lg-8">
 
                             <h2 className="fw-bold mt-2">
-                                Citigroup – AI for Innovation &amp; Compliance
+                                AI Foundation for Banking Sector
                             </h2>
+                            <p className="text-muted">
+                                <em>(Citigroup)</em>
+                            </p>
+                            <h6 className="fw-semibold mt-4">The Challenge:</h6>
                             <p className="mt-3">
-                                Citi partnered with Timmins to strengthen analytics, automation, and
-                                AI capability across compliance and operations teams.
+                                Data science and analytics teams (DSSM, model development, risk analytics, and validation) required practical Python-based data analytics and machine learning to address real banking use cases, moving beyond theory to support fraud analytics, model development, validation, and data-driven decisions.
                             </p>
+                            <h6 className="fw-semibold mt-4">Our Solution:</h6>
                             <p>
-                                Across six batches, participants improved from
-                                <strong>54%</strong> to <strong>88%</strong> in analytics performance
-                                and reported high readiness to deploy AI-driven solutions for real
-                                banking use cases.
+                                Timmins delivered a structured, hands-on analytics and machine learning enablement program across six batches, with a focus on:
                             </p>
+                            <ul className="list-unstyled role-list">
+                                <li>✔ Assessment-first, skill-based segmentation</li>
+                                <li>✔ Customized banking-context curriculum</li>
+                                <li>✔ Hands-on, code-heavy delivery
+                                </li>
+                            </ul>
+                            <h6 className="fw-semibold mt-4">Key Results</h6>
+                            <div className="tech-tags">
+                                <span>End-to-end 5G SoC capability strengthened</span>
+                                <span>Higher cross-domain engineering readiness</span>
+                                <span>Global, multi-site scalability
+                                </span>
+
+
+                            </div>
+
+
                         </div>
                         {/* Right Highlights Card */}
                         <div className="col-lg-4">
@@ -336,11 +351,10 @@ const page = () => {
                                         Participant satisfaction
                                     </li>
                                 </ul>
-                                <div className="ed-hero__btn ed-btn">
-                                    <a href="#">
-                                        Discuss Similar Onboarding Program
-                                    </a>
-                                </div>
+                                <a href="#" className="case-download-link underline mt-3 d-inline-block">
+                                    Download Full Case Study (via Form)
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -355,26 +369,36 @@ const page = () => {
                         <div className="col-lg-8">
 
                             <h2 className="fw-bold mb-3">
-                                Motorola – Mobile Development Enablement
+                                Mobile Development Enablement
                             </h2>
+                            <p className="text-muted">
+                                <em>(CMotorola)</em>
+                            </p>
+                            <h6 className="fw-semibold mt-4">The Challenge:</h6>
                             <p className="lead text-muted">
-                                Since 2018, Timmins has helped a global device manufacturer accelerate
-                                internal Android mobile development capability.
+                                Engineering teams needed to strengthen in-house Android development capability to independently develop, optimize, and maintain Qualcomm chipset–based Android smartphones across evolving Android versions.
                             </p>
+                            <h6 className="fw-semibold mt-4">Our Solution</h6>
                             <p>
-                                This engagement enabled engineering teams to independently build and
-                                optimize Android handsets (<strong>Android 10 to 14</strong>) without
-                                reliance on external vendors.
+                                Timmins delivered an ongoing staffing, training, and consulting enablement program to support end-to-end Android smartphone development. Training areas included:
                             </p>
-                            <h6 className="fw-semibold mt-4">Training Areas:</h6>
+                            <ul className="list-unstyled role-list">
+                                <li>✔ Embedded Linux and device drivers</li>
+                                <li>✔ Linux kernel programming for Android</li>
+                                <li>✔ Android framework, multimedia, and connectivity
+                                </li>
+                                <li>✔ Qualcomm chipset and board-level integration</li>
+                            </ul>
+                            <h6 className="fw-semibold mt-4">Key Results</h6>
                             <div className="tech-tags">
-                                <span>Linux &amp; SELinux</span>
-                                <span>Kotlin</span>
-                                <span>Jetpack Compose</span>
-                                <span>Mobile Architecture</span>
-                                <span>Performance Optimization</span>
-                                <span>System Integration</span>
-                            </div>
+                                <span>End-to-end 5G SoC capability strengthened</span>
+                                <span>Higher cross-domain engineering readiness</span>
+                                <span>Global, multi-site scalability
+                                </span>
+
+
+                            </div>                            <br />
+
                         </div>
                         {/* Right Card */}
                         <div className="col-lg-4">
@@ -392,16 +416,15 @@ const page = () => {
                                     <h3>8 Years</h3>
                                     <p>Long-term partnership</p>
                                 </div>
-                                <div className="ed-hero__btn ed-btn">
-                                    <a href="#">
-                                        Request Case Study Copy
-                                    </a>
-                                </div>
+                                <a href="#" className="case-download-link underline mt-3 d-inline-block">
+                                    Download Full Case Study (via Form)
+                                </a>
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
 
 
@@ -414,26 +437,43 @@ const page = () => {
                         <div className="col-lg-8">
 
                             <h2 className="fw-bold mb-3">
-                                5G SoC R&D Enablement (Confidential Semiconductor Client)
+                                5G SoC R&D Enablement
 
                             </h2>
+                            <p className="text-muted">
+                                <em>(US-based Semiconductor Company)</em>
+                            </p>
+                            <h6 className="fw-semibold mt-4">The Challenge:</h6>
                             <p className="lead text-muted">
-                                We supported global R&D teams in strengthening 5G SoC architecture and testing capability.
-                                Training and consulting covered:
+                                A global semiconductor company needed to continuously strengthen 5G Mobile SoC capabilities as technologies evolved rapidly across hardware, software, and system architecture. Engineering teams required practical, applied expertise to design, optimize, and deploy complex 5G solutions at scale.
                             </p>
 
-                            <h6 className="fw-semibold mt-4">Training Areas:</h6>
+                            <h6 className="fw-semibold mt-4">Our Solution:</h6>
+                            <p>
+
+                                Timmins delivered a highly customized 5G Mobile SoC enablement program for cross-functional R&D teams, covering critical capability areas including:
+
+                            </p>
+                            <ul className="list-unstyled role-list">
+                                <li>✔5G Mobile SoC architecture for next-generation mobile chip development</li>
+                                <li>✔ Low-power chip design and HW–SW optimization</li>
+                                <li>✔ Advanced memory technologies (LPDDR2, LPDDR4, LPDDR5)
+                                </li>
+                                <li>✔ Video codecs and multimedia systems (AV1, VVC, Camera ISP)
+                                </li>
+                                <li>Embedded software and platform security for mobile systems</li>
+                            </ul>
+                            <h6 className="fw-semibold mt-4">Key Results</h6>
                             <div className="tech-tags">
-                                <span>5G modem design fundamentals</span>
-                                <span>Power optimization strategies</span>
-                                <span>mmWave integration</span>
-                                <span>RF testing workflows</span>
+                                <span>End-to-end 5G SoC capability strengthened</span>
+                                <span>Higher cross-domain engineering readiness</span>
+                                <span>Global, multi-site scalability
+                                </span>
+
 
                             </div>
                             <br />
-                            <p>
-                                Results include improved design efficiency, higher testing accuracy, and faster time-to-market for next-generation 5G devices.
-                            </p>
+
                         </div>
                         {/* Right Card */}
                         <div className="col-lg-4">
@@ -451,11 +491,9 @@ const page = () => {
 
                                     <p>✔ Global multi-site implementation</p>
                                 </div>
-                                <div className="ed-hero__btn ed-btn">
-                                    <a href="#">
-                                        Download Full Case Study
-                                    </a>
-                                </div>
+                                <a href="#" className="case-download-link underline mt-3 d-inline-block">
+                                    Download Full Case Study (via Form)
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -525,7 +563,7 @@ const page = () => {
                                                     src="/assets/images/icons/icon-check-blue.svg"
                                                     alt="icon-check-blue"
                                                 />
-                                                Continuous measurement and engagement analytics
+                                                Feedback and improvement between batches
                                             </li>
                                             <li>
                                                 <img

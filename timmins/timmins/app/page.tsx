@@ -18,26 +18,55 @@ export default function Home() {
 
               {/* Start Hero Area */}
               <section className="ed-hero">
+                {/* HRDC Badges – Top Right */}
+                <div className="position-absolute top-0 end-0 m-4  me-5 d-flex gap-3">
+                  <Image
+                    src="/assets/New_images/badge.png"
+                    alt="HRDC Claimable"
+                    width={70}
+                    height={70}
+                    priority
+                  />
+                  <Image
+                    src="/assets/New_images/badge.png"
+                    alt="HRDC Registered Training Provider"
+                    width={70}
+                    height={70}
+                    priority
+                  />
+                </div>
+
+
                 <div className="container ed-container-expand">
                   <div className="row align-items-center">
                     <div className="col-lg-6 col-12">
                       {/* Hero Content */}
                       <div className="ed-hero__content">
                         <h1 className="ed-hero__content-title ed-split-text left">
-                          Building Future-Ready Engineering & Tech Teams
+                          Building Future-Ready Tech Teams
                         </h1>
-                        <p className="ed-hero__content-text">
-                          Timmins builds practical engineering capability in AI, Embedded Systems, 5G, and enterprise agility for teams across ASEAN and North America with 10+ years experience
+                        <p className="text-black text-lg font-medium drop-shadow-md">
+                          Engineering-grade capability building for modern tech teams, trusted for over a decade across 12+ countries worldwide.
+
                         </p>
+                        <br />
                         <p className="badge-container mt-2">
-                          <Image 
-                            src="/assets/New_images/badge.png" 
-                            alt="HRDC Claimable Training badge" 
+                          <Image
+                            src="/assets/New_images/badge.png"
+                            alt="HRDC Claimable Training badge"
                             width={120}
                             height={120}
                             priority
                           />
-                          <span>HRDC Claimable Training available for Malaysian employers.</span>
+
+                          <Image
+                            src="/assets/New_images/badge.png"
+                            alt="HRDC Claimable Training badge"
+                            width={120}
+                            height={120}
+                            priority
+                          />
+
                         </p>
                         <div className="d-flex gap-3">
                           <div className="ed-hero__btn ed-btn">
@@ -61,17 +90,13 @@ export default function Home() {
               {/* End Hero Area */}
             </div>
 
-            <section className="ed-partner mt-5">
+            <section className="ed-partner mt-5 section-gap">
               <div className="container ed-container">
                 <div className="row">
-                  {/* <div className="col-12">
-                    <div className="ed-partner__section-head">
-                      <h3 className="ed-partner__section-head-title">
-                        Get in touch with the <span>250+</span> companies who
-                        Collaboration us
-                      </h3>
-                    </div>
-                  </div> */}
+                  <h6 className="text-center text-muted mb-5 ">
+                    Trusted by Teams Across Industries & Regions
+                  </h6>
+
                 </div>
                 <div className="row">
                   <div className="col-12">
@@ -81,6 +106,7 @@ export default function Home() {
                         <img
                           src="/assets/New_images/clients/Cisco_logo_blue_2016.svg.png"
                           alt="Cisco"
+                          className="clients-logo"
                         />
                       </a>
                       {/* Single Slider  */}
@@ -102,6 +128,7 @@ export default function Home() {
                         <img
                           src="/assets/New_images/clients/digi company.jpeg"
                           alt="Digi"
+                          style={{ height: '60px', width: 'auto' }}
                         />
                       </a>
                       {/* Single Slider  */}
@@ -193,6 +220,7 @@ export default function Home() {
                         <img
                           src="/assets/New_images/clients/motorola-logo-png_seeklogo-95176.png"
                           alt="Motorola"
+                          className="clients-logo"
                         />
                       </a>
                       {/* Single Slider  */}
@@ -277,8 +305,8 @@ export default function Home() {
                         <h3 className="ed-section-head__title ed-split-text left">
                           Learn the Way That Fits You
                         </h3>
-                        <p className="ed-section-head__text">
-                          Whether you’re an organization building full-team capability or an individual upgrading your technical career, Timmins offers two learning paths:                        </p>
+                        {/* <p className="ed-section-head__text">
+                          Whether you’re an organization building full-team capability or an individual upgrading your technical career, Timmins offers two learning paths:                        </p> */}
                       </div>
                     </div>
                   </div>
@@ -291,7 +319,7 @@ export default function Home() {
                             For Companies
                           </h3>
                           <p className="ed-section-head__text">
-                            Build team-wide capability in AI, embedded systems, and 5G through customized corporate training and consulting. Popular corporate programs:
+                            Build team-wide engineering capability through tailored training and consulting. Popular corporate programs:
 
                           </p>
                         </div>
@@ -304,13 +332,7 @@ export default function Home() {
                               />
                               Embedded Systems Engineering
                             </li>
-                            <li>
-                              <img
-                                src="/assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              Online Remote Learning
-                            </li>
+
                             <li>
                               <img
                                 src="/assets/images/icons/icon-check-blue.svg"
@@ -330,7 +352,7 @@ export default function Home() {
                                 src="/assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Customized Technical Training
+                              Fresh Graduate Onboarding program
                             </li>
                             <li>
                               <img
@@ -369,7 +391,7 @@ export default function Home() {
                                 src="/assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Embedded Linux Fundamentals
+                              Embedded Linux System Internals
 
                             </li>
                             <li>
@@ -377,7 +399,7 @@ export default function Home() {
                                 src="/assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Generative AI & LangChain
+                              Data Analysis and Visualization with Power PI
 
                             </li>
                             <li>
@@ -385,7 +407,7 @@ export default function Home() {
                                 src="/assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              Android/Kotlin Development
+                              Machine Learning with Python
 
                             </li>
                             <li>
@@ -393,14 +415,14 @@ export default function Home() {
                                 src="/assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              5G Fundamentals
+                              Kotlin Fundamentals
                             </li>
                             <li>
                               <img
                                 src="/assets/images/icons/icon-check-blue.svg"
                                 alt="icon-check-blue"
                               />
-                              SAFe® Scrum Master Certification
+                              Gen AI for IT and Non-IT Teams
                             </li>
                           </ul>
                         </div>
@@ -420,89 +442,80 @@ export default function Home() {
             </div>
             <>
               {/* Start About Area */}
-              <section className="ed-about position-relative section-gap pt-0">
-                <div className="container-fluid">
-                  <div className="row justify-content-center pb-4">
-                    <div className="col-lg-8 col-12">
-                      <div className="ed-section-head text-center">
-                        <h2 className="ed-section-head__title ed-split-text left">
-                          Why Timmins
-                        </h2>
-                        <p>Real engineers. Real practice. Real capability.</p>
-                        <p className="ed-section-head__text">
-                          We are not a generic training vendor. Every program is designed and delivered by practitioners with deep field experience in engineering, telecom, manufacturing, and digital banking.
+              <section className="our-values-2 section-gap">
+                <div className="container">
+                  <div className="text-center mb-5">
+                    <h2 className="fw-bold">Why Training with Timmins</h2>
+                    <p className="text-muted">
+                      <i>Real engineers. Real practice. Real capability.</i>.
+                    </p>
+                    <br />
+                    <p>Every program is designed and delivered by practitioners with deep field experience in engineering, telecom, manufacturing, and banking.</p>
+                  </div>
+                  <div className="text-center">
+                    <p><b>Our signature approach combines:</b></p>
+                  </div>
+                  <br />
+                  <div className="row g-4">
+                    {/* Growth */}
+
+                    <div className="col-lg-6 col-md-6 col-12">
+                      <div className="value-card h-100">
+                        <div className="icon growth">
+                          <i className="bi bi-person-workspace" />
+
+                        </div>
+                        <h5>Practitioner-Led Delivery </h5>
+                        <p>
+                          led by engineers with real-world delivery experience.
                         </p>
                       </div>
                     </div>
-                    <div className="row">
-                      <div className="col-12">
-                        <div className="ed-category__wrapper">
-                          {/* Single Coure Card  */}
-                          <a
-                            href="/courses"
-                            className="ed-category__card wow fadeInUp"
-                            data-wow-delay=".3s"
-                            data-wow-duration="1s"
-                          >
-                            {/* <div className="ed-category__icon bg-1">
-                              <img src="assets/images/category/category-1/1.svg" alt="icon" />
-                            </div> */}
-                            <div className="ed-category__info">
-                              <h4>Practitioner-Led Delivery</h4>
-                              <p>trainers who build systems, not just teach them.</p>
-                            </div>
-                          </a>
-                          {/* Single Coure Card  */}
-                          <a
-                            href="/courses"
-                            className="ed-category__card wow fadeInUp"
-                            data-wow-delay=".5s"
-                            data-wow-duration="1s"
-                          >
-                            {/* <div className="ed-category__icon bg-2">
-                              <img src="assets/images/category/category-1/2.svg" alt="icon" />
-                            </div> */}
-                            <div className="ed-category__info">
-                              <h4>Engineering-Grade Depth</h4>
-                              <p>technical rigor for real-world complexity.                              </p>
-                            </div>
-                          </a>
-                          {/* Single Coure Card  */}
-                          <a
-                            href="/courses"
-                            className="ed-category__card wow fadeInUp"
-                            data-wow-delay=".7s"
-                            data-wow-duration="1s"
-                          >
-                            {/* <div className="ed-category__icon bg-3">
-                              <img src="assets/images/category/category-1/3.svg" alt="icon" />
-                            </div> */}
-                            <div className="ed-category__info">
-                              <h4>Hands-On Learning</h4>
-                              <p>labs, debugging, system workflows, AI pipelines, firmware tools.
-                              </p>
-                            </div>
-                          </a>
-                          {/* Single Coure Card  */}
-                          <a
-                            href="/courses"
-                            className="ed-category__card wow fadeInUp"
-                            data-wow-delay=".9s"
-                            data-wow-duration="1s"
-                          >
-                            {/* <div className="ed-category__icon bg-4">
-                              <img src="assets/images/category/category-1/4.svg" alt="icon" />
-                            </div> */}
-                            <div className="ed-category__info">
-                              <h4>Measurable Capability Growth</h4>
-                              <p> assessments, dashboards, and skill-mapping.</p>
-                            </div>
-                          </a>
-
+                    {/* Co-Creation */}
+                    <div className="col-lg-6 col-md-6 col-12">
+                      <div className="value-card h-100">
+                        <div className="icon cocreation">
+                          <i className="bi bi-diagram-3" />
                         </div>
+                        <h5>Engineering-Grade Depth </h5>
+                        <p>
+                          technical rigor for real-world complexity.
+                        </p>
+                      </div>
+                    </div>
+                    {/* Collaboration */}
+                    <div className="col-lg-6 col-md-6 col-12">
+                      <div className="value-card h-100">
+                        <div className="icon collaboration">
+                          <i className="bi bi-laptop" />
+                        </div>
+                        <h5>Hands-On Learning</h5>
+                        <p>
+                          labs, debugging, system workflows, AI pipelines, firmware tools.
+
+                        </p>
+                      </div>
+                    </div>
+                    {/* Excellence */}
+                    <div className="col-lg-6 col-md-6 col-12">
+                      <div className="value-card h-100">
+                        <div className="icon excellence">
+                          <i className="bi bi-bar-chart-line" />
+                        </div>
+                        <h5>Measurable Capability Growth</h5>
+                        <p>
+                          assessments, dashboards, and skill-mapping.
+                        </p>
                       </div>
                     </div>
                   </div>
+                  <br />
+                  <div className="text-center">
+                    <div className="text-decoration-underline-1" >
+                      <a href="#">How we Work</a>
+                    </div>
+                  </div>
+
                 </div>
               </section>
               {/* End About Area */}
@@ -654,7 +667,8 @@ export default function Home() {
                       <div className="d-flex justify-content-center mt-4">
                         <p className="badge-container">
                           <img src="/assets/New_images/badge.png" alt="hero-image" />
-                          <span>HRDC Claimable Training available for Malaysian employers.</span>
+                          <img src="/assets/New_images/badge.png" alt="hero-image" />
+
                         </p>
 
                       </div>
@@ -1284,7 +1298,7 @@ export default function Home() {
                                 aria-expanded="true"
                                 aria-controls="collapseOne"
                               >
-                                6. How can I start with your online class?
+                                6. What industries does Timmins work with?
                               </button>
                             </h2>
                             <div
@@ -1295,7 +1309,7 @@ export default function Home() {
                             >
                               <div className="ed-faq__accordion-body">
                                 <p className="ed-faq__accordion-text">
-                                  Semiconductors, telecom, manufacturing, banking, digital platforms, and tech-driven enterprises.
+                                  Timmins works with semiconductors, telecom, manufacturing, banking, digital platforms, and technology-driven enterprises.
                                 </p>
                               </div>
                             </div>
