@@ -8,141 +8,231 @@ export default function contactUspage() {
             <Header />
 
             {/* HERO */}
-            <section className="contact-hero">
-                <div className="contact-hero-content">
-                    <h1>Let’s Start a Conversation</h1>
-                    <p>
-                        Every partnership at Timmins starts with understanding your goals, your
-                        people, and the technical capabilities you want to build.
-                    </p>
-                    <p className="hero-subtext">
-                        Whether you're exploring AI consulting, embedded systems training, 5G
-                        technician training, corporate training in Malaysia, HRDC Claimable
-                        Courses, or a fully customized onboarding solution, our specialists are
-                        ready to help you plan the next step.
-                    </p>
+            <section className="contact-hero py-5">
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-8 text-center">
 
-                    <div className="hero-cta">
-                        <a href="#calendly" className="btn-primary">
-                            Book a Consultation
-                        </a>
-                        <a href="#contact-form" className="btn-secondary">
-                            Send a Message
-                        </a>
+                            <h1 className="contact-hero-title mb-3">
+                                Contact Us
+                            </h1>
+
+                            <p className="contact-hero-desc">
+                                We work with you to understand your objectives, your people, and the technical capabilities required to move from intent to real-world execution
+
+
+                            </p>
+
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* CONTACT CARDS */}
-            <section className="container py-5">
-                <h2 className="text-center fw-bold mb-5">📞 Get in Touch</h2>
 
-                <div className="row justify-content-center g-4">
+            <section className="contact-section py-5">
+                <div className="container">
 
-                    {/* Malaysia */}
-                    <div className="col-md-4">
-                        <div className="contact-card h-100 text-center">
-                            <h4>Malaysia (Head Office)</h4>
-
-                            <p>Timmins Training Consulting Sdn. Bhd.</p>
-                            <p>
-                                Suite 3A–05, Level 3A, Wisma Fiamma <br />
-                                No. 20, Jalan 7A/62A, Bandar Manjalara <br />
-                                52200 Kuala Lumpur, Malaysia
-                            </p>
-                            <p>
-                                📞 +60 3-2785 0737 <br />
-                                WhatsApp: +60 11-1667 4727
-                            </p>
-                            <p className="contact-email">
-                                ✉️ hello@consult-timmins.com
-                            </p>
-                        </div>
+                    {/* SECTION TITLE */}
+                    <div className="text-center mb-5">
+                        <h2 className="get-in-touch-title">
+                            📞 Get in Touch
+                        </h2>
                     </div>
 
-                    {/* Penang */}
-                    <div className="col-md-4">
-                        <div className="contact-card h-100 text-center d-flex flex-column justify-content-center">
-                            <h4>Penang Training Center</h4>
-                            <p>
-                                Bayan Lepas Industrial Park <br />
-                                Penang
-                            </p>
-                            <p>🕘 9:00 AM – 5:30 PM (Mon–Fri)</p>
-                        </div>
-                    </div>
+                    {/* CARDS */}
+                    <div className="row g-4">
 
-                    {/* Canada */}
-                    <div className="col-md-4">
-                        <div className="contact-card h-100 text-center d-flex flex-column justify-content-center">
-                            <h4>Canada (Representative Office)</h4>
-                            <p>
-                                Toronto, Ontario <br />
-                                Canada
-                            </p>
-                        </div>
-                    </div>
+                        {/* MALAYSIA – HEAD OFFICE */}
+                        <div className="col-lg-3 col-md-6 d-flex">
+                            <div className="contact-card primary w-100">
 
+                                <h4 className="mb-3">Malaysia (Head Office)</h4>
+
+                                <p className="location-text">
+                                    <strong>Timmins Training Consulting Sdn. Bhd.</strong><br />
+                                    Suite 3A–05, Level 3A, Wisma Fiamma<br />
+                                    No. 20, Jalan 7A/62A, Bandar Manjalara<br />
+                                    52200 Kuala Lumpur, Malaysia
+                                </p>
+
+                                <p className="location-text">
+                                    📱 +60 3-2785 0737 <br />
+                                    WhatsApp: +60 11-1667 4727
+                                </p>
+
+                                <p className="location-text">
+                                    ✉️ <a href="mailto:info@timmins-consulting.com">
+                                        info@timmins-consulting.com
+                                    </a>
+                                </p>
+
+                                <a
+                                    href="https://maps.app.goo.gl/36Z867fj5VgwrJU29?g_st=ic"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="map-link"
+                                >
+                                    View on Google Maps →
+                                </a>
+
+                            </div>
+                        </div>
+
+                        {/* PENANG TRAINING CENTER */}
+                        <div className="col-lg-3 col-md-6 d-flex">
+                            <div className="contact-card w-100">
+
+                                <h4 className="mb-3">Penang Training Center</h4>
+
+                                <p className="location-text">
+                                    Bayan Lepas Industrial Park<br />
+                                    Penang
+                                </p>
+
+                                <p className="location-text">
+                                    🕘 9:00 AM – 5:30 PM (Mon–Fri)
+                                </p>
+
+                                <a
+                                    href="https://maps.app.goo.gl/xTg4GoZFLobRJ11J8?g_st=ic"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="map-link"
+                                >
+                                    View on Google Maps →
+                                </a>
+
+                            </div>
+                        </div>
+
+                        {/* CANADA – REPRESENTATIVE OFFICE */}
+                        <div className="col-lg-3 col-md-6 d-flex">
+                            <div className="contact-card w-100">
+
+                                <h4 className="mb-3">Canada (Representative Office)</h4>
+
+                                <p className="location-text">
+                                    Toronto, Ontario<br />
+                                    Canada
+                                </p>
+
+                            </div>
+                        </div>
+
+                        {/* INDONESIA */}
+                        <div className="col-lg-3 col-md-6 d-flex">
+                            <div className="contact-card w-100">
+
+                                <h4 className="mb-3">Indonesia</h4>
+
+                                <p className="location-text">
+                                    South Jakarta
+                                </p>
+
+                                <a
+                                    href="https://maps.app.goo.gl/7fLGt4idozEcdLwz8?g_st=ic"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="map-link"
+                                >
+                                    View on Google Maps →
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </section>
+
+
 
             {/* APPOINTMENT */}
-            <section className="appointment-section" id="calendly">
-                <div className="appointment-wrapper listStyle">
-                    <h2>Book an Appointment</h2>
-                    <p className="appointment-intro">
-                        Schedule a short consultation with our practitioners.
-                    </p>
 
-                    <ul>
-                        <li>AI Consulting</li>
-                        <li>HRDC Claimable Training</li>
-                        <li>Technical Upskilling</li>
-                        <li>Embedded Systems Training</li>
-                    </ul>
-
-                    <p className="response-note">We respond within one business day.</p>
-                </div>
-            </section>
 
             {/* CONTACT FORM */}
-            <section className="contact-form-section" id="contact-form">
-                <div className="contact-form-wrapper">
-                    <h2>Send Us a Message</h2>
-                    <p className="form-intro">
-                        Tell us a bit about what you’re looking for.
-                    </p>
+            <section className="contact-message-section py-5">
+                <div className="container">
 
-                    <form className="contact-form">
-                        <input type="text" placeholder="Full Name" />
-                        <input type="text" placeholder="Organization Name" />
-                        <input type="email" placeholder="Email Address" />
-                        <input type="tel" placeholder="Contact Number" />
+                    <div className="row justify-content-center">
+                        <div className="col-lg-7">
 
-                        <select>
-                            <option>Select an option</option>
-                            <option>AI Consulting</option>
-                            <option>Embedded Systems</option>
-                            <option>5G Training</option>
-                        </select>
+                            {/* SECTION HEADING */}
+                            <div className="text-center mb-4">
+                                <h2 className="message-title">
+                                    Plan Your Next Capability Move
+                                </h2>
 
-                        <button type="submit" className="primary-btn">
-                            Send Message
-                        </button>
-                    </form>
+                                <p className="message-desc">
+                                    Tell us what capability you’re looking to build, whether it’s AI consulting,
+                                    embedded systems, 5G training, data analytics, or a broader learning strategy.
+                                    We’ll connect you with the right specialist to explore the best next step.
+                                </p>
+                            </div>
+
+                            {/* FORM */}
+                            <form className="contact-form">
+
+                                <div className="mb-3">
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        placeholder="Full Name"
+                                    />
+                                </div>
+
+                                <div className="mb-3">
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        placeholder="Organization Name"
+                                    />
+                                </div>
+
+                                <div className="mb-3">
+                                    <input
+                                        type="email"
+                                        className="form-control"
+                                        placeholder="Email Address"
+                                    />
+                                </div>
+
+                                <div className="mb-3">
+                                    <input
+                                        type="tel"
+                                        className="form-control"
+                                        placeholder="Contact Number"
+                                    />
+                                </div>
+
+                                <div className="mb-4">
+                                    <select className="form-control">
+                                        <option>Area of Interest</option>
+                                        <option>AI</option>
+                                        <option>Embedded Linux</option>
+                                        <option>5G</option>
+                                        <option>Data Analytics</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+
+                                <div className="text-center">
+                                    <button type="submit" className="btn btn-message-submit">
+                                        Connect with Our Team →
+                                    </button>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+
                 </div>
             </section>
+
 
             {/* SOFT CTA */}
-            <section className="soft-cta">
-                <div className="soft-cta-wrapper">
-                    <h2>Still Deciding?</h2>
-                    <p>
-                        Capability building takes thought, not pressure.
-                    </p>
-                    <strong>Timmins Training Consulting — Together, We Grow.</strong>
-                </div>
-            </section>
+
 
             <Footer />
         </>

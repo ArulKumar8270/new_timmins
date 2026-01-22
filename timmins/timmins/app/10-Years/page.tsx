@@ -12,26 +12,15 @@ export default function TenYearsPage() {
                 <section className="ten-years-page">
                     <div className="journey-hero-inner">
                         <h1>10 Years of Timmins</h1>
-                        <h2>A Decade of Learning and Impact</h2>
-                        <p className="journey-hero-year">2015 – 2025</p>
+                        {/* <h2>A Decade of Learning and Impact</h2>
+                        <p className="journey-hero-year">2015 – 2025</p> */}
 
                         <p>
-                            In 2025, Timmins Training Consulting celebrates 10 years of
-                            transforming how organizations learn, build capability, and
-                            navigate emerging technologies.
+                            From a vision in Malaysia to a trusted global capability partner, marking 10 years of engineering-grade learning in action.
                         </p>
 
-                        <p>
-                            What began in Malaysia with a simple vision—making corporate
-                            learning meaningful, practical, and engineering-grade—has grown
-                            into a multi-country capability partner trusted across Asia and
-                            North America.
-                        </p>
 
-                        <p>
-                            A decade later, that vision has powered advanced tech training
-                            supporting engineers, developers, analysts, and leaders worldwide.
-                        </p>
+
                     </div>
                 </section>
 
@@ -42,32 +31,25 @@ export default function TenYearsPage() {
                     <div className="journey-hero-inner">
                         <h2>Where It All Began (2015–2017)</h2>
 
-                        <p className="journey-hero-year">2015</p>
-                        <p>
-                            Timmins Training Consulting was officially registered as a corporate
-                            training provider in Malaysia. The founding purpose was clear:
-                        </p>
+                        <h6 className="fw-semibold mt-4">2015:</h6>
+                        <ul className="list-unstyled role-list">
+                            <li>✔ <strong>Founded in Malaysia</strong> with a clear belief in practical, hands-on learning</li>
+                            <li>
+                                ✔ Practitioner-led training, built by people with real industry experience
+                            </li>
+                            <li>✔ Engineering-grade focus grounded in real-world application</li>
 
-                        <p>
-                            <i>
-                                <u>
-                                    Corporate training must be relevant, hands-on, and driven by
-                                    real industry practitioners—not generic slides.
-                                </u>
-                            </i>
-                        </p>
+                        </ul>
+                        <h6 className="fw-semibold mt-4">2017:</h6>
+                        <ul className="list-unstyled role-list">
+                            <li>✔ <strong>Expanded to Indonesia</strong> as the first international milestone
+                            </li>
+                            <li>
+                                ✔ Specialized capability programs for engineering and banking sectors
+                            </li>
+                            <li>✔ Focus areas: embedded systems, firmware fundamentals, and hardware–software integration</li>
 
-                        <p>
-                            Early years were spent building deep expertise in
-                            engineering-focused learning.
-                        </p>
-
-                        <p className="journey-hero-year">2017</p>
-                        <p>
-                            Timmins expanded to Indonesia, marking its first international
-                            growth milestone, introducing embedded systems and banking
-                            capability programs.
-                        </p>
+                        </ul>
                     </div>
                 </section>
 
@@ -76,29 +58,40 @@ export default function TenYearsPage() {
                 {/* 2018–2019 */}
                 <section className="ten-years-page">
                     <div className="journey-block">
-                        <h2>Specialization & North America Expansion
-                            2018–2019</h2>
+                        <h4>Specialization & North America Expansion
+                            2018–2019</h4>
 
 
 
                         <p>
-                            During these years, Timmins shifted strongly into advanced technical domains:
+                            Timmins shifted into advanced technical domains:
                         </p>
 
-                        <ul>
-                            <li>telecom & 5G capability</li>
-                            <li>semiconductor & embedded engineering</li>
-                            <li>AI & data foundations</li>
+                        <ul >
+                            <li>✔ telecom & 5G capability</li>
+                            <li>✔ semiconductor & embedded engineering</li>
+                            <li>✔ AI & data foundations</li>
 
-                            <li>enterprise software engineering</li>
+                            <li>✔ enterprise software engineering</li>
                         </ul>
 
-                        <p className="journey-hero-year">2019</p>
+                        <p className="journey-hero-year">2018:</p>
 
                         <p className="journey-note">
-                            Timmins expanded operations to Canada, strengthening access to global subject matter experts and enabling cross-regional knowledge exchange. This step connected Timmins with new engineering partners and broadened the delivery of practitioner-led technical upskilling programs.
+                            ✔  HRD Corp–recognized Training Provider, enabling HRDC-Claimable Training for Malaysian employers.
 
                         </p>
+
+                        <p className="journey-hero-year">2019:</p>
+                        <ul className="list-unstyled role-list">
+                            <li>✔ <strong>Expanded operations to Canada</strong>  to access global subject matter experts
+                            </li>
+                            <li>
+                                ✔ Enabled cross-regional knowledge exchange
+                            </li>
+                            <li>✔Broadened delivery of practitioner-led technical upskilling programs</li>
+
+                        </ul>
                     </div>
                 </section>
 
@@ -107,23 +100,37 @@ export default function TenYearsPage() {
                 {/* 2020–2022 */}
                 <section className="ten-years-page">
                     <div className="journey-block">
-                        <h2>Reinvention Through Disruption (2020–2022)</h2>
+                        <h4>Reinvention Through Disruption (2020–2022)</h4>
 
-                        <p>
-                            When the pandemic reshaped the world, Timmins rebuilt its delivery model from the ground up. We launched:
-                        </p>
+
 
                         <ul>
-                            <li>hybrid and fully-virtual learning</li>
-                            <li>SCORM-based technical modules</li>
-                            <li>remote labs</li>
-                            <li>multi-timezone virtual classrooms</li>
-                            <li>digital learning analytics for capability tracking</li>
+                            <li><strong>Rebuilt delivery model</strong> during the pandemic</li>
+                            <li>Launched hybrid and fully virtual learning</li>
+                            <li>Enabled remote labs and multi-timezone classrooms</li>
+                            <li>Expanded reach, supporting more learners despite global disruption</li>
+
                         </ul>
 
-                        <p className="journey-note">
-                            Despite global disruption, our programs reached more learners than ever, keeping engineers, leaders, and teams progressing.
-                        </p>
+
+                    </div>
+                </section>
+
+
+
+                <div className="journey-arrow">↓</div>
+
+
+                <section className="ten-years-page">
+                    <div className="journey-block">
+                        <h4>Opening Timmins Training Center, Bayan Lepas
+                            (Penang 2024)</h4>
+
+
+
+                        <p>Timmins opened a dedicated training center in Bayan Lepas, Penang, to support hands-on, lab-based technical training and strengthen its delivery capability in Malaysia.</p>
+
+
                     </div>
                 </section>
 
@@ -137,20 +144,23 @@ export default function TenYearsPage() {
                         </h2>
 
                         <p>
-                            Today, Timmins delivers programs in <strong>10+ countries</strong> across Asia-Pacific and North America, in both English and Mandarin. Our clients include global technology companies,
+                            Today, Timmins delivers engineering-grade capability programs globally, supporting organizations through hands-on, practitioner-led learning.
                         </p>
 
                         <ul>
-                            <li>Embedded Systems</li>
-                            <li>AI & Machine Learning</li>
-                            <li>Telecom & 5G</li>
-                            <li>Cloud & DevOps</li>
-                            <li>Engineering Upskilling</li>
+                            <li>Programs delivered in 11 countries, in English and Mandarin</li>
+                            <li>Clients across sectors: global tech companies, engineering manufacturers, banks & financial institutions, universities, and public organizations</li>
                         </ul>
 
-                        <p className="journey-note">
-                            Recognized as an HRD Corp Training Provider in Malaysia.
-                        </p>
+                        <h6 className="fw-semibold mt-4">Core capability areas:</h6>
+                        <ul>
+                            <li>Embedded systems and embedded programming</li>
+                            <li>Telecom, 5G, and network capability</li>
+                            <li>Cloud, DevOps, and automation</li>
+                            <li>Technical upskilling for engineering teams</li>
+                        </ul>
+
+
                     </div>
                 </section>
 
@@ -182,6 +192,58 @@ export default function TenYearsPage() {
                             people.”
                         </p>
                         <span>— Muna, Director of Learning Delivery</span>
+                    </div>
+                </section>
+
+
+                <section className="ed-call-action position-relative section-gap pb-5">
+                    <div className="container ed-container">
+                        <div className="ed-call-action__inner position-relative">
+                            <div className="ed-call-action__shapes">
+                                <img
+                                    className="ed-call-action__shape-1 rotate-ani"
+                                    src="/assets/images/call-action/call-action-1/shape-1.svg"
+                                    alt="shape-1"
+                                />
+                                <img
+                                    className="ed-call-action__shape-2"
+                                    src="/assets/images/call-action/call-action-1/shape-2.svg"
+                                    alt="shape-2"
+                                />
+                                <img
+                                    className="ed-call-action__shape-3 updown-ani"
+                                    src="/assets/images/call-action/call-action-1/shape-3.svg"
+                                    alt="shape-3"
+                                />
+                            </div>
+                            <div className="row">
+                                <div className="col-lg-6 col-12">
+                                    <div className="ed-call-action__img">
+                                        <img
+                                            src="/assets/New_images/final cta section.jpg"
+                                            alt="call-action-img"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="col-lg-6 col-12 order-class">
+                                    <div className="ed-call-action__content">
+                                        <div className="ed-section-head">
+                                            <h2 className="ed-section-head__title ">Looking Ahead</h2>
+                                            <p className="ed-section-head__text ">
+                                                Entering our second decade, Timmins is building a global engineering learning ecosystem that helps organizations excel in future technologies. Let’s shape the next decade of learning, capability, and impact together.
+                                            </p>
+                                            <br />
+                                        </div>
+                                        <div className="ed-call-action__content-btn ed-btn" style={{ backgroundColor: 'var(--ed-secondary-color)' }}>
+                                            <a href="#" >
+                                                {" "}
+                                                Partner With Us
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
