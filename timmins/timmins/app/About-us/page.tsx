@@ -116,7 +116,7 @@ const page = () => {
                                     <div className="col-lg-4 col-md-12 text-center">
 
                                         <img
-                                            src="/assets/images/about/about-3/about-img.png"
+                                            src="/assets/New_images/about-us.jpg"
                                             alt="Timmins Consulting"
                                             className="img-fluid about-img"
                                         />
@@ -356,7 +356,7 @@ const page = () => {
                                             height="28"
                                         />
                                         <img
-                                            src="/assets/New_images/badge.png"
+                                            src="/assets/New_images/HRDC.png"
                                             alt="HRDC Registered Training Provider"
                                             height="28"
                                         />
@@ -396,7 +396,7 @@ const page = () => {
                                     <div className="col-lg-6 col-12">
                                         <div className="ed-call-action__img">
                                             <img
-                                                src="/assets/New_images/final cta section.jpg"
+                                                src="/assets/New_images/final cta horizontal.png"
                                                 alt="call-action-img"
                                             />
                                         </div>

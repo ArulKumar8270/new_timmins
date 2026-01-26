@@ -28,7 +28,7 @@ export default function Home() {
                     priority
                   />
                   <Image
-                    src="/assets/New_images/badge.png"
+                    src="/assets/New_images/HRDC.png"
                     alt="HRDC Registered Training Provider"
                     width={70}
                     height={70}
@@ -60,7 +60,7 @@ export default function Home() {
                           />
 
                           <Image
-                            src="/assets/New_images/badge.png"
+                            src="/assets/New_images/HRDC.png"
                             alt="HRDC Claimable Training badge"
                             width={120}
                             height={120}
@@ -667,7 +667,7 @@ export default function Home() {
                       <div className="d-flex justify-content-center mt-4">
                         <p className="badge-container">
                           <img src="/assets/New_images/badge.png" alt="hero-image" />
-                          <img src="/assets/New_images/badge.png" alt="hero-image" />
+                          <img src="/assets/New_images/HRDC.png" alt="hero-image" />
 
                         </p>
 
@@ -965,7 +965,7 @@ export default function Home() {
                             <div className="ed-testimonial__author">
 
                               <div className="ed-testimonial__author-info">
-                                <h5>L&D at Qualcomm</h5>
+                                <h5>Engineer at Qualcomm</h5>
                               </div>
                             </div>
                           </div>
@@ -994,7 +994,7 @@ export default function Home() {
                             <div className="ed-testimonial__author">
 
                               <div className="ed-testimonial__author-info">
-                                <h5>Engineer at Citibank</h5>
+                                <h5>Engineer at Citigroup</h5>
                               </div>
                             </div>
                           </div>
@@ -1050,7 +1050,8 @@ export default function Home() {
                             </p>
                             <div className="ed-testimonial__author">
                               <div className="ed-testimonial__author-info">
-                                <h5>Engineer at Citibank</h5>
+                                <h5>Engineer at Citigroup
+                                </h5>
                               </div>
                             </div>
                           </div>
@@ -1062,7 +1063,7 @@ export default function Home() {
               </section>
             </div>
 
-            <section className="ed-call-action position-relative section-gap pb-0">
+            <section className="ed-call-action position-relative section-gap mb-3.5">
               <div className="container ed-container">
                 <div className="ed-call-action__inner position-relative">
                   <div className="ed-call-action__shapes">
@@ -1086,7 +1087,7 @@ export default function Home() {
                     <div className="col-lg-6 col-12">
                       <div className="ed-call-action__img">
                         <img
-                          src="/assets/New_images/final cta section.jpg"
+                          src="/assets/New_images/final cta horizontal.png"
                           alt="call-action-img"
                         />
                       </div>
@@ -1102,7 +1103,7 @@ export default function Home() {
                             Whether you're planning a new AI initiative, upgrading your embedded systems team, or preparing engineers for new 5G requirements; we’re here to help.
                           </p>
                         </div>
-                        <div className="ed-call-action__content-btn ed-btn" style={{ backgroundColor: 'var(--ed-secondary-color)' }}>
+                        <div className="ed-call-action__content-btn ed-btn mb-5" style={{ backgroundColor: 'var(--ed-secondary-color)' }}>
                           <a href="#" >
                             {" "}
                             Book a Consultation
@@ -1116,10 +1117,112 @@ export default function Home() {
             </section>
 
 
+            <section className="global-presence-section section-gap">
+              <div className="container">
 
-            <section className="section-gap map-section pb-0">
-              <img src="/assets/New_images/map.png" alt="clients" />
+                {/* SECTION TITLE */}
+                <div className="text-center mb-5">
+                  <h2 className="global-title">Our Global Presence</h2>
+                  <p className="global-desc">
+                    Supporting organizations across key global regions.
+                  </p>
+                </div>
+
+                {/* ROW 1 – 6 COUNTRIES */}
+                <div className="row justify-content-center g-4 mb-4">
+
+                  <div className="col-lg-2 col-md-4 col-6">
+                    <div className="country-card">
+                      <img src="/assets/New_images/us.png" alt="United States" />
+                      <p>United States</p>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-2 col-md-4 col-6">
+                    <div className="country-card">
+                      <img src="/assets/New_images/canada.png" alt="Canada" />
+                      <p>Canada</p>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-2 col-md-4 col-6">
+                    <div className="country-card">
+                      <img src="/assets/New_images/uk.png" alt="United Kingdom" />
+                      <p>United Kingdom</p>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-2 col-md-4 col-6">
+                    <div className="country-card">
+                      <img src="/assets/New_images/france.png" alt="France" />
+                      <p>France</p>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-2 col-md-4 col-6">
+                    <div className="country-card">
+                      <img src="/assets/New_images/ME.png" alt="Middle East" />
+                      <p>Middle East</p>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-2 col-md-4 col-6">
+                    <div className="country-card">
+                      <img src="/assets/New_images/chaina.png" alt="China" />
+                      <p>China</p>
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* ROW 2 – 5 COUNTRIES (CENTERED) */}
+                <div className="row justify-content-center g-4">
+
+                  <div className="col-lg-2 col-md-4 col-6">
+                    <div className="country-card">
+                      <img src="/assets/New_images/india.png" alt="India" />
+                      <p>India</p>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-2 col-md-4 col-6">
+                    <div className="country-card">
+                      <img src="/assets/New_images/malaysia.png" alt="Malaysia" />
+                      <p>Malaysia</p>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-2 col-md-4 col-6">
+                    <div className="country-card">
+                      <img src="/assets/New_images/sinagpore.png" alt="Singapore" />
+                      <p>Singapore</p>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-2 col-md-4 col-6">
+                    <div className="country-card">
+                      <img src="/assets/New_images/indo.png" alt="Indonesia" />
+                      <p>Indonesia</p>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-2 col-md-4 col-6">
+                    <div className="country-card">
+                      <img src="/assets/New_images/thai.png" alt="Thailand" />
+                      <p>Thailand</p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
             </section>
+
+
+
+
+
+
             {/* Start Faq Area */}
             <section className="ed-faq section-gap position-relative">
               <div className="container ed-container">
@@ -1162,7 +1265,7 @@ export default function Home() {
                             >
                               <div className="ed-faq__accordion-body">
                                 <p className="ed-faq__accordion-text">
-                                  For new engineers, foundational Embedded Linux and embedded programming training provide the fastest capability lift
+                                  The recommended beginner courses are OS Essentials, Embedded C & GDB, and Embedded Linux System Internals. These courses provide a strong foundation in operating systems, embedded programming, debugging, and Linux internals.
                                 </p>
                               </div>
                             </div>
@@ -1189,7 +1292,7 @@ export default function Home() {
                             >
                               <div className="ed-faq__accordion-body">
                                 <p className="ed-faq__accordion-text">
-                                  Yes. Timmins provides AI consulting, AI consultation, and full capability-building programs for enterprise AI transformation.
+                                  Timmins offers both AI consulting and AI training, including capability assessment, use-case identification, and structured enterprise AI upskilling programs.
                                 </p>
                               </div>
                             </div>
@@ -1206,6 +1309,7 @@ export default function Home() {
                                 aria-controls="collapseTwo"
                               >
                                 3. Are your programs HRDC Claimable?
+
                               </button>
                             </h2>
                             <div
@@ -1216,7 +1320,7 @@ export default function Home() {
                             >
                               <div className="ed-faq__accordion-body">
                                 <p className="ed-faq__accordion-text">
-                                  Yes, for Malaysian employers only. Many AI, embedded, 5G, and corporate training Malaysia programs qualify.
+                                  Yes. For Malaysian employers only, many AI, Embedded Systems, 5G, and corporate training programs are HRDC claimable, subject to eligibility and approval.
                                 </p>
                               </div>
                             </div>
@@ -1243,7 +1347,7 @@ export default function Home() {
                             >
                               <div className="ed-faq__accordion-body">
                                 <p className="ed-faq__accordion-text">
-                                  Yes. We specialize in custom training pathways for embedded systems, 5G, AI, and software engineering
+                                  Yes. Timmins specializes in customized, role-based training pathways for embedded systems, AI, 5G, and software engineering teams.
                                 </p>
                               </div>
                             </div>
@@ -1259,7 +1363,7 @@ export default function Home() {
                                 aria-expanded="false"
                                 aria-controls="collapseFour"
                               >
-                                5. Are 5G training courses available online?
+                                5.Are Timmins training courses available online?
                               </button>
                             </h2>
                             <div
@@ -1270,7 +1374,7 @@ export default function Home() {
                             >
                               <div className="ed-faq__accordion-body">
                                 <p className="ed-faq__accordion-text">
-                                  Yes. We offer both online and on-site 5G training certification and 5G technician training programs.
+                                  Yes. Timmins offers online, on-site, and hybrid training programs for engineering and technical teams.
                                 </p>
                               </div>
                             </div>
@@ -1336,7 +1440,7 @@ export default function Home() {
                             >
                               <div className="ed-faq__accordion-body">
                                 <p className="ed-faq__accordion-text">
-                                  Yes. We deliver programs across Singapore, India, Vietnam, the US, and Canada.
+                                  Yes. Timmins delivers corporate training across Malaysia, Singapore, Indonesia, China, India, Vietnam, the United States, and Canada.
                                 </p>
                               </div>
                             </div>
@@ -1352,7 +1456,7 @@ export default function Home() {
                                 aria-expanded="false"
                                 aria-controls="collapseThree"
                               >
-                                8.How is Timmins different from other corporate training providers?
+                                8. How is Timmins different from other corporate training providers?
                               </button>
                             </h2>
                             <div
@@ -1363,7 +1467,7 @@ export default function Home() {
                             >
                               <div className="ed-faq__accordion-body">
                                 <p className="ed-faq__accordion-text">
-                                  We’re practitioner-led, engineering-grade, and deeply specialized in advanced technical capability, not generic soft skills.
+                                  Timmins is practitioner-led, engineering-grade, and deeply specialized, focusing on real capability building rather than generic or tool-centric training.
                                 </p>
                               </div>
                             </div>
@@ -1379,7 +1483,7 @@ export default function Home() {
                                 aria-expanded="false"
                                 aria-controls="collapseThree"
                               >
-                                9. Do you offer embedded programming training for IoT or device teams?
+                                9. Do you offer end-to-end Embedded Linux training?
                               </button>
                             </h2>
                             <div
@@ -1390,7 +1494,7 @@ export default function Home() {
                             >
                               <div className="ed-faq__accordion-body">
                                 <p className="ed-faq__accordion-text">
-                                  Yes. Including kernel, drivers, BSP, Yocto, debugging, and system-level engineering.
+                                  Yes. Timmins covers Embedded Linux end-to-end, including OS Essentials, Embedded C & GDB, Embedded Linux System Internals, device drivers (audio, I2C), kernel debugging, user-space and kernel internals, and SELinux, security.
                                 </p>
                               </div>
                             </div>
@@ -1407,6 +1511,7 @@ export default function Home() {
                                 aria-controls="collapseFour"
                               >
                                 10. Can Timmins design onboarding programs for fresh graduates?
+
                               </button>
                             </h2>
                             <div
@@ -1417,7 +1522,7 @@ export default function Home() {
                             >
                               <div className="ed-faq__accordion-body">
                                 <p className="ed-faq__accordion-text">
-                                  Absolutely. We’ve built multi-year onboarding academies for semiconductor and telecom companies.
+                                  Yes. Timmins has designed and delivered large-scale onboarding and engineering academy programs for semiconductor and telecom organizations.
                                 </p>
                               </div>
                             </div>

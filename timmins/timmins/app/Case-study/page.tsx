@@ -205,16 +205,11 @@ const page = () => {
                                         Participant rating
                                     </li>
                                 </ul>
-                                <div className="ed-hero__btn ed-btn">
-                                    <a
-                                        href="#"
-                                        className="case-download-link"
 
-                                    >
-                                        Download Full Case Study (via Form)
-                                    </a>
+                                <a href="#" className="case-download-link   underline mt-3 d-inline-block">
+                                    Download Full Case Study (via Form)
+                                </a>
 
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -524,15 +519,15 @@ const page = () => {
                             />
                         </div>
                         <div className="row">
-                            <div className="col-lg-6 col-12">
+                            <div className="col-lg-6 col-12 py-5">
                                 <div className="ed-call-action__img">
                                     <img
-                                        src="/assets/New_images/final cta section.jpg"
+                                        src="/assets/New_images/final cta horizontal.png"
                                         alt="call-action-img"
                                     />
                                 </div>
                             </div>
-                            <div className="col-lg-6 col-12 order-class">
+                            <div className="col-lg-6 col-12 order-class py-2 ">
                                 <div className="ed-call-action__content">
                                     <div className="ed-section-head">
                                         <h3 className="ed-section-head__title">

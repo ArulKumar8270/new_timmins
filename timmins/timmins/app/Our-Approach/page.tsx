@@ -50,7 +50,7 @@ const page = () => {
                     </div>
                     {/* RIGHT IMAGE */}
                     <div className="approach-image">
-                        <img src="/assets/New_images/Approach.jpg" alt="We listen first" />
+                        <img src="/assets/New_images/AP1.png" alt="We listen first" />
 
                     </div>
                 </div>
@@ -61,7 +61,7 @@ const page = () => {
                     {/* LEFT IMAGE */}
                     <div className="approach-image">
                         <img
-                            src="/assets/New_images/Approach.jpg"
+                            src="/assets/New_images/AP2.png"
                             alt="Co-design tailored solutions"
                         />
                     </div>
@@ -117,7 +117,7 @@ const page = () => {
                     {/* RIGHT IMAGE */}
                     <div className="approach-image">
                         <img
-                            src="/assets/New_images/Approach.jpg"
+                            src="/assets/New_images/AP3.png"
                             alt="Experts delivering hands-on engineering training"
                         />
                     </div>
@@ -187,7 +187,7 @@ const page = () => {
                     {/* RIGHT IMAGE */}
                     <div className="approach-image">
                         <img
-                            src="/assets/New_images/Approach.jpg"
+                            src="/assets/New_images/AP4.png"
                             alt="Long-term partnership and continued learning support"
                         />
                     </div>

@@ -51,6 +51,18 @@ export default function TenYearsPage() {
 
                         </ul>
                     </div>
+
+                    <div className="w-56 mx-auto">
+                        <img
+                            src="/assets/New_images/10-1.jpg"
+                            alt="Timmins early days 2016"
+                            className="w-full rounded-lg shadow-md"
+                        />
+                    </div>
+
+
+
+
                 </section>
 
                 <div className="journey-arrow">↓</div>

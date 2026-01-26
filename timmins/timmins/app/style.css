@@ -2216,7 +2216,7 @@
 
 .btn-message-submit {
     background: #1e88e5;
-    color: #56a0f6;
+    color: #00336c;
     padding: 12px 28px;
     border-radius: 999px;
     font-weight: 600;
@@ -2228,4 +2228,135 @@
 .btn-message-submit:hover {
     transform: translateY(-2px);
     box-shadow: 0 14px 30px rgba(30, 136, 229, 0.45);
+}
+
+.global-presence-section {
+    background: #eaf4fa;
+}
+
+.global-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.global-desc {
+    color: #555;
+}
+
+.country-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 12px;
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.country-card img {
+    width: 48px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.country-card p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.country-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ===== GLOBAL FLAG SECTION ===== */
+.global-presence-section {
+    background: #eaf4fa;
+}
+
+.country-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 18px 12px;
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.country-card img {
+    width: 48px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.country-card p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Hover (desktop only feel) */
+@media (min-width: 992px) {
+    .country-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* ===== XL (≥1200px) ===== */
+@media (min-width: 1200px) {
+    .country-card img {
+        width: 52px;
+    }
+
+    .country-card p {
+        font-size: 1rem;
+    }
+}
+
+/* ===== LARGE (992px – 1199px) ===== */
+@media (max-width: 1199px) {
+    .country-card img {
+        width: 46px;
+    }
+}
+
+/* ===== MEDIUM (768px – 991px) ===== */
+@media (max-width: 991px) {
+    .country-card {
+        padding: 16px 10px;
+    }
+
+    .country-card img {
+        width: 44px;
+    }
+
+    .country-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== SMALL (≤767px) ===== */
+@media (max-width: 767px) {
+    .country-card {
+        padding: 14px 8px;
+    }
+
+    .country-card img {
+        width: 42px;
+    }
+}
+
+/* ===== EXTRA SMALL (≤480px) ===== */
+@media (max-width: 480px) {
+    .country-card img {
+        width: 38px;
+    }
+
+    .country-card p {
+        font-size: 0.85rem;
+    }
 }
