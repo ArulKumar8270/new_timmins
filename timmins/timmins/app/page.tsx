@@ -710,7 +710,7 @@ export default function Home() {
                       <div className="ed-course__head position-relative">
                         <a href="#" className="ed-course__img">
                           <img
-                            src="/assets/images/course/course-2/1.png"
+                            src="/assets/New_images/FG.png"
                             alt="course-img"
                           />
                         </a>

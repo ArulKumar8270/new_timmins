@@ -8,20 +8,18 @@ const page = () => {
 
             <Header />
 
-            <section className="approach-hero-1">
-                <div className="approach-hero-content">
-                    <h1>Our Solutions</h1>
-                    <h3>Building engineers, empowering teams, and enabling technology transformation across industries.</h3>
-                    <p>
-                        Timmins is a practitioner-led advanced tech capability partner serving engineering-driven organizations across manufacturing, semiconductor, telecom, software, and banking.
+            <section className="solutions-hero">
+                <div className="container text-center">
+                    <h1 className="solutions-title">Our Solutions</h1>
+                    <p className="solutions-subtitle">
+                        Practitioner-led capability building for engineering-driven organizations,
+                        combining hands-on learning, domain expertise, and real-world application
+                        across industries.
                     </p>
-                    <p className="hero-highlight">
-                        We don’t deliver one-size-fits-all training. We build capability (technical, human, and organizational) through structured learning, domain-specific consulting, and industry-grade certification programs.
-
-                    </p>
-
                 </div>
             </section>
+
+
 
             <section className="onboarding-section listStyle bgBlue">
                 <h2>Fresh Graduate Onboarding Programs</h2>

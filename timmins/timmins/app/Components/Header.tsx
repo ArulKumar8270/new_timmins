@@ -21,7 +21,7 @@ const Header = () => {
 
         // Add scroll event listener
         window.addEventListener('scroll', handleScroll);
-        
+
         // Check initial scroll position
         handleScroll();
 
@@ -180,8 +180,8 @@ const Header = () => {
                                         </Link>
                                     </li>
                                     <li className={`offcanvas__menu_li ${expandedMenus.has('about') ? 'active' : ''}`}>
-                                        <a 
-                                            className="offcanvas__menu_item" 
+                                        <a
+                                            className="offcanvas__menu_item"
                                             href="javascript:void(0)"
                                             onClick={(e) => toggleSubmenu('about', e)}
                                         >
@@ -191,7 +191,8 @@ const Header = () => {
                                         <ul className={`offcanvas__sub_menu ${expandedMenus.has('about') ? 'show' : ''}`}>
                                             <li className="offcanvas__sub_menu_li">
                                                 <Link
-                                                    href="/About-us"
+                                                    href="/about
+                                                    "
                                                     className="offcanvas__sub_menu_item"
                                                     onClick={closeMobileMenu}
                                                 >
@@ -200,7 +201,7 @@ const Header = () => {
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
                                                 <Link
-                                                    href="/Our-Approach"
+                                                    href="/our-approach"
                                                     className="offcanvas__sub_menu_item"
                                                     onClick={closeMobileMenu}
                                                 >
@@ -209,7 +210,7 @@ const Header = () => {
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
                                                 <Link
-                                                    href="/10-Years"
+                                                    href="/10-years"
                                                     className="offcanvas__sub_menu_item"
                                                     onClick={closeMobileMenu}
                                                 >
@@ -219,8 +220,8 @@ const Header = () => {
                                         </ul>
                                     </li>
                                     <li className={`offcanvas__menu_li ${expandedMenus.has('solutions') ? 'active' : ''}`}>
-                                        <a 
-                                            className="offcanvas__menu_item" 
+                                        <a
+                                            className="offcanvas__menu_item"
                                             href="javascript:void(0)"
                                             onClick={(e) => toggleSubmenu('solutions', e)}
                                         >
@@ -229,14 +230,14 @@ const Header = () => {
                                         </a>
                                         <ul className={`offcanvas__sub_menu ${expandedMenus.has('solutions') ? 'show' : ''}`}>
                                             <li className="offcanvas__sub_menu_li">
-                                                <Link href="/Our-Solution" className="offcanvas__sub_menu_item" onClick={closeMobileMenu}>
+                                                <Link href="/our-solution" className="offcanvas__sub_menu_item" onClick={closeMobileMenu}>
                                                     Overview
                                                 </Link>
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
                                                 <Link
                                                     className="offcanvas__sub_menu_item"
-                                                    href="/Our-Solution"
+                                                    href="/our-solution"
                                                     onClick={closeMobileMenu}
                                                 >
                                                     Fresh Graduate Onboarding
@@ -245,7 +246,7 @@ const Header = () => {
                                             <li className="offcanvas__sub_menu_li">
                                                 <Link
                                                     className="offcanvas__sub_menu_item"
-                                                    href="/Our-Solution"
+                                                    href="/our-solution"
                                                     onClick={closeMobileMenu}
                                                 >
                                                     Training Needs Assessment
@@ -254,8 +255,8 @@ const Header = () => {
                                         </ul>
                                     </li>
                                     <li className={`offcanvas__menu_li ${expandedMenus.has('courses') ? 'active' : ''}`}>
-                                        <a 
-                                            className="offcanvas__menu_item" 
+                                        <a
+                                            className="offcanvas__menu_item"
                                             href="javascript:void(0)"
                                             onClick={(e) => toggleSubmenu('courses', e)}
                                         >
@@ -285,8 +286,8 @@ const Header = () => {
                                         </Link>
                                     </li>
                                     <li className={`offcanvas__menu_li ${expandedMenus.has('resources') ? 'active' : ''}`}>
-                                        <a 
-                                            className="offcanvas__menu_item" 
+                                        <a
+                                            className="offcanvas__menu_item"
                                             href="javascript:void(0)"
                                             onClick={(e) => toggleSubmenu('resources', e)}
                                         >
@@ -311,7 +312,7 @@ const Header = () => {
                                         </ul>
                                     </li>
                                     <li className="offcanvas__menu_li">
-                                        <Link className="offcanvas__menu_item" href="/Contact-us" onClick={closeMobileMenu}>
+                                        <Link className="offcanvas__menu_item" href="/contact-us" onClick={closeMobileMenu}>
                                             Contact
                                         </Link>
                                     </li>

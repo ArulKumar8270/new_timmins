@@ -206,7 +206,7 @@ const page = () => {
                                     </li>
                                 </ul>
 
-                                <a href="#" className="case-download-link   underline mt-3 d-inline-block">
+                                <a href="/assets/New_images/pdf1.pdf" target='_blank' className="case-download-link   underline mt-3 d-inline-block">
                                     Download Full Case Study (via Form)
                                 </a>
 
@@ -277,7 +277,7 @@ const page = () => {
                                     </li>
                                 </ul>
 
-                                <a href="#" className="case-download-link   underline mt-3 d-inline-block">
+                                <a href="/assets/New_images/pdf2.pdf" target='_blank' className="case-download-link   underline mt-3 d-inline-block">
                                     Download Full Case Study (via Form)
                                 </a>
 
@@ -346,7 +346,7 @@ const page = () => {
                                         Participant satisfaction
                                     </li>
                                 </ul>
-                                <a href="#" className="case-download-link underline mt-3 d-inline-block">
+                                <a href="/assets/New_images/pdf3.pdf" target='_blank' className="case-download-link underline mt-3 d-inline-block">
                                     Download Full Case Study (via Form)
                                 </a>
 
@@ -411,7 +411,7 @@ const page = () => {
                                     <h3>8 Years</h3>
                                     <p>Long-term partnership</p>
                                 </div>
-                                <a href="#" className="case-download-link underline mt-3 d-inline-block">
+                                <a href="/assets/New_images/pdf4.pdf" target='_blank' className="case-download-link underline mt-3 d-inline-block">
                                     Download Full Case Study (via Form)
                                 </a>
 
@@ -486,7 +486,7 @@ const page = () => {
 
                                     <p>✔ Global multi-site implementation</p>
                                 </div>
-                                <a href="#" className="case-download-link underline mt-3 d-inline-block">
+                                <a href="/assets/New_images/pdf5.pdf" target='_blank' className="case-download-link underline mt-3 d-inline-block">
                                     Download Full Case Study (via Form)
                                 </a>
                             </div>
