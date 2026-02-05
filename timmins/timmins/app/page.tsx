@@ -13,82 +13,68 @@ export default function Home() {
               className="section-bg hero-bg-2 background-image"
               style={{ backgroundImage: 'url("/assets/New_images/hero_2.jpg")' }}
             >
-              {/* Preload hero image for faster LCP */}
+              {/* Preload hero image */}
               <link rel="preload" as="image" href="/assets/New_images/hero_2.jpg" />
 
-              {/* Start Hero Area */}
               <section className="ed-hero">
-                {/* HRDC Badges – Top Right */}
-                <div className="position-absolute top-0 end-0 m-4  me-5 d-flex gap-3">
+
+                {/* HRDC BADGES – TOP RIGHT */}
+                <div className="position-absolute top-0 end-0 m-4 me-5 hero-badge-wrapper d-flex gap-3">
                   <Image
                     src="/assets/New_images/badge.png"
                     alt="HRDC Claimable"
-                    width={70}
-                    height={70}
+                    width={110}
+                    height={110}
                     priority
                   />
                   <Image
                     src="/assets/New_images/HRDC.png"
                     alt="HRDC Registered Training Provider"
-                    width={70}
-                    height={70}
+                    width={110}
+                    height={110}
                     priority
                   />
                 </div>
 
-
                 <div className="container ed-container-expand">
                   <div className="row align-items-center">
                     <div className="col-lg-6 col-12">
-                      {/* Hero Content */}
-                      <div className="ed-hero__content">
-                        <h1 className="ed-hero__content-title ed-split-text left">
-                          Building Future-Ready Tech Teams
-                        </h1>
-                        <p className="text-black text-lg font-medium drop-shadow-md">
-                          Engineering-grade capability building for modern tech teams, trusted for over a decade across 12+ countries worldwide.
 
-                        </p>
-                        <br />
-                        <p className="badge-container mt-2">
-                          <Image
-                            src="/assets/New_images/badge.png"
-                            alt="HRDC Claimable Training badge"
-                            width={120}
-                            height={120}
-                            priority
-                          />
+                      {/* LEFT TEXT WITH WHITE OVERLAY */}
+                      <div className="hero-text-overlay">
+                        <div className="ed-hero__content">
 
-                          <Image
-                            src="/assets/New_images/HRDC.png"
-                            alt="HRDC Claimable Training badge"
-                            width={120}
-                            height={120}
-                            priority
-                          />
+                          <h1 className="ed-hero__content-title ed-split-text left">
+                            Building Future-Ready Tech Teams
+                          </h1>
 
-                        </p>
-                        <div className="d-flex gap-3">
-                          <div className="ed-hero__btn ed-btn">
-                            <a href="#">
-                              For Companies – Explore Solutions
-                            </a>
+                          <p className="text-black text-lg font-medium">
+                            Engineering-grade capability building for modern tech teams,
+                            trusted for over a decade across 12+ countries worldwide.
+                          </p>
+
+                          <div className="d-flex gap-3 mt-3">
+                            <div className="ed-hero__btn ed-btn">
+                              <a href="#">For Companies – Explore Solutions</a>
+                            </div>
+
+                            <div
+                              className="ed-hero__btn ed-btn"
+                              style={{ backgroundColor: 'var(--ed-secondary-color)' }}
+                            >
+                              <a href="#">For Individuals – Browse Public Classes</a>
+                            </div>
                           </div>
-                          <div className="ed-hero__btn ed-btn" style={{ backgroundColor: 'var(--ed-secondary-color)' }}>
-                            <a href="#">
-                              For Individuals – Browse Public Classes
-                            </a>
-                          </div>
+
                         </div>
                       </div>
-                    </div>
 
+                    </div>
                   </div>
                 </div>
               </section>
-
-              {/* End Hero Area */}
             </div>
+
 
             <section className="ed-partner mt-5 section-gap">
               <div className="container ed-container">
@@ -444,46 +430,50 @@ export default function Home() {
               {/* Start About Area */}
               <section className="our-values-2 section-gap">
                 <div className="container">
+
                   <div className="text-center mb-5">
                     <h2 className="fw-bold">Why Training with Timmins</h2>
+
                     <p className="text-muted">
-                      <i>Real engineers. Real practice. Real capability.</i>.
+                      <i>Real engineers. Real practice. Real capability.</i>
                     </p>
+
                     <br />
-                    <p>Every program is designed and delivered by practitioners with deep field experience in engineering, telecom, manufacturing, and banking.</p>
+
+                    <p>
+                      Every program is designed and delivered by practitioners with deep field
+                      experience in engineering, telecom, manufacturing, and banking.
+                    </p>
                   </div>
-                  <div className="text-center">
-                    <p><b>Our signature approach combines:</b></p>
-                  </div>
-                  <br />
+
+                  {/* REMOVED: Our signature approach combines */}
+
                   <div className="row g-4">
-                    {/* Growth */}
 
                     <div className="col-lg-6 col-md-6 col-12">
                       <div className="value-card h-100">
                         <div className="icon growth">
                           <i className="bi bi-person-workspace" />
-
                         </div>
-                        <h5>Practitioner-Led Delivery </h5>
+                        <h5>Practitioner-Led Delivery</h5>
                         <p>
-                          led by engineers with real-world delivery experience.
+                          Led by engineers with real-world delivery experience.
                         </p>
                       </div>
                     </div>
-                    {/* Co-Creation */}
+
                     <div className="col-lg-6 col-md-6 col-12">
                       <div className="value-card h-100">
                         <div className="icon cocreation">
                           <i className="bi bi-diagram-3" />
                         </div>
-                        <h5>Engineering-Grade Depth </h5>
+                        <h5>Engineering-Grade Depth</h5>
                         <p>
-                          technical rigor for real-world complexity.
+                          Technical rigor for real-world complexity.
                         </p>
                       </div>
                     </div>
-                    {/* Collaboration */}
+
                     <div className="col-lg-6 col-md-6 col-12">
                       <div className="value-card h-100">
                         <div className="icon collaboration">
@@ -491,12 +481,11 @@ export default function Home() {
                         </div>
                         <h5>Hands-On Learning</h5>
                         <p>
-                          labs, debugging, system workflows, AI pipelines, firmware tools.
-
+                          Labs, debugging, system workflows, AI pipelines, firmware tools.
                         </p>
                       </div>
                     </div>
-                    {/* Excellence */}
+
                     <div className="col-lg-6 col-md-6 col-12">
                       <div className="value-card h-100">
                         <div className="icon excellence">
@@ -504,27 +493,50 @@ export default function Home() {
                         </div>
                         <h5>Measurable Capability Growth</h5>
                         <p>
-                          assessments, dashboards, and skill-mapping.
+                          Assessments, dashboards, and skill-mapping.
                         </p>
                       </div>
                     </div>
+
                   </div>
+
                   <br />
+
                   <div className="text-center">
-                    <div className="text-decoration-underline-1" >
-                      <a href="#">How we Work</a>
-                    </div>
+                    <a
+                      href="/about/approach"
+                      className="fw-semibold why-work-link"
+                    >
+                      Explore How We Work
+                    </a>
+
                   </div>
 
                 </div>
               </section>
+
               {/* End About Area */}
             </>
             <>
               {/* Start Course Area  */}
               <section className="ed-course ed-course--style-5 section-gap position-relative">
                 <div className="container ed-container">
-                  {/* Section Shapes  */}
+
+                  {/* HRDC BADGES – TOP RIGHT */}
+                  <div className="position-absolute top-0 end-0 m-4 me-5 public-badge-wrapper d-flex gap-3">
+                    <img
+                      src="/assets/New_images/badge.png"
+                      alt="HRDC Claimable"
+                      width="110"
+                    />
+                    <img
+                      src="/assets/New_images/HRDC.png"
+                      alt="HRDC Registered Training Provider"
+                      width="110"
+                    />
+                  </div>
+
+                  {/* Section Shapes */}
                   <div className="ed-course__shapes">
                     <img
                       className="shape-1 updown-ani"
@@ -532,36 +544,35 @@ export default function Home() {
                       alt="shape-1"
                     />
                   </div>
+
                   <div className="row justify-content-center">
                     <div className="col-lg-6 col-md-8 col-12">
                       <div className="ed-section-head text-center">
-
                         <h3 className="ed-section-head__title ed-split-text left">
                           Featured Public Classes
                         </h3>
-
                       </div>
                     </div>
                   </div>
+
                   <div className="row">
                     <div className="col-12">
                       <div className="ed-course__tab">
 
-                        {/* Tab Details */}
                         <div
                           className="ed-course__tab-details tab-details wow fadeInUp"
                           data-wow-delay=".5s"
                           data-wow-duration="1s"
                         >
                           <div className="tab-content" id="nav-tabContent">
-                            {/* Tab One */}
                             <div
                               className="tab-pane fade show active"
                               id="courseTab1"
                               role="tabpanel"
                             >
                               <div className="row">
-                                {/* Single Course  */}
+
+                                {/* COURSE 1 */}
                                 <div className="col-lg-6 col-12">
                                   <div className="ed-course__card">
                                     <div className="ed-course__image">
@@ -571,22 +582,18 @@ export default function Home() {
                                           alt="course-img"
                                         />
                                       </div>
-
                                     </div>
                                     <div className="ed-course__content">
-                                      <span className="ed-course__type">
-                                        Face-to-Face
-                                      </span>
+                                      <span className="ed-course__type">Face-to-Face</span>
                                       <a href="#">
                                         Embedded Linux System Internals
                                       </a>
-                                      <p>
-                                        5 days
-                                      </p>
+                                      <p>5 days</p>
                                     </div>
                                   </div>
                                 </div>
-                                {/* Single Course  */}
+
+                                {/* COURSE 2 */}
                                 <div className="col-lg-6 col-12">
                                   <div className="ed-course__card">
                                     <div className="ed-course__image">
@@ -602,87 +609,75 @@ export default function Home() {
                                       <a href="#">
                                         Power BI: From Data to Decisions
                                       </a>
-                                      <p>
-                                        2 Days
-                                      </p>
+                                      <p>2 Days</p>
                                     </div>
                                   </div>
                                 </div>
-                                {/* Single Course  */}
+
+                                {/* COURSE 3 */}
                                 <div className="col-lg-6 col-12">
                                   <div className="ed-course__card">
                                     <div className="ed-course__image">
-
                                       <div className="ed-course__main-img">
                                         <img
                                           src="/assets/New_images/Generative AI public class at Timmins.jpg"
                                           alt="course-img"
                                         />
                                       </div>
-
                                     </div>
                                     <div className="ed-course__content">
-                                      <span className="ed-course__type">
-                                        Online
-                                      </span>
+                                      <span className="ed-course__type">Online</span>
                                       <a href="#">
                                         Generative AI with LangChain
                                       </a>
-                                      <p>
-                                        2 days
-                                      </p>
+                                      <p>2 days</p>
                                     </div>
                                   </div>
                                 </div>
-                                {/* Single Course  */}
+
+                                {/* COURSE 4 */}
                                 <div className="col-lg-6 col-12">
                                   <div className="ed-course__card">
                                     <div className="ed-course__image">
-
                                       <div className="ed-course__main-img">
                                         <img
                                           src="/assets/New_images/kotlin fundamentals public class at Timmins.jpg"
                                           alt="course-img"
                                         />
                                       </div>
-
                                     </div>
                                     <div className="ed-course__content">
                                       <span className="ed-course__type">Face-to-Face</span>
                                       <a href="#">
                                         Kotlin Fundamentals
                                       </a>
-                                      <p>
-                                        4 Days
-                                      </p>
+                                      <p>4 Days</p>
                                     </div>
                                   </div>
                                 </div>
+
                               </div>
                             </div>
                           </div>
                         </div>
-                        {/* End Tab Details */}
+
                       </div>
+
+                      {/* VIEW CALENDAR BUTTON */}
                       <div className="d-flex justify-content-center mt-4">
-                        <p className="badge-container">
-                          <img src="/assets/New_images/badge.png" alt="hero-image" />
-                          <img src="/assets/New_images/HRDC.png" alt="hero-image" />
-
-                        </p>
-
-                      </div>
-                      <div className="d-flex justify-content-center">
                         <div className="ed-hero__btn ed-btn">
                           <a href="#">
                             View Training Calendar
                           </a>
                         </div>
                       </div>
+
                     </div>
                   </div>
+
                 </div>
               </section>
+
               {/* End Course Area  */}
             </>
 
@@ -690,6 +685,7 @@ export default function Home() {
             {/* Start Course Area */}
             <section className="ed-course ed-course--style2 section-gap position-relative overflow-hidden">
               <div className="container ed-container">
+
                 <div className="row justify-content-center">
                   <div className="col-lg-6 col-md-8 col-12">
                     <div className="ed-section-head text-center">
@@ -699,8 +695,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+
                 <div className="row justify-content-center">
-                  {/* Single Course Card */}
+
+                  {/* CARD 1 */}
                   <div className="col-lg-6 col-xl-6 col-md-6 col-12">
                     <div
                       className="ed-course__card ed-course__card--style2 wow fadeInUp"
@@ -708,30 +706,30 @@ export default function Home() {
                       data-wow-duration="1s"
                     >
                       <div className="ed-course__head position-relative">
-                        <a href="#" className="ed-course__img">
+                        <div className="ed-course__img">
                           <img
                             src="/assets/New_images/FG.png"
                             alt="course-img"
                           />
-                        </a>
-                      </div>
-                      <div className="ed-course__body">
-                        <a href="#" className="ed-course__title">
-                          <h5>
-                            Fresh Graduate Onboarding - Semiconductor Engineering
-                          </h5>
-                        </a>
-                        <div className="ed-course__rattings">
-
-                          <span>A 10-year partnership enabling 3,000+ engineers to become project-ready in embedded, mobile, 5G, AI, and RF.</span>
-
                         </div>
-                        <div className="text-decoration-underline"><a href="#">See All Case Studies</a></div>
+                      </div>
+
+                      <div className="ed-course__body">
+                        <h5>
+                          Fresh Graduate Onboarding – Semiconductor Engineering
+                        </h5>
+
+                        <div className="ed-course__rattings">
+                          <span>
+                            A 10-year partnership enabling 3,000+ engineers to become project-ready
+                            in embedded, mobile, 5G, AI, and RF.
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Single Course Card */}
+                  {/* CARD 2 */}
                   <div className="col-lg-6 col-xl-6 col-md-6 col-12">
                     <div
                       className="ed-course__card ed-course__card--style2 wow fadeInUp"
@@ -739,26 +737,30 @@ export default function Home() {
                       data-wow-duration="1s"
                     >
                       <div className="ed-course__head position-relative">
-                        <a href="#" className="ed-course__img">
+                        <div className="ed-course__img">
                           <img
                             src="/assets/New_images/AI Transformation training at Timmins.jpg"
                             alt="course-img"
                           />
-                        </a>
-                      </div>
-                      <div className="ed-course__body">
-
-                        <a href="#" className="ed-course__title">
-                          <h5>AI Transformation - Banking Sector (DBS & Citi)</h5>
-                        </a>
-                        <div className="ed-course__rattings">
-                          <span>7-year capability development in applied AI, analytics, and automation — 50–80% performance improvement.</span>
                         </div>
-                        <div className="text-decoration-underline"><a href="#">See All Case Studies</a></div>
+                      </div>
+
+                      <div className="ed-course__body">
+                        <h5>
+                          AI Transformation – Banking Sector (DBS & Citi)
+                        </h5>
+
+                        <div className="ed-course__rattings">
+                          <span>
+                            7-year capability development in applied AI, analytics, and automation —
+                            50–80% performance improvement.
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  {/* Single Course Card */}
+
+                  {/* CARD 3 */}
                   <div className="col-lg-6 col-xl-6 col-md-6 col-12">
                     <div
                       className="ed-course__card ed-course__card--style2 wow fadeInUp"
@@ -766,42 +768,44 @@ export default function Home() {
                       data-wow-duration="1s"
                     >
                       <div className="ed-course__head position-relative">
-                        <a href="#" className="ed-course__img">
+                        <div className="ed-course__img">
                           <img
                             src="/assets/New_images/Mobile development training at Timmins.jpg"
                             alt="course-img"
                           />
-                        </a>
-
+                        </div>
                       </div>
+
                       <div className="ed-course__body">
-                        <div className="ed-course__lesson">
+                        <h5>
+                          Mobile Development Enablement – Motorola
+                        </h5>
 
-                        </div>
-                        <a href="#" className="ed-course__title">
-                          <h5>
-                            Mobile Development Enablement - Motorola
-                          </h5>
-                        </a>
                         <div className="ed-course__rattings">
-
-                          <span>Mobile Development Enablement - Motorola</span>
-
+                          <span>
+                            Large-scale mobile engineering enablement driving faster delivery
+                            and consistent code quality across teams.
+                          </span>
                         </div>
-                        <div className="text-decoration-underline"><a href="#">See All Case Studies</a></div>
                       </div>
                     </div>
                   </div>
+
                 </div>
-                <div className="row justify-content-center">
-                  <div className="ed-section-bottom-btn ed-btn w-auto">
-                    <a>
-                      View All Courses
-                    </a>
-                  </div>
+
+                {/* BOTTOM LINK (NOT A BUTTON) */}
+                <div className="row justify-content-center mt-4">
+                  <a
+                    href="/case-studies"
+                    className="fw-semibold text-decoration-underline"
+                  >
+                    See All Case Studies
+                  </a>
                 </div>
+
               </div>
             </section>
+
             {/* End Course Area */}
 
             {/* Start Why Choose Area */}
