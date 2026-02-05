@@ -10,37 +10,35 @@ export default function Home() {
         <div id="smooth-content">
           <main>
             <div
-              className="section-bg hero-bg-2 background-image"
+              className="section-bg hero-bg-2 background-image position-relative"
               style={{ backgroundImage: 'url("/assets/New_images/hero_2.jpg")' }}
             >
-              {/* Preload hero image */}
               <link rel="preload" as="image" href="/assets/New_images/hero_2.jpg" />
 
               <section className="ed-hero">
-
-                {/* HRDC BADGES – TOP RIGHT */}
-                <div className="position-absolute top-0 end-0 m-4 me-5 hero-badge-wrapper d-flex gap-3">
-                  <Image
-                    src="/assets/New_images/badge.png"
-                    alt="HRDC Claimable"
-                    width={110}
-                    height={110}
-                    priority
-                  />
-                  <Image
-                    src="/assets/New_images/HRDC.png"
-                    alt="HRDC Registered Training Provider"
-                    width={110}
-                    height={110}
-                    priority
-                  />
-                </div>
-
                 <div className="container ed-container-expand">
+
+                  {/* HRDC BADGES */}
+                  <div className="hero-badge-wrapper d-flex gap-3">
+                    <Image
+                      src="/assets/New_images/badge.png"
+                      alt="HRDC Claimable"
+                      width={110}
+                      height={110}
+                      priority
+                    />
+                    <Image
+                      src="/assets/New_images/HRDC.png"
+                      alt="HRDC Registered Training Provider"
+                      width={110}
+                      height={110}
+                      priority
+                    />
+                  </div>
+
                   <div className="row align-items-center">
                     <div className="col-lg-6 col-12">
 
-                      {/* LEFT TEXT WITH WHITE OVERLAY */}
                       <div className="hero-text-overlay">
                         <div className="ed-hero__content">
 
@@ -53,7 +51,7 @@ export default function Home() {
                             trusted for over a decade across 12+ countries worldwide.
                           </p>
 
-                          <div className="d-flex gap-3 mt-3">
+                          <div className="d-flex gap-3 mt-3 flex-wrap">
                             <div className="ed-hero__btn ed-btn">
                               <a href="#">For Companies – Explore Solutions</a>
                             </div>
@@ -76,10 +74,11 @@ export default function Home() {
             </div>
 
 
+
             <section className="ed-partner mt-5 section-gap">
               <div className="container ed-container">
                 <div className="row">
-                  <h3 className="text-center pb-5   ">
+                  <h3 className="ed-section-head__title  text-center pb-5   ">
                     Trusted by Teams Across Industries & Regions
                   </h3>
 
@@ -283,152 +282,85 @@ export default function Home() {
             >
 
               {/* Start About Area */}
-              <section className="ed-about ed-about--style2 mb-5 position-relative">
+              <section className="ed-about ed-about--style2 mb-5 position-relative learn-fit-section">
                 <div className="container ed-container">
+
                   <div className="row justify-content-center pb-4">
                     <div className="col-lg-8 col-12">
                       <div className="ed-section-head text-center">
-                        <h3 className="ed-section-head__title ed-split-text left ">
+                        <h3 className="ed-section-head__title ed-split-text left">
                           Learn the Way That Fits You
                         </h3>
-                        {/* <p className="ed-section-head__text">
-                          Whether you’re an organization building full-team capability or an individual upgrading your technical career, Timmins offers two learning paths:                        </p> */}
                       </div>
                     </div>
                   </div>
+
                   <div className="row serviceBox">
+
+                    {/* FOR COMPANIES */}
                     <div className="col-lg-6 col-12">
-                      {/* About Content  */}
-                      <div className="ed-about__content">
+                      <div className="ed-about__content learn-box">
                         <div className="ed-section-head">
                           <h3 className="ed-section-head__title ed-split-text right">
                             For Companies
                           </h3>
                           <p className="ed-section-head__text">
                             Build team-wide engineering capability through tailored training and consulting. Popular corporate programs:
-
                           </p>
                         </div>
+
                         <div className="ed-about__feature">
                           <ul className="ed-about__features-list">
-                            <li>
-                              <img
-                                src="/assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              Embedded Systems Engineering
-                            </li>
-
-                            <li>
-                              <img
-                                src="/assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              5G R&D & Technician Upskilling
-                            </li>
-                            <li>
-                              <img
-                                src="/assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              AI Consulting & Applied AI
-                            </li>
-                            <li>
-                              <img
-                                src="/assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              Fresh Graduate Onboarding program
-                            </li>
-                            <li>
-                              <img
-                                src="/assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              Corporate Training Malaysia (HRDC Claimable)
-                            </li>
+                            <li>Embedded Systems Engineering</li>
+                            <li>5G R&D & Technician Upskilling</li>
+                            <li>AI Consulting & Applied AI</li>
+                            <li>Fresh Graduate Onboarding program</li>
+                            <li>Corporate Training Malaysia (HRDC Claimable)</li>
                           </ul>
                         </div>
+
                         <div className="ed-about__btn ed-btn">
-                          <a href="/courses">
-                            Explore B2B Solutions
-                            {/* <i className="fi fi-rr-arrow-small-right" /> */}
-                          </a>
+                          <a href="/courses">Explore B2B Solutions</a>
                         </div>
                       </div>
                     </div>
+
+                    {/* FOR INDIVIDUALS */}
                     <div className="col-lg-6 col-12">
-                      {/* About Images  */}
-                      <div className="ed-about__content">
+                      <div className="ed-about__content learn-box">
                         <div className="ed-section-head">
                           <h3 className="ed-section-head__title ed-split-text right">
                             For Individuals (Public Classes)
-
                           </h3>
                           <p className="ed-section-head__text">
                             Technical courses designed for engineers, fresh graduates, and career switchers. Popular public classes:
-
                           </p>
                         </div>
+
                         <div className="ed-about__feature">
                           <ul className="ed-about__features-list">
-                            <li>
-                              <img
-                                src="/assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              Embedded Linux System Internals
-
-                            </li>
-                            <li>
-                              <img
-                                src="/assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              Data Analysis and Visualization with Power PI
-
-                            </li>
-                            <li>
-                              <img
-                                src="/assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              Machine Learning with Python
-
-                            </li>
-                            <li>
-                              <img
-                                src="/assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              Kotlin Fundamentals
-                            </li>
-                            <li>
-                              <img
-                                src="/assets/images/icons/icon-check-blue.svg"
-                                alt="icon-check-blue"
-                              />
-                              Gen AI for IT and Non-IT Teams
-                            </li>
+                            <li>Embedded Linux System Internals</li>
+                            <li>Data Analysis and Visualization with Power BI</li>
+                            <li>Machine Learning with Python</li>
+                            <li>Kotlin Fundamentals</li>
+                            <li>Gen AI for IT and Non-IT Teams</li>
                           </ul>
                         </div>
+
                         <div className="ed-about__btn ed-btn">
-                          <a href="#">
-                            Browse Public Classe
-                          </a>
+                          <a href="#">Browse Public Classes</a>
                         </div>
                       </div>
-
                     </div>
+
                   </div>
                 </div>
-
               </section>
 
             </div>
             <>
               {/* Start About Area */}
-              <section className="our-values-2 mb-5">
+              <section className="our-values-2 mb-5 why-timmins-section">
                 <div className="container">
 
                   <div className="text-center mb-5">
@@ -438,15 +370,11 @@ export default function Home() {
                       <i>Real engineers. Real practice. Real capability.</i>
                     </p>
 
-                    <br />
-
-                    <p>
+                    <p className="mt-3">
                       Every program is designed and delivered by practitioners with deep field
                       experience in engineering, telecom, manufacturing, and banking.
                     </p>
                   </div>
-
-                  {/* REMOVED: Our signature approach combines */}
 
                   <div className="row g-4">
 
@@ -456,9 +384,7 @@ export default function Home() {
                           <i className="bi bi-person-workspace" />
                         </div>
                         <h5>Practitioner-Led Delivery</h5>
-                        <p>
-                          Led by engineers with real-world delivery experience.
-                        </p>
+                        <p>Led by engineers with real-world delivery experience.</p>
                       </div>
                     </div>
 
@@ -468,9 +394,7 @@ export default function Home() {
                           <i className="bi bi-diagram-3" />
                         </div>
                         <h5>Engineering-Grade Depth</h5>
-                        <p>
-                          Technical rigor for real-world complexity.
-                        </p>
+                        <p>Technical rigor for real-world complexity.</p>
                       </div>
                     </div>
 
@@ -480,9 +404,7 @@ export default function Home() {
                           <i className="bi bi-laptop" />
                         </div>
                         <h5>Hands-On Learning</h5>
-                        <p>
-                          Labs, debugging, system workflows, AI pipelines, firmware tools.
-                        </p>
+                        <p>Labs, debugging, system workflows, AI pipelines, firmware tools.</p>
                       </div>
                     </div>
 
@@ -492,24 +414,19 @@ export default function Home() {
                           <i className="bi bi-bar-chart-line" />
                         </div>
                         <h5>Measurable Capability Growth</h5>
-                        <p>
-                          Assessments, dashboards, and skill-mapping.
-                        </p>
+                        <p>Assessments, dashboards, and skill-mapping.</p>
                       </div>
                     </div>
 
                   </div>
 
-                  <br />
-
-                  <div className="text-center text-xl pt-4">
+                  <div className="text-center pt-4">
                     <a
                       href="/about/approach"
                       className="fw-semibold why-work-link"
                     >
                       Explore How We Work
                     </a>
-
                   </div>
 
                 </div>
@@ -519,22 +436,8 @@ export default function Home() {
             </>
             <>
               {/* Start Course Area  */}
-              <section className="ed-course ed-course--style-5 section-gap position-relative">
+              <section className="ed-course ed-course--style-5 section-gap position-relative public-class-section">
                 <div className="container ed-container">
-
-                  {/* HRDC BADGES – TOP RIGHT */}
-                  <div className="position-absolute top-0 end-0 m-4 me-5 public-badge-wrapper d-flex gap-3">
-                    <img
-                      src="/assets/New_images/badge.png"
-                      alt="HRDC Claimable"
-                      width="110"
-                    />
-                    <img
-                      src="/assets/New_images/HRDC.png"
-                      alt="HRDC Registered Training Provider"
-                      width="110"
-                    />
-                  </div>
 
                   {/* Section Shapes */}
                   <div className="ed-course__shapes">
@@ -545,31 +448,42 @@ export default function Home() {
                     />
                   </div>
 
+                  {/* SECTION HEADING */}
                   <div className="row justify-content-center">
                     <div className="col-lg-6 col-md-8 col-12">
                       <div className="ed-section-head text-center">
                         <h3 className="ed-section-head__title ed-split-text left">
                           Featured Public Classes
                         </h3>
+
+                        {/* HRDC BADGES */}
+                        <div className="public-badge-wrapper d-flex gap-3 justify-content-center mt-3">
+                          <img
+                            src="/assets/New_images/badge.png"
+                            alt="HRDC Claimable"
+                            width="110"
+                          />
+                          <img
+                            src="/assets/New_images/HRDC.png"
+                            alt="HRDC Registered Training Provider"
+                            width="110"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="row">
+                  {/* COURSES */}
+                  <div className="row mt-4">
                     <div className="col-12">
                       <div className="ed-course__tab">
-
                         <div
                           className="ed-course__tab-details tab-details wow fadeInUp"
                           data-wow-delay=".5s"
                           data-wow-duration="1s"
                         >
-                          <div className="tab-content" id="nav-tabContent">
-                            <div
-                              className="tab-pane fade show active"
-                              id="courseTab1"
-                              role="tabpanel"
-                            >
+                          <div className="tab-content">
+                            <div className="tab-pane fade show active">
                               <div className="row">
 
                                 {/* COURSE 1 */}
@@ -585,9 +499,7 @@ export default function Home() {
                                     </div>
                                     <div className="ed-course__content">
                                       <span className="ed-course__type">Face-to-Face</span>
-                                      <a href="#">
-                                        Embedded Linux System Internals
-                                      </a>
+                                      <a href="#">Embedded Linux System Internals</a>
                                       <p>5 days</p>
                                     </div>
                                   </div>
@@ -606,9 +518,7 @@ export default function Home() {
                                     </div>
                                     <div className="ed-course__content">
                                       <span className="ed-course__type">Face-to-Face</span>
-                                      <a href="#">
-                                        Power BI: From Data to Decisions
-                                      </a>
+                                      <a href="#">Power BI: From Data to Decisions</a>
                                       <p>2 Days</p>
                                     </div>
                                   </div>
@@ -627,9 +537,7 @@ export default function Home() {
                                     </div>
                                     <div className="ed-course__content">
                                       <span className="ed-course__type">Online</span>
-                                      <a href="#">
-                                        Generative AI with LangChain
-                                      </a>
+                                      <a href="#">Generative AI with LangChain</a>
                                       <p>2 days</p>
                                     </div>
                                   </div>
@@ -648,9 +556,7 @@ export default function Home() {
                                     </div>
                                     <div className="ed-course__content">
                                       <span className="ed-course__type">Face-to-Face</span>
-                                      <a href="#">
-                                        Kotlin Fundamentals
-                                      </a>
+                                      <a href="#">Kotlin Fundamentals</a>
                                       <p>4 Days</p>
                                     </div>
                                   </div>
@@ -660,15 +566,12 @@ export default function Home() {
                             </div>
                           </div>
                         </div>
-
                       </div>
 
                       {/* VIEW CALENDAR BUTTON */}
                       <div className="d-flex justify-content-center mt-4">
                         <div className="ed-hero__btn ed-btn">
-                          <a href="#">
-                            View Training Calendar
-                          </a>
+                          <a href="#">View Training Calendar</a>
                         </div>
                       </div>
 
@@ -677,6 +580,7 @@ export default function Home() {
 
                 </div>
               </section>
+
 
               {/* End Course Area  */}
             </>
@@ -715,9 +619,9 @@ export default function Home() {
                       </div>
 
                       <div className="ed-course__body">
-                        <h5>
+                        <h6>
                           Fresh Graduate Onboarding – Semiconductor Engineering
-                        </h5>
+                        </h6>
 
                         <div className="ed-course__rattings">
                           <span>
@@ -746,9 +650,9 @@ export default function Home() {
                       </div>
 
                       <div className="ed-course__body">
-                        <h5>
+                        <h6>
                           AI Transformation – Banking Sector (DBS & Citi)
-                        </h5>
+                        </h6>
 
                         <div className="ed-course__rattings">
                           <span>
@@ -777,9 +681,9 @@ export default function Home() {
                       </div>
 
                       <div className="ed-course__body">
-                        <h5>
+                        <h6>
                           Mobile Development Enablement – Motorola
-                        </h5>
+                        </h6>
 
                         <div className="ed-course__rattings">
                           <span>
