@@ -79,9 +79,9 @@ export default function Home() {
             <section className="ed-partner mt-5 section-gap">
               <div className="container ed-container">
                 <div className="row">
-                  <h6 className="text-center text-muted mb-5 ">
+                  <h3 className="text-center pb-5   ">
                     Trusted by Teams Across Industries & Regions
-                  </h6>
+                  </h3>
 
                 </div>
                 <div className="row">
@@ -283,12 +283,12 @@ export default function Home() {
             >
 
               {/* Start About Area */}
-              <section className="ed-about ed-about--style2 section-gap  position-relative">
+              <section className="ed-about ed-about--style2 mb-5 position-relative">
                 <div className="container ed-container">
                   <div className="row justify-content-center pb-4">
                     <div className="col-lg-8 col-12">
                       <div className="ed-section-head text-center">
-                        <h3 className="ed-section-head__title ed-split-text left">
+                        <h3 className="ed-section-head__title ed-split-text left ">
                           Learn the Way That Fits You
                         </h3>
                         {/* <p className="ed-section-head__text">
@@ -428,7 +428,7 @@ export default function Home() {
             </div>
             <>
               {/* Start About Area */}
-              <section className="our-values-2 section-gap">
+              <section className="our-values-2 mb-5">
                 <div className="container">
 
                   <div className="text-center mb-5">
@@ -502,7 +502,7 @@ export default function Home() {
 
                   <br />
 
-                  <div className="text-center">
+                  <div className="text-center text-xl pt-4">
                     <a
                       href="/about/approach"
                       className="fw-semibold why-work-link"
@@ -794,14 +794,16 @@ export default function Home() {
                 </div>
 
                 {/* BOTTOM LINK (NOT A BUTTON) */}
-                <div className="row justify-content-center mt-4">
+                <div className="text-center text-xl pt-4">
                   <a
                     href="/case-studies"
-                    className="fw-semibold text-decoration-underline"
+                    className="fw-semibold why-work-link"
                   >
                     See All Case Studies
                   </a>
+
                 </div>
+
 
               </div>
             </section>
