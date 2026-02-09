@@ -105,39 +105,50 @@ const page = () => {
                 {/* Start About Area */}
                 <>
                     {/* About Timmins Training */}
-                    <section className="about-timmins py- section-gap">
+                    <section className="about-timmins section-gap">
                         <div className="container">
-                            <div className="text-center mb-5">
-                                <h2 className="fw-bold">Our Purpose & Mission</h2>
-                            </div>
-                            <div className="about-card">
-                                <div className="row align-items-center g-4">
-                                    {/* Left Image */}
-                                    <div className="col-lg-4 col-md-12 text-center">
 
+                            <div className="about-card">
+
+                                {/* CARD TITLE */}
+                                <div className="text-center mb-4">
+                                    <h2 className="fw-bold">Our Purpose & Mission</h2>
+                                </div>
+
+                                <div className="row align-items-center g-4">
+
+                                    {/* LEFT IMAGE */}
+                                    <div className="col-lg-4 col-md-12 text-center">
                                         <img
                                             src="/assets/New_images/about-us.jpg"
                                             alt="Timmins Consulting"
                                             className="img-fluid about-img"
                                         />
                                     </div>
-                                    {/* Right Content */}
-                                    <div className="col-lg-7 col-md-12">
-                                        <h6>Our Purpose:</h6>
-                                        <p>
-                                            Timmins exists to deliver practitioner-led, engineering-grade training that keeps pace with modern technology and translates directly into real-world impact.
 
-                                        </p>
-                                        <h6>Our Mission:</h6>
+                                    {/* RIGHT CONTENT */}
+                                    <div className="col-lg-8 col-md-12">
+                                        <h6>Our Purpose</h6>
                                         <p>
-                                            Our mission is to enable organizations to stay competitive in a rapidly evolving tech landscape through practitioner-led training and engineering-grade capability building..
+                                            Timmins exists to deliver practitioner-led, engineering-grade training
+                                            that keeps pace with modern technology and translates directly into
+                                            real-world impact.
                                         </p>
 
+                                        <h6 className="mt-3">Our Mission</h6>
+                                        <p>
+                                            Our mission is to enable organizations to stay competitive in a rapidly
+                                            evolving tech landscape through practitioner-led training and
+                                            engineering-grade capability building.
+                                        </p>
                                     </div>
+
                                 </div>
                             </div>
+
                         </div>
                     </section>
+
                 </>
 
 
@@ -300,10 +311,7 @@ const page = () => {
                                         .
                                     </p>
                                     <br />
-                                    <p>
-                                        Ten years later, our belief remains the same: the right training can
-                                        transform an entire organization.
-                                    </p>
+
                                     <div className="ed-hero__btn ed-btn">
                                         <a href="#">
                                             Explore Our Journey →
@@ -344,21 +352,15 @@ const page = () => {
                                         partial or company-funded options when full coverage isn’t available.
                                     </p>
 
-                                    <p className="text-muted">
-                                        (Note: HRDC eligibility applies to Malaysian employers only.)
-                                    </p>
-
                                     {/* HRDC BADGES */}
-                                    <div className="badge-container d-flex justify-content-center gap-3 mt-4">
+                                    <div className="badge-container hrdc-badges d-flex justify-content-center gap-3 mt-4">
                                         <img
                                             src="/assets/New_images/badge.png"
                                             alt="HRDC Claimable"
-                                            height="28"
                                         />
                                         <img
                                             src="/assets/New_images/HRDC.png"
                                             alt="HRDC Registered Training Provider"
-                                            height="28"
                                         />
                                     </div>
 
@@ -372,9 +374,10 @@ const page = () => {
 
 
 
-                    <section className="ed-call-action position-relative section-gap pb-5">
+                    <section className="ed-call-action position-relative section-gap pb-5 about-cta">
                         <div className="container ed-container">
                             <div className="ed-call-action__inner position-relative">
+
                                 <div className="ed-call-action__shapes">
                                     <img
                                         className="ed-call-action__shape-1 rotate-ani"
@@ -392,7 +395,10 @@ const page = () => {
                                         alt="shape-3"
                                     />
                                 </div>
-                                <div className="row">
+
+                                <div className="row align-items-center">
+
+                                    {/* IMAGE */}
                                     <div className="col-lg-6 col-12">
                                         <div className="ed-call-action__img">
                                             <img
@@ -401,26 +407,37 @@ const page = () => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="col-lg-6 col-12 order-class">
+
+                                    {/* CONTENT */}
+                                    <div className="col-lg-6 col-12 order-class pb-5">
                                         <div className="ed-call-action__content">
-                                            <div className="ed-section-head">
-                                                <p className="ed-section-head__text ">
-                                                    We’re more than a corporate training provider, we’re your capability partner.
-                                                    Whether you need AI training, embedded systems training, or fully customized corporate
-                                                    training; we help your teams build real skills for the technologies shaping tomorrow.
-                                                </p>
-                                                <br />
-                                                <p className="ed-section-head__text">Ready to build engineering capability that lasts?
-                                                </p>
-                                            </div>
-                                            <div className="ed-call-action__content-btn ed-btn" style={{ backgroundColor: 'var(--ed-secondary-color)' }}>
-                                                <a href="#" >
-                                                    {" "}
+
+
+                                            <h4 className="cta-heading ">
+                                                Build Engineering Capability That Lasts
+                                            </h4>
+
+                                            <p className="ed-section-head__text mb-4">
+                                                We’re more than a generic corporate training provider, we’re your
+                                                capability partner. We help your teams build real skills for the
+                                                technologies shaping tomorrow.
+                                            </p>
+                                            <p className="ed-section-head__text mt-2 mb-2">
+                                                Ready to build engineering capability that lasts?
+                                            </p>
+
+                                            <div
+                                                className="ed-call-action__content-btn ed-btn mb-7"
+                                                style={{ backgroundColor: 'var(--ed-secondary-color)' }}
+                                            >
+                                                <a href="/contact-us">
                                                     Book a Consultation
                                                 </a>
                                             </div>
+
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>

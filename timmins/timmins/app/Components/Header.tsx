@@ -191,8 +191,7 @@ const Header = () => {
                                         <ul className={`offcanvas__sub_menu ${expandedMenus.has('about') ? 'show' : ''}`}>
                                             <li className="offcanvas__sub_menu_li">
                                                 <Link
-                                                    href="/about
-                                                    "
+                                                    href="/about-us"
                                                     className="offcanvas__sub_menu_item"
                                                     onClick={closeMobileMenu}
                                                 >
@@ -359,10 +358,10 @@ const Header = () => {
                                                 </a>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <Link href="/About-us">Who We Are</Link>
+                                                        <Link href="/about-us">Who We Are</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/Our-Approach">Our Approach</Link>
+                                                        <Link href="/our-approach">Our Approach</Link>
                                                     </li>
                                                     <li>
                                                         <Link href="/10-Years">Our 10 Year Journey</Link>
@@ -376,13 +375,13 @@ const Header = () => {
                                                 </a>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <Link href="/Our-Solution">Overview</Link>
+                                                        <Link href="/our-Solution">Overview</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/Our-Solution">Fresh Graduate Onboarding</Link>
+                                                        <Link href="/our-Solution">Fresh Graduate Onboarding</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/Our-Solution">Training Needs Assessment</Link>
+                                                        <Link href="/our-Solution">Training Needs Assessment</Link>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -401,7 +400,7 @@ const Header = () => {
                                                 </ul>
                                             </li>
                                             <li>
-                                                <Link href="/Contact-us">
+                                                <Link href="/contact-us">
                                                     Training Calendar
                                                 </Link>
                                             </li>
@@ -411,7 +410,7 @@ const Header = () => {
                                                 </a>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <Link href="/Case-study">Case Studies</Link>
+                                                        <Link href="/case-study">Case Studies</Link>
                                                     </li>
                                                     <li>
                                                         <a href="#">Blog</a>

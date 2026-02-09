@@ -3144,3 +3144,172 @@ section {
         text-align: center;
     }
 }
+
+
+/* =================================
+   ABOUT – PURPOSE & MISSION
+================================ */
+
+.about-timmins .about-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+/* IMAGE */
+.about-timmins .about-img {
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+/* =====================
+   LAPTOP (≤ 1199px)
+===================== */
+@media (max-width: 1199px) {
+    .about-timmins .about-card {
+        padding: 32px;
+    }
+}
+
+/* =====================
+   TABLET (≤ 991px)
+===================== */
+@media (max-width: 991px) {
+    .about-timmins .about-card {
+        padding: 28px;
+        text-align: center;
+    }
+
+    .about-timmins h6 {
+        margin-top: 16px;
+    }
+}
+
+/* =====================
+   MOBILE (≤ 767px)
+===================== */
+@media (max-width: 767px) {
+    .about-timmins .about-card {
+        padding: 22px;
+    }
+
+    .about-timmins h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-timmins p {
+        font-size: 0.95rem;
+    }
+}
+
+/* =================================
+   HRDC SECTION – BADGE VISIBILITY
+================================ */
+
+.about-hrdc .hrdc-badges img {
+    height: 72px;
+    /* XL / L default */
+    width: auto;
+}
+
+/* =====================
+   LAPTOP (≤ 1199px)
+===================== */
+@media (max-width: 1199px) {
+    .about-hrdc .hrdc-badges img {
+        height: 64px;
+    }
+}
+
+/* =====================
+   TABLET (≤ 991px)
+===================== */
+@media (max-width: 991px) {
+    .about-hrdc .hrdc-badges img {
+        height: 56px;
+    }
+}
+
+/* =====================
+   MOBILE (≤ 767px)
+===================== */
+@media (max-width: 767px) {
+    .about-hrdc .hrdc-badges {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .about-hrdc .hrdc-badges img {
+        height: 48px;
+    }
+}
+
+
+/* =================================
+   ABOUT CTA – RESPONSIVE FIX
+================================ */
+
+.about-cta .cta-heading {
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* IMAGE */
+.about-cta .ed-call-action__img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+/* CTA button spacing fix */
+.about-cta .ed-call-action__content-btn {
+    margin-top: 12px;
+    /* reduce vertical gap */
+}
+
+
+/* =====================
+   TABLET & BELOW
+===================== */
+@media (max-width: 991px) {
+
+    /* CONTENT FIRST */
+    .about-cta .order-class {
+        order: -1;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .about-cta .ed-call-action__content {
+        padding: 0 12px;
+    }
+
+    .about-cta .ed-call-action__content-btn {
+        margin: 0 auto;
+    }
+}
+
+/* =====================
+   MOBILE ONLY
+===================== */
+@media (max-width: 767px) {
+
+    .about-cta .cta-heading {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .about-cta .ed-section-head__text {
+        font-size: 0.95rem;
+    }
+
+    .about-cta .ed-call-action__content-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .about-cta .ed-call-action__content-btn a {
+        display: block;
+        text-align: center;
+    }
+}

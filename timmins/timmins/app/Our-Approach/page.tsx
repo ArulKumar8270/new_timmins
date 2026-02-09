@@ -18,7 +18,7 @@ const page = () => {
                                 Our Approach
                             </h1>
 
-                            <p className="case-hero-desc mb-4">
+                            <p className=" mb-4">
                                 Practitioner-led, engineering-grade learning designed to build real technical and digital capability in environments that reflect real-world engineering.
                             </p>
 
@@ -34,7 +34,7 @@ const page = () => {
                     {/* LEFT CONTENT */}
                     <div className="approach-text">
                         <h2>We Listen First</h2>
-                        <p>
+                        <p className=" mb-4">
                             Every partnership begins with understanding. We start by listening to your business goals, your team’s skill gaps, and your organization’s challenges. This includes:
                         </p>
                         <ul>
@@ -124,43 +124,39 @@ const page = () => {
                 </div>
             </section>
 
-            <section className="measure-section">
-                <h2>We Measure What Matters</h2>
-                <p className="measure-sub">
-                    We measure capability uplift, not attendance. Our measurement includes:
-                </p>
+            <section className="approach-section-1 deliver-experts section gap">
+                <div className="approach-container">
+                    {/* LEFT CONTENT */}
+                    <div className="approach-text">
+                        <h2> We Measure What Matters</h2>
+                        <p>
+                            We measure capability uplift, not attendance. Our measurement includes:
+                        </p>
+                        <ul>
+                            <li>pre/post assessments</li>
+                            <li>individual skill progression</li>
+                            <li>team capability uplift reports</li>
+                            <li>stakeholder summaries</li>
+                            <li>
+                                recommended next steps
+                            </li>
+                        </ul>
+                        <p className="approach-outcome">
+                            <strong>Outcome:</strong> evidence-based insight into what changed and why it matters.
 
-                <div className="measure-grid">
-                    <div className="measure-card">
-                        <h4>Pre / Post Assessments</h4>
-                        {/* <p>Clear benchmarking of skill levels before and after training.</p> */}
+                        </p>
+
                     </div>
-
-                    <div className="measure-card">
-                        <h4>Individual Skill Progression</h4>
-                        {/* <p>Track how each learner improves across defined competencies.</p> */}
+                    {/* RIGHT IMAGE */}
+                    <div className="approach-image">
+                        <img
+                            src="/assets/New_images/AP4.png"
+                            alt="Experts delivering hands-on engineering training"
+                        />
                     </div>
-
-                    <div className="measure-card">
-                        <h4>Team Capability Uplift</h4>
-                        {/* <p>Aggregate reporting showing capability growth at team level.</p> */}
-                    </div>
-
-                    <div className="measure-card">
-                        <h4>Stakeholder Summaries</h4>
-                        {/* <p>Clear executive-ready insights aligned to business goals.</p> */}
-                    </div>
-
-                    <div className="measure-card">
-                        <h4>Recommended Next Steps</h4>
-                        {/* <p>Actionable guidance for continued capability development.</p> */}
-                    </div>
-                </div>
-
-                <div className="measure-outcome">
-                    <strong>Outcome:</strong> evidence-based insight into what changed and why it matters.
                 </div>
             </section>
+
 
 
 
@@ -187,7 +183,7 @@ const page = () => {
                     {/* RIGHT IMAGE */}
                     <div className="approach-image">
                         <img
-                            src="/assets/New_images/AP4.png"
+                            src="/assets/New_images/AP5.png"
                             alt="Long-term partnership and continued learning support"
                         />
                     </div>
