@@ -8,25 +8,26 @@ export default function contactUspage() {
             <Header />
 
             {/* HERO */}
-            <section className="contact-hero py-5">
+            <section className="contact-hero contact-hero--compact">
                 <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-lg-8 text-center">
+                        <div className="col-lg-8 col-md-10 col-12 text-center">
 
                             <h1 className="contact-hero-title mb-3">
                                 Contact Us
                             </h1>
 
-                            <p className="contact-hero-desc">
-                                We work with you to understand your objectives, your people, and the technical capabilities required to move from intent to real-world execution
-
-
+                            <p className="contact-hero-desc mb-0">
+                                We work with you to understand your objectives, your people,
+                                and the technical capabilities required to move from intent
+                                to real-world execution.
                             </p>
 
                         </div>
                     </div>
                 </div>
             </section>
+
 
 
             <section className="contact-section py-5">
@@ -151,63 +152,76 @@ export default function contactUspage() {
 
 
             {/* CONTACT FORM */}
-            <section className="contact-message-section py-5">
+            <section
+                className="contact-message-section"
+                style={{
+                    paddingTop: "40px",
+                    paddingBottom: "40px",
+                    background: "#ffffff"
+                }}
+            >
                 <div className="container">
 
                     <div className="row justify-content-center">
                         <div className="col-lg-7">
 
-                            {/* SECTION HEADING */}
                             <div className="text-center mb-4">
-                                <h2 className="message-title">
+                                <h2
+                                    style={{
+                                        fontWeight: "700",
+                                        marginBottom: "12px"
+                                    }}
+                                >
                                     Plan Your Next Capability Move
                                 </h2>
 
-                                <p className="message-desc">
-                                    Tell us what capability you’re looking to build, whether it’s AI consulting,
-                                    embedded systems, 5G training, data analytics, or a broader learning strategy.
-                                    We’ll connect you with the right specialist to explore the best next step.
+                                <p
+                                    style={{
+                                        fontSize: "15px",
+                                        color: "#555",
+                                        maxWidth: "620px",
+                                        margin: "0 auto"
+                                    }}
+                                >
+                                    Tell us what capability you’re looking to build.
+                                    We’ll connect you with the right specialist.
                                 </p>
                             </div>
 
-                            {/* FORM */}
-                            <form className="contact-form">
+                            <form
+                                className="contact-form"
+                                style={{
+                                    background: "#fff",
+                                    padding: "28px",
+                                    borderRadius: "16px",
+                                    boxShadow: "0 12px 30px rgba(0,0,0,0.06)"
+                                }}
+                            >
 
                                 <div className="mb-3">
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        placeholder="Full Name"
-                                    />
+                                    <label className="form-label fw-semibold">Full Name</label>
+                                    <input type="text" className="form-control" required />
                                 </div>
 
                                 <div className="mb-3">
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        placeholder="Organization Name"
-                                    />
+                                    <label className="form-label fw-semibold">Organization</label>
+                                    <input type="text" className="form-control" />
                                 </div>
 
                                 <div className="mb-3">
-                                    <input
-                                        type="email"
-                                        className="form-control"
-                                        placeholder="Email Address"
-                                    />
+                                    <label className="form-label fw-semibold">Email</label>
+                                    <input type="email" className="form-control" required />
                                 </div>
 
                                 <div className="mb-3">
-                                    <input
-                                        type="tel"
-                                        className="form-control"
-                                        placeholder="Contact Number"
-                                    />
+                                    <label className="form-label fw-semibold">Contact Number</label>
+                                    <input type="tel" className="form-control" />
                                 </div>
 
                                 <div className="mb-4">
+                                    <label className="form-label fw-semibold">Area of Interest</label>
                                     <select className="form-control">
-                                        <option>Area of Interest</option>
+                                        <option>Select an option</option>
                                         <option>AI</option>
                                         <option>Embedded Linux</option>
                                         <option>5G</option>
@@ -217,7 +231,18 @@ export default function contactUspage() {
                                 </div>
 
                                 <div className="text-center">
-                                    <button type="submit" className="btn btn-message-submit">
+                                    <button
+                                        type="submit"
+                                        style={{
+                                            background: "#f5a623",
+                                            color: "#fff",
+                                            fontWeight: "600",
+                                            padding: "18px 34px",
+                                            borderRadius: "30px",
+                                            border: "none",
+                                            marginTop: "12px",
+                                        }}
+                                    >
                                         Connect with Our Team →
                                     </button>
                                 </div>
@@ -229,6 +254,7 @@ export default function contactUspage() {
 
                 </div>
             </section>
+
 
 
             {/* SOFT CTA */}

@@ -81,9 +81,7 @@ const page = () => {
                                 capability through real-world, practitioner-led learning and delivery.
                             </p>
 
-                            <p className="case-hero-impact">
-                                10+ years of partnerships • 5,000+ professionals trained • 200+ programs delivered
-                            </p>
+
 
                         </div>
 
@@ -133,132 +131,191 @@ const page = () => {
 
 
 
-            <section className="case-study-section section-gap
-            ">
+            <section className="case-study-section section-gap">
                 <div className="container">
                     <div className="row align-items-start g-4">
+
                         {/* Left Content */}
                         <div className="col-lg-8">
 
-                            <h2 className="fw-bold mt-2">Fresh Graduate Onboarding </h2>
+                            <h2 className="fw-bold mt-2">Fresh Graduate Onboarding</h2>
+
                             <p className="text-muted">
                                 <em>(Confidential US-Based Semiconductor Company)</em>
                             </p>
+
                             <h6 className="fw-semibold mt-4">The Challenge:</h6>
                             <p className="mt-3">
-                                A semiconductor company needed to bridge the gap between academic learning  and industry-ready engineering skills by onboarding fresh graduates into complex technical roles and enabling contribution in real-world environments.
+                                A semiconductor company needed to bridge the gap between academic learning
+                                and industry-ready engineering skills by onboarding fresh graduates into
+                                complex technical roles and enabling contribution in real-world environments.
                             </p>
 
                             <h6 className="fw-semibold mt-4">Our role covers:</h6>
-                            <p className="mt-3">Timmins enabled 350+ fresh graduates to become industry-ready engineers through customized onboarding. The program covered core engineering domains including Embedded Linux, Android, 5G, VLSI chip design, and AI fundamentals, supported by:</p>
+                            <p className="mt-3">
+                                Timmins enabled 350+ fresh graduates to become industry-ready engineers through
+                                customized onboarding. The program covered core engineering domains including
+                                Embedded Linux, Android, 5G, VLSI chip design, and AI fundamentals, supported by:
+                            </p>
+
                             <ul className="list-unstyled role-list">
                                 <li>✔ Skill gap assessment</li>
-                                <li>
-                                    ✔ Customized course design
-                                </li>
+                                <li>✔ Customized course design</li>
                                 <li>✔ Hands-on, structured delivery</li>
-                                <li>✔Ongoing assessment and engagement</li>
+                                <li>✔ Ongoing assessment and engagement</li>
                             </ul>
 
-                            <h6 className="fw-semibold mt-4">Key Results</h6>
-                            <div className="tech-tags">
-                                <span>End-to-end 5G SoC capability strengthened</span>
-                                <span>Higher cross-domain engineering readiness</span>
-                                <span>Global, multi-site scalability
-                                </span>
-
-
-                            </div>
-
+                            {/* Quote kept (not Key Results section) */}
                             <div className="quote-box mt-4">
                                 <p>
-                                    “Significant skill development, high engagement, and positive
-                                    feedback — graduates demonstrated a 50% improvement in key technical
-                                    areas, becoming industry-ready professionals.”
+                                    “Significant skill development, high engagement, and positive feedback —
+                                    graduates demonstrated strong gains across AI and Android courses.”
                                 </p>
                                 <span>— Timmins Training Report</span>
                             </div>
+
                         </div>
+
                         {/* Right Highlights Card */}
                         <div className="col-lg-4">
                             <div className="highlight-card">
+
                                 <h5 className="fw-bold mb-3">Key Highlights</h5>
+
                                 <ul className="list-unstyled highlight-list">
                                     <li>
-                                        <strong>10 Years</strong>
+                                        <strong>350+</strong>
                                         <br />
-                                        Partnership across Malaysia, India, USA
+                                        fresh graduates enabled
                                     </li>
                                     <li>
-                                        <strong>3,000+</strong>
+                                        <strong>~50%</strong>
                                         <br />
-                                        Engineers trained
+                                        Skill improvement
                                     </li>
                                     <li>
-                                        <strong>50%</strong>
+                                        <strong>4.33 – 4.82 / 5</strong>
                                         <br />
-                                        Average capability improvement
+                                        High feedback scores
                                     </li>
                                     <li>
-                                        <strong>4.5 – 5.0</strong>
+                                        <strong>AI & Android</strong>
                                         <br />
-                                        Participant rating
+                                        Strong capability gains
                                     </li>
                                 </ul>
 
-                                <a href="/assets/New_images/pdf1.pdf" target='_blank' className="case-download-link   underline mt-3 d-inline-block">
-                                    Download Full Case Study (via Form)
+                                <a
+                                    href="#"
+                                    className="case-download-link underline mt-3 d-inline-block"
+                                >
+                                    Download Full Case Study
                                 </a>
 
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
 
+            <div className="modal fade" id="caseStudyModal" tabindex="-1">
+                <div className="modal-dialog modal-dialog-centered">
+                    <div className="modal-content">
+
+                        <div className="modal-header">
+                            <h5 className="modal-title">Download Full Case Study</h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div className="modal-body">
+                            <form id="caseStudyForm">
+                                <div className="mb-3">
+                                    <label className="form-label">Full Name</label>
+                                    <input type="text" className="form-control" required />
+                                </div>
+
+                                <div className="mb-3">
+                                    <label className="form-label">Organization</label>
+                                    <input type="text" className="form-control" required />
+                                </div>
+
+                                <div className="mb-3">
+                                    <label className="form-label">Email</label>
+                                    <input type="email" className="form-control" required />
+                                </div>
+
+                                <div className="mb-3">
+                                    <label className="form-label">Contact Number</label>
+                                    <input type="tel" className="form-control" required />
+                                </div>
+
+                                <button type="submit" className="btn btn-primary w-100">
+                                    Submit & Download
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
             <section className="case-study-section-1 py-5">
                 <div className="container">
                     <div className="row align-items-start g-4">
+
                         {/* Left Content */}
                         <div className="col-lg-8">
 
-                            <h2 className="fw-bold mt-2">Machine Learning Program for Data Analytics</h2>
+                            <h2 className="fw-bold mt-2">
+                                Machine Learning Program for Data Analytics
+                            </h2>
+
                             <p className="text-muted">
-                                <em>(DBS Bank )</em>
+                                <em>(DBS Bank)</em>
                             </p>
+
                             <h6 className="fw-semibold mt-4">The Challenge</h6>
                             <p className="mt-3">
-                                The bank needed to build stronger in-house data analytics and machine learning capability for real banking use cases.
+                                The bank needed to strengthen in-house data analytics and machine learning
+                                capability to address real banking use cases such as customer insights,
+                                risk analysis, and operational decision-making.
                             </p>
+
                             <h6 className="fw-semibold mt-4">Our Solution</h6>
                             <p>
-                                Timmins designed and delivered a customized Machine Learning program for the bank’s in-house data analytics engineers, combining training and consulting tailored to real banking use cases. The program focused on:
+                                Timmins designed and delivered a customized Machine Learning program for
+                                the bank’s internal data analytics engineers. The engagement combined
+                                structured training with applied consulting, focused on real banking
+                                datasets and use cases.
                             </p>
+
                             <ul className="list-unstyled role-list">
                                 <li>✔ Data analytics and machine learning foundations for banking</li>
                                 <li>✔ Applied analytics for customer insights and decision support</li>
-                                <li>✔ Customer sentiment analysis and service improvement
-                                </li>
-                                <li>✔ Analytics-enabled security use cases
-                                </li>
-                                <li>✔ Hands-on implementation using Python and existing enterprise systems
-                                </li>
-
+                                <li>✔ Customer sentiment analysis and service improvement</li>
+                                <li>✔ Analytics-enabled security and risk use cases</li>
+                                <li>✔ Hands-on implementation using Python and enterprise data systems</li>
                             </ul>
+
+                            {/* Key Results – corrected */}
                             <h6 className="fw-semibold mt-4">Key Results</h6>
                             <div className="tech-tags">
-                                <span>End-to-end 5G SoC capability strengthened</span>
-                                <span>Higher cross-domain engineering readiness</span>
-                                <span>Global, multi-site scalability
-                                </span>
-
-
+                                <span>Stronger in-house ML & analytics capability</span>
+                                <span>Improved data-driven decision making</span>
+                                <span>Production-ready analytics use cases</span>
                             </div>
+
                         </div>
+
                         {/* Right Highlights Card */}
                         <div className="col-lg-4">
                             <div className="highlight-card">
+
                                 <h5 className="fw-bold mb-3">Highlights</h5>
+
                                 <ul className="list-unstyled highlight-list">
                                     <li>
                                         <strong>7 Years</strong>
@@ -277,15 +334,21 @@ const page = () => {
                                     </li>
                                 </ul>
 
-                                <a href="/assets/New_images/pdf2.pdf" target='_blank' className="case-download-link   underline mt-3 d-inline-block">
+                                <a
+                                    href="/assets/New_images/pdf2.pdf"
+                                    target="_blank"
+                                    className="case-download-link underline mt-3 d-inline-block"
+                                >
                                     Download Full Case Study (via Form)
                                 </a>
 
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
+
 
             <section className="case-study-section py-5">
                 <div className="container">

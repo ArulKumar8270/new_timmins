@@ -58,7 +58,7 @@ export default function TenYearsPage() {
                         </div>
                         {/* RIGHT IMAGE */}
                         <div className="approach-image">
-                            <img src="/assets/New_images/2016.jpg" alt="We listen first" />
+                            <img src="/assets/New_images/2016.png" alt="We listen first" />
 
                         </div>
                     </div>
@@ -107,7 +107,7 @@ export default function TenYearsPage() {
                         </div>
                         {/* RIGHT IMAGE */}
                         <div className="approach-image">
-                            <img src="/assets/New_images/2018.jpg" alt="We listen first" />
+                            <img src="/assets/New_images/2018.png" alt="We listen first" />
 
                         </div>
                     </div>
@@ -163,7 +163,7 @@ export default function TenYearsPage() {
                         </div>
                         {/* RIGHT IMAGE */}
                         <div className="approach-image">
-                            <img src="/assets/New_images/2024.jpg" alt="We listen first" />
+                            <img src="/assets/New_images/2024.png" alt="We listen first" />
                         </div>
                     </div>
                 </section>
@@ -211,7 +211,7 @@ export default function TenYearsPage() {
                         </div>
                         {/* RIGHT IMAGE */}
                         <div className="approach-image">
-                            <img src="/assets/New_images/2020.png" alt="We listen first" />
+                            <img src="/assets/New_images/2026.jpg" alt="We listen first" />
                         </div>
                     </div>
                 </section>

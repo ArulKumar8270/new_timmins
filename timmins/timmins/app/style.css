@@ -3313,3 +3313,180 @@ section {
         text-align: center;
     }
 }
+
+/* ===============================
+   CONTACT – GET IN TOUCH SECTION
+   =============================== */
+
+.contact-section {
+    background: #ffffff;
+}
+
+/* Section title */
+.get-in-touch-title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Row equal height fix */
+.contact-section .row>div {
+    display: flex;
+}
+
+/* Card base */
+.contact-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* REMOVE any special primary styling */
+.contact-card.primary {
+    background: #ffffff !important;
+    color: #111111 !important;
+}
+
+/* Card heading */
+.contact-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 18px;
+    color: #111111;
+}
+
+/* Text content */
+.location-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444444;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+/* Email link */
+.location-text a {
+    color: #0b5ed7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Google Maps link */
+.map-link {
+    margin-top: auto;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0b5ed7;
+    text-decoration: none;
+}
+
+/* Mobile spacing */
+@media (max-width: 767px) {
+    .contact-card {
+        padding: 22px 20px;
+    }
+
+    .contact-card h4 {
+        font-size: 18px;
+    }
+}
+
+
+/* ===============================
+   CONTACT MESSAGE FORM
+   =============================== */
+
+.contact-message-section {
+    background: #ffffff;
+}
+
+/* Heading */
+.message-title {
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.message-desc {
+    font-size: 15px;
+    color: #555;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* Form box */
+.contact-form {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Labels */
+.contact-form .form-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Inputs */
+.contact-form .form-control {
+    height: 46px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/* Button */
+.btn-message-submit {
+    background: var(--ed-secondary-color, #f5a623);
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 34px;
+    border-radius: 30px;
+    border: none;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .contact-form {
+        padding: 22px;
+    }
+
+    .message-desc {
+        font-size: 14px;
+    }
+}
+
+/* CONTACT HERO – FORCE COMPACT HEIGHT FIX */
+
+.contact-hero {
+    min-height: unset !important;
+    height: auto !important;
+    display: block !important;
+}
+
+.contact-hero--compact {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .contact-hero--compact {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    .contact-hero--compact {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
