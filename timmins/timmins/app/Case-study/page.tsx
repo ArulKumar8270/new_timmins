@@ -561,9 +561,10 @@ const page = () => {
 
 
 
-            <section className="ed-call-action position-relative section-gap pb-10">
+            <section className="ed-call-action position-relative section-gap pb-5 about-cta">
                 <div className="container ed-container">
                     <div className="ed-call-action__inner position-relative">
+
                         <div className="ed-call-action__shapes">
                             <img
                                 className="ed-call-action__shape-1 rotate-ani"
@@ -581,8 +582,11 @@ const page = () => {
                                 alt="shape-3"
                             />
                         </div>
-                        <div className="row">
-                            <div className="col-lg-6 col-12 py-5">
+
+                        <div className="row align-items-center">
+
+                            {/* IMAGE */}
+                            <div className="col-lg-6 col-12">
                                 <div className="ed-call-action__img">
                                     <img
                                         src="/assets/New_images/final cta horizontal.png"
@@ -590,66 +594,46 @@ const page = () => {
                                     />
                                 </div>
                             </div>
-                            <div className="col-lg-6 col-12 order-class py-2 ">
+
+                            {/* CONTENT */}
+                            <div className="col-lg-6 col-12 order-class pb-5">
                                 <div className="ed-call-action__content">
-                                    <div className="ed-section-head">
-                                        <h3 className="ed-section-head__title">
-                                            We Don’t Just Train. We Transform.
-                                        </h3>
-                                        <p className="ed-section-head__text">
-                                            Every story above shares the same DNA:
-                                        </p>
-                                    </div>
-                                    <div className="ed-about__feature">
-                                        <ul className="ed-about__features-list">
-                                            <li>
-                                                <img
-                                                    src="/assets/images/icons/icon-check-blue.svg"
-                                                    alt="icon-check-blue"
-                                                />
-                                                Co-creation with client teams and SMEs
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/assets/images/icons/icon-check-blue.svg"
-                                                    alt="icon-check-blue"
-                                                />
-                                                Hands-on, real-world learning
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/assets/images/icons/icon-check-blue.svg"
-                                                    alt="icon-check-blue"
-                                                />
-                                                Feedback and improvement between batches
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/assets/images/icons/icon-check-blue.svg"
-                                                    alt="icon-check-blue"
-                                                />
-                                                Measurable outcomes that align with business goals
-                                            </li>
 
 
+                                    <h4 className="cta-heading ">
+                                        We Don’t Just Train. We Transform.
+                                    </h4>
+
+                                    <p className="ed-section-head__text mb-4">
+                                        Every story above shares the same DNA:
+
+                                        <ul>
+                                            <li>✔ Co-creation with client teams and SMEs</li>
+                                            <li>✔ Hands-on, real-world learning</li>
+                                            <li>✔ Feedback and improvement between batches</li>
+                                            <li>✔  Measurable outcomes that align with business goals</li>
                                         </ul>
+                                    </p>
 
-                                    </div>
-                                    <br />
+
+
+
                                     <div
-                                        className="ed-call-action__content-btn ed-btn"
-                                        style={{ backgroundColor: "var(--ed-secondary-color)" }}
+                                        className="ed-call-action__content-btn ed-btn mb-7"
+                                        style={{ backgroundColor: 'var(--ed-secondary-color)' }}
                                     >
-                                        <a href="#"> {/* */}Book a Consultation</a>
+                                        <a href="/contact-us">
+                                            Book a Consultation
+                                        </a>
                                     </div>
 
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </section>
-
             <Footer />
 
 

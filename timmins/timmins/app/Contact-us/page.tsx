@@ -33,118 +33,111 @@ export default function contactUspage() {
             <section className="contact-section py-5">
                 <div className="container">
 
-                    {/* SECTION TITLE */}
+                    {/* TITLE */}
                     <div className="text-center mb-5">
-                        <h2 className="get-in-touch-title">
-                            📞 Get in Touch
-                        </h2>
+                        <h2 className="fw-bold">Get in Touch</h2>
+                        <p className="text-muted mt-2">
+                            Reach out to our regional teams for partnerships, training, or consultations.
+                        </p>
                     </div>
 
-                    {/* CARDS */}
                     <div className="row g-4">
 
-                        {/* MALAYSIA – HEAD OFFICE */}
-                        <div className="col-lg-3 col-md-6 d-flex">
-                            <div className="contact-card primary w-100">
+                        {/* CARD */}
+                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <div className="contact-card-alt h-100">
+                                <span className="accent"></span>
 
-                                <h4 className="mb-3">Malaysia (Head Office)</h4>
+                                <h5>Malaysia</h5>
+                                <small className="text-muted">(Head Office)</small>
 
-                                <p className="location-text">
+                                <p className="mt-3">
                                     <strong>Timmins Training Consulting Sdn. Bhd.</strong><br />
                                     Suite 3A–05, Level 3A, Wisma Fiamma<br />
-                                    No. 20, Jalan 7A/62A, Bandar Manjalara<br />
-                                    52200 Kuala Lumpur, Malaysia
+                                    Kuala Lumpur, Malaysia
                                 </p>
 
-                                <p className="location-text">
-                                    📱 +60 3-2785 0737 <br />
-                                    WhatsApp: +60 11-1667 4727
-                                </p>
-
-                                <p className="location-text">
-                                    ✉️ <a href="mailto:info@timmins-consulting.com">
-                                        info@timmins-consulting.com
-                                    </a>
+                                <p>
+                                    📞 +60 3-2785 0737<br />
+                                    💬 +60 11-1667 4727<br />
+                                    ✉️ info@timmins-consulting.com
                                 </p>
 
                                 <a
-                                    href="https://maps.app.goo.gl/36Z867fj5VgwrJU29?g_st=ic"
+                                    href="https://maps.app.goo.gl/36Z867fj5VgwrJU29"
                                     target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="map-link"
+                                    className="contact-link"
                                 >
                                     View on Google Maps →
                                 </a>
-
                             </div>
                         </div>
 
-                        {/* PENANG TRAINING CENTER */}
-                        <div className="col-lg-3 col-md-6 d-flex">
-                            <div className="contact-card w-100">
+                        {/* CARD */}
+                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <div className="contact-card-alt h-100">
+                                <span className="accent"></span>
 
-                                <h4 className="mb-3">Penang Training Center</h4>
+                                <h5>Penang</h5>
+                                <small className="text-muted">Training Center</small>
 
-                                <p className="location-text">
+                                <p className="mt-3">
                                     Bayan Lepas Industrial Park<br />
                                     Penang
                                 </p>
 
-                                <p className="location-text">
-                                    🕘 9:00 AM – 5:30 PM (Mon–Fri)
-                                </p>
+                                <p>🕘 9:00 AM – 5:30 PM (Mon–Fri)</p>
 
                                 <a
-                                    href="https://maps.app.goo.gl/xTg4GoZFLobRJ11J8?g_st=ic"
+                                    href="https://maps.app.goo.gl/xTg4GoZFLobRJ11J8"
                                     target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="map-link"
+                                    className="contact-link"
                                 >
                                     View on Google Maps →
                                 </a>
-
                             </div>
                         </div>
 
-                        {/* CANADA – REPRESENTATIVE OFFICE */}
-                        <div className="col-lg-3 col-md-6 d-flex">
-                            <div className="contact-card w-100">
+                        {/* CARD */}
+                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <div className="contact-card-alt h-100">
+                                <span className="accent"></span>
 
-                                <h4 className="mb-3">Canada (Representative Office)</h4>
+                                <h5>Canada</h5>
+                                <small className="text-muted">Representative Office</small>
 
-                                <p className="location-text">
+                                <p className="mt-3">
                                     Toronto, Ontario<br />
                                     Canada
                                 </p>
-
                             </div>
                         </div>
 
-                        {/* INDONESIA */}
-                        <div className="col-lg-3 col-md-6 d-flex">
-                            <div className="contact-card w-100">
+                        {/* CARD */}
+                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <div className="contact-card-alt h-100">
+                                <span className="accent"></span>
 
-                                <h4 className="mb-3">Indonesia</h4>
+                                <h5>Indonesia</h5>
 
-                                <p className="location-text">
+                                <p className="mt-3">
                                     South Jakarta
                                 </p>
 
                                 <a
-                                    href="https://maps.app.goo.gl/7fLGt4idozEcdLwz8?g_st=ic"
+                                    href="https://maps.app.goo.gl/7fLGt4idozEcdLwz8"
                                     target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="map-link"
+                                    className="contact-link"
                                 >
                                     View on Google Maps →
                                 </a>
-
                             </div>
                         </div>
 
                     </div>
                 </div>
             </section>
+
 
 
 

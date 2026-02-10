@@ -492,7 +492,7 @@ export default function Home() {
                                     <div className="ed-course__image">
                                       <div className="ed-course__main-img">
                                         <img
-                                          src="/assets/New_images/Embedded Linux public class at Timmins.jpg"
+                                          src="/assets/New_images/Embedded Linux public class at Timmins.png"
                                           alt="course-img"
                                         />
                                       </div>
@@ -511,7 +511,7 @@ export default function Home() {
                                     <div className="ed-course__image">
                                       <div className="ed-course__main-img">
                                         <img
-                                          src="/assets/New_images/Power BI public class at timmins.jpg"
+                                          src="/assets/New_images/Power BI public class at timmins.png"
                                           alt="course-img"
                                         />
                                       </div>
@@ -530,7 +530,7 @@ export default function Home() {
                                     <div className="ed-course__image">
                                       <div className="ed-course__main-img">
                                         <img
-                                          src="/assets/New_images/Generative AI public class at Timmins.jpg"
+                                          src="/assets/New_images/Generative AI public class at Timmins.png"
                                           alt="course-img"
                                         />
                                       </div>
@@ -549,7 +549,7 @@ export default function Home() {
                                     <div className="ed-course__image">
                                       <div className="ed-course__main-img">
                                         <img
-                                          src="/assets/New_images/kotlin fundamentals public class at Timmins.jpg"
+                                          src="/assets/New_images/kotlin fundamentals public class at Timmins.png"
                                           alt="course-img"
                                         />
                                       </div>
@@ -643,7 +643,7 @@ export default function Home() {
                       <div className="ed-course__head position-relative">
                         <div className="ed-course__img">
                           <img
-                            src="/assets/New_images/AI Transformation training at Timmins.jpg"
+                            src="/assets/New_images/AI Transformation training at Timmins.png"
                             alt="course-img"
                           />
                         </div>
@@ -674,7 +674,7 @@ export default function Home() {
                       <div className="ed-course__head position-relative">
                         <div className="ed-course__img">
                           <img
-                            src="/assets/New_images/Mobile development training at Timmins.jpg"
+                            src="/assets/New_images/Mobile development training at Timmins.png"
                             alt="course-img"
                           />
                         </div>
@@ -973,9 +973,10 @@ export default function Home() {
               </section>
             </div>
 
-            <section className="ed-call-action position-relative section-gap mb-3.5">
+            <section className="ed-call-action position-relative section-gap pb-5 about-cta">
               <div className="container ed-container">
                 <div className="ed-call-action__inner position-relative">
+
                   <div className="ed-call-action__shapes">
                     <img
                       className="ed-call-action__shape-1 rotate-ani"
@@ -993,7 +994,10 @@ export default function Home() {
                       alt="shape-3"
                     />
                   </div>
-                  <div className="row">
+
+                  <div className="row align-items-center">
+
+                    {/* IMAGE */}
                     <div className="col-lg-6 col-12">
                       <div className="ed-call-action__img">
                         <img
@@ -1002,25 +1006,33 @@ export default function Home() {
                         />
                       </div>
                     </div>
-                    <div className="col-lg-6 col-12 order-class">
-                      <div className="ed-call-action__content">
-                        <div className="ed-section-head">
 
-                          <h3 className="ed-section-head__title">
-                            Let’s Build Your Team’s Next Capability
-                          </h3>
-                          <p className="ed-section-head__text">
-                            Whether you're planning a new AI initiative, upgrading your embedded systems team, or preparing engineers for new 5G requirements; we’re here to help.
-                          </p>
-                        </div>
-                        <div className="ed-call-action__content-btn ed-btn mb-5" style={{ backgroundColor: 'var(--ed-secondary-color)' }}>
-                          <a href="#" >
-                            {" "}
+                    {/* CONTENT */}
+                    <div className="col-lg-6 col-12 order-class pb-5">
+                      <div className="ed-call-action__content">
+
+
+                        <h4 className="cta-heading ">
+                          Let’s Build Your Team’s Next Capability
+                        </h4>
+
+                        <p className="ed-section-head__text mb-4">
+                          Whether you're designing new systems, strengthening delivery capability, or preparing teams for evolving operational requirements, we’re here to help.
+                        </p>
+
+
+                        <div
+                          className="ed-call-action__content-btn ed-btn mb-7"
+                          style={{ backgroundColor: 'var(--ed-secondary-color)' }}
+                        >
+                          <a href="/contact-us">
                             Book a Consultation
                           </a>
                         </div>
+
                       </div>
                     </div>
+
                   </div>
                 </div>
               </div>
@@ -1043,28 +1055,28 @@ export default function Home() {
 
                   <div className="col-lg-2 col-md-4 col-6">
                     <div className="country-card">
-                      <img src="/assets/New_images/us.png" alt="United States" />
+                      <img src="/assets/New_images/US2.png" alt="United States" />
                       <p>United States</p>
                     </div>
                   </div>
 
                   <div className="col-lg-2 col-md-4 col-6">
                     <div className="country-card">
-                      <img src="/assets/New_images/canada.png" alt="Canada" />
+                      <img src="/assets/New_images/Canada 2.png" alt="Canada" />
                       <p>Canada</p>
                     </div>
                   </div>
 
                   <div className="col-lg-2 col-md-4 col-6">
                     <div className="country-card">
-                      <img src="/assets/New_images/uk.png" alt="United Kingdom" />
+                      <img src="/assets/New_images/UK2.png" alt="United Kingdom" />
                       <p>United Kingdom</p>
                     </div>
                   </div>
 
                   <div className="col-lg-2 col-md-4 col-6">
                     <div className="country-card">
-                      <img src="/assets/New_images/france.png" alt="France" />
+                      <img src="/assets/New_images/France 2.png" alt="France" />
                       <p>France</p>
                     </div>
                   </div>
@@ -1078,7 +1090,7 @@ export default function Home() {
 
                   <div className="col-lg-2 col-md-4 col-6">
                     <div className="country-card">
-                      <img src="/assets/New_images/chaina.png" alt="China" />
+                      <img src="/assets/New_images/China 1.png" alt="China" />
                       <p>China</p>
                     </div>
                   </div>
@@ -1090,35 +1102,35 @@ export default function Home() {
 
                   <div className="col-lg-2 col-md-4 col-6">
                     <div className="country-card">
-                      <img src="/assets/New_images/india.png" alt="India" />
+                      <img src="/assets/New_images/India 2.png" alt="India" />
                       <p>India</p>
                     </div>
                   </div>
 
                   <div className="col-lg-2 col-md-4 col-6">
                     <div className="country-card">
-                      <img src="/assets/New_images/malaysia.png" alt="Malaysia" />
+                      <img src="/assets/New_images/Malay2.png" alt="Malaysia" />
                       <p>Malaysia</p>
                     </div>
                   </div>
 
                   <div className="col-lg-2 col-md-4 col-6">
                     <div className="country-card">
-                      <img src="/assets/New_images/sinagpore.png" alt="Singapore" />
+                      <img src="/assets/New_images/Singapore2.png" alt="Singapore" />
                       <p>Singapore</p>
                     </div>
                   </div>
 
                   <div className="col-lg-2 col-md-4 col-6">
                     <div className="country-card">
-                      <img src="/assets/New_images/indo.png" alt="Indonesia" />
+                      <img src="/assets/New_images/Indo 2.png" alt="Indonesia" />
                       <p>Indonesia</p>
                     </div>
                   </div>
 
                   <div className="col-lg-2 col-md-4 col-6">
                     <div className="country-card">
-                      <img src="/assets/New_images/thai.png" alt="Thailand" />
+                      <img src="/assets/New_images/Thai2 (2).png" alt="Thailand" />
                       <p>Thailand</p>
                     </div>
                   </div>
