@@ -63,13 +63,13 @@ export default function TenYearsPage() {
                         </div>
                     </div>
 
-                    <div className="w-56 mx-auto">
+                    {/* <div className="w-56 mx-auto">
                         <img
                             src="/assets/New_images/10-1.jpg"
                             alt="Timmins early days 2016"
                            style={{ width: '60%', borderRadius: '10px' }}
                         />
-                    </div>
+                    </div> */}
 
 
 
