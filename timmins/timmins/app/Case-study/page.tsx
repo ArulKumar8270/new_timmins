@@ -157,6 +157,7 @@ const page = () => {
                                 customized onboarding. The program covered core engineering domains including
                                 Embedded Linux, Android, 5G, VLSI chip design, and AI fundamentals, supported by:
                             </p>
+                            <br />
 
                             <ul className="list-unstyled role-list">
                                 <li>✔ Skill gap assessment</li>
@@ -206,11 +207,14 @@ const page = () => {
                                 </ul>
 
                                 <a
-                                    href="#"
-                                    className="case-download-link underline mt-3 d-inline-block"
+                                    href="/assets/New_images/pdf1.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="case-download-link mt-3 d-inline-block"
                                 >
                                     Download Full Case Study
                                 </a>
+
 
                             </div>
                         </div>
@@ -219,7 +223,7 @@ const page = () => {
                 </div>
             </section>
 
-            <div className="modal fade" id="caseStudyModal" tabindex="-1">
+            {/* <div className="modal fade" id="caseStudyModal" tabindex="-1">
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content">
 
@@ -258,7 +262,7 @@ const page = () => {
 
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
 
@@ -285,12 +289,13 @@ const page = () => {
                             </p>
 
                             <h6 className="fw-semibold mt-4">Our Solution</h6>
-                            <p>
+                            <p className="mt-3">
                                 Timmins designed and delivered a customized Machine Learning program for
                                 the bank’s internal data analytics engineers. The engagement combined
                                 structured training with applied consulting, focused on real banking
                                 datasets and use cases.
                             </p>
+                            <br />
 
                             <ul className="list-unstyled role-list">
                                 <li>✔ Data analytics and machine learning foundations for banking</li>
@@ -370,6 +375,9 @@ const page = () => {
                             <p>
                                 Timmins delivered a structured, hands-on analytics and machine learning enablement program across six batches, with a focus on:
                             </p>
+
+                            <br />
+
                             <ul className="list-unstyled role-list">
                                 <li>✔ Assessment-first, skill-based segmentation</li>
                                 <li>✔ Customized banking-context curriculum</li>
@@ -433,13 +441,14 @@ const page = () => {
                                 <em>(CMotorola)</em>
                             </p>
                             <h6 className="fw-semibold mt-4">The Challenge:</h6>
-                            <p className="lead text-muted">
+                            <p className=" text-muted">
                                 Engineering teams needed to strengthen in-house Android development capability to independently develop, optimize, and maintain Qualcomm chipset–based Android smartphones across evolving Android versions.
                             </p>
                             <h6 className="fw-semibold mt-4">Our Solution</h6>
                             <p>
                                 Timmins delivered an ongoing staffing, training, and consulting enablement program to support end-to-end Android smartphone development. Training areas included:
                             </p>
+                            <br />
                             <ul className="list-unstyled role-list">
                                 <li>✔ Embedded Linux and device drivers</li>
                                 <li>✔ Linux kernel programming for Android</li>
@@ -502,16 +511,17 @@ const page = () => {
                                 <em>(US-based Semiconductor Company)</em>
                             </p>
                             <h6 className="fw-semibold mt-4">The Challenge:</h6>
-                            <p className="lead text-muted">
+                            <p className="mt-3">
                                 A global semiconductor company needed to continuously strengthen 5G Mobile SoC capabilities as technologies evolved rapidly across hardware, software, and system architecture. Engineering teams required practical, applied expertise to design, optimize, and deploy complex 5G solutions at scale.
                             </p>
 
                             <h6 className="fw-semibold mt-4">Our Solution:</h6>
-                            <p>
+                            <p className="mt-3">
 
                                 Timmins delivered a highly customized 5G Mobile SoC enablement program for cross-functional R&D teams, covering critical capability areas including:
 
                             </p>
+                            <br />
                             <ul className="list-unstyled role-list">
                                 <li>✔5G Mobile SoC architecture for next-generation mobile chip development</li>
                                 <li>✔ Low-power chip design and HW–SW optimization</li>

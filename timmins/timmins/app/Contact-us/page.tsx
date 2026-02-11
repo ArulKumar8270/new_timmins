@@ -30,56 +30,50 @@ export default function contactUspage() {
 
 
 
-            <section className="contact-section py-5">
+            <section className="contact-grid-section py-5">
                 <div className="container">
 
-                    {/* TITLE */}
                     <div className="text-center mb-5">
-                        <h2 className="fw-bold">Get in Touch</h2>
-                        <p className="text-muted mt-2">
+                        <h2 className="contact-main-title">Get in Touch</h2>
+                        <p className="contact-main-subtitle">
                             Reach out to our regional teams for partnerships, training, or consultations.
                         </p>
                     </div>
 
                     <div className="row g-4">
 
-                        {/* CARD */}
-                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <div className="contact-card-alt h-100">
-                                <span className="accent"></span>
+                        {/* Malaysia */}
+                        <div className="col-lg-6 col-md-6 col-sm-12">
+                            <div className="contact-card-new h-100">
+                                <h4>Malaysia <span>(Head Office)</span></h4>
 
-                                <h5>Malaysia</h5>
-                                <small className="text-muted">(Head Office)</small>
-
-                                <p className="mt-3">
-                                    <strong>Timmins Training Consulting Sdn. Bhd.</strong><br />
-                                    Suite 3A–05, Level 3A, Wisma Fiamma<br />
-                                    Kuala Lumpur, Malaysia
+                                <p className="company">
+                                    Timmins Training Consulting Sdn. Bhd.
                                 </p>
 
                                 <p>
-                                    📞 +60 3-2785 0737<br />
-                                    💬 +60 11-1667 4727<br />
+                                    Taman Zeta@Zetapark, C-11-01 Komplek Danau Kota, 67,<br />
+                                    Jln Taman Ibu Kota, Setapak,<br />
+                                    53300 Kuala Lumpur, Malaysia
+                                </p>
+
+                                <p className="mt-3">
+                                    📱 +60 3-2785 0737<br />
+                                    WhatsApp: +60 11-1667 4727<br />
                                     ✉️ info@timmins-consulting.com
                                 </p>
 
-                                <a
-                                    href="https://maps.app.goo.gl/36Z867fj5VgwrJU29"
-                                    target="_blank"
-                                    className="contact-link"
-                                >
-                                    View on Google Maps →
+                                <a href="https://maps.app.goo.gl/36Z867fj5VgwrJU29?g_st=ic" target="_blank">
+                                    View Map →
                                 </a>
                             </div>
                         </div>
 
-                        {/* CARD */}
-                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <div className="contact-card-alt h-100">
-                                <span className="accent"></span>
-
-                                <h5>Penang</h5>
-                                <small className="text-muted">Training Center</small>
+                        {/* Penang */}
+                        <div className="col-lg-6 col-md-6 col-sm-12">
+                            <div className="contact-card-new h-100">
+                                <h4>Penang</h4>
+                                <small>Training Center</small>
 
                                 <p className="mt-3">
                                     Bayan Lepas Industrial Park<br />
@@ -88,23 +82,17 @@ export default function contactUspage() {
 
                                 <p>🕘 9:00 AM – 5:30 PM (Mon–Fri)</p>
 
-                                <a
-                                    href="https://maps.app.goo.gl/xTg4GoZFLobRJ11J8"
-                                    target="_blank"
-                                    className="contact-link"
-                                >
-                                    View on Google Maps →
+                                <a href="https://maps.app.goo.gl/xTg4GoZFLobRJ11J8?g_st=ic" target="_blank">
+                                    View Map →
                                 </a>
                             </div>
                         </div>
 
-                        {/* CARD */}
-                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <div className="contact-card-alt h-100">
-                                <span className="accent"></span>
-
-                                <h5>Canada</h5>
-                                <small className="text-muted">Representative Office</small>
+                        {/* Canada */}
+                        <div className="col-lg-6 col-md-6 col-sm-12">
+                            <div className="contact-card-new h-100">
+                                <h4>Canada</h4>
+                                <small>Representative Office</small>
 
                                 <p className="mt-3">
                                     Toronto, Ontario<br />
@@ -113,23 +101,17 @@ export default function contactUspage() {
                             </div>
                         </div>
 
-                        {/* CARD */}
-                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <div className="contact-card-alt h-100">
-                                <span className="accent"></span>
-
-                                <h5>Indonesia</h5>
+                        {/* Indonesia */}
+                        <div className="col-lg-6 col-md-6 col-sm-12">
+                            <div className="contact-card-new h-100">
+                                <h4>Indonesia</h4>
 
                                 <p className="mt-3">
                                     South Jakarta
                                 </p>
 
-                                <a
-                                    href="https://maps.app.goo.gl/7fLGt4idozEcdLwz8"
-                                    target="_blank"
-                                    className="contact-link"
-                                >
-                                    View on Google Maps →
+                                <a href="https://maps.app.goo.gl/7fLGt4idozEcdLwz8?g_st=ic" target="_blank">
+                                    View Map →
                                 </a>
                             </div>
                         </div>
@@ -137,6 +119,7 @@ export default function contactUspage() {
                     </div>
                 </div>
             </section>
+
 
 
 

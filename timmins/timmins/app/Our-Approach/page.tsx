@@ -124,11 +124,18 @@ const page = () => {
                 </div>
             </section>
 
-            <section className="approach-section-1 deliver-experts section gap">
-                <div className="approach-container">
-                    {/* LEFT CONTENT */}
+            <section className="approach-section co-design">
+                <div className="approach-container reverse">
+                    {/* LEFT IMAGE */}
+                    <div className="approach-image">
+                        <img
+                            src="/assets/New_images/AP4.png"
+                            alt="Co-design tailored solutions"
+                        />
+                    </div>
+                    {/* RIGHT CONTENT */}
                     <div className="approach-text">
-                        <h2> We Measure What Matters</h2>
+                        <h2>We Measure What Matters</h2>
                         <p>
                             We measure capability uplift, not attendance. Our measurement includes:
                         </p>
@@ -137,22 +144,11 @@ const page = () => {
                             <li>individual skill progression</li>
                             <li>team capability uplift reports</li>
                             <li>stakeholder summaries</li>
-                            <li>
-                                recommended next steps
-                            </li>
+                            <li>recommended next steps</li>
                         </ul>
                         <p className="approach-outcome">
-                            <strong>Outcome:</strong> evidence-based insight into what changed and why it matters.
-
+                            <strong>Outcome:</strong>evidence-based insight into what changed and why it matters.
                         </p>
-
-                    </div>
-                    {/* RIGHT IMAGE */}
-                    <div className="approach-image">
-                        <img
-                            src="/assets/New_images/AP4.png"
-                            alt="Experts delivering hands-on engineering training"
-                        />
                     </div>
                 </div>
             </section>
