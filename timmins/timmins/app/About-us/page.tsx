@@ -120,7 +120,7 @@ const page = () => {
                                     {/* LEFT IMAGE */}
                                     <div className="col-lg-4 col-md-12 text-center">
                                         <img
-                                            src="/assets/New_images/About-Us 1.png"
+                                            src="/assets/New_images/About-us.jpg"
                                             alt="Timmins Consulting"
                                             className="img-fluid"
                                             style={{
