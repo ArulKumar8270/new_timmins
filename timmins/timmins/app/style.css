@@ -3677,6 +3677,7 @@ section {
 
 .sidebar-menu li {
     margin-bottom: 15px;
+    color: #2f2f2f;
 }
 
 .sidebar-menu a {
@@ -3692,10 +3693,18 @@ section {
 }
 
 .domain-section h2 {
-    font-size: 34px;
-    margin-bottom: 25px;
+    font-size: 38px;
+    font-weight: 700;
     color: #0d2b2a;
+    margin-bottom: 20px;
 }
+
+.domain-section>p {
+    max-width: 650px;
+    color: #6b7280;
+    margin-bottom: 50px;
+}
+
 
 /* CARDS */
 .capability-grid {
@@ -3712,7 +3721,7 @@ section {
 
 /* APPROACH */
 .approach-section {
-    background: #eef3f6;
+    background: #ffffff;
 }
 
 .approach-title {
@@ -3722,9 +3731,32 @@ section {
 
 .approach-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    /* 6 column system */
     gap: 30px;
+    margin-top: 50px;
 }
+
+/* First 3 cards */
+.approach-card:nth-child(1),
+.approach-card:nth-child(2),
+.approach-card:nth-child(3) {
+    grid-column: span 2;
+    /* 2+2+2 = 6 */
+}
+
+/* Last 2 cards centered */
+.approach-card:nth-child(4) {
+    grid-column: 2 / span 2;
+    /* start from col 2 */
+}
+
+.approach-card:nth-child(5) {
+    grid-column: 4 / span 2;
+    /* start from col 4 */
+}
+
+
 
 .approach-card {
     background: white;
@@ -3755,4 +3787,460 @@ section {
     .approach-grid {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 992px) {
+    .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .approach-card {
+        grid-column: span 2 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-card {
+        grid-column: span 1 !important;
+    }
+}
+
+
+/* INDUSTRIES MODERN DESIGN */
+.industries-modern {
+    text-align: center;
+}
+
+.section-heading-center h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #0d2b2a;
+    margin-bottom: 60px;
+}
+
+.industries-circle-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.industry-circle-card {
+    text-align: center;
+}
+
+.industry-img {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.industry-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.industry-circle-card:hover .industry-img {
+    transform: scale(1.05);
+}
+
+.industry-circle-card h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0d2b2a;
+}
+
+.industry-bottom-text {
+    margin-top: 50px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #6b7280;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .industries-circle-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .industries-circle-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .industries-circle-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* WHO SECTION */
+.who-section {
+    padding-top: 80px;
+}
+
+.who-section h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #0d2b2a;
+    margin-bottom: 50px;
+}
+
+.who-card {
+    background: #f8f9fb;
+    padding: 40px 50px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+}
+
+.who-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.who-item:last-child {
+    border-bottom: none;
+}
+
+.who-icon {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.who-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.who-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #2d3748;
+    font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .who-card {
+        padding: 30px;
+    }
+
+    .who-item {
+        align-items: flex-start;
+    }
+
+    .who-item p {
+        font-size: 14px;
+    }
+}
+
+
+
+/* JOB FAMILIES SECTION */
+.job-section h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #0d2b2a;
+    margin-bottom: 50px;
+}
+
+.job-card {
+    background: #f8f9fb;
+    padding: 40px 50px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+}
+
+.job-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.job-row:last-child {
+    border-bottom: none;
+}
+
+/* LEFT TAG */
+.job-layer {
+    background: #dbeafe;
+    color: #0d2b2a;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 8px;
+    min-width: 180px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* RIGHT ROLES */
+.job-roles {
+    margin-left: 40px;
+}
+
+.job-roles ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.job-roles li {
+    font-size: 15px;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .job-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .job-roles {
+        margin-left: 0;
+    }
+
+    .job-layer {
+        min-width: auto;
+    }
+}
+
+
+
+/* OUTCOMES SECTION */
+.outcomes-section h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: #0d2b2a;
+    margin-bottom: 50px;
+}
+
+.outcomes-card {
+    background: #f8f9fb;
+    padding: 50px 60px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+}
+
+.outcome-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.outcome-item:last-child {
+    margin-bottom: 0;
+}
+
+.check-icon {
+    background: #e0f2fe;
+    color: #0d2b2a;
+    font-weight: 700;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.outcome-item p {
+    font-size: 16px;
+    color: #374151;
+    margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .outcomes-card {
+        padding: 30px;
+    }
+
+    .outcome-item {
+        gap: 12px;
+    }
+}
+
+
+/* TRAINING SECTION */
+.training-section h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #0d2b2a;
+}
+
+.accordion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background: #f8f9fb;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.accordion-item {
+    transition: all 0.3s ease;
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 22px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    color: #0d2b2a;
+}
+
+.accordion-header {
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform-origin: top;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 500px;
+    /* adjust if content bigger */
+    opacity: 1;
+}
+
+
+.accordion-content ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.accordion-content li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.arrow {
+    font-size: 18px;
+}
+
+/* ================= INSTRUCTOR SECTION ================= */
+
+.instructor-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.instructor-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.instructor-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.4s ease;
+}
+
+.instructor-card {
+    min-width: 260px;
+    background: #f8f9fb;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.instructor-card:hover {
+    transform: translateY(-6px);
+}
+
+.instructor-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0d2b2a;
+    margin-bottom: 6px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* NAV BUTTONS */
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f5a623;
+    color: #fff;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: -20px;
+}
+
+.next-btn {
+    right: -20px;
 }
