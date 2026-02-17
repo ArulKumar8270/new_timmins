@@ -1,59 +1,39 @@
 "use client";
-import React from "react";
+
+import React, { useState, useEffect } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import { useEffect } from "react";
-
 
 export default function EmbeddedLinuxDomain() {
 
-    useEffect(() => {
+    /* ================= ACCORDION STATE ================= */
+    const [activeAccordion, setActiveAccordion] = useState<number | null>(0);
 
-        const items = document.querySelectorAll(".accordion-item");
+    const toggleAccordion = (index: number) => {
+        setActiveAccordion(activeAccordion === index ? null : index);
+    };
 
-        items.forEach((item) => {
-            const header = item.querySelector(".accordion-header");
-            const content = item.querySelector(".accordion-content");
+    /* ================= INSTRUCTOR SLIDER ================= */
 
-            header.addEventListener("click", () => {
-                item.classList.toggle("active");
-
-                if (item.classList.contains("active")) {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                } else {
-                    content.style.maxHeight = 0;
-                }
-            });
-        });
-    }, []);
 
     useEffect(() => {
-        const track = document.querySelector(".instructor-track");
+        const track = document.querySelector(".instructor-track") as HTMLElement;
         const nextBtn = document.querySelector(".next-btn");
         const prevBtn = document.querySelector(".prev-btn");
 
         if (!track || !nextBtn || !prevBtn) return;
 
-        let position = 0;
+        const scrollAmount = 300;
 
-        const handleNext = () => {
-            position -= 300;
-            track.style.transform = `translateX(${position}px)`;
-        };
+        nextBtn.addEventListener("click", () => {
+            track.scrollLeft += scrollAmount;
+        });
 
-        const handlePrev = () => {
-            position += 300;
-            track.style.transform = `translateX(${position}px)`;
-        };
-
-        nextBtn.addEventListener("click", handleNext);
-        prevBtn.addEventListener("click", handlePrev);
-
-        return () => {
-            nextBtn.removeEventListener("click", handleNext);
-            prevBtn.removeEventListener("click", handlePrev);
-        };
+        prevBtn.addEventListener("click", () => {
+            track.scrollLeft -= scrollAmount;
+        });
     }, []);
+
 
 
     return (
@@ -63,24 +43,31 @@ export default function EmbeddedLinuxDomain() {
             {/* HERO */}
             <section className="domain-hero">
                 <div className="container hero-wrapper">
-                    <div className="hero-content">
+                    <div className="hero-text">
                         <p className="domain-label">ENGINEERING CAPABILITY DOMAIN</p>
+
                         <h1>
-                            Embedded Linux <br />
-                            Engineering Capability
+                            Embedded Linux
+                            <span> Engineering Capability</span>
                         </h1>
+
                         <p className="hero-desc">
                             Practitioner-led capability development across kernel engineering,
-                            BSP bring-up, driver development, system integration, and
-                            production deployment.
+                            BSP bring-up, driver development, system integration,
+                            and production deployment.
                         </p>
+
+                        <a href="/contact-us" className="hero-btn">
+                            Talk to Timmins
+                        </a>
                     </div>
 
                     <div className="hero-image">
-                        <img src="/assets/New_images/linux.jpg" alt="Embedded Linux" />
+                        <img src="/assets/New_images/linux.png" alt="Embedded Linux" />
                     </div>
                 </div>
             </section>
+
 
             {/* MAIN LAYOUT */}
             <section className="domain-main">
@@ -89,54 +76,40 @@ export default function EmbeddedLinuxDomain() {
                     {/* SIDEBAR */}
                     <aside className="domain-sidebar">
                         <div className="sidebar-card">
+
                             <ul className="sidebar-menu">
                                 <li><a href="#overview">Overview</a></li>
                                 <li><a href="#approach">Timmins Approach</a></li>
                                 <li><a href="#industries">Industries & Use Cases</a></li>
-                                <li><a href="#industries">Who This Domain is For</a></li>
-                                <li><a href="#industries">Job Families</a></li>
-                                <li><a href="#industries">Outcomes</a></li>
-                                <li><a href="#industries">Core Competencies</a></li>
-                                <li><a href="#industries">Competency x Job Family</a></li>
-                                <li><a href="#industries">Learning Paths</a></li>
-                                <li><a href="#industries">Formats</a></li>
-                                <li><a href="#industries">Courses</a></li>
-                                <li><a href="#industries">FAQ</a></li>
+                                <li><a href="#who">Who This Domain Is For</a></li>
+                                <li><a href="#job-families">Job Families</a></li>
+                                <li><a href="#outcomes">Outcomes</a></li>
+                                <li><a href="#formats">Training Formats</a></li>
+                                <li><a href="#instructors">Instructor</a></li>
+                                <li><a href="#faq">FAQ</a></li>
                             </ul>
 
-                            <div className="text-center">
-                                <a href="/contact-us" className="contact-link"
-                                    type="submit"
-                                    style={{
-                                        background: "#f5a623",
-                                        color: "#fff",
-                                        fontWeight: "600",
-                                        padding: "18px 34px",
-                                        borderRadius: "30px",
-                                        border: "none",
-                                        marginTop: "12px",
-                                    }}
-                                >
+                            <a href="/contact-us" className="sidebar-btn">
+                                Talk to Timmins
+                            </a>
 
-                                    Talk to Timmins
-                                </a>
-
-                            </div>
                         </div>
                     </aside>
+
 
                     {/* RIGHT CONTENT */}
                     <div className="domain-content">
 
                         {/* OVERVIEW */}
-                        <section id="overview" className="domain-section">
-                            <h2>Overview</h2>
-                            <p>
-                                Embedded Linux Engineering is at the core of modern device
-                                development. From automotive control systems to IoT gateways
-                                and telecom infrastructure, Linux powers mission-critical
-                                embedded systems worldwide.
-                            </p>
+                        <section id="overview" className="domain-section overview-modern">
+                            <div className="overview-head">
+                                <h2>Overview</h2>
+                                <p>
+                                    Embedded Linux Engineering is at the core of modern device development.
+                                    From automotive control systems to IoT gateways and telecom infrastructure,
+                                    Linux powers mission-critical embedded systems worldwide.
+                                </p>
+                            </div>
 
                             <div className="capability-grid">
                                 <div className="capability-card">
@@ -163,37 +136,47 @@ export default function EmbeddedLinuxDomain() {
 
                         {/* APPROACH */}
                         <section id="approach" className="domain-section">
-                            <div className="approach-title">
-                                <h2>How Timmins Approaches This Domain</h2>
+
+                            <div className="approach-container">
+
+                                <div className="approach-title">
+                                    <h2>How Timmins Approaches This Domain</h2>
+                                </div>
+
+                                <div className="approach-grid">
+
+                                    <div className="approach-card">
+                                        <h4>Competency-Driven</h4>
+                                        <p>Not just framework-driven</p>
+                                    </div>
+
+                                    <div className="approach-card">
+                                        <h4>Role-Aligned</h4>
+                                        <p>Aligned to real engineering roles</p>
+                                    </div>
+
+                                    <div className="approach-card">
+                                        <h4>Production-Ready Skills</h4>
+                                        <p>Hands-on deployment-focused learning</p>
+                                    </div>
+
+                                    <div className="approach-card">
+                                        <h4>All Seniority Levels</h4>
+                                        <p>Fresh grads to senior engineers</p>
+                                    </div>
+
+                                    <div className="approach-card">
+                                        <h4>Enterprise Customizable</h4>
+                                        <p>Adaptable for product teams</p>
+                                    </div>
+
+                                </div>
+
                             </div>
 
-                            <div className="approach-grid">
-                                <div className="approach-card">
-                                    <h4>Competency-Driven</h4>
-                                    <p>Not just framework-driven</p>
-                                </div>
-
-                                <div className="approach-card">
-                                    <h4>Role-Aligned</h4>
-                                    <p>Aligned to real engineering roles</p>
-                                </div>
-
-                                <div className="approach-card">
-                                    <h4>Production-Ready Skills</h4>
-                                    <p>Hands-on deployment-focused learning</p>
-                                </div>
-
-                                <div className="approach-card">
-                                    <h4>All Seniority Levels</h4>
-                                    <p>Fresh grads to senior engineers</p>
-                                </div>
-
-                                <div className="approach-card">
-                                    <h4>Enterprise Customizable</h4>
-                                    <p>Adaptable for product teams</p>
-                                </div>
-                            </div>
                         </section>
+
+
 
 
                         {/* INDUSTRIES SECTION */}
@@ -258,7 +241,7 @@ export default function EmbeddedLinuxDomain() {
                         </section>
 
                         {/* WHO THIS DOMAIN IS FOR */}
-                        <section id="who" className="domain-section who-section">
+                        <section id="who" className="domain-section who-modern">
 
                             <div className="section-heading-center">
                                 <h2>Who This Domain Is For</h2>
@@ -300,9 +283,10 @@ export default function EmbeddedLinuxDomain() {
 
 
 
+
                         {/* JOB FAMILIES */}
                         {/* JOB FAMILIES */}
-                        <section id="job-families" className="domain-section job-section">
+                        <section id="job-families" className="domain-section job-modern">
 
                             <div className="section-heading-center">
                                 <h2>Job Families We Support</h2>
@@ -310,7 +294,6 @@ export default function EmbeddedLinuxDomain() {
 
                             <div className="job-card">
 
-                                {/* Application Layer */}
                                 <div className="job-row">
                                     <div className="job-layer">Application Layer</div>
                                     <div className="job-roles">
@@ -321,7 +304,6 @@ export default function EmbeddedLinuxDomain() {
                                     </div>
                                 </div>
 
-                                {/* System Layer */}
                                 <div className="job-row">
                                     <div className="job-layer">System Layer</div>
                                     <div className="job-roles">
@@ -332,7 +314,6 @@ export default function EmbeddedLinuxDomain() {
                                     </div>
                                 </div>
 
-                                {/* Platform Layer */}
                                 <div className="job-row">
                                     <div className="job-layer">Platform Layer</div>
                                     <div className="job-roles">
@@ -343,7 +324,6 @@ export default function EmbeddedLinuxDomain() {
                                     </div>
                                 </div>
 
-                                {/* Advanced & Leadership */}
                                 <div className="job-row">
                                     <div className="job-layer">Advanced & Leadership</div>
                                     <div className="job-roles">
@@ -360,9 +340,10 @@ export default function EmbeddedLinuxDomain() {
 
 
 
+
                         {/* OUTCOMES */}
                         {/* OUTCOMES SECTION */}
-                        <section id="outcomes" className="domain-section outcomes-section">
+                        <section id="outcomes" className="domain-section outcomes-modern">
 
                             <div className="section-heading-center">
                                 <h2>Outcomes & Value Delivered</h2>
@@ -371,27 +352,27 @@ export default function EmbeddedLinuxDomain() {
                             <div className="outcomes-card">
 
                                 <div className="outcome-item">
-                                    <span className="check-icon">✓</span>
+                                    <div className="check-icon">✓</div>
                                     <p>Strong foundational and advanced embedded Linux skills</p>
                                 </div>
 
                                 <div className="outcome-item">
-                                    <span className="check-icon">✓</span>
+                                    <div className="check-icon">✓</div>
                                     <p>Faster onboarding of embedded engineers</p>
                                 </div>
 
                                 <div className="outcome-item">
-                                    <span className="check-icon">✓</span>
+                                    <div className="check-icon">✓</div>
                                     <p>Improved system stability and debuggability</p>
                                 </div>
 
                                 <div className="outcome-item">
-                                    <span className="check-icon">✓</span>
+                                    <div className="check-icon">✓</div>
                                     <p>Reduced dependency on ad-hoc troubleshooting</p>
                                 </div>
 
                                 <div className="outcome-item">
-                                    <span className="check-icon">✓</span>
+                                    <div className="check-icon">✓</div>
                                     <p>Clear progression from application-level to kernel-level expertise</p>
                                 </div>
 
@@ -400,128 +381,130 @@ export default function EmbeddedLinuxDomain() {
                         </section>
 
 
+
                         {/* TRAINING FORMATS SECTION */}
-                        <section id="formats" className="domain-section training-section">
-
-                            <div className="section-heading-center">
-                                <h2>Competencies – Training Formats</h2>
-                            </div>
-
-                            <div className="accordion">
-
-                                {/* ITEM 1 */}
-                                <div className="accordion-item active">
-                                    <button className="accordion-header">
-                                        <span>🛠 Fundamentals of Embedded Linux</span>
-                                        <span className="arrow">−</span>
-                                    </button>
-                                    <div className="accordion-content">
-                                        <ul>
-                                            <li>Linux architecture & boot process</li>
-                                            <li>Kernel basics & configuration</li>
-                                            <li>BSP fundamentals</li>
-                                            <li>Driver development introduction</li>
-                                            <li>Build systems (Yocto / Buildroot)</li>
-                                        </ul>
-                                    </div>
+                        <section className="modern-accordion">
+                            <div className="accordion-wrapper">
+                                <div className="section-heading-center">
+                                    <h2>Outcomes & Value Delivered</h2>
                                 </div>
 
-                                {/* ITEM 2 */}
-                                <div className="accordion-item">
-                                    <button className="accordion-header">
-                                        <span>⚙ Kernel & Driver Engineering</span>
-                                        <span className="arrow">+</span>
-                                    </button>
-                                    <div className="accordion-content">
-                                        <ul>
-                                            <li>Advanced kernel debugging</li>
-                                            <li>Device driver design patterns</li>
-                                            <li>Memory management & performance tuning</li>
-                                        </ul>
-                                    </div>
-                                </div>
 
-                                {/* ITEM 3 */}
-                                <div className="accordion-item">
-                                    <button className="accordion-header">
-                                        <span>🚀 Production Deployment</span>
-                                        <span className="arrow">+</span>
-                                    </button>
-                                    <div className="accordion-content">
-                                        <ul>
-                                            <li>Secure boot & hardening</li>
-                                            <li>System validation</li>
-                                            <li>Deployment workflows</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                {[
+                                    {
+                                        title: "📘 Fundamentals of Digital Marketing",
+                                        content: (
+                                            <>
+                                                <p>You can start and learn from the basic that contains:</p>
+                                                <ul>
+                                                    <li>Digital Marketing Landscape & Strategy #1 & 2</li>
+                                                    <li>Pitching Digital Marketing’s Study Case</li>
+                                                    <li>Marketing & Consumer Psychology (RVL)</li>
+                                                    <li>Brand Building</li>
+                                                    <li>Marketing Copywriting</li>
+                                                </ul>
+                                            </>
+                                        )
+                                    },
+                                    {
+                                        title: "📱 Social Media Organic",
+                                        content: <p>Content strategy, growth systems and engagement framework.</p>
+                                    },
+                                    {
+                                        title: "🛠 Landing Page Building",
+                                        content: <p>High converting landing pages and funnel strategy.</p>
+                                    },
+                                    {
+                                        title: "📊 Marketing Data Analytics",
+                                        content: <p>Performance tracking and reporting frameworks.</p>
+                                    }
+                                ].map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className={`accordion-item ${activeAccordion === index ? "active" : ""}`}
+                                    >
+                                        <div
+                                            className="accordion-header"
+                                            onClick={() => toggleAccordion(index)}
+                                            style={{ cursor: "pointer" }}
+                                        >
+                                            <span>{item.title}</span>
+                                            <span>{activeAccordion === index ? "⌃" : "⌄"}</span>
+                                        </div>
 
-                                {/* ITEM 4 */}
-                                <div className="accordion-item">
-                                    <button className="accordion-header">
-                                        <span>📊 System Integration & Validation</span>
-                                        <span className="arrow">+</span>
-                                    </button>
-                                    <div className="accordion-content">
-                                        <ul>
-                                            <li>Hardware bring-up</li>
-                                            <li>Debugging techniques</li>
-                                            <li>Automation & testing strategies</li>
-                                        </ul>
+                                        {activeAccordion === index && (
+                                            <div className="accordion-body">
+                                                {item.content}
+                                            </div>
+                                        )}
                                     </div>
-                                </div>
+                                ))}
 
                             </div>
-
                         </section>
 
                         {/* ================= INSTRUCTORS ================= */}
                         {/* ================= INSTRUCTORS ================= */}
-                        <section id="instructors" className="instructor-section">
-                            <div className="section-heading">
-                                <h2>Instructor</h2>
-                            </div>
+                        {/* ================= INSTRUCTORS ================= */}
+                        <section id="instructors" className="instructor-modern">
+                            <div className="container">
 
-                            <div className="instructor-wrapper">
-                                <button className="nav-btn prev-btn">&#10094;</button>
+                                <h2 className="section-title">Instructor</h2>
 
-                                <div className="instructor-track">
-                                    <div className="instructor-card">
-                                        <img src="/assets/New_images/course.png" alt="Instructor" />
-                                        <div className="card-content">
-                                            <h4>Metha Dwi Karina</h4>
-                                            <p>Ex Digital Strategist at Gojek</p>
+                                <div className="instructor-slider">
+
+                                    <button className="nav-btn prev-btn">&#10094;</button>
+
+                                    <div className="instructor-track">
+
+                                        <div className="instructor-card">
+                                            <div className="instructor-img">
+                                                <img src="/assets/New_images/course.png" alt="Instructor" />
+                                            </div>
+                                            <div className="instructor-info">
+                                                <h4>Metha Dwi Karina</h4>
+                                                <p>Ex Digital Strategist at Gojek</p>
+                                            </div>
                                         </div>
+
+                                        <div className="instructor-card">
+                                            <div className="instructor-img">
+                                                <img src="/assets/New_images/course.png" alt="Instructor" />
+                                            </div>
+                                            <div className="instructor-info">
+                                                <h4>Kareem Reza</h4>
+                                                <p>Social Media Specialist</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="instructor-card">
+                                            <div className="instructor-img">
+                                                <img src="/assets/New_images/course.png" alt="Instructor" />
+                                            </div>
+                                            <div className="instructor-info">
+                                                <h4>Balebat Buana Puspa</h4>
+                                                <p>Digital Marketing Manager</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="instructor-card">
+                                            <div className="instructor-img">
+                                                <img src="/assets/New_images/course.png" alt="Instructor" />
+                                            </div>
+                                            <div className="instructor-info">
+                                                <h4>Roro Ajeng Sekar Arum</h4>
+                                                <p>Social Media & Optimization</p>
+                                            </div>
+                                        </div>
+
                                     </div>
 
-                                    <div className="instructor-card">
-                                        <img src="/assets/New_images/course.png" alt="Instructor" />
-                                        <div className="card-content">
-                                            <h4>Kareem Reza</h4>
-                                            <p>Social Media Specialist</p>
-                                        </div>
-                                    </div>
+                                    <button className="nav-btn next-btn">&#10095;</button>
 
-                                    <div className="instructor-card">
-                                        <img src="/assets/New_images/course.png" alt="Instructor" />
-                                        <div className="card-content">
-                                            <h4>Ralehat Buana Puspa</h4>
-                                            <p>Digital Marketing Manager</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="instructor-card">
-                                        <img src="/assets/New_images/course.png" alt="Instructor" />
-                                        <div className="card-content">
-                                            <h4>Roro Ajeng Sekar</h4>
-                                            <p>Social Media & Optimization</p>
-                                        </div>
-                                    </div>
                                 </div>
-
-                                <button className="nav-btn next-btn">&#10095;</button>
                             </div>
                         </section>
+
 
 
 

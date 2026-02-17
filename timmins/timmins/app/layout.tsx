@@ -290,6 +290,7 @@ export default function RootLayout({
             __html: JSON.stringify(schemaData)
           }}
         />
+
       </body>
     </html>
   );
