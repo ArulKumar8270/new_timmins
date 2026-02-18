@@ -1,8 +1,13 @@
+"use client";
+import { useState } from "react";
+
 import Image from "next/image";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 
 export default function Home() {
+  const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
+
   return (
     <>
       <Header />
@@ -46,7 +51,7 @@ export default function Home() {
                             Building Future-Ready Tech Teams
                           </h1>
 
-                          <p className="text-black text-lg font-medium">
+                          <p className="text-black text-xl font-medium homePara">
                             Engineering-grade capability building for modern tech teams,
                             trusted for over a decade across 12+ countries worldwide.
                           </p>
@@ -282,80 +287,76 @@ export default function Home() {
             >
 
               {/* Start About Area */}
-              <section className="ed-about ed-about--style2 mb-5 position-relative learn-fit-section">
-                <div className="container ed-container">
+              <section className="About-area learn-fit-section position-relative mb-5 ">
 
+                {/* Section Title Container */}
+                <div className="container ed-container">
                   <div className="row justify-content-center pb-4">
                     <div className="col-lg-8 col-12">
                       <div className="ed-section-head text-center">
-                        <h3 className="ed-section-head__title ed-split-text left">
+                        <h3 className="ed-section-head__title">
                           Learn the Way That Fits You
                         </h3>
                       </div>
                     </div>
                   </div>
+                </div>
 
-                  <div className="row serviceBox">
+                {/* Two Separate Containers */}
+                <div className="container ed-container">
+                  <div className="row g-4">
 
                     {/* FOR COMPANIES */}
                     <div className="col-lg-6 col-12">
-                      <div className="ed-about__content learn-box">
-                        <div className="ed-section-head">
-                          <h3 className="ed-section-head__title ed-split-text right">
-                            For Companies
-                          </h3>
-                          <p className="ed-section-head__text">
-                            Build team-wide engineering capability through tailored training and consulting. Popular corporate programs:
-                          </p>
-                        </div>
+                      <div className="learn-box-single">
+                        <h3>For Companies</h3>
+                        <p>
+                          Build team-wide engineering capability through tailored training and consulting.
+                          Popular corporate programs:
+                        </p>
 
-                        <div className="ed-about__feature">
-                          <ul className="ed-about__features-list">
-                            <li>Embedded Systems Engineering</li>
-                            <li>5G R&D & Technician Upskilling</li>
-                            <li>AI Consulting & Applied AI</li>
-                            <li>Fresh Graduate Onboarding program</li>
-                            <li>Corporate Training Malaysia (HRDC Claimable)</li>
-                          </ul>
-                        </div>
+                        <ul>
+                          <li>Embedded Systems Engineering</li>
+                          <li>5G R&D & Technician Upskilling</li>
+                          <li>AI Consulting & Applied AI</li>
+                          <li>Fresh Graduate Onboarding program</li>
+                          <li>Corporate Training Malaysia (HRDC Claimable)</li>
+                        </ul>
 
-                        <div className="ed-about__btn ed-btn">
-                          <a href="/courses">Explore B2B Solutions</a>
-                        </div>
+                        <a href="/courses" className="learn-btn">
+                          Explore B2B Solutions
+                        </a>
                       </div>
                     </div>
 
                     {/* FOR INDIVIDUALS */}
                     <div className="col-lg-6 col-12">
-                      <div className="ed-about__content learn-box">
-                        <div className="ed-section-head">
-                          <h3 className="ed-section-head__title ed-split-text right">
-                            For Individuals (Public Classes)
-                          </h3>
-                          <p className="ed-section-head__text">
-                            Technical courses designed for engineers, fresh graduates, and career switchers. Popular public classes:
-                          </p>
-                        </div>
+                      <div className="learn-box-single">
+                        <h3>For Individuals (Public Classes)</h3>
+                        <p>
+                          Technical courses designed for engineers, fresh graduates,
+                          and career switchers. Popular public classes:
+                        </p>
 
-                        <div className="ed-about__feature">
-                          <ul className="ed-about__features-list">
-                            <li>Embedded Linux System Internals</li>
-                            <li>Data Analysis and Visualization with Power BI</li>
-                            <li>Machine Learning with Python</li>
-                            <li>Kotlin Fundamentals</li>
-                            <li>Gen AI for IT and Non-IT Teams</li>
-                          </ul>
-                        </div>
+                        <ul>
+                          <li>Embedded Linux System Internals</li>
+                          <li>Data Analysis and Visualization with Power BI</li>
+                          <li>Machine Learning with Python</li>
+                          <li>Kotlin Fundamentals</li>
+                          <li>Gen AI for IT and Non-IT Teams</li>
+                        </ul>
 
-                        <div className="ed-about__btn ed-btn">
-                          <a href="#">Browse Public Classes</a>
-                        </div>
+                        <a href="#" className="learn-btn">
+                          Browse Public Classes
+                        </a>
                       </div>
                     </div>
 
                   </div>
                 </div>
+
               </section>
+
 
             </div>
             <>
@@ -422,7 +423,8 @@ export default function Home() {
 
                   <div className="text-center pt-4">
                     <a
-                      href="/about/approach"
+                      href="https://timmins.nicknameinfotech.com/our-approach/"
+                      target="_blank" rel="noopener noreferrer"
                       className="fw-semibold why-work-link"
                     >
                       Explore How We Work
@@ -700,8 +702,9 @@ export default function Home() {
                 {/* BOTTOM LINK (NOT A BUTTON) */}
                 <div className="text-center text-xl pt-4">
                   <a
-                    href="/case-studies"
+                    href="https://timmins.nicknameinfotech.com/case-study"
                     className="fw-semibold why-work-link"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     See All Case Studies
                   </a>
@@ -973,73 +976,8 @@ export default function Home() {
               </section>
             </div>
 
-            <section className="ed-call-action position-relative section-gap pb-5 about-cta">
-              <div className="container ed-container">
-                <div className="ed-call-action__inner position-relative">
 
-                  <div className="ed-call-action__shapes">
-                    <img
-                      className="ed-call-action__shape-1 rotate-ani"
-                      src="/assets/images/call-action/call-action-1/shape-1.svg"
-                      alt="shape-1"
-                    />
-                    <img
-                      className="ed-call-action__shape-2"
-                      src="/assets/images/call-action/call-action-1/shape-2.svg"
-                      alt="shape-2"
-                    />
-                    <img
-                      className="ed-call-action__shape-3 updown-ani"
-                      src="/assets/images/call-action/call-action-1/shape-3.svg"
-                      alt="shape-3"
-                    />
-                  </div>
-
-                  <div className="row align-items-center">
-
-                    {/* IMAGE */}
-                    <div className="col-lg-6 col-12">
-                      <div className="ed-call-action__img">
-                        <img
-                          src="/assets/New_images/final cta horizontal.png"
-                          alt="call-action-img"
-                        />
-                      </div>
-                    </div>
-
-                    {/* CONTENT */}
-                    <div className="col-lg-6 col-12 order-class pb-5">
-                      <div className="ed-call-action__content">
-
-
-                        <h4 className="cta-heading ">
-                          Let’s Build Your Team’s Next Capability
-                        </h4>
-
-                        <p className="ed-section-head__text mb-4">
-                          Whether you're designing new systems, strengthening delivery capability, or preparing teams for evolving operational requirements, we’re here to help.
-                        </p>
-
-
-                        <div
-                          className="ed-call-action__content-btn ed-btn mb-7"
-                          style={{ backgroundColor: 'var(--ed-secondary-color)' }}
-                        >
-                          <a href="/contact-us">
-                            Book a Consultation
-                          </a>
-                        </div>
-
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </section>
-
-
-            <section className="global-presence-section section-gap">
+            <section className="global-presence-section section-gap ">
               <div className="container">
 
                 {/* SECTION TITLE */}
@@ -1142,317 +1080,155 @@ export default function Home() {
 
 
 
-
-
-
-            {/* Start Faq Area */}
-            <section className="ed-faq section-gap position-relative">
+            <section className="ed-call-action position-relative section-gap pb-5 about-cta">
               <div className="container ed-container">
-                <div className="ed-section-head text-center">
+                <div className="ed-call-action__inner position-relative">
 
-                  <h3 className="ed-section-head__title text-center">
-                    Frequently Asked Questions
-                  </h3>
-                </div>
-                <div className="ed-faq__inner position-relative">
+                  <div className="ed-call-action__shapes">
+                    <img
+                      className="ed-call-action__shape-1 rotate-ani"
+                      src="/assets/images/call-action/call-action-1/shape-1.svg"
+                      alt="shape-1"
+                    />
+                    <img
+                      className="ed-call-action__shape-2"
+                      src="/assets/images/call-action/call-action-1/shape-2.svg"
+                      alt="shape-2"
+                    />
+                    <img
+                      className="ed-call-action__shape-3 updown-ani"
+                      src="/assets/images/call-action/call-action-1/shape-3.svg"
+                      alt="shape-3"
+                    />
+                  </div>
 
                   <div className="row align-items-center">
-                    <div className="col-lg-12 col-xl-6 col-12">
-                      {/* Faq Images  */}
-                      <div className="ed-faq__content">
 
-                        <div
-                          className="ed-faq__accordion faq-inner accordion"
-                          id="accordionExample"
-                        >
-                          {/* Single Faq */}
-                          <div className="ed-faq__accordion-item">
-                            <h2 className="accordion-header" id="headingOne">
-                              <button
-                                className="accordion-button"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne"
-                                aria-expanded="true"
-                                aria-controls="collapseOne"
-                              >
-                                1. What is the best embedded systems training for beginners?
-                              </button>
-                            </h2>
-                            <div
-                              id="collapseOne"
-                              className="accordion-collapse collapse show"
-                              aria-labelledby="headingOne"
-                              data-bs-parent="#accordionExample"
-                            >
-                              <div className="ed-faq__accordion-body">
-                                <p className="ed-faq__accordion-text">
-                                  The recommended beginner courses are OS Essentials, Embedded C & GDB, and Embedded Linux System Internals. These courses provide a strong foundation in operating systems, embedded programming, debugging, and Linux internals.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          {/* Single Faq */}
-                          <div className="ed-faq__accordion-item">
-                            <h2 className="accordion-header" id="headingThree">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree"
-                                aria-expanded="false"
-                                aria-controls="collapseThree"
-                              >
-                                2. Does Timmins offer AI consulting or only training?
-                              </button>
-                            </h2>
-                            <div
-                              id="collapseThree"
-                              className="accordion-collapse collapse"
-                              aria-labelledby="headingThree"
-                              data-bs-parent="#accordionExample"
-                            >
-                              <div className="ed-faq__accordion-body">
-                                <p className="ed-faq__accordion-text">
-                                  Timmins offers both AI consulting and AI training, including capability assessment, use-case identification, and structured enterprise AI upskilling programs.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          {/* Single Faq */}
-                          <div className="ed-faq__accordion-item">
-                            <h2 className="accordion-header" id="headingTwo">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo"
-                                aria-expanded="false"
-                                aria-controls="collapseTwo"
-                              >
-                                3. Are your programs HRDC Claimable?
-
-                              </button>
-                            </h2>
-                            <div
-                              id="collapseTwo"
-                              className="accordion-collapse collapse"
-                              aria-labelledby="headingTwo"
-                              data-bs-parent="#accordionExample"
-                            >
-                              <div className="ed-faq__accordion-body">
-                                <p className="ed-faq__accordion-text">
-                                  Yes. For Malaysian employers only, many AI, Embedded Systems, 5G, and corporate training programs are HRDC claimable, subject to eligibility and approval.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          {/* Single Faq */}
-                          <div className="ed-faq__accordion-item">
-                            <h2 className="accordion-header" id="headingThree">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree"
-                                aria-expanded="false"
-                                aria-controls="collapseThree"
-                              >
-                                4. Do you provide customized training for engineering teams?
-                              </button>
-                            </h2>
-                            <div
-                              id="collapseThree"
-                              className="accordion-collapse collapse"
-                              aria-labelledby="headingThree"
-                              data-bs-parent="#accordionExample"
-                            >
-                              <div className="ed-faq__accordion-body">
-                                <p className="ed-faq__accordion-text">
-                                  Yes. Timmins specializes in customized, role-based training pathways for embedded systems, AI, 5G, and software engineering teams.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          {/* Single Faq */}
-                          <div className="ed-faq__accordion-item">
-                            <h2 className="accordion-header" id="headingFour">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseFour"
-                                aria-expanded="false"
-                                aria-controls="collapseFour"
-                              >
-                                5.Are Timmins training courses available online?
-                              </button>
-                            </h2>
-                            <div
-                              id="collapseFour"
-                              className="accordion-collapse collapse"
-                              aria-labelledby="headingFour"
-                              data-bs-parent="#accordionExample"
-                            >
-                              <div className="ed-faq__accordion-body">
-                                <p className="ed-faq__accordion-text">
-                                  Yes. Timmins offers online, on-site, and hybrid training programs for engineering and technical teams.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div className="col-lg-12 col-xl-6 col-12">
-                      {/* Faq Content  */}
-                      <div className="ed-faq__content">
-
-                        <div
-                          className="ed-faq__accordion faq-inner accordion"
-                          id="accordionExample"
-                        >
-                          {/* Single Faq */}
-                          <div className="ed-faq__accordion-item">
-                            <h2 className="accordion-header" id="headingOne">
-                              <button
-                                className="accordion-button"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne"
-                                aria-expanded="true"
-                                aria-controls="collapseOne"
-                              >
-                                6. What industries does Timmins work with?
-                              </button>
-                            </h2>
-                            <div
-                              id="collapseOne"
-                              className="accordion-collapse collapse show"
-                              aria-labelledby="headingOne"
-                              data-bs-parent="#accordionExample"
-                            >
-                              <div className="ed-faq__accordion-body">
-                                <p className="ed-faq__accordion-text">
-                                  Timmins works with semiconductors, telecom, manufacturing, banking, digital platforms, and technology-driven enterprises.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          {/* Single Faq */}
-                          <div className="ed-faq__accordion-item">
-                            <h2 className="accordion-header" id="headingTwo">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo"
-                                aria-expanded="false"
-                                aria-controls="collapseTwo"
-                              >
-                                7. Do you provide corporate training outside Malaysia?
-                              </button>
-                            </h2>
-                            <div
-                              id="collapseTwo"
-                              className="accordion-collapse collapse"
-                              aria-labelledby="headingTwo"
-                              data-bs-parent="#accordionExample"
-                            >
-                              <div className="ed-faq__accordion-body">
-                                <p className="ed-faq__accordion-text">
-                                  Yes. Timmins delivers corporate training across Malaysia, Singapore, Indonesia, China, India, Vietnam, the United States, and Canada.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          {/* Single Faq */}
-                          <div className="ed-faq__accordion-item">
-                            <h2 className="accordion-header" id="headingThree">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree"
-                                aria-expanded="false"
-                                aria-controls="collapseThree"
-                              >
-                                8. How is Timmins different from other corporate training providers?
-                              </button>
-                            </h2>
-                            <div
-                              id="collapseThree"
-                              className="accordion-collapse collapse"
-                              aria-labelledby="headingThree"
-                              data-bs-parent="#accordionExample"
-                            >
-                              <div className="ed-faq__accordion-body">
-                                <p className="ed-faq__accordion-text">
-                                  Timmins is practitioner-led, engineering-grade, and deeply specialized, focusing on real capability building rather than generic or tool-centric training.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          {/* Single Faq */}
-                          <div className="ed-faq__accordion-item">
-                            <h2 className="accordion-header" id="headingThree">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree"
-                                aria-expanded="false"
-                                aria-controls="collapseThree"
-                              >
-                                9. Do you offer end-to-end Embedded Linux training?
-                              </button>
-                            </h2>
-                            <div
-                              id="collapseThree"
-                              className="accordion-collapse collapse"
-                              aria-labelledby="headingThree"
-                              data-bs-parent="#accordionExample"
-                            >
-                              <div className="ed-faq__accordion-body">
-                                <p className="ed-faq__accordion-text">
-                                  Yes. Timmins covers Embedded Linux end-to-end, including OS Essentials, Embedded C & GDB, Embedded Linux System Internals, device drivers (audio, I2C), kernel debugging, user-space and kernel internals, and SELinux, security.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          {/* Single Faq */}
-                          <div className="ed-faq__accordion-item">
-                            <h2 className="accordion-header" id="headingFour">
-                              <button
-                                className="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#collapseFour"
-                                aria-expanded="false"
-                                aria-controls="collapseFour"
-                              >
-                                10. Can Timmins design onboarding programs for fresh graduates?
-
-                              </button>
-                            </h2>
-                            <div
-                              id="collapseFour"
-                              className="accordion-collapse collapse"
-                              aria-labelledby="headingFour"
-                              data-bs-parent="#accordionExample"
-                            >
-                              <div className="ed-faq__accordion-body">
-                                <p className="ed-faq__accordion-text">
-                                  Yes. Timmins has designed and delivered large-scale onboarding and engineering academy programs for semiconductor and telecom organizations.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                    {/* IMAGE */}
+                    <div className="col-lg-6 col-12">
+                      <div className="ed-call-action__img">
+                        <img
+                          src="/assets/New_images/final cta horizontal.png"
+                          alt="call-action-img"
+                        />
                       </div>
                     </div>
+
+                    {/* CONTENT */}
+                    <div className="col-lg-6 col-12 order-class pb-5">
+                      <div className="ed-call-action__content">
+
+
+                        <h4 className="cta-heading ">
+                          Let’s Build Your Team’s Next Capability
+                        </h4>
+
+                        <p className="ed-section-head__text mb-4">
+                          Whether you're designing new systems, strengthening delivery capability, or preparing teams for evolving operational requirements, we’re here to help.
+                        </p>
+
+
+                        <div
+                          className="ed-call-action__content-btn ed-btn mb-7"
+                          style={{ backgroundColor: 'var(--ed-secondary-color)' }}
+                        >
+                          <a href="/contact-us">
+                            Book a Consultation
+                          </a>
+                        </div>
+
+                      </div>
+                    </div>
+
                   </div>
+                </div>
+              </div>
+            </section>
+
+
+
+
+
+
+            <section className="ed-faq section-gap position-relative overflow-hidden">
+
+              <div className="container ">
+
+                <div className="section-heading-center">
+                  <h2>Frequently Asked Questions</h2>
+                </div>
+
+
+                <div className="faq-grid">
+
+                  {[
+                    {
+                      question: "1. What is the best embedded systems training for beginners?",
+                      answer: "The recommended beginner courses are OS Essentials, Embedded C & GDB, and Embedded Linux System Internals. These courses provide a strong foundation in operating systems, embedded programming, debugging, and Linux internals."
+
+                    },
+                    {
+                      question: "2. Does Timmins offer AI consulting or only training?",
+                      answer: "Timmins offers both AI consulting and AI training, including capability assessment, use-case identification, and structured enterprise AI upskilling programs."
+                    },
+                    {
+                      question: "3. Are your programs HRDC Claimable?",
+                      answer: "Yes. For Malaysian employers only, many AI, Embedded Systems, 5G, and corporate training programs are HRDC claimable, subject to eligibility and approval."
+                    },
+                    {
+                      question: "4. Do you provide customized training for engineering teams?",
+                      answer: "Yes. Timmins specializes in customized, role-based training pathways for embedded systems, AI, 5G, and software engineering teams."
+                    },
+                    {
+                      question: "5.Are Timmins training courses available online?",
+                      answer: "Yes. Timmins offers online, on-site, and hybrid training programs for engineering and technical teams."
+                    },
+                    {
+                      question: "6. What industries does Timmins work with?",
+                      answer: "Timmins works with semiconductors, telecom, manufacturing, banking, digital platforms, and technology-driven enterprises."
+                    },
+                    {
+                      question: "7. Do you provide corporate training outside Malaysia?",
+                      answer: "Yes. Timmins delivers corporate training across Malaysia, Singapore, Indonesia, China, India, Vietnam, the United States, and Canada."
+                    },
+                    {
+                      question: "8. How is Timmins different from other corporate training providers?",
+                      answer: "Timmins is practitioner-led, engineering-grade, and deeply specialized, focusing on real capability building rather than generic or tool-centric training."
+                    },
+                    {
+                      question: "9. Do you offer end-to-end Embedded Linux training?",
+                      answer: "Yes. Timmins covers Embedded Linux end-to-end, including OS Essentials, Embedded C & GDB, Embedded Linux System Internals, device drivers (audio, I2C), kernel debugging, user-space and kernel internals, and SELinux, security."
+                    },
+                    {
+                      question: "10. Can Timmins design onboarding programs for fresh graduates?",
+                      answer: "Yes. Timmins has designed and delivered large-scale onboarding and engineering academy programs for semiconductor and telecom organizations."
+                    }
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className={`faq-card ${activeAccordion === index ? "active" : ""}`}
+                    >
+                      <div
+                        className="faq-question"
+                        onClick={() =>
+                          setActiveAccordion(activeAccordion === index ? null : index)
+                        }
+                      >
+                        <span>{item.question}</span>
+                        <span className="arrow">
+                          {activeAccordion === index ? "−" : "›"}
+                        </span>
+                      </div>
+
+                      <div
+                        className={`faq-answer ${activeAccordion === index ? "show" : ""
+                          }`}
+                      >
+                        {item.answer}
+                      </div>
+                    </div>
+                  ))}
+
                 </div>
               </div>
             </section>

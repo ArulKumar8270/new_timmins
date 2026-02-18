@@ -215,43 +215,70 @@ const page = () => {
                 </div>
             </section>
 
-            <section className="approach-cta py-5">
-                <div className="container">
-                    <div className="row justify-content-center text-center">
-                        <div className="col-lg-8">
+            <section className="ed-call-action position-relative section-gap pb-5 about-cta">
+                <div className="container ed-container">
+                    <div className="ed-call-action__inner position-relative">
 
-                            <h2 className="mb-3 fw-bold">
-                                Ready to Build Capability?
-                            </h2>
+                        <div className="ed-call-action__shapes">
+                            <img
+                                className="ed-call-action__shape-1 rotate-ani"
+                                src="/assets/images/call-action/call-action-1/shape-1.svg"
+                                alt="shape-1"
+                            />
+                            <img
+                                className="ed-call-action__shape-2"
+                                src="/assets/images/call-action/call-action-1/shape-2.svg"
+                                alt="shape-2"
+                            />
+                            <img
+                                className="ed-call-action__shape-3 updown-ani"
+                                src="/assets/images/call-action/call-action-1/shape-3.svg"
+                                alt="shape-3"
+                            />
+                        </div>
 
-                            <p className="mb-4 text-muted">
-                                Let’s design a solution that fits your engineering and business needs.
-                            </p>
+                        <div className="row align-items-center">
 
-                            <div className="d-flex justify-content-center gap-3 flex-wrap">
+                            {/* IMAGE */}
+                            <div className="col-lg-6 col-12">
+                                <div className="ed-call-action__img">
+                                    <img
+                                        src="/assets/New_images/final cta horizontal.png"
+                                        alt="call-action-img"
+                                    />
+                                </div>
+                            </div>
 
-                                {/* PRIMARY */}
-                                <a href="/solutions" className="btn btn-cta-primary">
-                                    Explore Technical Solutions →
-                                </a>
+                            {/* CONTENT */}
+                            <div className="col-lg-6 col-12 order-class pb-5">
+                                <div className="ed-call-action__content">
 
-                                {/* SECONDARY */}
-                                <a href="/courses" className="btn btn-cta-outline">
-                                    View Courses →
-                                </a>
 
-                                {/* TERTIARY */}
-                                <a href="/contact" className="btn btn-cta-soft">
-                                    Speak to Our Team →
-                                </a>
+                                    <h4 className="cta-heading ">
+                                        Ready to Build Capability?
+                                    </h4>
 
+                                    <p className="ed-section-head__text mb-4">
+                                        Let’s design a solution that fits your engineering and business needs.
+                                    </p>
+
+
+                                    <div
+                                        className="ed-call-action__content-btn ed-btn mb-7"
+                                        style={{ backgroundColor: 'var(--ed-secondary-color)' }}
+                                    >
+                                        <a href="https://timmins.nicknameinfotech.com/contact-us" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
+                                            Speak to Our Team
+                                        </a>
+                                    </div>
+
+                                </div>
                             </div>
 
                         </div>
                     </div>
                 </div>
             </section>
-
 
 
             <Footer />

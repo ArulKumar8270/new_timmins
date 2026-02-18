@@ -79,47 +79,54 @@ export default function TenYearsPage() {
                 <div className="journey-arrow">↓</div>
 
                 {/* 2018–2019 */}
-                <section className=" approach-section-1  listen-first section gap">
-                    <div className="approach-container">
-                        {/* LEFT CONTENT */}
+                <section className="approach-section co-design">
+                    <div className="approach-container reverse">
+                        {/* LEFT IMAGE */}
+                        <div className="approach-image">
+                            <img
+                                src="/assets/New_images/2018.png"
+                                alt="Co-design tailored solutions"
+                            />
+                        </div>
+                        {/* RIGHT CONTENT */}
                         <div className="approach-text">
-                            <h2>2018–2019 - Specialization & North America Expansion
-                            </h2>
-                            <h6>
+                            <h2>2018–2019 - Specialization & North America Expansion</h2>
+                            <p>
                                 Timmins shifted into advanced technical domains:
 
-                            </h6>
+                            </p>
                             <ul>
-                                <li>telecom & 5G capability
-
+                                <li>Telecom & 5G capability
                                 </li>
-                                <li>semiconductor & embedded engineering
+                                <li>Semiconductor & embedded engineering
                                 </li>
                                 <li>AI & data foundations
                                 </li>
-                                <li>enterprise software engineering
+                                <li>Eenterprise software engineering
                                 </li>
                             </ul>
-                            <h6 className="mt-3">2018:</h6>
+
+                            <h6 className="mt-3">2017:</h6>
                             <ul>
                                 <li>HRD Corp–recognized Training Provider, enabling HRDC-Claimable Training for Malaysian employers
                                 </li>
 
                             </ul>
-                            <h6 className="mt-3">2019:</h6>
+                            <h6 className="mt-3">2017:</h6>
                             <ul>
-                                <li>Expanded operations to Canada to access global subject matter expertse
+                                <li>Expanded operations to Canada to access global subject matter experts
+
                                 </li>
-                                <li>Enabled cross-regional knowledge exchange</li>
+                                <li>Enabled cross-regional knowledge exchange
+
+                                </li>
                                 <li>Broadened delivery of practitioner-led technical upskilling programs
-                                    Expanded operations to Canada to access global subject matter expertse
+
+
                                 </li>
+
                             </ul>
 
-                        </div>
-                        {/* RIGHT IMAGE */}
-                        <div className="approach-image">
-                            <img src="/assets/New_images/2018.png" alt="We listen first" />
 
                         </div>
                     </div>
@@ -159,23 +166,25 @@ export default function TenYearsPage() {
                 <div className="journey-arrow">↓</div>
 
 
-                <section className=" approach-section-1  listen-first section gap">
-                    <div className="approach-container">
-                        {/* LEFT CONTENT */}
+                <section className="approach-section co-design">
+                    <div className="approach-container reverse">
+                        {/* LEFT IMAGE */}
+                        <div className="approach-image">
+                            <img
+                                src="/assets/New_images/2024.jpg"
+                                alt="Co-design tailored solutions"
+                            />
+                        </div>
+                        {/* RIGHT CONTENT */}
                         <div className="approach-text">
-                            <h2>2024 - Opening Timmins Training Center, Bayan Lepas (Penang)
-                            </h2>
-
+                            <h2>2024 - Opening Timmins Training Center, Bayan Lepas (Penang)</h2>
                             <p>
-                                Timmins opened a dedicated training center in Bayan Lepas, Penang, to support hands-on, lab-based technical training and strengthen its delivery capability in Malaysia.
+                                Timmins opened a dedicated training center in Bayan Lepas, Penang, to support hands-on, lab-based technical training and strengthen its delivery capability in Malaysia
 
                             </p>
 
 
-                        </div>
-                        {/* RIGHT IMAGE */}
-                        <div className="approach-image">
-                            <img src="/assets/New_images/2024.png" alt="We listen first" />
+
                         </div>
                     </div>
                 </section>

@@ -2232,6 +2232,7 @@
 
 .global-presence-section {
     background: #eaf4fa;
+
 }
 
 .global-title {
@@ -2274,6 +2275,7 @@
 /* ===== GLOBAL FLAG SECTION ===== */
 .global-presence-section {
     background: #eaf4fa;
+
 }
 
 .country-card {
@@ -5483,4 +5485,127 @@ header {
     position: sticky;
     top: 200px;
     /* adjust based on navbar height */
+}
+
+.homePara {
+    font-size: 1.15rem;
+}
+
+
+.learn-box-single {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.learn-box-single h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.learn-box-single p {
+    margin-bottom: 20px;
+    color: #3b3a3a;
+}
+
+.learn-box-single ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.learn-box-single ul li {
+    margin-bottom: 10px;
+    color: #01070b;
+    font-size: 15px;
+}
+
+.learn-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #4a86c5;
+    color: #0b0505 !important;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.learn-btn:hover {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #4a86c5;
+    color: #ffffff !important;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.About-area {
+    background: #ede3f3;
+}
+
+.global-presence-section {
+    margin-top: 80px;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.hero-btn {
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Blue buttons */
+.hero-btn.primary {
+    background-color: #3b82b6;
+    color: #fff;
+}
+
+.hero-btn.primary:hover {
+    background-color: #3b82b6;
+    color: #fff !important;
+}
+
+/* Orange middle button */
+.hero-btn.highlight {
+    background-color: #f4a623;
+    color: #fff;
+}
+
+.hero-btn.highlight:hover {
+    background-color: #e69500;
+}
+
+
+.view-map-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 22px;
+    background-color: #f4a623;
+    /* Timmins yellow */
+    color: #fff;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.view-map-btn:hover {
+    background-color: #d98e14;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }

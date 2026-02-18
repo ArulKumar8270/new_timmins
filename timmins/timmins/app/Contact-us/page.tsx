@@ -52,18 +52,28 @@ export default function contactUspage() {
                                 </p>
 
                                 <p>
-                                    Taman Zeta@Zetapark, C-11-01 Komplek Danau Kota, 67, Jln Taman Ibu Kota, Setapak, 53300 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia
+
+                                    Taman Zeta@Zetapark, C-11-01 Komplek Danau Kota, 67,
+                                    Jln Taman Ibu Kota, Setapak,  53300 Kuala Lumpur, Malaysia
+
                                 </p>
 
                                 <p className="mt-3">
-                                    📱 +60 11-1667 4727<br />
-                                    WhatsApp: +60 11-1667 4727<br />
+                                    📱 Phone: +60 3-2785 0737 <br />
+                                    WhatsApp: +60 11-1667 4727 <a href="https://wa.me/601116674727" target="_blank">(link to whatsapp)</a>
+                                    <br />
                                     ✉️ info@timmins-consulting.com
                                 </p>
 
-                                <a href="https://maps.app.goo.gl/36Z867fj5VgwrJU29?g_st=ic" target="_blank">
+                                <a
+                                    href="https://maps.app.goo.gl/36Z867fj5VgwrJU29?g_st=ic"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="view-map-btn"
+                                >
                                     View Map →
                                 </a>
+
                             </div>
                         </div>
 
@@ -71,15 +81,28 @@ export default function contactUspage() {
                         <div className="col-lg-6 col-md-6 col-sm-12">
                             <div className="contact-card-new h-100">
                                 <h4>Penang</h4>
-                                <small>Training Center</small>
+                                <small>Malaysia (Training Center)
+                                </small>
 
                                 <p className="mt-3">
-                                    1-3-6, Lintang Mayang Pasir 3, Elit Avenue, 11950 Bayan Lepas,<br /> Pulau Pinang, Malaysia
+                                    1-3-6, Lintang Mayang Pasir 3, Elit Avenue, 11950 Bayan Lepas, Pulau Pinang, Malaysia
                                 </p>
 
                                 <p>🕘 9:00 AM – 5:30 PM (Mon–Fri)</p>
 
-                                <a href="https://maps.app.goo.gl/xTg4GoZFLobRJ11J8?g_st=ic" target="_blank">
+                                <p className="mt-3">
+
+                                    WhatsApp: +60 11-1667 4727 <a href="https://wa.me/601116674727" target="_blank">(link to whatsapp)</a>
+                                    <br />
+                                    ✉️ info@timmins-consulting.com
+                                </p>
+
+                                <a
+                                    href="https://www.google.com/maps?q=Taman+Zeta@Zetapark,+Setapak,+Kuala+Lumpur"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="view-map-btn"
+                                >
                                     View Map →
                                 </a>
                             </div>
@@ -93,7 +116,9 @@ export default function contactUspage() {
 
                                 <p className="mt-3">
                                     Toronto, Ontario<br />
-                                    Canada
+
+                                    ✉️ info@timmins-consulting.com
+
                                 </p>
                             </div>
                         </div>
@@ -104,15 +129,20 @@ export default function contactUspage() {
                                 <h4>Indonesia</h4>
 
                                 <p className="mt-3">
-                                    Indonesia Stock Exchange tower 2 level 17, RT.5/RW.3, Senayan, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12190, Indonesia
+                                    South Jakarta<br />
+                                    WhatsApp: +60 11-1667 4727 <a href="https://wa.me/601116674727" target="_blank">(link to whatsapp)</a>
+                                    <br />
+                                    ✉️ info@timmins-consulting.com
                                 </p>
 
-                                <p className="mt-3">
-                                    📱 +62 815-9859-825<br />
 
-                                </p>
 
-                                <a href="https://maps.app.goo.gl/7fLGt4idozEcdLwz8?g_st=ic" target="_blank">
+                                <a
+                                    href="https://www.google.com/maps?q=Taman+Zeta@Zetapark,+Setapak,+Kuala+Lumpur"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="view-map-btn"
+                                >
                                     View Map →
                                 </a>
                             </div>

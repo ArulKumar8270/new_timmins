@@ -1,8 +1,11 @@
+"use client";
+import { useState } from "react";
 import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 
 const page = () => {
+    const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
     return (
         <>
 
@@ -245,317 +248,88 @@ const page = () => {
             </section>
 
 
-            <section className="ed-faq section-gap position-relative">
-                <div className="container ed-container">
-                    <div className="ed-section-head text-center">
+            <section className="ed-faq section-gap position-relative overflow-hidden">
 
-                        <h3 className="ed-section-head__title text-center">
-                            Frequently Asked Questions
-                        </h3>
+                <div className="container ">
+
+                    <div className="section-heading-center">
+                        <h2>Frequently Asked Questions</h2>
                     </div>
-                    <div className="ed-faq__inner position-relative">
 
-                        <div className="row align-items-center">
-                            <div className="col-lg-12 col-xl-6 col-12">
-                                {/* Faq Images  */}
-                                <div className="ed-faq__content">
 
-                                    <div
-                                        className="ed-faq__accordion faq-inner accordion"
-                                        id="accordionExample"
-                                    >
-                                        {/* Single Faq */}
-                                        <div className="ed-faq__accordion-item">
-                                            <h2 className="accordion-header" id="headingOne">
-                                                <button
-                                                    className="accordion-button"
-                                                    type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseOne"
-                                                    aria-expanded="true"
-                                                    aria-controls="collapseOne"
-                                                >
-                                                    1. What is Scaled Agile Certification (SAFe)?
-                                                </button>
-                                            </h2>
-                                            <div
-                                                id="collapseOne"
-                                                className="accordion-collapse collapse show"
-                                                aria-labelledby="headingOne"
-                                                data-bs-parent="#accordionExample"
-                                            >
-                                                <div className="ed-faq__accordion-body">
-                                                    <p className="ed-faq__accordion-text">
-                                                        Scaled Agile Certification (SAFe) is a globally recognized framework for implementing agile at enterprise scale. Companies search for it to improve program delivery, cross-team collaboration, and organizational agility.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Single Faq */}
-                                        <div className="ed-faq__accordion-item">
-                                            <h2 className="accordion-header" id="headingThree">
-                                                <button
-                                                    className="accordion-button collapsed"
-                                                    type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseThree"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseThree"
-                                                >
-                                                    2. Is SAFe Scrum Master Certification worth it?
-                                                </button>
-                                            </h2>
-                                            <div
-                                                id="collapseThree"
-                                                className="accordion-collapse collapse"
-                                                aria-labelledby="headingThree"
-                                                data-bs-parent="#accordionExample"
-                                            >
-                                                <div className="ed-faq__accordion-body">
-                                                    <p className="ed-faq__accordion-text">
-                                                        Yes. SAFe Scrum Master Certification is valuable for professionals working in enterprises with complex, multi-team environments. It enhances career opportunities and qualifies you for roles in large-scale agile transformations.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Single Faq */}
-                                        <div className="ed-faq__accordion-item">
-                                            <h2 className="accordion-header" id="headingTwo">
-                                                <button
-                                                    className="accordion-button collapsed"
-                                                    type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseTwo"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseTwo"
-                                                >
-                                                    3. What is Embedded Linux used for?
-                                                </button>
-                                            </h2>
-                                            <div
-                                                id="collapseTwo"
-                                                className="accordion-collapse collapse"
-                                                aria-labelledby="headingTwo"
-                                                data-bs-parent="#accordionExample"
-                                            >
-                                                <div className="ed-faq__accordion-body">
-                                                    <p className="ed-faq__accordion-text">
-                                                        Embedded Linux is widely used in IoT devices, industrial automation, automotive systems, consumer electronics, and medical devices. Companies search this when looking for engineers who understand kernel, drivers, and system-level programming.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Single Faq */}
-                                        <div className="ed-faq__accordion-item">
-                                            <h2 className="accordion-header" id="headingThree">
-                                                <button
-                                                    className="accordion-button collapsed"
-                                                    type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseThree"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseThree"
-                                                >
-                                                    4. What skills are required for Embedded Linux development?
+                    <div className="faq-grid">
 
-                                                </button>
-                                            </h2>
-                                            <div
-                                                id="collapseThree"
-                                                className="accordion-collapse collapse"
-                                                aria-labelledby="headingThree"
-                                                data-bs-parent="#accordionExample"
-                                            >
-                                                <div className="ed-faq__accordion-body">
-                                                    <p className="ed-faq__accordion-text">
-                                                        Common prerequisites include C programming, Linux basics, shell scripting, cross-compiling, kernel concepts, and Yocto/Buildroot exposure.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Single Faq */}
-                                        <div className="ed-faq__accordion-item">
-                                            <h2 className="accordion-header" id="headingFour">
-                                                <button
-                                                    className="accordion-button collapsed"
-                                                    type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseFour"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseFour"
-                                                >
-                                                    5. What is a Skill Matrix in training?
-                                                </button>
-                                            </h2>
-                                            <div
-                                                id="collapseFour"
-                                                className="accordion-collapse collapse"
-                                                aria-labelledby="headingFour"
-                                                data-bs-parent="#accordionExample"
-                                            >
-                                                <div className="ed-faq__accordion-body">
-                                                    <p className="ed-faq__accordion-text">
-                                                        A skill matrix is a structured tool that maps team competencies, identifies skill gaps, and guides training planning. It’s often searched by L&D leaders planning technical upskilling.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        {[
+                            {
+                                question: "1. What is the best embedded systems training for beginners?",
+                                answer: "The recommended beginner courses are OS Essentials, Embedded C & GDB, and Embedded Linux System Internals. These courses provide a strong foundation in operating systems, embedded programming, debugging, and Linux internals."
+
+                            },
+                            {
+                                question: "2. Does Timmins offer AI consulting or only training?",
+                                answer: "Timmins offers both AI consulting and AI training, including capability assessment, use-case identification, and structured enterprise AI upskilling programs."
+                            },
+                            {
+                                question: "3. Are your programs HRDC Claimable?",
+                                answer: "Yes. For Malaysian employers only, many AI, Embedded Systems, 5G, and corporate training programs are HRDC claimable, subject to eligibility and approval."
+                            },
+                            {
+                                question: "4. Do you provide customized training for engineering teams?",
+                                answer: "Yes. Timmins specializes in customized, role-based training pathways for embedded systems, AI, 5G, and software engineering teams."
+                            },
+                            {
+                                question: "5.Are Timmins training courses available online?",
+                                answer: "Yes. Timmins offers online, on-site, and hybrid training programs for engineering and technical teams."
+                            },
+                            {
+                                question: "6. What industries does Timmins work with?",
+                                answer: "Timmins works with semiconductors, telecom, manufacturing, banking, digital platforms, and technology-driven enterprises."
+                            },
+                            {
+                                question: "7. Do you provide corporate training outside Malaysia?",
+                                answer: "Yes. Timmins delivers corporate training across Malaysia, Singapore, Indonesia, China, India, Vietnam, the United States, and Canada."
+                            },
+                            {
+                                question: "8. How is Timmins different from other corporate training providers?",
+                                answer: "Timmins is practitioner-led, engineering-grade, and deeply specialized, focusing on real capability building rather than generic or tool-centric training."
+                            },
+                            {
+                                question: "9. Do you offer end-to-end Embedded Linux training?",
+                                answer: "Yes. Timmins covers Embedded Linux end-to-end, including OS Essentials, Embedded C & GDB, Embedded Linux System Internals, device drivers (audio, I2C), kernel debugging, user-space and kernel internals, and SELinux, security."
+                            },
+                            {
+                                question: "10. Can Timmins design onboarding programs for fresh graduates?",
+                                answer: "Yes. Timmins has designed and delivered large-scale onboarding and engineering academy programs for semiconductor and telecom organizations."
+                            }
+                        ].map((item, index) => (
+                            <div
+                                key={index}
+                                className={`faq-card ${activeAccordion === index ? "active" : ""}`}
+                            >
+                                <div
+                                    className="faq-question"
+                                    onClick={() =>
+                                        setActiveAccordion(activeAccordion === index ? null : index)
+                                    }
+                                >
+                                    <span>{item.question}</span>
+                                    <span className="arrow">
+                                        {activeAccordion === index ? "−" : "›"}
+                                    </span>
                                 </div>
 
-                            </div>
-                            <div className="col-lg-12 col-xl-6 col-12">
-                                {/* Faq Content  */}
-                                <div className="ed-faq__content">
-
-                                    <div
-                                        className="ed-faq__accordion faq-inner accordion"
-                                        id="accordionExample"
-                                    >
-                                        {/* Single Faq */}
-                                        <div className="ed-faq__accordion-item">
-                                            <h2 className="accordion-header" id="headingOne">
-                                                <button
-                                                    className="accordion-button"
-                                                    type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseOne"
-                                                    aria-expanded="true"
-                                                    aria-controls="collapseOne"
-                                                >
-                                                    6. How do I build a fresh graduate onboarding program for engineers?
-                                                </button>
-                                            </h2>
-                                            <div
-                                                id="collapseOne"
-                                                className="accordion-collapse collapse show"
-                                                aria-labelledby="headingOne"
-                                                data-bs-parent="#accordionExample"
-                                            >
-                                                <div className="ed-faq__accordion-body">
-                                                    <p className="ed-faq__accordion-text">
-                                                        Graduate onboarding programs should combine technical fundamentals, hands-on labs, SCORM modules, assessments, and supervised projects. Many engineering and banking companies search for this to accelerate talent readiness.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Single Faq */}
-                                        <div className="ed-faq__accordion-item">
-                                            <h2 className="accordion-header" id="headingTwo">
-                                                <button
-                                                    className="accordion-button collapsed"
-                                                    type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseTwo"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseTwo"
-                                                >
-                                                    7. What is HRDC Claimable Training?
-                                                </button>
-                                            </h2>
-                                            <div
-                                                id="collapseTwo"
-                                                className="accordion-collapse collapse"
-                                                aria-labelledby="headingTwo"
-                                                data-bs-parent="#accordionExample"
-                                            >
-                                                <div className="ed-faq__accordion-body">
-                                                    <p className="ed-faq__accordion-text">
-                                                        HRDC Claimable Training allows Malaysian employers to claim training costs under HRD Corp. (This applies only to Malaysian organizations.)
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Single Faq */}
-                                        <div className="ed-faq__accordion-item">
-                                            <h2 className="accordion-header" id="headingThree">
-                                                <button
-                                                    className="accordion-button collapsed"
-                                                    type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseThree"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseThree"
-                                                >
-                                                    8. Does Timmins offer Customized Training?
-                                                </button>
-                                            </h2>
-                                            <div
-                                                id="collapseThree"
-                                                className="accordion-collapse collapse"
-                                                aria-labelledby="headingThree"
-                                                data-bs-parent="#accordionExample"
-                                            >
-                                                <div className="ed-faq__accordion-body">
-                                                    <p className="ed-faq__accordion-text">
-                                                        Yes. We specialize in custom-designed capability programs based on technology stack, workflow, and team goals.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Single Faq */}
-                                        <div className="ed-faq__accordion-item">
-                                            <h2 className="accordion-header" id="headingThree">
-                                                <button
-                                                    className="accordion-button collapsed"
-                                                    type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseThree"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseThree"
-                                                >
-                                                    9. Does Timmins provide consulting, not just training?
-
-                                                </button>
-                                            </h2>
-                                            <div
-                                                id="collapseThree"
-                                                className="accordion-collapse collapse"
-                                                aria-labelledby="headingThree"
-                                                data-bs-parent="#accordionExample"
-                                            >
-                                                <div className="ed-faq__accordion-body">
-                                                    <p className="ed-faq__accordion-text">
-                                                        Yes. We offer Embedded Linux Consulting, AI Consulting, and Mobile Development Consulting for organizations needing technical implementation support.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* Single Faq */}
-                                        <div className="ed-faq__accordion-item">
-                                            <h2 className="accordion-header" id="headingFour">
-                                                <button
-                                                    className="accordion-button collapsed"
-                                                    type="button"
-                                                    data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseFour"
-                                                    aria-expanded="false"
-                                                    aria-controls="collapseFour"
-                                                >
-                                                    10. What is the difference between corporate training and customized training?
-                                                </button>
-                                            </h2>
-                                            <div
-                                                id="collapseFour"
-                                                className="accordion-collapse collapse"
-                                                aria-labelledby="headingFour"
-                                                data-bs-parent="#accordionExample"
-                                            >
-                                                <div className="ed-faq__accordion-body">
-                                                    <p className="ed-faq__accordion-text">
-                                                        Corporate training usually refers to standardized programs delivered to many companies, while customized training is tailored specifically to your organization’s technology stack, workflows, skill gaps, and business goals. Customized programs deliver higher relevance and better capability outcomes for engineering-driven teams.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div
+                                    className={`faq-answer ${activeAccordion === index ? "show" : ""
+                                        }`}
+                                >
+                                    {item.answer}
                                 </div>
                             </div>
-                        </div>
+                        ))}
+
                     </div>
                 </div>
             </section>
-
             <Footer />
 
 

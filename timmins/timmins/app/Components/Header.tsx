@@ -185,7 +185,7 @@ const Header = () => {
                                             href="javascript:void(0)"
                                             onClick={(e) => toggleSubmenu('about', e)}
                                         >
-                                            About
+                                            About-us
                                             <i className={`fi fi-ss-angle-small-${expandedMenus.has('about') ? 'up' : 'down'}`} />
                                         </a>
                                         <ul className={`offcanvas__sub_menu ${expandedMenus.has('about') ? 'show' : ''}`}>
@@ -353,7 +353,7 @@ const Header = () => {
                                             </li>
                                             <li>
                                                 <a href="javascript:void(0)">
-                                                    About
+                                                    About-us
                                                     <i className="fi fi-ss-angle-small-down" />
                                                 </a>
                                                 <ul className="sub-menu">
