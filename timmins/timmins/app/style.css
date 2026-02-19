@@ -5716,3 +5716,156 @@ header {
         font-size: 32px;
     }
 }
+
+/* HERO */
+.contact-hero {
+    background: #eaf4fa;
+    min-height: 300px;
+    padding: 80px 0;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero-desc {
+    max-width: 700px;
+    margin: auto;
+    color: #5f6b7a;
+}
+
+/* SPLIT SECTION */
+.contact-split {
+    background: #ffffff;
+}
+
+.split-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.office-modern {
+    border-top: 1px solid #e5e7eb;
+}
+
+.office-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 35px 0;
+    border-bottom: 1px solid #e5e7eb;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.office-row:hover {
+    background: #f9fafc;
+    padding-left: 15px;
+}
+
+.office-left h5 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.office-left .company {
+    font-weight: 500;
+    color: #111827;
+}
+
+.office-left p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.office-contact {
+    min-width: 260px;
+    text-align: right;
+}
+
+.office-contact p {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+}
+
+/* Accent line on hover */
+.office-row::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 60%;
+    width: 4px;
+    background: #4f46e5;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.office-row:hover::before {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .office-row {
+        flex-direction: column;
+    }
+
+    .office-contact {
+        text-align: left;
+        margin-top: 15px;
+    }
+}
+
+
+/* FORM CARD */
+.form-card {
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+    margin-top: 250px;
+    margin-left: 38px;
+}
+
+.modern-input {
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.modern-input:focus {
+    border-color: #4f46e5;
+    box-shadow: none;
+}
+
+/* BUTTON */
+.modern-btn {
+    background: #4f46e5;
+    border: none;
+    padding: 14px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.modern-btn:hover {
+    background: #4338ca;
+}

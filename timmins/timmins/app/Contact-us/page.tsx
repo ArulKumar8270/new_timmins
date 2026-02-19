@@ -2,271 +2,149 @@ import React from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
-export default function contactUspage() {
+export default function ContactUspage() {
     return (
         <>
             <Header />
 
             {/* HERO */}
-            <section className="contact-hero contact-hero--compact">
+            <section className="contact-hero text-center d-flex align-items-center">
                 <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-8 col-md-10 col-12 text-center">
+                    <h1 className="hero-title">Contact Us</h1>
+                    <p className="hero-desc">
+                        We work with you to understand your objectives, your people,
+                        and the technical capabilities required to move from intent
+                        to real-world execution.
+                    </p>
+                </div>
+            </section>
 
-                            <h1 className="contact-hero-title mb-3">
-                                Contact Us
-                            </h1>
+            {/* SPLIT SECTION */}
+            <section className="contact-split py-5">
+                <div className="container">
+                    <div className="row align-items-start">
 
-                            <p className="contact-hero-desc mb-0">
-                                We work with you to understand your objectives, your people,
-                                and the technical capabilities required to move from intent
-                                to real-world execution.
+                        {/* LEFT SIDE */}
+                        <div className="col-lg-6 mb-5 mb-lg-0">
+                            <h2 className="split-title mb-3">Get in Touch</h2>
+                            <p className="text-muted mb-5">
+                                Reach out to our regional teams for partnerships, training,
+                                or consultations.
                             </p>
 
-                        </div>
-                    </div>
-                </div>
-            </section>
+                            <div className="office-modern">
 
+                                {/* Malaysia */}
+                                <div className="office-row">
+                                    <div className="office-left">
+                                        <h5>Malaysia <span>(Head Office)</span></h5>
+                                        <p className="company">
+                                            Timmins Training Consulting Sdn. Bhd.
+                                        </p>
+                                        <p>
+                                            Taman Zeta@Zetapark, C-11-01 Kompleks Danau Kota, 67,<br />
+                                            Jln Taman Ibu Kota, Setapak, 53300 Kuala Lumpur, Malaysia
+                                        </p>
+                                    </div>
 
+                                    <div className="office-contact">
+                                        <p><strong>Phone:</strong> +60 3-2785 0737</p>
+                                        <p><strong>WhatsApp:</strong> +60 11-1667 4727</p>
+                                        <p><strong>Email:</strong> info@timmins-consulting.com</p>
+                                        <a href="#" className="map-link">View Map →</a>
+                                    </div>
+                                </div>
 
-            <section className="contact-grid-section py-5">
-                <div className="container">
+                                {/* Penang */}
+                                <div className="office-row">
+                                    <div className="office-left">
+                                        <h5>Penang</h5>
+                                        <p>
+                                            1-3-6, Lintang Mayang Pasir 3, Elite Avenue,
+                                            11950 Bayan Lepas, Pulau Pinang, Malaysia
+                                        </p>
+                                        <p>9:00 AM – 5:30 PM (Mon–Fri)</p>
+                                    </div>
 
-                    <div className="text-center mb-5">
-                        <h2 className="contact-main-title">Get in Touch</h2>
-                        <p className="contact-main-subtitle">
-                            Reach out to our regional teams for partnerships, training, or consultations.
-                        </p>
-                    </div>
+                                    <div className="office-contact">
+                                        <p><strong>WhatsApp:</strong> +60 11-1667 4727</p>
+                                        <p><strong>Email:</strong> info@timmins-consulting.com</p>
+                                        <a href="#" className="map-link">View Map →</a>
+                                    </div>
+                                </div>
 
-                    <div className="row g-4">
+                                {/* Canada */}
+                                <div className="office-row">
+                                    <div className="office-left">
+                                        <h5>Canada</h5>
+                                        <p>Toronto, Ontario</p>
+                                    </div>
 
-                        {/* Malaysia */}
-                        <div className="col-lg-6 col-md-6 col-sm-12">
-                            <div className="contact-card-new h-100">
-                                <h4>Malaysia <span>(Head Office)</span></h4>
+                                    <div className="office-contact">
+                                        <p><strong>Email:</strong> info@timmins-consulting.com</p>
+                                    </div>
+                                </div>
 
-                                <p className="company">
-                                    Timmins Training Consulting Sdn. Bhd.
-                                </p>
+                                {/* Indonesia */}
+                                <div className="office-row">
+                                    <div className="office-left">
+                                        <h5>Indonesia</h5>
+                                        <p>South Jakarta</p>
+                                    </div>
 
-                                <p>
-
-                                    Taman Zeta@Zetapark, C-11-01 Komplek Danau Kota, 67,
-                                    Jln Taman Ibu Kota, Setapak,  53300 Kuala Lumpur, Malaysia
-
-                                </p>
-
-                                <p className="mt-3">
-                                    📱 Phone: +60 3-2785 0737 <br />
-                                    WhatsApp: +60 11-1667 4727 <a href="https://wa.me/601116674727" target="_blank">(link to whatsapp)</a>
-                                    <br />
-                                    ✉️ info@timmins-consulting.com
-                                </p>
-
-                                <a
-                                    href="https://maps.app.goo.gl/36Z867fj5VgwrJU29?g_st=ic"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="view-map-btn"
-                                >
-                                    View Map →
-                                </a>
+                                    <div className="office-contact">
+                                        <p><strong>WhatsApp:</strong> +60 11-1667 4727</p>
+                                        <p><strong>Email:</strong> info@timmins-consulting.com</p>
+                                        <a href="#" className="map-link">View Map →</a>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
 
-                        {/* Penang */}
-                        <div className="col-lg-6 col-md-6 col-sm-12">
-                            <div className="contact-card-new h-100">
-                                <h4>Penang</h4>
-                                <small>Malaysia (Training Center)
-                                </small>
-
-                                <p className="mt-3">
-                                    1-3-6, Lintang Mayang Pasir 3, Elit Avenue, 11950 Bayan Lepas, Pulau Pinang, Malaysia
-                                </p>
-
-                                <p>🕘 9:00 AM – 5:30 PM (Mon–Fri)</p>
-
-                                <p className="mt-3">
-
-                                    WhatsApp: +60 11-1667 4727 <a href="https://wa.me/601116674727" target="_blank">(link to whatsapp)</a>
-                                    <br />
-                                    ✉️ info@timmins-consulting.com
-                                </p>
-
-                                <a
-                                    href="https://www.google.com/maps?q=Taman+Zeta@Zetapark,+Setapak,+Kuala+Lumpur"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="view-map-btn"
-                                >
-                                    View Map →
-                                </a>
-                            </div>
-                        </div>
-
-                        {/* Canada */}
-                        <div className="col-lg-6 col-md-6 col-sm-12">
-                            <div className="contact-card-new h-100">
-                                <h4>Canada</h4>
-                                <small>Representative Office</small>
-
-                                <p className="mt-3">
-                                    Toronto, Ontario<br />
-
-                                    ✉️ info@timmins-consulting.com
-
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Indonesia */}
-                        <div className="col-lg-6 col-md-6 col-sm-12">
-                            <div className="contact-card-new h-100">
-                                <h4>Indonesia</h4>
-
-                                <p className="mt-3">
-                                    South Jakarta<br />
-                                    WhatsApp: +60 11-1667 4727 <a href="https://wa.me/601116674727" target="_blank">(link to whatsapp)</a>
-                                    <br />
-                                    ✉️ info@timmins-consulting.com
-                                </p>
 
 
+                        {/* RIGHT SIDE FORM */}
+                        <div className="col-lg-6">
+                            <div className="form-card">
+                                <h3 className="mb-4">Plan Your Next Capability Move</h3>
 
-                                <a
-                                    href="https://www.google.com/maps?q=Taman+Zeta@Zetapark,+Setapak,+Kuala+Lumpur"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="view-map-btn"
-                                >
-                                    View Map →
-                                </a>
+                                <form>
+                                    <div className="row g-3">
+                                        <div className="col-md-6">
+                                            <input type="text" className="form-control modern-input" placeholder="Full Name" />
+                                        </div>
+                                        <div className="col-md-6">
+                                            <input type="text" className="form-control modern-input" placeholder="Organization" />
+                                        </div>
+                                        <div className="col-md-6">
+                                            <input type="email" className="form-control modern-input" placeholder="Email" />
+                                        </div>
+                                        <div className="col-md-6">
+                                            <input type="text" className="form-control modern-input" placeholder="Contact Number" />
+                                        </div>
+                                        <div className="col-12">
+                                            <select className="form-select modern-input">
+                                                <option>Select an option</option>
+                                                <option>Embedded Systems</option>
+                                                <option>Business Intelligence</option>
+                                                <option>Programming Languages</option>
+                                            </select>
+                                        </div>
+                                        <div className="col-12">
+                                            <button className="modern-btn w-100">
+                                                Connect with Our Team →
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+
                             </div>
                         </div>
 
                     </div>
                 </div>
             </section>
-
-
-
-
-
-            {/* APPOINTMENT */}
-
-
-            {/* CONTACT FORM */}
-            <section
-                className="contact-message-section"
-                style={{
-                    paddingTop: "40px",
-                    paddingBottom: "40px",
-                    background: "#ffffff"
-                }}
-            >
-                <div className="container">
-
-                    <div className="row justify-content-center">
-                        <div className="col-lg-7">
-
-                            <div className="text-center mb-4">
-                                <h2
-                                    style={{
-                                        fontWeight: "700",
-                                        marginBottom: "12px"
-                                    }}
-                                >
-                                    Plan Your Next Capability Move
-                                </h2>
-
-                                <p
-                                    style={{
-                                        fontSize: "15px",
-                                        color: "#555",
-                                        maxWidth: "620px",
-                                        margin: "0 auto"
-                                    }}
-                                >
-                                    Tell us what capability you’re looking to build.
-                                    We’ll connect you with the right specialist.
-                                </p>
-                            </div>
-
-                            <form
-                                className="contact-form"
-                                style={{
-                                    background: "#fff",
-                                    padding: "28px",
-                                    borderRadius: "16px",
-                                    boxShadow: "0 12px 30px rgba(0,0,0,0.06)"
-                                }}
-                            >
-
-                                <div className="mb-3">
-                                    <label className="form-label fw-semibold">Full Name</label>
-                                    <input type="text" className="form-control" required />
-                                </div>
-
-                                <div className="mb-3">
-                                    <label className="form-label fw-semibold">Organization</label>
-                                    <input type="text" className="form-control" />
-                                </div>
-
-                                <div className="mb-3">
-                                    <label className="form-label fw-semibold">Email</label>
-                                    <input type="email" className="form-control" required />
-                                </div>
-
-                                <div className="mb-3">
-                                    <label className="form-label fw-semibold">Contact Number</label>
-                                    <input type="tel" className="form-control" />
-                                </div>
-
-                                <div className="mb-4">
-                                    <label className="form-label fw-semibold">Area of Interest</label>
-                                    <select className="form-control">
-                                        <option>Select an option</option>
-                                        <option>AI</option>
-                                        <option>Embedded Linux</option>
-                                        <option>5G</option>
-                                        <option>Data Analytics</option>
-                                        <option>Others</option>
-                                    </select>
-                                </div>
-
-                                <div className="text-center">
-                                    <button
-                                        type="submit"
-                                        style={{
-                                            background: "#f5a623",
-                                            color: "#fff",
-                                            fontWeight: "600",
-                                            padding: "18px 34px",
-                                            borderRadius: "30px",
-                                            border: "none",
-                                            marginTop: "12px",
-                                        }}
-                                    >
-                                        Connect with Our Team →
-                                    </button>
-                                </div>
-
-                            </form>
-
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-
-
-            {/* SOFT CTA */}
-
 
             <Footer />
         </>

@@ -375,13 +375,13 @@ const Header = () => {
                                                 </a>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <Link href="/our-Solution">Overview</Link>
+                                                        <Link href="/our-solution">Overview</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/our-Solution">Fresh Graduate Onboarding</Link>
+                                                        <Link href="/our-solution">Fresh Graduate Onboarding</Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/our-Solution">Training Needs Assessment</Link>
+                                                        <Link href="/our-solution">Training Needs Assessment</Link>
                                                     </li>
                                                 </ul>
                                             </li>

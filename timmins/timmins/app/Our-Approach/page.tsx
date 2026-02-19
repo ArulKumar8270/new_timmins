@@ -9,7 +9,7 @@ const page = () => {
             <Header />
 
 
-            <section className="approach-listen case-hero py-5">
+            <section className="approach-listen ten-years-page py-5">
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-9 text-center">
@@ -267,7 +267,7 @@ const page = () => {
                                         className="ed-call-action__content-btn ed-btn mb-7"
                                         style={{ backgroundColor: 'var(--ed-secondary-color)' }}
                                     >
-                                        <a href="https://timmins.nicknameinfotech.com/contact-us" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
+                                        <a href="/contact-us" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
                                             Speak to Our Team
                                         </a>
                                     </div>

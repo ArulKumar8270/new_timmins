@@ -91,9 +91,9 @@ const Footer = () => {
                                 <h4 className="footer-column-title desktop-only">Company</h4>
                                 <div className={`footer-column-content ${openAccordion === 'company' ? 'open' : ''}`}>
                                     <ul className="footer-links">
-                                        <li><Link href="https://timmins.nicknameinfotech.com/about-us/">About Us</Link></li>
-                                        <li><Link href="https://timmins.nicknameinfotech.com/10-Years/">Our Journey (10 Years)</Link></li>
-                                        <li><Link href="https://timmins.nicknameinfotech.com/our-approach/">Our Approach</Link></li>
+                                        <li><Link href="/about-us">About Us</Link></li>
+                                        <li><Link href="/10-Years">Our Journey (10 Years)</Link></li>
+                                        <li><Link href="/our-approach">Our Approach</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -111,9 +111,9 @@ const Footer = () => {
                                 <h4 className="footer-column-title desktop-only">Solutions</h4>
                                 <div className={`footer-column-content ${openAccordion === 'solutions' ? 'open' : ''}`}>
                                     <ul className="footer-links">
-                                        <li><Link href="/our-Solution">Fresh Graduate Onboarding</Link></li>
-                                        <li><Link href="/our-Solution">Technology Stack Programs</Link></li>
-                                        <li><Link href="/our-Solution">Training Needs Assessments</Link></li>
+                                        <li><Link href="/our-solution">Fresh Graduate Onboarding</Link></li>
+                                        <li><Link href="/our-solution">Technology Stack Programs</Link></li>
+                                        <li><Link href="/our-solution">Training Needs Assessments</Link></li>
                                         <li><Link href="/scaled-agile">View All Solutions</Link></li>
                                     </ul>
                                 </div>
@@ -126,16 +126,16 @@ const Footer = () => {
                                     onClick={() => toggleAccordion('resources')}
                                     aria-expanded={openAccordion === 'resources'}
                                 >
-                                    Resources
+                                    Domain
                                     <span className="accordion-icon">{openAccordion === 'resources' ? '−' : '+'}</span>
                                 </button>
                                 <h4 className="footer-column-title desktop-only">Resources</h4>
                                 <div className={`footer-column-content ${openAccordion === 'resources' ? 'open' : ''}`}>
                                     <ul className="footer-links">
-                                        <li><Link href="/">Embedded Systems</Link></li>
-                                        <li><Link href="/Contact-us">Business Intelligence</Link></li>
-                                        <li><Link href="/Case-study">Programming Languages</Link></li>
-                                        <li><Link href="/Case-study">View All Domains</Link></li>
+                                        <li><Link href="/courses">Embedded Systems</Link></li>
+                                        <li><Link href="/courses">Business Intelligence</Link></li>
+                                        <li><Link href="/courses">Programming Languages</Link></li>
+                                        <li><Link href="/courses">View All Domains</Link></li>
                                     </ul>
                                 </div>
                             </div>

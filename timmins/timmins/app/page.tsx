@@ -423,7 +423,7 @@ export default function Home() {
 
                   <div className="text-center pt-4">
                     <a
-                      href="https://timmins.nicknameinfotech.com/our-approach/"
+                      href="/our-approach"
                       target="_blank" rel="noopener noreferrer"
                       className="fw-semibold why-work-link"
                     >
@@ -702,7 +702,7 @@ export default function Home() {
                 {/* BOTTOM LINK (NOT A BUTTON) */}
                 <div className="text-center text-xl pt-4">
                   <a
-                    href="https://timmins.nicknameinfotech.com/case-study"
+                    href="/case-study"
                     className="fw-semibold why-work-link"
                     target="_blank" rel="noopener noreferrer"
                   >
