@@ -67,27 +67,33 @@ const page = () => {
 
 
 
-            <section className="case-hero py-5">
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-9 text-center">
+            <section className="case-hero">
+                <div className="case-container">
 
-                            <h1 className="case-hero-title mb-3">
-                                Case Studies
-                            </h1>
+                    <div className="case-left">
+                        <h1>
+                            Tingkatkan Bisnis dan Kinerja Tim
+                            <br /> dengan Corporate Training
+                            Belajarlagi
+                        </h1>
 
-                            <p className="case-hero-desc mb-4">
-                                How Timmins partners with organizations to build advanced technology
-                                capability through real-world, practitioner-led learning and delivery.
-                            </p>
+                        <p>
+                            Tingkatkan performa bisnis melalui program pengembangan
+                            karyawan yang inovatif dan menyenangkan bersama Belajarlagi.
+                        </p>
 
-
-
-                        </div>
-
+                        <button className="case-btn">Konsultasi Gratis</button>
                     </div>
+
+                    <div className="case-right">
+                        <img src="/assets/New_images/case1.png" alt="Corporate Training" />
+                    </div>
+
                 </div>
             </section>
+
+
+
 
 
             <section className="case-impact-section py-4">
@@ -140,18 +146,19 @@ const page = () => {
 
                             <h2 className="fw-bold mt-2">Fresh Graduate Onboarding</h2>
 
-                            <p className="text-muted">
-                                <em>(Confidential US-Based Semiconductor Company)</em>
+
+                            <p className="text-muted font-extrabold" >
+                                <b>(Confidential US-Based Semiconductor Company)</b>
                             </p>
 
-                            <h6 className="fw-semibold mt-4">The Challenge:</h6>
+                            <h6 className="fw-semibold mt-4">The Challenge</h6>
                             <p className="mt-3">
                                 A semiconductor company needed to bridge the gap between academic learning
                                 and industry-ready engineering skills by onboarding fresh graduates into
                                 complex technical roles and enabling contribution in real-world environments.
                             </p>
 
-                            <h6 className="fw-semibold mt-4">Our role covers:</h6>
+                            <h6 className="fw-semibold mt-4">Our Solution</h6>
                             <p className="mt-3">
                                 Timmins enabled 350+ fresh graduates to become industry-ready engineers through
                                 customized onboarding. The program covered core engineering domains including
@@ -277,8 +284,8 @@ const page = () => {
                                 Machine Learning Program for Data Analytics
                             </h2>
 
-                            <p className="text-muted">
-                                <em>(DBS Bank)</em>
+                            <p className="text-muted font-extrabold" >
+                                <b>(DBS Bank)</b>
                             </p>
 
                             <h6 className="fw-semibold mt-4">The Challenge</h6>
@@ -288,7 +295,7 @@ const page = () => {
                                 risk analysis, and operational decision-making.
                             </p>
 
-                            <h6 className="fw-semibold mt-4">Our Solution</h6>
+                            <h6 className="fw-semibold mt-4">Our Solutions</h6>
                             <p className="mt-3">
                                 Timmins designed and delivered a customized Machine Learning program for
                                 the bank’s internal data analytics engineers. The engagement combined
@@ -306,12 +313,7 @@ const page = () => {
                             </ul>
 
                             {/* Key Results – corrected */}
-                            <h6 className="fw-semibold mt-4">Key Results</h6>
-                            <div className="tech-tags">
-                                <span>Stronger in-house ML & analytics capability</span>
-                                <span>Improved data-driven decision making</span>
-                                <span>Production-ready analytics use cases</span>
-                            </div>
+
 
                         </div>
 
@@ -319,32 +321,26 @@ const page = () => {
                         <div className="col-lg-4">
                             <div className="highlight-card">
 
-                                <h5 className="fw-bold mb-3">Highlights</h5>
+                                <h5 className="fw-bold mb-3">Key Highlights</h5>
 
                                 <ul className="list-unstyled highlight-list">
-                                    <li>
-                                        <strong>7 Years</strong>
-                                        <br />
-                                        Long-term AI partnership
+                                    <li >
+
+                                        ✔ In-house analytics capability strengthened
                                     </li>
-                                    <li>
-                                        <strong>1,200+</strong>
-                                        <br />
-                                        Participants trained
+                                    <li >
+
+                                        ✔ Continued engagement through repeat program adoption
                                     </li>
-                                    <li>
-                                        <strong>80%</strong>
-                                        <br />
-                                        Skill improvement
-                                    </li>
+
                                 </ul>
 
                                 <a
                                     href="/assets/New_images/pdf2.pdf"
                                     target="_blank"
-                                    className="case-download-link underline mt-3 d-inline-block"
+                                    className="case-download-link underline mt-3 d-inline-block "
                                 >
-                                    Download Full Case Study (via Form)
+                                    Download Full Case Study(via Form)
                                 </a>
 
                             </div>
@@ -364,14 +360,14 @@ const page = () => {
                             <h2 className="fw-bold mt-2">
                                 AI Foundation for Banking Sector
                             </h2>
-                            <p className="text-muted">
-                                <em>(Citigroup)</em>
+                            <p className="text-muted font-extrabold" >
+                                <b>(Citigroup)</b>
                             </p>
-                            <h6 className="fw-semibold mt-4">The Challenge:</h6>
+                            <h6 className="fw-semibold mt-4">The Challenge</h6>
                             <p className="mt-3">
                                 Data science and analytics teams (DSSM, model development, risk analytics, and validation) required practical Python-based data analytics and machine learning to address real banking use cases, moving beyond theory to support fraud analytics, model development, validation, and data-driven decisions.
                             </p>
-                            <h6 className="fw-semibold mt-4">Our Solution:</h6>
+                            <h6 className="fw-semibold mt-4">Our Solutions</h6>
                             <p>
                                 Timmins delivered a structured, hands-on analytics and machine learning enablement program across six batches, with a focus on:
                             </p>
@@ -384,22 +380,13 @@ const page = () => {
                                 <li>✔ Hands-on, code-heavy delivery
                                 </li>
                             </ul>
-                            <h6 className="fw-semibold mt-4">Key Results</h6>
-                            <div className="tech-tags">
-                                <span>End-to-end 5G SoC capability strengthened</span>
-                                <span>Higher cross-domain engineering readiness</span>
-                                <span>Global, multi-site scalability
-                                </span>
-
-
-                            </div>
 
 
                         </div>
                         {/* Right Highlights Card */}
                         <div className="col-lg-4">
                             <div className="highlight-card">
-                                <h5 className="fw-bold mb-3">Highlights</h5>
+                                <h5 className="fw-bold mb-3">Key Highlights</h5>
                                 <ul className="list-unstyled highlight-list">
                                     <li>
                                         <strong>118</strong>
@@ -407,19 +394,17 @@ const page = () => {
                                         Participants trained
                                     </li>
                                     <li>
-                                        <strong>54% → 88%</strong>
+                                        <strong> 88%</strong>
                                         <br />
-                                        Performance improvement
+                                        improvement
                                     </li>
                                     <li>
-                                        <strong>4.7 / 5</strong>
+                                        <strong>4.5+/5</strong>
                                         <br />
-                                        Participant satisfaction
+                                        Satisfaction score
                                     </li>
                                 </ul>
-                                <a href="/assets/New_images/pdf3.pdf" target='_blank' className="case-download-link underline mt-3 d-inline-block">
-                                    Download Full Case Study (via Form)
-                                </a>
+
 
                             </div>
                         </div>
@@ -438,13 +423,13 @@ const page = () => {
                                 Mobile Development Enablement
                             </h2>
                             <p className="text-muted">
-                                <em>(CMotorola)</em>
+                                <b>(CMotorola)</b>
                             </p>
-                            <h6 className="fw-semibold mt-4">The Challenge:</h6>
+                            <h6 className="fw-semibold mt-4">The Challenge</h6>
                             <p className=" text-muted">
                                 Engineering teams needed to strengthen in-house Android development capability to independently develop, optimize, and maintain Qualcomm chipset–based Android smartphones across evolving Android versions.
                             </p>
-                            <h6 className="fw-semibold mt-4">Our Solution</h6>
+                            <h6 className="fw-semibold mt-4">Our Solutions</h6>
                             <p>
                                 Timmins delivered an ongoing staffing, training, and consulting enablement program to support end-to-end Android smartphone development. Training areas included:
                             </p>
@@ -456,15 +441,7 @@ const page = () => {
                                 </li>
                                 <li>✔ Qualcomm chipset and board-level integration</li>
                             </ul>
-                            <h6 className="fw-semibold mt-4">Key Results</h6>
-                            <div className="tech-tags">
-                                <span>End-to-end 5G SoC capability strengthened</span>
-                                <span>Higher cross-domain engineering readiness</span>
-                                <span>Global, multi-site scalability
-                                </span>
-
-
-                            </div>                            <br />
+                            <br />
 
                         </div>
                         {/* Right Card */}
@@ -472,20 +449,20 @@ const page = () => {
                             <div className="case-metrics-card">
                                 <h5 className="fw-bold mb-4">Key Highlights</h5>
                                 <div className="metric">
-                                    <h3>600+</h3>
-                                    <p>Engineers trained</p>
+
+                                    <p>✔ In-house Android handset development capability established</p>
                                 </div>
                                 <div className="metric">
-                                    <h3>60%</h3>
-                                    <p>Faster project readiness</p>
+
+                                    <p>✔ Successful delivery of Android devices across versions 10 to 14</p>
+
                                 </div>
-                                <div className="metric">
-                                    <h3>8 Years</h3>
-                                    <p>Long-term partnership</p>
-                                </div>
-                                <a href="/assets/New_images/pdf4.pdf" target='_blank' className="case-download-link underline mt-3 d-inline-block">
+
+                                <button className="case-btn"><a href="/assets/New_images/pdf4.pdf" target='_blank' className=" underline mt-3 d-inline-block">
                                     Download Full Case Study (via Form)
-                                </a>
+                                </a></button>
+
+
 
                             </div>
                         </div>
@@ -508,14 +485,14 @@ const page = () => {
 
                             </h2>
                             <p className="text-muted">
-                                <em>(US-based Semiconductor Company)</em>
+                                <b>(US-based Semiconductor Company)</b>
                             </p>
-                            <h6 className="fw-semibold mt-4">The Challenge:</h6>
+                            <h6 className="fw-semibold mt-4">The Challenge</h6>
                             <p className="mt-3">
                                 A global semiconductor company needed to continuously strengthen 5G Mobile SoC capabilities as technologies evolved rapidly across hardware, software, and system architecture. Engineering teams required practical, applied expertise to design, optimize, and deploy complex 5G solutions at scale.
                             </p>
 
-                            <h6 className="fw-semibold mt-4">Our Solution:</h6>
+                            <h6 className="fw-semibold mt-4">Our Solutions</h6>
                             <p className="mt-3">
 
                                 Timmins delivered a highly customized 5G Mobile SoC enablement program for cross-functional R&D teams, covering critical capability areas including:
@@ -529,39 +506,34 @@ const page = () => {
                                 </li>
                                 <li>✔ Video codecs and multimedia systems (AV1, VVC, Camera ISP)
                                 </li>
-                                <li>Embedded software and platform security for mobile systems</li>
+                                <li>✔ Embedded software and platform security for mobile systems</li>
                             </ul>
-                            <h6 className="fw-semibold mt-4">Key Results</h6>
-                            <div className="tech-tags">
-                                <span>End-to-end 5G SoC capability strengthened</span>
-                                <span>Higher cross-domain engineering readiness</span>
-                                <span>Global, multi-site scalability
-                                </span>
 
-
-                            </div>
                             <br />
 
                         </div>
                         {/* Right Card */}
                         <div className="col-lg-4">
                             <div className="case-metrics-card">
-                                <h5 className="fw-bold mb-4"> Highlights</h5>
+                                <h5 className="fw-bold mb-4">Key Highlights</h5>
                                 <div className="metric">
 
-                                    <p>✔ Accelerated release cycles </p>
+                                    <p>✔ End-to-end 5G SoC capability strengthened
+                                    </p>
                                 </div>
                                 <div className="metric">
 
-                                    <p>✔ Improved engineering quality</p>
+                                    <p>✔ Higher cross-domain engineering readiness
+                                    </p>
                                 </div>
                                 <div className="metric">
 
-                                    <p>✔ Global multi-site implementation</p>
+                                    <p>✔ Global, multi-site scalability
+                                    </p>
                                 </div>
-                                <a href="/assets/New_images/pdf5.pdf" target='_blank' className="case-download-link underline mt-3 d-inline-block">
+                                <button className="case-btn"><a href="/assets/New_images/pdf4.pdf" target='_blank' className=" underline mt-3 d-inline-block">
                                     Download Full Case Study (via Form)
-                                </a>
+                                </a></button>
                             </div>
                         </div>
                     </div>

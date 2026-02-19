@@ -1984,18 +1984,18 @@
 }
 
 .case-impact-section {
-    background: #eaf4fa;
+    background: #fff;
     /* clearly different */
     padding: 72px 0;
     /* strong separation */
 
     /* section boundary feel */
-    border-top: 2px solid #eaf4fa;
+    border-top: 10px solid #eaf4fa;
 
 }
 
 .case-impact-section .impact-item {
-    padding: 16px;
+    padding: 18px;
 }
 
 .approach-listen {
@@ -3609,13 +3609,13 @@ section {
 }
 
 .case-download-link {
-    color: #a8aaad !important;
+    color: #0066ff !important;
     text-decoration: underline !important;
     font-weight: 500;
 }
 
 .case-download-link:hover {
-    color: #084298;
+    color: #6a9fef;
     /* darker blue on hover */
 }
 
@@ -5608,4 +5608,111 @@ header {
     background-color: #d98e14;
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+.case-hero {
+    background: #324f8c;
+    /* Correct blue tone */
+    padding: 110px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bottom Left Curve */
+.case-hero::before {
+    content: "";
+    position: absolute;
+    top: 550px;
+    left: -250px;
+    width: 600px;
+    height: 600px;
+    background: #f2f2f2;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.case-container {
+    width: 88%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+/* LEFT TEXT */
+.case-left {
+    width: 50%;
+    color: #ffffff;
+}
+
+.case-left h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.case-left p {
+    font-size: 17px;
+    opacity: 0.9;
+    margin-bottom: 35px;
+    max-width: 520px;
+    color: #d9e2ff;
+}
+
+.case-btn {
+    background: #f4a623;
+    color: #eaf4fa;
+    border: none;
+    padding: 14px 34px;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.case-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* RIGHT IMAGE */
+.case-right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.case-right img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .case-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .case-left,
+    .case-right {
+        width: 100%;
+    }
+
+    .case-right {
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    .case-left h1 {
+        font-size: 32px;
+    }
 }

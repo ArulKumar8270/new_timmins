@@ -91,9 +91,9 @@ const Footer = () => {
                                 <h4 className="footer-column-title desktop-only">Company</h4>
                                 <div className={`footer-column-content ${openAccordion === 'company' ? 'open' : ''}`}>
                                     <ul className="footer-links">
-                                        <li><Link href="/About-us">About Us</Link></li>
-                                        <li><Link href="/10-Years">Our Journey (10 Years)</Link></li>
-                                        <li><Link href="/Contact-us">Contact Us</Link></li>
+                                        <li><Link href="https://timmins.nicknameinfotech.com/about-us/">About Us</Link></li>
+                                        <li><Link href="https://timmins.nicknameinfotech.com/10-Years/">Our Journey (10 Years)</Link></li>
+                                        <li><Link href="https://timmins.nicknameinfotech.com/our-approach/">Our Approach</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -111,10 +111,10 @@ const Footer = () => {
                                 <h4 className="footer-column-title desktop-only">Solutions</h4>
                                 <div className={`footer-column-content ${openAccordion === 'solutions' ? 'open' : ''}`}>
                                     <ul className="footer-links">
-                                        <li><Link href="/Our-Solution">Fresh Graduate Onboarding</Link></li>
-                                        <li><Link href="/Our-Solution">Technology Stack Programs</Link></li>
-                                        <li><Link href="/Our-Solution">AI Consulting</Link></li>
-                                        <li><Link href="/Scaled-Agile">SAFe® Certification</Link></li>
+                                        <li><Link href="/our-Solution">Fresh Graduate Onboarding</Link></li>
+                                        <li><Link href="/our-Solution">Technology Stack Programs</Link></li>
+                                        <li><Link href="/our-Solution">Training Needs Assessments</Link></li>
+                                        <li><Link href="/scaled-agile">View All Solutions</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -132,9 +132,10 @@ const Footer = () => {
                                 <h4 className="footer-column-title desktop-only">Resources</h4>
                                 <div className={`footer-column-content ${openAccordion === 'resources' ? 'open' : ''}`}>
                                     <ul className="footer-links">
-                                        <li><Link href="/">Courses</Link></li>
-                                        <li><Link href="/Contact-us">Training Calendar</Link></li>
-                                        <li><Link href="/Case-study">Insights & Case Studies</Link></li>
+                                        <li><Link href="/">Embedded Systems</Link></li>
+                                        <li><Link href="/Contact-us">Business Intelligence</Link></li>
+                                        <li><Link href="/Case-study">Programming Languages</Link></li>
+                                        <li><Link href="/Case-study">View All Domains</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -164,6 +165,9 @@ const Footer = () => {
                                             <div className="office-details">
                                                 <strong>Indonesia</strong>
                                                 <p>Jakarta Selatan</p>
+                                                <p>Jakarta
+                                                </p>
+                                                <p>South Jakarta</p>
                                             </div>
                                         </div>
                                         <div className="office-item">
@@ -175,8 +179,8 @@ const Footer = () => {
                                         </div>
                                     </div>
                                     <div className="footer-contact-info">
-                                        <a href="mailto:info@consult-timmins.com" className="contact-link">
-                                            ✉️ info@consult-timmins.com
+                                        <a href="mailto:info@timmins-consulting.com" className="contact-link">
+                                            ✉️ info@timmins-consulting.com
                                         </a>
                                         <a href="tel:+60327850737" className="contact-link">
                                             📞 +60 3 2785 0737
@@ -195,7 +199,8 @@ const Footer = () => {
                             <div className="footer-social">
 
                                 <a
-                                    href="https://www.linkedin.com/company/timmins-training-consulting"
+                                    href="https://linkedin.com/company/timmins-training-consulting
+"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="LinkedIn Page"
@@ -206,7 +211,7 @@ const Footer = () => {
                                     LinkedIn
                                 </a>
                                 <a
-                                    href="https://www.instagram.com/consulttimmins"
+                                    href=" https://www.instagram.com/timminstraining/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="Instagram Page"
@@ -226,7 +231,7 @@ const Footer = () => {
                                     Facebook
                                 </a>
                                 <a
-                                    href="https://www.youtube.com/@consulttimmins"
+                                    href=""
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="YouTube Channel"
