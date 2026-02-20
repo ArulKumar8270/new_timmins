@@ -20,29 +20,36 @@ const FAQ_ITEMS = [
 const SOLUTION_CARDS = [
   {
     title: "Fresh Graduate Programs",
-    description: "From fresh talent to project-ready engineers. We design onboarding programs that accelerate readiness for engineering, tech, and operations roles.",
-    features: ["AI & ML fundamentals", "Embedded Linux", "Mobile (Kotlin, Jetpack)", "Cloud & DevOps", "HRDC Claimable"],
+    subtitle: "From fresh talent to project-ready engineers",
+    description: " We design onboarding programs that accelerate readiness for engineering, tech, and operations roles across industries. Our multi-industry curricula cover:",
+    content: ["AI & Machine Learning fundamentals", "Embedded Linux & Embedded Programming", "Mobile Development (Kotlin, Jetpack)", "Cloud, DevOps & automation", "Software engineering foundations"],
+    third: "Key Benefits",
+    features: ["blended learning (SCORM + ILT)", "hands-on labs and real-case simulations", "pre-/post-assessment", "engagement analytics", "HRDC Claimable Training (Malaysia only)"],
     icon: "cap",
     link: "/solutions/tna",
   },
   {
     title: "Technology Stack Programs",
-    description: "End-to-end skill mastery for technical teams across Embedded Linux, AI, and Mobile stacks.",
-    features: ["Embedded Linux Stack", "AI Stack", "Mobile Stack", "Engineering autonomy"],
+    description: "Our Technology Stack Programs help engineers build mastery across complete domains, not isolated modules. Sample stacks:",
+    content: ["Embedded Linux Stack: Boot → Kernel → Drivers → Yocto → Debugging", "AI Stack: Python → ML → DL → GenAI → LangChain → Autogen", "Mobile Apps Dev Stack: Kotlin → Jetpack → Compose → Optimization → CI/CD"],
+    third: "Outcomes",
+    features: ["deeper engineering autonomy", "reduced dependency on external vendors", "consistent skill standards across teams",],
     icon: "chip",
     link: "/solutions/technology-stacks",
   },
   {
-    title: "Professional Development",
-    description: "Human capability for engineering-driven organizations: mindset, communication, collaboration, and leadership.",
-    features: ["Mindset & adaptability", "Communication & influence", "Team enablement"],
+    title: "Professional Development Stack",
+    subtitle: "Our Professional Development Stack strengthens:",
+    description: "This stack is designed for engineers, analysts, managers, and cross-functional teams across industries.",
+    features: ["mindset & adaptability", "communication & influence", "collaboration & emotional intelligence", "productivity & self-management", "team enablement & leadership"],
     icon: "people",
     link: "/solutions/tna",
   },
   {
-    title: "Training Needs Assessment",
-    description: "Measure, benchmark, transform. Role-based skills mapping, gap analysis, and data-driven reporting.",
-    features: ["Skills mapping", "Gap analysis", "Custom roadmap", "HRDC support"],
+    title: "Training Needs Assessment & Skill Matrix",
+    subtitle: "We help organizations evaluate capability objectively through:",
+    description: "This brings clarity to your training needs assessment, customized training plans, and professional development training roadmap.",
+    features: ["role-based skills mapping", "engineering vs non-engineering segmentation", "prerequisite tracking", "gap analysis", "custom development roadmap", "data-driven reporting"],
     icon: "chart",
     link: "/solutions/tna",
   },
@@ -66,9 +73,9 @@ export default function OurSolutionPage() {
         <section className="sol-hero">
           <div className="sol-hero__pattern" aria-hidden="true" />
           <div className="sol-hero__inner">
-            <h1 className="sol-hero__title">Empowering Tech Teams & Individuals</h1>
+            <h1 className="sol-hero__title">Our Solutions</h1>
             <p className="sol-hero__subtitle">
-              Practitioner-led capability building for engineering-driven organizations—hands-on learning, domain expertise, and real-world application across industries.
+              Practitioner-led capability building for engineering-driven organizations, combining hands-on learning, domain expertise, and real-world application across industries.
             </p>
             <a href="/solutions/tna" className="sol-hero__cta">Explore Our Solutions</a>
           </div>
@@ -89,13 +96,24 @@ export default function OurSolutionPage() {
                     {card.icon === "chart" && <SolIconChart />}
                   </div>
                   <h3 className="sol-card__title">{card.title}</h3>
+                  <h6 className="sol-card__subtitle text-muted ">{card.subtitle}</h6>
                   <p className="sol-card__desc">{card.description}</p>
+                  <ul className="sol-card__content">
+                    {card.content?.map((f, j) => (
+                      <li key={j}>
+                        <span className="sol-card__dot" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <br />
+                  <h6 className="sol-card__subtitle text-muted">{card.third}</h6>
                   <ul className="sol-card__features">
-                    {card.features.map((f, j) => (
+                    {card.features?.map((f, j) => (
                       <li key={j}><span className="sol-card__dot" />{f}</li>
                     ))}
                   </ul>
-                  <a href={card.link} className="sol-card__link">Learn more</a>
+                  <a href={card.link} className="sol-card__link">Explore Technology Programs</a>
                 </div>
               ))}
             </div>
@@ -106,9 +124,9 @@ export default function OurSolutionPage() {
         {/* Technology Stack: dark blue, white text, pills */}
         <section className="sol-section sol-tech">
           <div className="sol-container sol-container--narrow">
-            <h2 className="sol-tech__title">Technology Stack Services</h2>
+            <h2 className="sol-tech__title">Consulting Services</h2>
             <p className="sol-tech__desc">
-              Our Technology Stack Programs help engineers build mastery across complete domains—Embedded Linux, AI, Mobile—not isolated modules.
+              We extend our learning impact into execution through domain-specific consulting:
             </p>
             <div className="sol-tech__icon-wrap">
               <SolIconShield />

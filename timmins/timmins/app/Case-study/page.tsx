@@ -72,17 +72,14 @@ const page = () => {
 
                     <div className="case-left">
                         <h1>
-                            Tingkatkan Bisnis dan Kinerja Tim
-                            <br /> dengan Corporate Training
-                            Belajarlagi
+                            Case Studiesi
                         </h1>
 
                         <p>
-                            Tingkatkan performa bisnis melalui program pengembangan
-                            karyawan yang inovatif dan menyenangkan bersama Belajarlagi.
+                            How Timmins partners with organizations to build advanced technology capability through real-world, practitioner-led learning and delivery.
                         </p>
 
-                        <button className="case-btn">Konsultasi Gratis</button>
+
                     </div>
 
                     <div className="case-right">

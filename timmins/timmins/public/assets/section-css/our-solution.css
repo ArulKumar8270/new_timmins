@@ -206,7 +206,7 @@
 }
 
 .sol-card__title {
-    font-size: 1.25rem;
+    font-size: 1.60rem;
     font-weight: 700;
     color: #15314e;
     margin-bottom: 0.5rem;
@@ -240,6 +240,26 @@
     height: 6px;
     border-radius: 50%;
     background: #4198c8;
+}
+
+.sol-card__content li {
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #15314e;
+
+    /* Dark grey */
+}
+
+.sol-card__content li,
+.sol-card__features li {
+    display: flex;
+    align-items: center;
+}
+
+.sol-card__content li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .sol-card__link {
@@ -358,7 +378,7 @@
 /* ----- Consulting: metrics row + list ----- */
 .sol-consulting {
     padding: 4rem 0;
-    background:#eaf4fa;
+    background: #eaf4fa;
 }
 
 .sol-consulting__title {

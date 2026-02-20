@@ -19,14 +19,14 @@ const timelineData = [
   },
   {
     year: "2018–2019",
-    title: "Specialization & North America",
+    title: "Specialization & North America Expansion",
     side: "left" as const,
     image: "/assets/New_images/2018.png",
     imageAlt: "Timmins expansion",
     points: [
-      "Shifted into advanced technical domains: Telecom & 5G, Semiconductor & embedded, AI & data foundations, Enterprise software engineering.",
+      "Timmins shifted into advanced technical domains: Telecom & 5G, Semiconductor & embedded, AI & data foundations, Enterprise software engineering.",
       "HRD Corp–recognized Training Provider, enabling HRDC-Claimable Training for Malaysian employers.",
-      "Expanded operations to Canada; cross-regional knowledge exchange and practitioner-led technical upskilling globally.",
+      "Expanded operations to Canada to access global subject matter experts,Enabled cross-regional knowledge exchange,Broadened delivery of practitioner-led technical upskilling programs.",
     ],
   },
   {
@@ -44,24 +44,24 @@ const timelineData = [
   },
   {
     year: "2024",
-    title: "Timmins Training Center, Bayan Lepas (Penang)",
+    title: "Opening Timmins Training Center, Bayan Lepas (Penang)",
     side: "left" as const,
     image: "/assets/New_images/2024.jpg",
     imageAlt: "Timmins Training Center Penang",
     points: [
-      "Opened a dedicated training center in Bayan Lepas, Penang, for hands-on, lab-based technical training and stronger delivery capability in Malaysia.",
+      "Timmins opened a dedicated training center in Bayan Lepas, Penang, to support hands-on, lab-based technical training and strengthen its delivery capability in Malaysia.",
     ],
   },
   {
     year: "2023–2025",
-    title: "Global Reach & HRDC Recognition",
+    title: "Global Reach , Engineering Depth, & HRDC Recognition",
     side: "right" as const,
     image: "/assets/New_images/2026.jpg",
     imageAlt: "Timmins global capability",
     points: [
-      "Engineering-grade capability programs delivered globally in 11 countries, in English and Mandarin.",
-      "Clients across global tech, engineering manufacturers, banks, universities, and public organizations.",
-      "Core areas: Embedded systems, Telecom & 5G, Cloud & DevOps, technical upskilling for engineering teams.",
+      "Today, Timmins delivers Engineering-grade capability programs delivered globally supporting organizations through hands-on, practitioner-led learning.Programs delivered in in 11 countries, in English and Mandarin.",
+      "Clients across sectors global tech companies, engineering manufacturers, banks, universities, and public organizations,financial institutions.",
+      "Core capability  areas: Embedded systems  and embedded programming, Telecom,5Gc&  network capability, Cloud,DevOps & automation , technical upskilling for engineering teams.",
     ],
   },
 ];
