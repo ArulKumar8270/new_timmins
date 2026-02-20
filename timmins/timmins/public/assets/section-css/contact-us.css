@@ -385,3 +385,348 @@
     font-size: 16px;
     color: #4198c8;
 }
+
+/* ========== Contact Us – Modern layout (cu-page) ========== */
+.cu-page {
+    background: #fff;
+}
+
+.cu-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero */
+.cu-hero {
+    padding: 4rem 1.5rem 3.5rem;
+    text-align: center;
+    background: linear-gradient(160deg, #15314e 0%, #1e3a5f 100%);
+}
+
+.cu-hero__inner {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.cu-hero__title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.cu-hero__desc {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Quick contact strip */
+.cu-quick {
+    padding: 1rem 1.5rem;
+    background: #eaf4fa;
+    border-bottom: 1px solid rgba(21, 49, 78, 0.08);
+}
+
+.cu-quick .cu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 2rem;
+}
+
+.cu-quick__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #15314e;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.cu-quick__item:hover {
+    color: #4198c8;
+}
+
+.cu-quick__icon {
+    font-size: 1.125rem;
+}
+
+/* Main grid: offices | form */
+.cu-main {
+    padding: 3rem 0 4rem;
+}
+
+.cu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 3rem;
+    align-items: start;
+}
+
+/* Offices column */
+.cu-offices__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #15314e;
+    margin-bottom: 0.5rem;
+}
+
+.cu-offices__intro {
+    font-size: 0.9375rem;
+    color: #4a5b6b;
+    margin-bottom: 1.75rem;
+    line-height: 1.55;
+}
+
+.cu-office {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1.5rem 1.5rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+}
+
+.cu-office:last-child {
+    margin-bottom: 0;
+}
+
+.cu-office__header {
+    margin-bottom: 0.75rem;
+}
+
+.cu-office__header h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #15314e;
+    margin: 0 0 0.25rem 0;
+}
+
+.cu-office__badge {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #4198c8;
+    background: rgba(65, 152, 200, 0.12);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-left: 0.35rem;
+}
+
+.cu-office__company {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #15314e;
+    margin: 0;
+}
+
+.cu-office__address,
+.cu-office__hours {
+    font-size: 0.875rem;
+    color: #4a5b6b;
+    line-height: 1.55;
+    margin: 0 0 0.75rem 0;
+}
+
+.cu-office__contact {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.75rem 0;
+    font-size: 0.875rem;
+    color: #15314e;
+}
+
+.cu-office__contact li {
+    margin-bottom: 0.35rem;
+    color: #15314e;
+}
+
+.cu-office__link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4198c8;
+    text-decoration: none;
+}
+
+.cu-office__link:hover {
+    text-decoration: underline;
+}
+
+/* Form column */
+.cu-form-wrap {
+    position: sticky;
+    top: 1.5rem;
+}
+
+.cu-form-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(21, 49, 78, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+.cu-form-card__header {
+    background: linear-gradient(135deg, #15314e 0%, #1e3a5f 100%);
+    padding: 1.75rem 2rem;
+}
+
+.cu-form-card__title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.35rem 0;
+}
+
+.cu-form-card__sub {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+.cu-form {
+    padding: 2rem 2rem 2.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.cu-form__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.cu-form__row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.cu-form__label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #15314e;
+    letter-spacing: 0.01em;
+}
+
+.cu-form__input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #f8fafc;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    font-family: inherit;
+}
+
+.cu-form__input:hover {
+    background: #fff;
+}
+
+.cu-form__input::placeholder {
+    color: #94a3b8;
+}
+
+.cu-form__input:focus {
+    outline: none;
+    border-color: #4198c8;
+    box-shadow: 0 0 0 3px rgba(65, 152, 200, 0.2);
+    background: #fff;
+}
+
+.cu-form__select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234a5b6b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.25rem;
+}
+
+.cu-form__textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.cu-form__submit {
+    margin-top: 0.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #4198c8 0%, #3585b3 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 14px rgba(65, 152, 200, 0.35);
+}
+
+.cu-form__submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(65, 152, 200, 0.4);
+}
+
+.cu-form__submit-arrow {
+    font-size: 1.125rem;
+    transition: transform 0.2s;
+}
+
+.cu-form__submit:hover .cu-form__submit-arrow {
+    transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .cu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cu-form-wrap {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .cu-hero {
+        padding: 3rem 1rem 2.5rem;
+    }
+
+    .cu-quick .cu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cu-main {
+        padding: 2rem 0 3rem;
+    }
+
+    .cu-form__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cu-form-card__header {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .cu-form {
+        padding: 1.5rem 1.5rem 1.75rem;
+    }
+
+    .cu-form-card {
+        border-radius: 16px;
+    }
+}

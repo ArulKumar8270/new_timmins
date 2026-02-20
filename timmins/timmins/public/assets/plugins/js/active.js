@@ -521,7 +521,8 @@
       });
     }
   }
-  gsap_ed_custom_cursor();
+  // Cursor is initialized by Header.tsx on mount/pathname so it works after client-side navigation
+  // gsap_ed_custom_cursor();
   /*======================================================================================
     Preloader JS
   =======================================================================================*/

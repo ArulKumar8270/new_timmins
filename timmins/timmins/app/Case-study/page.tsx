@@ -458,7 +458,7 @@ const page = () => {
 
                                 </div>
 
-                                <button className="case-btn"><a href="/assets/New_images/pdf4.pdf" target='_blank' className=" underline mt-3 d-inline-block">
+                                <button className="case-btn"><a href="/assets/New_images/pdf4.pdf" target='_blank' className=" underline d-inline-block">
                                     Download Full Case Study (via Form)
                                 </a></button>
 
@@ -531,7 +531,7 @@ const page = () => {
                                     <p>✔ Global, multi-site scalability
                                     </p>
                                 </div>
-                                <button className="case-btn"><a href="/assets/New_images/pdf4.pdf" target='_blank' className=" underline mt-3 d-inline-block">
+                                <button className="case-btn"><a href="/assets/New_images/pdf4.pdf" target='_blank' className=" underline d-inline-block">
                                     Download Full Case Study (via Form)
                                 </a></button>
                             </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -8,6 +8,7 @@ const Header = () => {
     const [isSticky, setIsSticky] = useState(false);
     const pathname = usePathname();
     const [expandedMenus, setExpandedMenus] = useState<Set<string>>(new Set());
+    const cursorBallRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -131,6 +132,120 @@ const Header = () => {
         setExpandedMenus(new Set());
     }, [pathname]);
 
+    // Re-initialize custom cursor on mount and after client-side navigation
+    // (cursor-ball is re-created when Header remounts on each page)
+    useLayoutEffect(() => {
+        let cancelled = false;
+        let cleanup: (() => void) | null = null;
+
+        const tryInit = (): boolean => {
+            const cursorBall = cursorBallRef.current;
+            const gsap = (window as any).gsap;
+            if (!cursorBall || !gsap || cancelled) return false;
+
+            const mouse = { x: 0, y: 0 };
+            const pos = { x: 0, y: 0 };
+            const ratio = 0.99;
+
+            gsap.set(cursorBall, {
+                xPercent: -50,
+                yPercent: -50,
+                borderWidth: "1px",
+                width: "40px",
+                height: "40px",
+                opacity: 1,
+                scale: 1,
+                backgroundColor: "transparent",
+                borderColor: "rgba(156, 156, 156, 0.5)",
+            });
+
+            const onMouseMove = (e: MouseEvent) => {
+                const scrollTop = window.pageYOffset ?? document.documentElement.scrollTop;
+                mouse.x = e.pageX;
+                mouse.y = e.pageY - scrollTop;
+            };
+
+            const updatePosition = () => {
+                pos.x += (mouse.x - pos.x) * ratio;
+                pos.y += (mouse.y - pos.y) * ratio;
+                gsap.to(cursorBall, { duration: 0.4, x: pos.x, y: pos.y });
+            };
+
+            document.addEventListener("mousemove", onMouseMove);
+            gsap.ticker.add(updatePosition);
+
+            const onHoverEnter = () => {
+                gsap.to(cursorBall, {
+                    borderColor: "rgba(34, 34, 34, 0.05)",
+                    scale: 1.7,
+                    opacity: 0.15,
+                    backgroundColor: "rgba(34, 34, 34, 0.2)",
+                });
+            };
+            const onHoverLeave = () => {
+                gsap.to(cursorBall, {
+                    borderColor: "rgba(156, 156, 156, 0.5)",
+                    scale: 1,
+                    opacity: 1,
+                    backgroundColor: "transparent",
+                    width: "40px",
+                    height: "40px",
+                });
+                gsap.ticker.add(updatePosition);
+            };
+
+            const selector = "a, button, input[type=submit]";
+            const onMouseOver = (e: Event) => {
+                if ((e.target as Element).closest?.(selector)) onHoverEnter();
+            };
+            const onMouseOut = (e: Event) => {
+                const related = (e as MouseEvent).relatedTarget as Element | null;
+                if (!related?.closest?.(selector)) onHoverLeave();
+            };
+            document.body.addEventListener("mouseover", onMouseOver);
+            document.body.addEventListener("mouseout", onMouseOut);
+
+            cleanup = () => {
+                document.removeEventListener("mousemove", onMouseMove);
+                gsap.ticker.remove(updatePosition);
+                document.body.removeEventListener("mouseover", onMouseOver);
+                document.body.removeEventListener("mouseout", onMouseOut);
+            };
+            return true;
+        };
+
+        let attempts = 0;
+        let retryId: ReturnType<typeof setTimeout> | null = null;
+        const maxAttempts = 30; // ~4.5s of retries
+        const run = () => {
+            if (cancelled || attempts >= maxAttempts) return;
+            attempts++;
+            if (tryInit()) return;
+            retryId = window.setTimeout(run, 150);
+        };
+
+        // Run immediately (ref is set after commit; useLayoutEffect runs after commit)
+        run();
+        // When returning to home, DOM/GSAP can be delayed; schedule one extra try after paint
+        if (!cleanup) {
+            const lateId = window.setTimeout(() => {
+                if (!cancelled && !cleanup) run();
+            }, 200);
+            return () => {
+                cancelled = true;
+                window.clearTimeout(lateId);
+                if (retryId) window.clearTimeout(retryId);
+                cleanup?.();
+            };
+        }
+
+        return () => {
+            cancelled = true;
+            if (retryId) window.clearTimeout(retryId);
+            cleanup?.();
+        };
+    }, [pathname]);
+
     return (
         <>
             {/* <div id="preloader">
@@ -141,9 +256,9 @@ const Header = () => {
                 </div>
             </div> */}
             {/* End Preloader */}
-            {/* Custom Cursor Start */}
+            {/* Custom Cursor Start - ref allows re-init after client-side navigation */}
             <div id="ed-mouse">
-                <div id="cursor-ball" />
+                <div id="cursor-ball" ref={cursorBallRef} />
             </div>
             {/* Custom Cursor End */}
             {/* Start Mobile Menu Offcanvas */}

@@ -62,7 +62,7 @@ export default function Home() {
                             </div>
 
                             <div
-                              className="ed-hero__btn ed-btn"
+                              className="ed-btn"
                               style={{ backgroundColor: 'var(--ed-secondary-color)' }}
                             >
                               <a href="#">For Individuals – Browse Public Classes</a>
@@ -322,10 +322,9 @@ export default function Home() {
                           <li>Fresh Graduate Onboarding program</li>
                           <li>Corporate Training Malaysia (HRDC Claimable)</li>
                         </ul>
-
-                        <a href="/courses" className="learn-btn">
-                          Explore B2B Solutions
-                        </a>
+                        <div className="ed-hero__btn ed-btn">
+                          <a href="/courses">Explore B2B Solutions</a>
+                        </div>
                       </div>
                     </div>
 
@@ -346,9 +345,9 @@ export default function Home() {
                           <li>Gen AI for IT and Non-IT Teams</li>
                         </ul>
 
-                        <a href="#" className="learn-btn">
-                          Browse Public Classes
-                        </a>
+                        <div className="ed-hero__btn ed-btn">
+                          <a href="/courses">Browse Public Classes</a>
+                        </div>
                       </div>
                     </div>
 

@@ -5669,7 +5669,7 @@ header {
     background: #f4a623;
     color: #eaf4fa;
     border: none;
-    padding: 14px 34px;
+    padding: 14px 25px;
     border-radius: 40px;
     font-weight: 600;
     cursor: pointer;
@@ -5868,4 +5868,8 @@ header {
 
 .modern-btn:hover {
     background: #4338ca;
+}
+
+.bg-gray-100 {
+    background-color: #f8f9fa;
 }

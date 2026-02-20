@@ -105,16 +105,10 @@ const page = () => {
                 {/* Start About Area */}
                 <>
                     {/* About Timmins Training */}
-                    <section className="about-timmins section-gap">
+                    <section className="approach-section section-gap">
                         <div className="container">
 
                             <div className="about-card">
-
-                                {/* CARD TITLE */}
-                                <div className="text-center mb-4">
-                                    <h2 className="fw-bold">Our Purpose & Mission</h2>
-                                </div>
-
                                 <div className="row align-items-center g-4">
 
                                     {/* LEFT IMAGE */}
@@ -134,19 +128,27 @@ const page = () => {
 
                                     {/* RIGHT CONTENT */}
                                     <div className="col-lg-8 col-md-12">
-                                        <h6>Our Purpose</h6>
-                                        <p>
-                                            Timmins exists to deliver practitioner-led, engineering-grade training
-                                            that keeps pace with modern technology and translates directly into
-                                            real-world impact.
-                                        </p>
-
-                                        <h6 className="mt-3">Our Mission</h6>
-                                        <p>
-                                            Our mission is to enable organizations to stay competitive in a rapidly
-                                            evolving tech landscape through practitioner-led training and
-                                            engineering-grade capability building.
-                                        </p>
+                                        <div className="mb-4">
+                                            <h3 className="fw-bold">Our Purpose & Mission</h3>
+                                        </div>
+                                        <div className="align-items-baseline d-flex flex gap-3 mb-4 pb-3 px-4 rounded-2 bg-gray-100">
+                                            <div>
+                                                <h6>Our Purpose</h6>
+                                                <p>
+                                                    Timmins exists to deliver practitioner-led, engineering-grade training
+                                                    that keeps pace with modern technology and translates directly into
+                                                    real-world impact.
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <h6 className="mt-3">Our Mission</h6>
+                                                <p>
+                                                    Our mission is to enable organizations to stay competitive in a rapidly
+                                                    evolving tech landscape through practitioner-led training and
+                                                    engineering-grade capability building.
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>

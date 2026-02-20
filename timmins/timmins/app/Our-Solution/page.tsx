@@ -1,344 +1,260 @@
 "use client";
+
 import { useState } from "react";
-import React from 'react'
-import Header from '../Components/Header'
-import Footer from '../Components/Footer'
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 
-const page = () => {
-    const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
-    return (
-        <>
+const FAQ_ITEMS = [
+  { question: "What is the best embedded systems training for beginners?", answer: "The recommended beginner courses are OS Essentials, Embedded C & GDB, and Embedded Linux System Internals. These courses provide a strong foundation in operating systems, embedded programming, debugging, and Linux internals." },
+  { question: "Does Timmins offer AI consulting or only training?", answer: "Timmins offers both AI consulting and AI training, including capability assessment, use-case identification, and structured enterprise AI upskilling programs." },
+  { question: "Are your programs HRDC Claimable?", answer: "Yes. For Malaysian employers only, many AI, Embedded Systems, 5G, and corporate training programs are HRDC claimable, subject to eligibility and approval." },
+  { question: "Do you provide customized training for engineering teams?", answer: "Yes. Timmins specializes in customized, role-based training pathways for embedded systems, AI, 5G, and software engineering teams." },
+  { question: "Are Timmins training courses available online?", answer: "Yes. Timmins offers online, on-site, and hybrid training programs for engineering and technical teams." },
+  { question: "What industries does Timmins work with?", answer: "Timmins works with semiconductors, telecom, manufacturing, banking, digital platforms, and technology-driven enterprises." },
+  { question: "Do you provide corporate training outside Malaysia?", answer: "Yes. Timmins delivers corporate training across Malaysia, Singapore, Indonesia, China, India, Vietnam, the United States, and Canada." },
+  { question: "How is Timmins different from other corporate training providers?", answer: "Timmins is practitioner-led, engineering-grade, and deeply specialized, focusing on real capability building rather than generic or tool-centric training." },
+  { question: "Do you offer end-to-end Embedded Linux training?", answer: "Yes. Timmins covers Embedded Linux end-to-end, including OS Essentials, Embedded C & GDB, Embedded Linux System Internals, device drivers (audio, I2C), kernel debugging, user-space and kernel internals, and SELinux, security." },
+  { question: "Can Timmins design onboarding programs for fresh graduates?", answer: "Yes. Timmins has designed and delivered large-scale onboarding and engineering academy programs for semiconductor and telecom organizations." },
+];
 
-            <Header />
+const SOLUTION_CARDS = [
+  {
+    title: "Fresh Graduate Programs",
+    description: "From fresh talent to project-ready engineers. We design onboarding programs that accelerate readiness for engineering, tech, and operations roles.",
+    features: ["AI & ML fundamentals", "Embedded Linux", "Mobile (Kotlin, Jetpack)", "Cloud & DevOps", "HRDC Claimable"],
+    icon: "cap",
+    link: "/solutions/tna",
+  },
+  {
+    title: "Technology Stack Programs",
+    description: "End-to-end skill mastery for technical teams across Embedded Linux, AI, and Mobile stacks.",
+    features: ["Embedded Linux Stack", "AI Stack", "Mobile Stack", "Engineering autonomy"],
+    icon: "chip",
+    link: "/solutions/technology-stacks",
+  },
+  {
+    title: "Professional Development",
+    description: "Human capability for engineering-driven organizations: mindset, communication, collaboration, and leadership.",
+    features: ["Mindset & adaptability", "Communication & influence", "Team enablement"],
+    icon: "people",
+    link: "/solutions/tna",
+  },
+  {
+    title: "Training Needs Assessment",
+    description: "Measure, benchmark, transform. Role-based skills mapping, gap analysis, and data-driven reporting.",
+    features: ["Skills mapping", "Gap analysis", "Custom roadmap", "HRDC support"],
+    icon: "chart",
+    link: "/solutions/tna",
+  },
+];
 
-            <section className="solutions-hero">
-                <div className="container text-center">
-                    <h1 className="solutions-title">Our Solutions</h1>
-                    <p className="solutions-subtitle">
-                        Practitioner-led capability building for engineering-driven organizations,
-                        combining hands-on learning, domain expertise, and real-world application
-                        across industries.
-                    </p>
+const TECH_PILLS = [
+  "Embedded Linux", "AI & GenAI", "Mobile (Kotlin)", "Cloud & DevOps",
+  "5G & Telecom", "Software Engineering", "Data Analytics", "Automation",
+  "Yocto & BSP", "LangChain", "Jetpack Compose", "CI/CD",
+];
+
+export default function OurSolutionPage() {
+  const [activeFaq, setActiveFaq] = useState<number | null>(null);
+
+  return (
+    <>
+      <Header />
+
+      <div className="sol-page">
+        {/* Hero: gradient, headline, orange CTA */}
+        <section className="sol-hero">
+          <div className="sol-hero__pattern" aria-hidden="true" />
+          <div className="sol-hero__inner">
+            <h1 className="sol-hero__title">Empowering Tech Teams & Individuals</h1>
+            <p className="sol-hero__subtitle">
+              Practitioner-led capability building for engineering-driven organizations—hands-on learning, domain expertise, and real-world application across industries.
+            </p>
+            <a href="/solutions/tna" className="sol-hero__cta">Explore Our Solutions</a>
+          </div>
+        </section>
+
+        {/* Our Solutions: section title + 4 cards grid */}
+        <section className="sol-section sol-solutions">
+          <div className="sol-container">
+            <h2 className="sol-section__title">Our Solutions</h2>
+            <div className="sol-section__line" />
+            <div className="sol-cards">
+              {SOLUTION_CARDS.map((card, i) => (
+                <div key={i} className="sol-card">
+                  <div className="sol-card__icon">
+                    {card.icon === "cap" && <SolIconCap />}
+                    {card.icon === "chip" && <SolIconChip />}
+                    {card.icon === "people" && <SolIconPeople />}
+                    {card.icon === "chart" && <SolIconChart />}
+                  </div>
+                  <h3 className="sol-card__title">{card.title}</h3>
+                  <p className="sol-card__desc">{card.description}</p>
+                  <ul className="sol-card__features">
+                    {card.features.map((f, j) => (
+                      <li key={j}><span className="sol-card__dot" />{f}</li>
+                    ))}
+                  </ul>
+                  <a href={card.link} className="sol-card__link">Learn more</a>
                 </div>
-            </section>
+              ))}
+            </div>
+            <a href="/solutions/tna" className="sol-btn sol-btn--primary">See More Solutions</a>
+          </div>
+        </section>
 
+        {/* Technology Stack: dark blue, white text, pills */}
+        <section className="sol-section sol-tech">
+          <div className="sol-container sol-container--narrow">
+            <h2 className="sol-tech__title">Technology Stack Services</h2>
+            <p className="sol-tech__desc">
+              Our Technology Stack Programs help engineers build mastery across complete domains—Embedded Linux, AI, Mobile—not isolated modules.
+            </p>
+            <div className="sol-tech__icon-wrap">
+              <SolIconShield />
+            </div>
+            <div className="sol-tech__pills">
+              {TECH_PILLS.map((label, i) => (
+                <span key={i} className="sol-tech__pill"><SolIconCog />{label}</span>
+              ))}
+            </div>
+            <a href="/solutions/technology-stacks" className="sol-btn sol-btn--light">Start Your Solution</a>
+          </div>
+        </section>
 
+        {/* Consulting: title + 4 metric boxes */}
+        <section className="sol-section sol-consulting">
+          <div className="sol-container">
+            <h2 className="sol-consulting__title">Consulting Services</h2>
+            <p className="sol-consulting__tagline">From learning to implementation, led by practitioners.</p>
+            <div className="sol-metrics">
+              <div className="sol-metric">
+                <span className="sol-metric__value">5,000+</span>
+                <span className="sol-metric__label">Professionals Trained</span>
+              </div>
+              <div className="sol-metric">
+                <span className="sol-metric__value">10+</span>
+                <span className="sol-metric__label">Years of Experience</span>
+              </div>
+              <div className="sol-metric">
+                <span className="sol-metric__value">200+</span>
+                <span className="sol-metric__label">Customized Programs</span>
+              </div>
+              <div className="sol-metric">
+                <span className="sol-metric__value">100+</span>
+                <span className="sol-metric__label">Global Clients</span>
+              </div>
+            </div>
+            <div className="sol-consulting__list">
+              <div className="sol-consulting__item">
+                <h4>Embedded Linux Consulting</h4>
+                <p>Kernel, BSP, drivers, Yocto, debugging — ideal for manufacturing, embedded, IoT.</p>
+              </div>
+              <div className="sol-consulting__item">
+                <h4>AI Consulting</h4>
+                <p>GenAI workflows, LLM integration, LangChain — ideal for telco, software, digital banking.</p>
+              </div>
+              <div className="sol-consulting__item">
+                <h4>Mobile Development Consulting</h4>
+                <p>Android, Kotlin, Jetpack, performance — ideal for fintech, telco, mobile-first enterprises.</p>
+              </div>
+            </div>
+            <a href="/solutions/consulting" className="sol-btn sol-btn--primary">View Consulting Services</a>
+          </div>
+        </section>
 
-            <section className="onboarding-section listStyle bgBlue">
-                <h2>Fresh Graduate Onboarding Programs</h2>
-                <h4>From fresh talent to project-ready engineers.</h4>
-                <p className="intro">
-                    We design onboarding programs that accelerate readiness for engineering,
-                    tech, and operations roles across industries. Our multi-industry curricula
-                    cover:
-                </p>
-                <ul className="outcomes-list">
-                    <li>AI &amp; Machine Learning fundamentals</li>
-                    <li>Embedded Linux &amp; Embedded Programming</li>
-                    <li>Mobile Development (Kotlin, Jetpack)</li>
-                    <li>Cloud, DevOps &amp; automation</li>
-                    <li>Software engineering foundations</li>
-                </ul>
-                <h3 className="features-title">Features:</h3>
-                <ul className="outcomes-list">
-                    <li>Blended learning (SCORM + ILT)</li>
-                    <li>Hands-on labs and real-case simulations</li>
-                    <li>Pre-/post-assessment with skill progression</li>
-                    <li>Engagement analytics</li>
-                    <li>HRDC Claimable Training (Malaysia only)</li>
-                </ul>
-                <p className="highlight">
-                    📌 Over a decade of onboarding success for manufacturing, telecom, and
-                    banking enterprises.
-                </p>
-                <a href="/solutions/tna" className="primary-btn text-white">
-                    Explore Technology Programs
-                </a>
-            </section>
+        {/* Why Choose Us: two-column text */}
+        <section className="sol-section sol-why">
+          <div className="sol-container">
+            <h2 className="sol-why__title">Why Organizations Choose Timmins</h2>
+            <div className="sol-why__grid">
+              <div className="sol-why__col">
+                <h3>Practitioner-led & engineering-grade</h3>
+                <p>We don’t just teach skills. We build engineers, teams, and systems. Our programs are delivered by people with real industry experience and grounded in real-world application.</p>
+                <p>Relevant across manufacturing, telecom, banking, and engineering—with measurable impact and capability uplift.</p>
+              </div>
+              <div className="sol-why__col">
+                <h3>Global reach, local impact</h3>
+                <p>Programs delivered in 11+ countries, in English and Mandarin. Clients include global tech companies, engineering manufacturers, banks, universities, and public organizations.</p>
+                <p>HRDC-Claimable in Malaysia. SAFe® Bronze Partner. Over a decade of onboarding success.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <section className="tech-stack-sectionb">
-                <div className="container text-center">
-                    <h2>Technology Stack Programs</h2>
-                    <h4>End-to-end skill mastery for technical teams.</h4>
-                    <p>
-                        Our Technology Stack Programs help engineers build mastery across complete
-                        domains, not isolated modules.
-                    </p>
-                    <p className="stack-line">
-                        <strong>Embedded Linux Stack:</strong>
-                        Boot → Kernel → Drivers → Yocto → Debugging
-                    </p>
-                    <p className="stack-line">
-                        <strong>AI Stack:</strong>
-                        Python → ML → DL → GenAI → LangChain → Autogen
-                    </p>
-                    <p className="stack-line">
-                        <strong>Mobile Stack:</strong>
-                        Kotlin → Jetpack → Compose → Optimization → CI/CD
-                    </p>
-                    <h4 className="mt-4">Outcomes</h4>
-                    <ul className="outcomes-list">
-                        <li>Deeper engineering autonomy</li>
-                        <li>Reduced dependency on external vendors</li>
-                        <li>Consistent skill standards across teams</li>
-                    </ul>
-                    <a href="/solutions/technology-stacks" className="tech-btn text-white">
-                        See Technical Stacks
-                    </a>
+        {/* CTA strip */}
+        <section className="sol-section sol-cta-strip">
+          <div className="sol-container sol-container--narrow">
+            <h2 className="sol-cta-strip__title">Build Capability With Us</h2>
+            <p className="sol-cta-strip__text">Let’s design a capability roadmap that fits your teams and industry.</p>
+            <div className="sol-cta-strip__buttons">
+              <a href="/solutions/consulting" className="sol-btn sol-btn--primary">For Companies – Explore Solutions</a>
+              <a href="/courses" className="sol-btn sol-btn--outline">For Individuals – Browse Public Classes</a>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="sol-section sol-faq">
+          <div className="sol-container sol-container--narrow">
+            <h2 className="sol-faq__title">Frequently Asked Questions</h2>
+            <p className="sol-faq__subtitle">Answers for teams and individuals exploring our solutions.</p>
+            <div className="sol-faq__list">
+              {FAQ_ITEMS.map((item, i) => (
+                <div
+                  key={i}
+                  className={`sol-faq__item ${activeFaq === i ? "sol-faq__item--open" : ""}`}
+                >
+                  <button
+                    type="button"
+                    className="sol-faq__q"
+                    onClick={() => setActiveFaq(activeFaq === i ? null : i)}
+                    aria-expanded={activeFaq === i}
+                  >
+                    {item.question}
+                    <span className="sol-faq__icon">{activeFaq === i ? "−" : "+"}</span>
+                  </button>
+                  <div className="sol-faq__a">{item.answer}</div>
                 </div>
-            </section>
+              ))}
+            </div>
+            <a href="/contact-us" className="sol-btn sol-btn--primary">Get in Touch</a>
+          </div>
+        </section>
+      </div>
 
-            <section className="onboarding-section listStyle bgBlue">
-                <h2>Professional Development Stack</h2>
-                <h4>Human capability for engineering-driven organizations.</h4>
-                <p className="intro">
-                    Technical success requires strong human capability. Our Professional Development Stack strengthens:
-                </p>
-                <ul className="outcomes-list">
-                    <li>mindset & adaptability</li>
-                    <li>communication & influence</li>
-                    <li>collaboration & emotional intelligence</li>
-                    <li>productivity & self-management</li>
-                    <li>team enablement & leadership
-                    </li>
-                </ul>
-
-                <p className="highlight">
-                    This stack is designed for <strong>engineers, analysts, managers, and cross-functional teams</strong> across industries.
-                </p>
-                <a href="/solutions/tna" className="primary-btn text-white">
-                    Explore Professional Development
-                </a>
-            </section>
-
-
-            <section className="onboarding-section-1 listStyle">
-                <h2>Training Needs Assessment & Skill Matrix</h2>
-                <h4>Measure. Benchmark. Transform.</h4>
-                <p className="intro">
-                    We help organizations evaluate capability objectively through:
-
-                </p>
-                <ul className="outcomes-list witthautoStyle">
-                    <li>role-based skills mapping</li>
-                    <li>engineering vs non-engineering segmentation</li>
-                    <li>prerequisite tracking</li>
-                    <li>gap analysis</li>
-                    <li>custom development roadmap</li>
-                    <li>data-driven reporting</li>
-
-                </ul>
-
-                <p className="highlight">
-                    This brings clarity to your training needs assessment, customized training plans, and professional development training roadmap
-                </p>
-                <a href="/solutions/tna" className="primary-btn text-white">
-                    Build Your Skill Matrix
-                </a>
-            </section>
-
-
-            <section className="consulting-section">
-                <div className="consulting-container">
-                    <h2>Consulting Services</h2>
-                    <p className="consulting-subtitle">
-                        From learning to implementation, led by practitioners.
-                    </p>
-                    <p className="consulting-intro">
-                        We extend our learning impact into execution through domain-specific
-                        consulting:
-                    </p>
-                    <div className="consulting-list">
-                        <div className="consulting-item">
-                            <h3>Embedded Linux Consulting</h3>
-                            <p>Kernel, BSP, drivers, Yocto, debugging</p>
-                            <span>
-                                → Ideal for manufacturing, embedded, IoT, and device companies.
-                            </span>
-                        </div>
-                        <div className="consulting-item">
-                            <h3>AI Consulting</h3>
-                            <p>GenAI workflows, LLM integration, LangChain, automation</p>
-                            <span>→ Ideal for telco, software, and digital banking.</span>
-                        </div>
-                        <div className="consulting-item">
-                            <h3>Mobile Development Consulting</h3>
-                            <p>Android framework, Kotlin, Jetpack, performance optimization</p>
-                            <span>→ Ideal for fintech, telco, and mobile-first enterprises.</span>
-                        </div>
-                    </div>
-                    <p className="consulting-footer">
-                        All consulting engagements use our engineering-first approach:
-                        <br />
-                        <strong>
-                            practitioner-led, system-aware, and designed for measurable capability
-                            uplift.
-                        </strong>
-                    </p>
-                    <a href="/solutions/consulting" className="primary-btn text-white">
-                        View Consulting Services
-                    </a>
-                </div>
-            </section>
-
-
-            <section className="onboarding-section-1 listStyle">
-                <h2>Scaled Agile Certification (SAFe®) - Bronze Partner</h2>
-                <h4>Enterprise agility for multi-industry transformation.</h4>
-                <p className="intro">
-                    As an Official <strong>Scaled Agile Bronze Partner</strong>, we deliver SAFe® certification programs for manufacturing, telecom, banking, and large-scale engineering organizations. Popular certifications:
-                </p>
-                <ul className="outcomes-list witthautoStyle">
-                    <li>SAFe® 6.0 Training</li>
-                    <li>Leading SAFe (SAFe Agilist)</li>
-                    <li>SAFe Scrum Master (SSM)</li>
-                    <li>SAFe Advanced Scrum Master (SASM)</li>
-                    <li>SAFe DevOps Practitioner</li>
-                    <li>SAFe for Teams</li>
-                    <li>SAFe Release Train Engineer
-                    </li>
-                    <li>SAFe Agile Product Management</li>
-                </ul>
-                <h3 className="features-title">Features:</h3>
-                <ul className="outcomes-list witthautoStyle">
-                    <li>delivered by certified SAFe® trainers</li>
-                    <li>private corporate batches</li>
-                    <li><strong>HRDC Claimable Training</strong> (Malaysia only)</li>
-                </ul>
-                <a href="/solutions/tna" className="primary-btn text-white">
-                    Explore SAFe® Certifications
-                </a>
-            </section>
-
-            <section className="onboarding-section listStyle bgBlue">
-                <h2>Why Organizations Choose Timmins</h2>
-                <ul className="outcomes-list witthautoStyle">
-                    <li>practitioner-led, engineering-grade programs</li>
-                    <li>relevant across industries (manufacturing, telecom, banking, engineering)</li>
-                    <li>5,000+ professionals trained</li>
-                    <li>200+ customized programs</li>
-                    <li>100+ global clients
-                    </li>
-                    <li>HRDC-Claimable in Malaysia</li>
-                    <li>measurable impact and capability uplift</li>
-                </ul>
-
-                <p className="highlight">
-                    <i>“We don’t just teach skills. We build engineers, teams, and systems.”</i>
-                </p>
-            </section>
-
-
-
-            <section className="onboarding-section-1">
-                <h2>Build Capability With Us</h2>
-                <p>Let’s design a capability roadmap that fits your teams and industry.</p>
-                <br />
-
-                <div className="button-row">
-                    <a href="/solutions/consulting" className="btn-primary text-white">
-                        For Companies – Explore Solutions
-                    </a>
-                    <a href="/courses" className="btn-secondary">
-                        For Individuals – Browse Public Classes
-                    </a>
-                </div>
-
-
-            </section>
-
-
-            <section className="ed-faq section-gap position-relative overflow-hidden">
-
-                <div className="container ">
-
-                    <div className="section-heading-center">
-                        <h2>Frequently Asked Questions</h2>
-                    </div>
-
-
-                    <div className="faq-grid">
-
-                        {[
-                            {
-                                question: "1. What is the best embedded systems training for beginners?",
-                                answer: "The recommended beginner courses are OS Essentials, Embedded C & GDB, and Embedded Linux System Internals. These courses provide a strong foundation in operating systems, embedded programming, debugging, and Linux internals."
-
-                            },
-                            {
-                                question: "2. Does Timmins offer AI consulting or only training?",
-                                answer: "Timmins offers both AI consulting and AI training, including capability assessment, use-case identification, and structured enterprise AI upskilling programs."
-                            },
-                            {
-                                question: "3. Are your programs HRDC Claimable?",
-                                answer: "Yes. For Malaysian employers only, many AI, Embedded Systems, 5G, and corporate training programs are HRDC claimable, subject to eligibility and approval."
-                            },
-                            {
-                                question: "4. Do you provide customized training for engineering teams?",
-                                answer: "Yes. Timmins specializes in customized, role-based training pathways for embedded systems, AI, 5G, and software engineering teams."
-                            },
-                            {
-                                question: "5.Are Timmins training courses available online?",
-                                answer: "Yes. Timmins offers online, on-site, and hybrid training programs for engineering and technical teams."
-                            },
-                            {
-                                question: "6. What industries does Timmins work with?",
-                                answer: "Timmins works with semiconductors, telecom, manufacturing, banking, digital platforms, and technology-driven enterprises."
-                            },
-                            {
-                                question: "7. Do you provide corporate training outside Malaysia?",
-                                answer: "Yes. Timmins delivers corporate training across Malaysia, Singapore, Indonesia, China, India, Vietnam, the United States, and Canada."
-                            },
-                            {
-                                question: "8. How is Timmins different from other corporate training providers?",
-                                answer: "Timmins is practitioner-led, engineering-grade, and deeply specialized, focusing on real capability building rather than generic or tool-centric training."
-                            },
-                            {
-                                question: "9. Do you offer end-to-end Embedded Linux training?",
-                                answer: "Yes. Timmins covers Embedded Linux end-to-end, including OS Essentials, Embedded C & GDB, Embedded Linux System Internals, device drivers (audio, I2C), kernel debugging, user-space and kernel internals, and SELinux, security."
-                            },
-                            {
-                                question: "10. Can Timmins design onboarding programs for fresh graduates?",
-                                answer: "Yes. Timmins has designed and delivered large-scale onboarding and engineering academy programs for semiconductor and telecom organizations."
-                            }
-                        ].map((item, index) => (
-                            <div
-                                key={index}
-                                className={`faq-card ${activeAccordion === index ? "active" : ""}`}
-                            >
-                                <div
-                                    className="faq-question"
-                                    onClick={() =>
-                                        setActiveAccordion(activeAccordion === index ? null : index)
-                                    }
-                                >
-                                    <span>{item.question}</span>
-                                    <span className="arrow">
-                                        {activeAccordion === index ? "−" : "›"}
-                                    </span>
-                                </div>
-
-                                <div
-                                    className={`faq-answer ${activeAccordion === index ? "show" : ""
-                                        }`}
-                                >
-                                    {item.answer}
-                                </div>
-                            </div>
-                        ))}
-
-                    </div>
-                </div>
-            </section>
-            <Footer />
-
-
-
-
-
-
-        </>
-    )
+      <Footer />
+    </>
+  );
 }
 
-export default page
+function SolIconCap() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 4L2 8l10 4 10-4-10-4z" /><path d="M2 8v6l10 4 10-4V8" /><path d="M6 12l6 2 6-2" /></svg>
+  );
+}
+function SolIconChip() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M9 9h6v6H9z" /><path d="M9 4v4M15 4v4M9 16v4M15 16v4M4 9h4M4 15h4M16 9h4M16 15h4" /></svg>
+  );
+}
+function SolIconPeople() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="9" cy="7" r="3" /><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" /><circle cx="17" cy="11" r="2" /><path d="M21 21v-1a3 3 0 00-3-3" /></svg>
+  );
+}
+function SolIconChart() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 3v18h18" /><path d="M7 14l4-4 4 4 5-6" /></svg>
+  );
+}
+function SolIconShield() {
+  return (
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+  );
+}
+function SolIconCog() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3" /><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" /></svg>
+  );
+}
