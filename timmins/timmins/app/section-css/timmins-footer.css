@@ -1,0 +1,445 @@
+/*================================================================================================
+    Timmins Footer 2025 Design
+===================================================================================================*/
+
+.timmins-footer {
+    background: #15314E;
+    color: #FFFFFF;
+    font-family: 'Inter', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    position: relative;
+}
+
+/* Trust Bar */
+.footer-trust-bar {
+    background: #15314E;
+    padding: 48px 0 36px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.trust-bar-content {
+    text-align: center;
+}
+
+.trust-badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.trust-badge {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.trust-separator {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 18px;
+}
+
+.trust-message {
+    margin-bottom: 20px;
+}
+
+.trust-message p {
+    font-size: 16px;
+    color: #DADADA;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.trust-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.trust-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #CFCFCF;
+}
+
+.trust-icon {
+    font-size: 18px;
+}
+
+.trust-ctas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cta-button.primary {
+    background: #EC5339;
+    color: #FFFFFF;
+}
+
+.cta-button.primary:hover {
+    background: #d9452e;
+    transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta-button.secondary:hover {
+    border-color: #EC5339;
+    color: #EC5339;
+}
+
+/* Main Footer */
+.footer-main {
+    padding: 48px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column-title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #EC5339;
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-column-title.mobile-only {
+    display: none;
+}
+
+.footer-column-title.desktop-only {
+    display: block;
+}
+
+.accordion-icon {
+    font-size: 24px;
+    font-weight: 300;
+    color: #EC5339;
+}
+
+.footer-column-content {
+    display: block;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 16px;
+}
+
+.footer-links li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-links a {
+    color: #CFCFCF;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #EC5339;
+}
+
+.footer-offices {
+    margin-bottom: 24px;
+}
+
+.office-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.office-item:last-child {
+    margin-bottom: 0;
+}
+
+.office-flag {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.office-details {
+    flex: 1;
+}
+
+.office-details strong {
+    display: block;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.office-details p {
+    color: #CFCFCF;
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.contact-link {
+    color: #CFCFCF;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-link:hover {
+    color: #EC5339;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    background: rgba(13, 36, 54, 0.9);
+    padding: 36px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-bottom-content {
+    text-align: center;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    color: #CFCFCF;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.social-link:hover {
+    color: #EC5339;
+}
+
+.footer-certifications {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.cert-badge {
+    font-size: 14px;
+    color: #DADADA;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cert-separator {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-trust-bar {
+        padding: 36px 0 28px;
+    }
+
+    .trust-badges {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .trust-separator {
+        display: none;
+    }
+
+    .trust-features {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .trust-ctas {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-main {
+        padding: 36px 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .footer-column {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .footer-column:last-child {
+        border-bottom: none;
+    }
+
+    .footer-column-title.mobile-only {
+        display: flex;
+    }
+
+    .footer-column-title.desktop-only {
+        display: none;
+    }
+
+    .footer-column-title {
+        margin-bottom: 0;
+        padding: 20px 0;
+        border-bottom: none;
+    }
+
+    .footer-column-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .footer-column-content.open {
+        max-height: 1000px;
+        padding-bottom: 20px;
+    }
+
+    .footer-links {
+        padding-top: 12px;
+    }
+
+    .footer-offices {
+        padding-top: 12px;
+    }
+
+    .footer-contact-info {
+        padding-top: 12px;
+    }
+
+    .footer-bottom {
+        padding: 28px 0;
+    }
+
+    .footer-social {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-certifications {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .cert-separator {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .trust-message p {
+        font-size: 14px;
+    }
+
+    .footer-column-title {
+        font-size: 16px;
+    }
+
+    .footer-links a,
+    .contact-link,
+    .social-link {
+        font-size: 14px;
+    }
+}
+
+/*================================================================================================
+    End Timmins Footer CSS
+===================================================================================================*/

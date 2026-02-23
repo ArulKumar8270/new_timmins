@@ -1,0 +1,258 @@
+/* ===== HERO MODERN STYLE ===== */
+
+.pc-hero-modern {
+    background: #eaf1f6;
+    padding: 110px 0;
+}
+
+.pc-modern-title {
+    font-size: 56px;
+    font-weight: 800;
+    color: #0f2c2c;
+    line-height: 1.1;
+}
+
+.pc-modern-desc {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #5c6b75;
+    max-width: 500px;
+}
+
+/* Image frame effect */
+.pc-image-frame {
+    background: #1f2d3d;
+    padding: 20px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.pc-image-frame img {
+    border-radius: 20px;
+}
+
+/* ===== Responsive ===== */
+
+/* Large screens */
+@media (max-width: 1199px) {
+    .pc-modern-title {
+        font-size: 46px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .pc-hero-modern {
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .pc-modern-title {
+        font-size: 38px;
+    }
+
+    .pc-modern-desc {
+        margin: 20px auto 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .pc-modern-title {
+        font-size: 28px;
+    }
+
+    .pc-modern-desc {
+        font-size: 15px;
+    }
+
+    .pc-image-frame {
+        padding: 12px;
+        border-radius: 20px;
+    }
+}
+
+
+
+/* ===== CALENDAR SECTION ===== */
+
+.pc-calendar-section {
+    background: #f6f8fb;
+    padding: 100px 0;
+}
+
+.pc-section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* Filter Bar */
+
+.pc-filter-bar {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.pc-search-input {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    min-width: 250px;
+}
+
+.pc-filter-select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Calendar Box */
+
+.pc-calendar-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.pc-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.pc-calendar-day {
+    background: #eef3f8;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.pc-calendar-day:hover {
+    background: #dbe9f7;
+}
+
+/* Right List */
+
+.pc-class-list {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.pc-class-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.pc-class-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.pc-class-item h6 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.pc-class-item p {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+}
+
+/* Active calendar day */
+.active-day {
+    background: #0d6efd;
+    color: white;
+    font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 991px) {
+    .pc-calendar-section {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .pc-calendar-day {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+
+/* =========================
+   WHY TRAIN WITH TIMMINS
+========================== */
+
+.why-timmins-section {
+    padding: 100px 0;
+    background: #f8f9fb;
+}
+
+.why-title {
+    font-weight: 700;
+    color: #1b2b52;
+}
+
+
+
+.why-card {
+    display: flex;
+    gap: 20px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    align-items: flex-start;
+    transition: 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-icon img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.why-card h5 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.why-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .why-timmins-section {
+        padding: 70px 0;
+    }
+
+    .why-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}

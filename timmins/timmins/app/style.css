@@ -5873,3 +5873,631 @@ header {
 .bg-gray-100 {
     background-color: #f8f9fa;
 }
+
+/* =========================
+   REVO STYLE HERO
+========================== */
+
+.revou-hero {
+    background: linear-gradient(to right,
+            #f3e7b3 50%,
+            #f5f6f8 50%);
+    padding: 120px 0;
+}
+
+/* LEFT DARK CARD */
+
+.skill-card {
+    background: #111;
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card h4 {
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-card li {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    padding-left: 20px;
+    position: relative;
+}
+
+.skill-card li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #f7c948;
+}
+
+/* RIGHT SIDE */
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #111;
+    margin: 20px 0;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.badge-tag {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+}
+
+.meta span {
+    margin-right: 20px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.btn-register {
+    background: #f7c948;
+    border: none;
+    padding: 14px 32px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 8px;
+    margin-top: 25px;
+    transition: 0.3s ease;
+}
+
+.btn-register:hover {
+    background: #f7c948;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+    .revou-hero {
+        background: #f5f6f8;
+        padding: 80px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .skill-card {
+        margin-bottom: 40px;
+    }
+}
+
+
+/* =========================
+   WHY MATTERS SECTION
+========================== */
+
+.why-matters {
+    background: #f5f6f8;
+    padding: 100px 0;
+}
+
+.why-matters h2 {
+    font-weight: 700;
+    color: #111;
+}
+
+.why-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-number {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+.highlight-box {
+    background: #000;
+    color: #f7c948;
+    padding: 8px 12px;
+    display: inline-block;
+    margin: 15px 0;
+    font-weight: 600;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.why-card h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+
+
+/* =========================
+   WHO SHOULD ATTEND
+========================== */
+
+.who-attend {
+    background: #ffffff;
+    padding: 100px 0;
+}
+
+.who-attend h2 {
+    font-weight: 700;
+    color: #111;
+}
+
+.sub-text {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+.role-card {
+    background: #f7f7f7;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #e5e5e5;
+    transition: 0.3s ease;
+    height: 100%;
+}
+
+.role-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.role-card h6 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.salary {
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+.btn-primary-cta {
+    background: #f7c948;
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: 0.3s ease;
+}
+
+.btn-primary-cta:hover {
+    background: #f7c948;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .who-attend {
+        padding: 70px 0;
+    }
+}
+
+
+/* =========================
+   COURSE HIGHLIGHT SECTION
+========================== */
+
+.course-highlight {
+    background: #f4cf3a;
+    padding: 100px 0;
+}
+
+.highlight-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #111;
+}
+
+.highlight-sub {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.highlight-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: 0.3s ease;
+    height: 100%;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background: #f4cf3a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+    font-size: 20px;
+}
+
+.highlight-card p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+    .highlight-title {
+        font-size: 2rem;
+    }
+}
+
+
+/* =========================
+   AGENDA SECTION
+========================== */
+
+.custom-accordion {
+    border: none;
+    margin-bottom: 15px;
+}
+
+.custom-accordion .accordion-button {
+    background: #f4cf3a;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    background: #f4cf3a;
+    color: #000;
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-body {
+    background: #ffffff;
+    border-radius: 0 0 8px 8px;
+    padding: 20px;
+}
+
+.custom-accordion ul {
+    padding-left: 20px;
+
+}
+
+.btn-timmins-primary {
+    background: #1e4b8e;
+    color: #fff;
+    border: none;
+    padding: 12px 35px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.btn-timmins-primary:hover {
+    background: #163a6d;
+}
+
+
+.agenda-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.custom-accordion-item {
+    margin-bottom: 15px;
+}
+
+.accordion-header-custom {
+    background: #f4cf3a;
+    padding: 18px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-body-custom {
+    background: #fff;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+.accordion-body-custom li {
+    color: black;
+}
+
+.btn-timmins-primary {
+    background: #f4cf3a;
+    color: #fff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 6px;
+}
+
+.btn-timmins-primary:hover {
+    background: #f4cf3a;
+    color: #fff;
+}
+
+
+
+
+/* =========================
+   EXPERT SECTION
+========================== */
+
+.expert-section {
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    position: relative;
+}
+
+.expert-overlay {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 80px 0;
+}
+
+.expert-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.expert-desc {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #000;
+    line-height: 1.7;
+
+}
+
+.expert-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.expert-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.expert-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1e4b8e;
+    font-size: 18px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 992px) {
+    .expert-section {
+        padding: 80px 0;
+    }
+
+    .expert-overlay {
+        padding: 50px 0;
+    }
+
+    .expert-title {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+/* =========================
+   TESTIMONIAL SECTION
+========================== */
+
+.testimonial-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.testimonial-source {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonial-section {
+        padding: 70px 0;
+    }
+}
+
+
+/* =========================
+   CERTIFICATE SECTION
+========================== */
+
+.certificate-section {
+    background: #eef1f5;
+    padding: 100px 0;
+}
+
+.certificate-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.certificate-desc {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+}
+
+.certificate-img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .certificate-section {
+        padding: 70px 0;
+    }
+}
+
+
+
+/* =========================
+   LIMITED SEATS SECTION
+========================== */
+
+.limited-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.limited-box {
+    background: #f4cf3a;
+    padding: 50px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.limited-title {
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.progress-wrapper {
+    margin-bottom: 25px;
+}
+
+.progress-text {
+    font-size: 0.85rem;
+    display: inline-block;
+    background: #ff4d4f;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.custom-progress {
+    height: 10px;
+    background: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.custom-progress-bar {
+    width: 84%;
+    height: 100%;
+    background: #ff4d4f;
+    border-radius: 20px;
+}
+
+.limited-btn {
+    background: #ff4d4f;
+    color: #fff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.limited-btn:hover {
+    background: #d9363e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .limited-section {
+        padding: 70px 0;
+    }
+
+    .limited-box {
+        padding: 35px;
+    }
+}

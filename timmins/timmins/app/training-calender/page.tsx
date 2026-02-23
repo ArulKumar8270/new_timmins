@@ -1,3 +1,4 @@
+import "../section-css/training.css"
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Image from "next/image";
