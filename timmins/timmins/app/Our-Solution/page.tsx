@@ -48,7 +48,7 @@ export default function OurSolutionPage() {
             {/* 1 */}
             <div className="col-lg-6">
               <div className="solution-card">
-                <h4>Fresh Graduate Onboarding Programs</h4>
+                <h4 className="mb-3">Fresh Graduate Onboarding Programs</h4>
                 <p className="highlight">From fresh talent to project-ready engineers.</p>
 
                 <ul>
@@ -78,8 +78,8 @@ export default function OurSolutionPage() {
 
             {/* 2 */}
             <div className="col-lg-6">
-              <div className="solution-card">
-                <h4>Technology Stack Programs</h4>
+              <div className="solution-card cardbg">
+                <h4 className="mb-3">Technology Stack Programs</h4>
 
                 <ul>
                   <li><strong>Embedded Linux Stack:</strong> Boot → Kernel → Drivers → Yocto → Debugging</li>
@@ -103,8 +103,8 @@ export default function OurSolutionPage() {
 
             {/* 3 */}
             <div className="col-lg-6">
-              <div className="solution-card">
-                <h4>Professional Development Stack</h4>
+              <div className="solution-card cardbg">
+                <h4 className="mb-3">Professional Development Stack</h4>
 
                 <ul>
                   <li>Mindset & adaptability</li>
@@ -130,7 +130,7 @@ export default function OurSolutionPage() {
             {/* 4 */}
             <div className="col-lg-6">
               <div className="solution-card">
-                <h4>Training Needs Assessment & Skill Matrix</h4>
+                <h4 className="mb-3">Training Needs Assessment & Skill Matrix</h4>
 
                 <ul>
                   <li>Role-based skills mapping</li>

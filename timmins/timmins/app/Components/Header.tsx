@@ -215,7 +215,7 @@ const Header = () => {
         };
 
         let attempts = 0;
-        let retryId: ReturnType<typeof setTimeout> | null = null;
+        let retryId: number | null = null;
         const maxAttempts = 30; // ~4.5s of retries
         const run = () => {
             if (cancelled || attempts >= maxAttempts) return;
