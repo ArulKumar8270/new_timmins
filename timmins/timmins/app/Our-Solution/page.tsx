@@ -3,9 +3,13 @@ import { useState } from "react";
 import "../section-css/our-solution.css"
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import CaseStudyDownloadModal from "../case-study/CaseStudyDownloadModal";
+
+const TECH_STACK_PDF = "/assets/pdf/Timmins Technology Stack.pdf";
 
 export default function OurSolutionPage() {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
+  const [showTechStackModal, setShowTechStackModal] = useState(false);
 
   return (
     <>
@@ -25,134 +29,146 @@ export default function OurSolutionPage() {
                 organizations, combining hands-on learning, domain expertise,
                 and real-world application across industries.
               </p>
+              <a href="#solutions-offerings" className="solutions-hero-btn">
+                Explore Solutions
+              </a>
             </div>
           </div>
         </div>
       </section>
 
 
-      {/* SOLUTION OFFERINGS SECTION */}
-      <section className="solutions-offerings">
+      {/* SOLUTION OFFERINGS SECTION - Alternating Text | Image layout */}
+      <section id="solutions-offerings" className="solutions-offerings">
         <div className="container">
 
-          <div className="section-header text-center">
-            <h2>Our Capability Solutions</h2>
-            <p>
-              Structured, practitioner-led programs designed to build deep,
-              scalable engineering capability across organizations.
-            </p>
+          {/* 1: Text left | Image right */}
+          <div className="solution-row">
+            <div className="solution-row-text">
+              <h2>Fresh Graduate Onboarding Programs</h2>
+              <p className="solution-highlight">From fresh talent to project-ready engineers.</p>
+              <p>We design onboarding programs that accelerate readiness for engineering, tech, and operations roles across industries. Our multi-industry curricula cover:
+              </p>
+              <ul>
+                <li>AI & Machine Learning fundamentals</li>
+                <li>Embedded Linux & Embedded Programming</li>
+                <li>Mobile Development (Kotlin, Jetpack)</li>
+                <li>Cloud, DevOps & Automation</li>
+                <li>Software engineering foundations</li>
+              </ul>
+              <h6>Features</h6>
+              <ul>
+                <li>Blended learning (SCORM + ILT)</li>
+                <li>Hands-on labs and real-case simulations</li>
+                <li>Pre-/post-assessment</li>
+                <li>Engagement analytics</li>
+                <li><strong>HRDC Claimable Training (Malaysia only)</strong></li>
+              </ul>
+              <a href="/contact-us" className="solution-link">
+              Curate Your Programs →
+              </a>
+            </div>
+            <div className="solution-row-image">
+              <img src="/assets/New_images/AP1.png" alt="Fresh graduate onboarding and training" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="solutions-offerings" className="solutions-offerings solutions-offerings--alt">
+        <div className="container">
+          {/* 2: Image left | Text right */}
+          <div className="solution-row solution-row-reverse">
+            <div className="solution-row-image">
+              <img src="/assets/New_images/our-solution/Consulting service at Timmins.png" alt="Technology stack programs" />
+            </div>
+            <div className="solution-row-text">
+              <h2>Technology Stack Programs</h2>
+              <p>Our Technology Stack Programs help engineers build mastery across complete domains, not isolated modules. Sample stacks:</p>
+              <ul>
+                <li><strong>Embedded Linux Stack:</strong> Boot → Kernel → Drivers → Yocto → Debugging</li>
+                <li><strong>AI Stack:</strong> Python → ML → DL → GenAI → LangChain → Autogen</li>
+                <li><strong>Mobile Apps Dev Stack:</strong> Kotlin → Jetpack → Compose → Optimization → CI/CD</li>
+              </ul>
+              <h6>Outcomes</h6>
+              <ul>
+                <li>Deeper engineering autonomy</li>
+                <li>Reduced dependency on external vendors</li>
+                <li>Consistent skill standards across teams</li>
+              </ul>
+              <button
+                type="button"
+                className="solution-link"
+                onClick={() => setShowTechStackModal(true)}
+              >
+                Explore Our Technology Stack →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CaseStudyDownloadModal
+        isOpen={showTechStackModal}
+        onClose={() => setShowTechStackModal(false)}
+        downloadUrl={TECH_STACK_PDF}
+        caseStudyName="Technology Stack"
+        title="Download Technology Stack"
+      />
+
+      <section id="solutions-offerings" className="solutions-offerings">
+        <div className="container">
+          {/* 3: Text left | Image right */}
+          <div className="solution-row">
+            <div className="solution-row-text">
+              <h2>Professional Development Stack</h2>
+              <p>Our Professional Development Stack strengthens:
+              </p>
+              <ul>
+                <li>Mindset & adaptability</li>
+                <li>Communication & influence</li>
+                <li>Collaboration & emotional intelligence</li>
+                <li>Productivity & self-management</li>
+                <li>Team enablement & leadership</li>
+              </ul>
+              <p>
+                This stack is designed for engineers, analysts, managers,
+                and cross-functional teams across industries.
+              </p>
+              <a href="/contact-us" className="solution-link">
+              Curate Your Programs →
+              </a>
+            </div>
+            <div className="solution-row-image">
+              <img src="/assets/New_images/our-solution/Professional Stack Development at Timmins.png" alt="Professional development training" />
+            </div>
           </div>
 
-          <div className="row g-4">
-
-            {/* 1 */}
-            <div className="col-lg-6">
-              <div className="solution-card">
-                <h4 className="mb-3">Fresh Graduate Onboarding Programs</h4>
-                <p className="highlight">From fresh talent to project-ready engineers.</p>
-
-                <ul>
-                  <li>AI & Machine Learning fundamentals</li>
-                  <li>Embedded Linux & Embedded Programming</li>
-                  <li>Mobile Development (Kotlin, Jetpack)</li>
-                  <li>Cloud, DevOps & Automation</li>
-                  <li>Software engineering foundations</li>
-                </ul>
-
-                <h6>Features</h6>
-                <ul>
-                  <li>Blended learning (SCORM + ILT)</li>
-                  <li>Hands-on labs & simulations</li>
-                  <li>Pre/post assessment</li>
-                  <li>Engagement analytics</li>
-                  <li><strong>HRDC Claimable Training (Malaysia only)</strong></li>
-                </ul>
-
-                <br />
-
-                <a href="/courses" className="solution-link">
-                  Explore Technology Programs →
-                </a>
-              </div>
+          {/* 4: Image left | Text right */}
+          <div className="solution-row solution-row-reverse">
+            <div className="solution-row-image">
+              <img src="/assets/New_images/our-solution/Timmins skills matrix.png" alt="Training needs assessment and skill matrix" />
             </div>
-
-            {/* 2 */}
-            <div className="col-lg-6">
-              <div className="solution-card cardbg">
-                <h4 className="mb-3">Technology Stack Programs</h4>
-
-                <ul>
-                  <li><strong>Embedded Linux Stack:</strong> Boot → Kernel → Drivers → Yocto → Debugging</li>
-                  <li><strong>AI Stack:</strong> Python → ML → DL → GenAI → LangChain → Autogen</li>
-                  <li><strong>Mobile Dev Stack:</strong> Kotlin → Compose → CI/CD</li>
-                </ul>
-
-                <h6>Outcomes</h6>
-                <ul>
-                  <li>Deeper engineering autonomy</li>
-                  <li>Reduced vendor dependency</li>
-                  <li>Consistent skill standards</li>
-                </ul>
-                <br />
-
-                <a href="/solutions/technology-stacks" className="solution-link">
-                  See Technical Stacks →
-                </a>
-              </div>
+            <div className="solution-row-text">
+              <h2>Training Needs Assessment & Skill Matrix</h2>
+              <p>We help organizations evaluate capability objectively through:
+              </p>
+              <ul>
+                <li>Role-based skills mapping</li>
+                <li>Engineering vs non-engineering segmentation</li>
+                <li>Prerequisite tracking</li>
+                <li>Gap analysis</li>
+                <li>Custom development roadmap</li>
+                <li>Data-driven reporting</li>
+              </ul>
+              <p>
+                This brings clarity to your training needs assessment, customized training plans, and professional development training roadmap.
+              </p>
+              <a href="/contact-us" className="solution-link">
+              Talk to Our Expert →
+              </a>
             </div>
-
-            {/* 3 */}
-            <div className="col-lg-6">
-              <div className="solution-card cardbg">
-                <h4 className="mb-3">Professional Development Stack</h4>
-
-                <ul>
-                  <li>Mindset & adaptability</li>
-                  <li>Communication & influence</li>
-                  <li>Collaboration & emotional intelligence</li>
-                  <li>Productivity & self-management</li>
-                  <li>Team enablement & leadership</li>
-                </ul>
-
-                <p>
-                  Designed for engineers, analysts, managers,
-                  and cross-functional teams.
-                </p>
-
-                <br />
-
-                <a href="/courses" className="solution-link">
-                  Explore Professional Development →
-                </a>
-              </div>
-            </div>
-
-            {/* 4 */}
-            <div className="col-lg-6">
-              <div className="solution-card">
-                <h4 className="mb-3">Training Needs Assessment & Skill Matrix</h4>
-
-                <ul>
-                  <li>Role-based skills mapping</li>
-                  <li>Engineering vs non-engineering segmentation</li>
-                  <li>Prerequisite tracking</li>
-                  <li>Gap analysis</li>
-                  <li>Custom development roadmap</li>
-                  <li>Data-driven reporting</li>
-                </ul>
-
-                <p>
-                  Brings clarity to your capability roadmap and customized training plans.
-                </p>
-                <br />
-
-                <a href="/solutions/tna" className="solution-link">
-                  Build Your Skill Matrix →
-                </a>
-              </div>
-            </div>
-
           </div>
+
         </div>
       </section>
 
@@ -220,9 +236,9 @@ export default function OurSolutionPage() {
               </strong>
             </p>
 
-            <a href="/solutions/consulting" className="consult-link">
+            {/* <a href="/solutions/consulting" className="consult-link">
               👉 View Consulting Services →
-            </a>
+            </a> */}
           </div>
 
         </div>
@@ -262,15 +278,15 @@ export default function OurSolutionPage() {
                 <li>SAFe Agile Product Management</li>
               </ul>
 
-              <a href="/solutions/agile" className="safe-link">
+              {/* <a href="/Scaled-Agile" className="safe-link">
                 👉 Explore SAFe® Certifications →
-              </a>
+              </a> */}
             </div>
 
             {/* RIGHT FEATURE BOX */}
             <div className="col-lg-5">
               <div className="safe-feature-box">
-                <h5>Program Highlights</h5>
+                <h5>Features:</h5>
 
                 <ul>
                   <li>Delivered by certified SAFe® trainers</li>
@@ -302,7 +318,7 @@ export default function OurSolutionPage() {
             <div className="col-md-6 col-lg-4">
               <div className="why-card">
                 <h4>Practitioner-Led</h4>
-                <p>Engineering-grade programs designed by domain experts.</p>
+                <p>Practitioner-led, engineering-grade programs relevant across industries.</p>
               </div>
             </div>
 
@@ -357,10 +373,12 @@ export default function OurSolutionPage() {
           </p>
 
           <div className="cta-buttons">
-            <a href="/contact" className="btn-primary-cta">
+            <a href="/contact-us" className="btn-primary-cta">
               Speak to Our Team
             </a>
-
+            <a href="https://consult-timmins.com/course/" target="_blank" rel="noopener noreferrer" className="btn-primary-cta btn-secondary-cta">
+              Explore Courses
+            </a>
           </div>
 
         </div>
@@ -379,45 +397,44 @@ export default function OurSolutionPage() {
 
             {[
               {
-                question: "1. What is the best embedded systems training for beginners?",
-                answer: "The recommended beginner courses are OS Essentials, Embedded C & GDB, and Embedded Linux System Internals. These courses provide a strong foundation in operating systems, embedded programming, debugging, and Linux internals."
-
+                question: "1. What is Scaled Agile Certification (SAFe)?",
+                answer: "Scaled Agile Certification (SAFe) is a globally recognized framework for implementing agile at enterprise scale. Companies search for it to improve program delivery, cross-team collaboration, and organizational agility."
               },
               {
-                question: "2. Does Timmins offer AI consulting or only training?",
-                answer: "Timmins offers both AI consulting and AI training, including capability assessment, use-case identification, and structured enterprise AI upskilling programs."
+                question: "2. Is SAFe Scrum Master Certification worth it?",
+                answer: "Yes. SAFe Scrum Master Certification is valuable for professionals working in enterprises with complex, multi-team environments. It enhances career opportunities and qualifies you for roles in large-scale agile transformations."
               },
               {
-                question: "3. Are your programs HRDC Claimable?",
-                answer: "Yes. For Malaysian employers only, many AI, Embedded Systems, 5G, and corporate training programs are HRDC claimable, subject to eligibility and approval."
+                question: "3. What is Embedded Linux used for?",
+                answer: "Embedded Linux is widely used in IoT devices, industrial automation, automotive systems, consumer electronics, and medical devices. Companies search this when looking for engineers who understand kernel, drivers, and system-level programming."
               },
               {
-                question: "4. Do you provide customized training for engineering teams?",
-                answer: "Yes. Timmins specializes in customized, role-based training pathways for embedded systems, AI, 5G, and software engineering teams."
+                question: "4. What skills are required for Embedded Linux development?",
+                answer: "Common prerequisites include C programming, Linux basics, shell scripting, cross-compiling, kernel concepts, and Yocto/Buildroot exposure."
               },
               {
-                question: "5.Are Timmins training courses available online?",
-                answer: "Yes. Timmins offers online, on-site, and hybrid training programs for engineering and technical teams."
+                question: "5. What is a Skill Matrix in training?",
+                answer: "A skill matrix is a structured tool that maps team competencies, identifies skill gaps, and guides training planning. It's often searched by L&D leaders planning technical upskilling."
               },
               {
-                question: "6. What industries does Timmins work with?",
-                answer: "Timmins works with semiconductors, telecom, manufacturing, banking, digital platforms, and technology-driven enterprises."
+                question: "6. How do I build a fresh graduate onboarding program for engineers?",
+                answer: "Graduate onboarding programs should combine technical fundamentals, hands-on labs, SCORM modules, assessments, and supervised projects. Many engineering and banking companies search for this to accelerate talent readiness."
               },
               {
-                question: "7. Do you provide corporate training outside Malaysia?",
-                answer: "Yes. Timmins delivers corporate training across Malaysia, Singapore, Indonesia, China, India, Vietnam, the United States, and Canada."
+                question: "7. What is HRDC Claimable Training?",
+                answer: "HRDC Claimable Training allows Malaysian employers to claim training costs under HRD Corp. (This applies only to Malaysian organizations.)"
               },
               {
-                question: "8. How is Timmins different from other corporate training providers?",
-                answer: "Timmins is practitioner-led, engineering-grade, and deeply specialized, focusing on real capability building rather than generic or tool-centric training."
+                question: "8. Does Timmins offer Customized Training?",
+                answer: "Yes. We specialize in custom-designed capability programs based on technology stack, workflow, and team goals."
               },
               {
-                question: "9. Do you offer end-to-end Embedded Linux training?",
-                answer: "Yes. Timmins covers Embedded Linux end-to-end, including OS Essentials, Embedded C & GDB, Embedded Linux System Internals, device drivers (audio, I2C), kernel debugging, user-space and kernel internals, and SELinux, security."
+                question: "9. Does Timmins provide consulting, not just training?",
+                answer: "Yes. We offer Embedded Linux Consulting, AI Consulting, and Mobile Development Consulting for organizations needing technical implementation support."
               },
               {
-                question: "10. Can Timmins design onboarding programs for fresh graduates?",
-                answer: "Yes. Timmins has designed and delivered large-scale onboarding and engineering academy programs for semiconductor and telecom organizations."
+                question: "10. What is the difference between corporate training and customized training?",
+                answer: "Corporate training usually refers to standardized programs delivered to many companies, while customized training is tailored specifically to your organization's technology stack, workflows, skill gaps, and business goals. Customized programs deliver higher relevance and better capability outcomes for engineering-driven teams."
               }
             ].map((item, index) => (
               <div
@@ -432,7 +449,7 @@ export default function OurSolutionPage() {
                 >
                   <span>{item.question}</span>
                   <span className="arrow">
-                    {activeAccordion === index ? "−" : "›"}
+                    {activeAccordion === index ? "⌃" : "⌄"}
                   </span>
                 </div>
 

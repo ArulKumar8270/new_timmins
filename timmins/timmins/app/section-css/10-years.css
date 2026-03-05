@@ -164,7 +164,7 @@
     transform: translateX(0);
 }
 
-/* Dot on axis */
+/* Diamond marker on axis */
 .timeline-page .timeline__item::before {
     content: "";
     position: absolute;
@@ -172,9 +172,8 @@
     top: 1.25rem;
     width: 12px;
     height: 12px;
-    border-radius: 50%;
     background: #64748b;
-    transform: translateX(-50%);
+    transform: translateX(-50%) rotate(45deg);
     z-index: 2;
     box-shadow: 0 0 0 3px #fff;
 }
@@ -195,7 +194,6 @@
 }
 
 .timeline-page .timeline__list {
-    list-style: none;
     padding: 0;
     margin: 0;
     font-size: 0.9375rem;
@@ -203,13 +201,35 @@
     color: rgba(255, 255, 255, 0.95);
 }
 
-.timeline-page .timeline__list li {
+.timeline-page .timeline__year-group {
+    margin-bottom: 1rem;
+}
+
+.timeline-page .timeline__year-group:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-page .timeline__year-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.35rem;
+    display: block;
+}
+
+.timeline-page .timeline__bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 0;
+}
+
+.timeline-page .timeline__bullets li {
     position: relative;
     padding-left: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.timeline-page .timeline__list li::before {
+.timeline-page .timeline__bullets li::before {
     content: "";
     position: absolute;
     left: 0;
@@ -220,12 +240,16 @@
     background: rgba(255, 255, 255, 0.8);
 }
 
-.timeline-page .timeline__item--right .timeline__list li {
+.timeline-page .timeline__bullets li strong {
+    font-weight: 700;
+}
+
+.timeline-page .timeline__item--right .timeline__bullets li {
     padding-left: 0;
     padding-right: 1rem;
 }
 
-.timeline-page .timeline__item--right .timeline__list li::before {
+.timeline-page .timeline__item--right .timeline__bullets li::before {
     left: auto;
     right: 0;
 }
@@ -248,6 +272,76 @@
     filter: grayscale(0);
 }
 
+/* Text-section format: clean layout, black text on white (like reference) */
+.timeline-page .timeline__card--text-section {
+    background: #fff;
+    color: #1a1a1a;
+    border: 1px solid #e5e7eb;
+}
+
+.timeline-page .timeline__card--text-section .timeline__card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.timeline-page .timeline__text-section {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #1a1a1a;
+}
+
+.timeline-page .timeline__text-section .timeline__intro {
+    margin: 0 0 1rem;
+    color: #1a1a1a;
+}
+
+.timeline-page .timeline__text-section .timeline__bullets--primary {
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
+}
+
+.timeline-page .timeline__text-section .timeline__bullets--primary li {
+    margin-bottom: 0.35rem;
+}
+
+.timeline-page .timeline__text-section .timeline__bullets--primary li::before {
+    background: #1a1a1a;
+}
+
+.timeline-page .timeline__text-section .timeline__subheading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0.75rem 0 0.5rem;
+}
+
+.timeline-page .timeline__text-section .timeline__bullets--secondary {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.timeline-page .timeline__text-section .timeline__bullets--secondary li {
+    margin-bottom: 0.35rem;
+}
+
+.timeline-page .timeline__text-section .timeline__bullets--secondary li::before {
+    background: #1a1a1a;
+}
+
+/* Ensure text-section bullets stay left-aligned (override right-item rules) */
+.timeline-page .timeline__card--text-section .timeline__bullets--primary li,
+.timeline-page .timeline__card--text-section .timeline__bullets--secondary li {
+    padding-left: 1.25rem;
+    padding-right: 0;
+}
+
+.timeline-page .timeline__card--text-section .timeline__bullets--primary li::before,
+.timeline-page .timeline__card--text-section .timeline__bullets--secondary li::before {
+    left: 0;
+    right: auto;
+}
+
 /* Responsive: stack to single column, axis on left */
 @media (max-width: 992px) {
     .timeline-page .timeline__item {
@@ -259,12 +353,12 @@
 
     .timeline-page .timeline__axis {
         left: 0.75rem;
-        transform: none;
+        transform: translateX(-50%)rotate(45deg);
     }
 
     .timeline-page .timeline__item::before {
         left: 0.75rem;
-        transform: none;
+        transform: rotate(45deg);
     }
 
     .timeline-page .timeline__year {

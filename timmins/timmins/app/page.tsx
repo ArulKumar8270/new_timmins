@@ -1,12 +1,67 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import { supabase } from "@/lib/supabase";
+import type { PublicClassSession } from "@/lib/supabase";
+
+const COURSE_IMAGE_MAP: Record<string, string> = {
+  "embedded-linux-system-internals": "/assets/New_images/Embedded Linux public class at Timmins.png",
+  "analyzing-data-microsoft-power-bi": "/assets/New_images/Power BI public class at timmins.png",
+  "generative-ai-openai-langchain": "/assets/New_images/Generative AI public class at Timmins.png",
+  "kotlin-fundamentals": "/assets/New_images/kotlin fundamentals public class at Timmins.png",
+};
+
+function getDateSortKey(dateStr: string): number {
+  const m = dateStr.match(/(\d+)\s*[-–]\s*(?:\d+\s+)?(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s*(\d{4})/i)
+    || dateStr.match(/(\d+)\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s*(\d{4})/i);
+  if (!m) return 0;
+  const day = parseInt(m[1], 10);
+  const monthStr = (m[2] || "").toLowerCase();
+  const year = parseInt(m[3] || "0", 10);
+  const months = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
+  const monthIdx = months.findIndex((mo) => monthStr.startsWith(mo));
+  if (monthIdx < 0) return 0;
+  return new Date(year, monthIdx, day).getTime();
+}
 
 export default function Home() {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
+  const [featuredClasses, setFeaturedClasses] = useState<PublicClassSession[]>([]);
+  const [sessionPrices, setSessionPrices] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    supabase
+      .from("public_class_sessions")
+      .select("*")
+      .order("date", { ascending: true })
+      .then(async ({ data }) => {
+        const sorted = [...(data || [])].sort((a, b) => getDateSortKey(a.date) - getDateSortKey(b.date));
+        const top4 = sorted.slice(0, 4);
+        setFeaturedClasses(top4);
+        if (top4.length > 0) {
+          const ids = top4.map((s) => s.id);
+          const slugs = [...new Set(top4.map((s) => s.slug))];
+          const [sessionRes, courseRes] = await Promise.all([
+            supabase.from("session_content").select("session_id, content").in("session_id", ids),
+            supabase.from("course_content").select("slug, content").in("slug", slugs),
+          ]);
+          const prices: Record<string, string> = {};
+          (sessionRes.data || []).forEach((r) => {
+            const content = r.content as { price?: string };
+            if (content?.price) prices[r.session_id] = content.price;
+          });
+          const courseBySlug = new Map((courseRes.data || []).map((r) => [r.slug, r.content as { price?: string }]));
+          top4.forEach((s) => {
+            if (!prices[s.id] && courseBySlug.get(s.slug)?.price) prices[s.id] = courseBySlug.get(s.slug)!.price!;
+          });
+          setSessionPrices(prices);
+        }
+      });
+  }, []);
 
   return (
     <>
@@ -58,14 +113,14 @@ export default function Home() {
 
                           <div className="d-flex gap-3 mt-3 flex-wrap">
                             <div className="ed-hero__btn ed-btn">
-                              <a href="#">For Companies – Explore Solutions</a>
+                              <a href="/our-solution">For Companies – Explore Solutions</a>
                             </div>
 
                             <div
                               className="ed-btn"
                               style={{ backgroundColor: 'var(--ed-secondary-color)' }}
                             >
-                              <a href="#">For Individuals – Browse Public Classes</a>
+                              <a href="/training-calendar/public-classes">For Individuals – Browse Public Classes</a>
                             </div>
                           </div>
 
@@ -309,7 +364,7 @@ export default function Home() {
                     {/* FOR COMPANIES */}
                     <div className="col-lg-6 col-12">
                       <div className="learn-box-single">
-                        <h3>For Companies</h3>
+                        <h3>Our Solutions</h3>
                         <p>
                           Build team-wide engineering capability through tailored training and consulting.
                           Popular corporate programs:
@@ -323,7 +378,7 @@ export default function Home() {
                           <li>Corporate Training Malaysia (HRDC Claimable)</li>
                         </ul>
                         <div className="ed-hero__btn ed-btn">
-                          <a href="/courses">Explore B2B Solutions</a>
+                          <a href="/our-solution">Explore B2B Solutions</a>
                         </div>
                       </div>
                     </div>
@@ -331,7 +386,7 @@ export default function Home() {
                     {/* FOR INDIVIDUALS */}
                     <div className="col-lg-6 col-12">
                       <div className="learn-box-single">
-                        <h3>For Individuals (Public Classes)</h3>
+                        <h3>Public Classes</h3>
                         <p>
                           Technical courses designed for engineers, fresh graduates,
                           and career switchers. Popular public classes:
@@ -346,7 +401,7 @@ export default function Home() {
                         </ul>
 
                         <div className="ed-hero__btn ed-btn">
-                          <a href="/courses">Browse Public Classes</a>
+                          <a href="/training-calendar/public-classes">Browse Public Classes</a>
                         </div>
                       </div>
                     </div>
@@ -366,9 +421,9 @@ export default function Home() {
                   <div className="text-center mb-5">
                     <h2 className="fw-bold">Why Training with Timmins</h2>
 
-                    <p className="text-muted">
+                    <h4 className="text">
                       <i>Real engineers. Real practice. Real capability.</i>
-                    </p>
+                    </h4>
 
                     <p className="mt-3">
                       Every program is designed and delivered by practitioners with deep field
@@ -424,7 +479,7 @@ export default function Home() {
                     <a
                       href="/our-approach"
                       target="_blank" rel="noopener noreferrer"
-                      className="fw-semibold why-work-link"
+                      className="fw-semibold why-work-link text-black"
                     >
                       Explore How We Work
                     </a>
@@ -486,83 +541,35 @@ export default function Home() {
                           <div className="tab-content">
                             <div className="tab-pane fade show active">
                               <div className="row">
-
-                                {/* COURSE 1 */}
-                                <div className="col-lg-6 col-12">
-                                  <div className="ed-course__card">
-                                    <div className="ed-course__image">
-                                      <div className="ed-course__main-img">
-                                        <img
-                                          src="/assets/New_images/Embedded Linux public class at Timmins.png"
-                                          alt="course-img"
-                                        />
+                                {featuredClasses.length > 0 ? (
+                                  featuredClasses.map((cls) => {
+                                    const imgSrc = COURSE_IMAGE_MAP[cls.slug] || "/assets/New_images/Thome.png";
+                                    const deliveryType = /online|virtual|zoom|webinar/i.test(cls.location) ? "Online" : "Face-to-Face";
+                                    return (
+                                      <div key={cls.id} className="col-lg-6 col-12">
+                                        <div className="ed-course__card">
+                                          <div className="ed-course__image">
+                                            <div className="ed-course__main-img">
+                                              <img src={imgSrc} alt={cls.course_name} />
+                                            </div>
+                                          </div>
+                                          <div className="ed-course__content">
+                                            <span className="ed-course__type">{deliveryType}</span>
+                                            <Link href={`/training-calendar/public-classes/${cls.slug}`}>
+                                              {cls.course_name}
+                                            </Link>
+                                            <p>{cls.duration}{cls.date ? ` · ${cls.date}` : ""}{cls.location ? ` · ${cls.location}` : ""}</p>
+                                            {sessionPrices[cls.id] && <p style={{ fontSize: "0.85rem", color: "#4198c8", marginTop: "0.25rem", marginBottom: 0 }}>{sessionPrices[cls.id]}</p>}
+                                          </div>
+                                        </div>
                                       </div>
-                                    </div>
-                                    <div className="ed-course__content">
-                                      <span className="ed-course__type">Face-to-Face</span>
-                                      <a href="#">Embedded Linux System Internals</a>
-                                      <p>5 days</p>
-                                    </div>
+                                    );
+                                  })
+                                ) : (
+                                  <div className="col-12 text-center py-4" style={{ color: "#64748b" }}>
+                                    Loading courses…
                                   </div>
-                                </div>
-
-                                {/* COURSE 2 */}
-                                <div className="col-lg-6 col-12">
-                                  <div className="ed-course__card">
-                                    <div className="ed-course__image">
-                                      <div className="ed-course__main-img">
-                                        <img
-                                          src="/assets/New_images/Power BI public class at timmins.png"
-                                          alt="course-img"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div className="ed-course__content">
-                                      <span className="ed-course__type">Face-to-Face</span>
-                                      <a href="#">Power BI: From Data to Decisions</a>
-                                      <p>2 Days</p>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                {/* COURSE 3 */}
-                                <div className="col-lg-6 col-12">
-                                  <div className="ed-course__card">
-                                    <div className="ed-course__image">
-                                      <div className="ed-course__main-img">
-                                        <img
-                                          src="/assets/New_images/Generative AI public class at Timmins.png"
-                                          alt="course-img"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div className="ed-course__content">
-                                      <span className="ed-course__type">Online</span>
-                                      <a href="#">Generative AI with LangChain</a>
-                                      <p>2 days</p>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                {/* COURSE 4 */}
-                                <div className="col-lg-6 col-12">
-                                  <div className="ed-course__card">
-                                    <div className="ed-course__image">
-                                      <div className="ed-course__main-img">
-                                        <img
-                                          src="/assets/New_images/kotlin fundamentals public class at Timmins.png"
-                                          alt="course-img"
-                                        />
-                                      </div>
-                                    </div>
-                                    <div className="ed-course__content">
-                                      <span className="ed-course__type">Face-to-Face</span>
-                                      <a href="#">Kotlin Fundamentals</a>
-                                      <p>4 Days</p>
-                                    </div>
-                                  </div>
-                                </div>
-
+                                )}
                               </div>
                             </div>
                           </div>
@@ -572,7 +579,7 @@ export default function Home() {
                       {/* VIEW CALENDAR BUTTON */}
                       <div className="d-flex justify-content-center mt-4">
                         <div className="ed-hero__btn ed-btn">
-                          <a href="#">View Training Calendar</a>
+                          <a href="/training-calendar/public-classes">View Training Calendar</a>
                         </div>
                       </div>
 
@@ -817,6 +824,15 @@ export default function Home() {
               {/* Start Testimonial Area */}
               <section className="ed-testimonial ed-testimonial--style2 ed-course ed-course--style-5 section-gap position-relative">
                 <div className="container ed-container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-6 col-md-8 col-12">
+                    <div className="ed-section-head text-center">
+                      <h3 className="ed-section-head__title ed-split-text left">
+                      Testimonials
+                      </h3>
+                    </div>
+                  </div>
+                </div>
                   <div className="row align-items-center">
                     <div className="col-12">
                       {/* Testimonial Content  */}
@@ -976,7 +992,7 @@ export default function Home() {
             </div>
 
 
-            <section className="global-presence-section section-gap ">
+            <section className="global-presence-section section-gap mt-0">
               <div className="container">
 
                 {/* SECTION TITLE */}
@@ -1215,7 +1231,7 @@ export default function Home() {
                       >
                         <span>{item.question}</span>
                         <span className="arrow">
-                          {activeAccordion === index ? "−" : "›"}
+                          {activeAccordion === index ? "⌃" : "⌄"}
                         </span>
                       </div>
 

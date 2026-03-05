@@ -3,12 +3,35 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { supabase } from '@/lib/supabase'
+
+type ClassItem = { slug: string; course_name: string };
 
 const Header = () => {
     const [isSticky, setIsSticky] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const pathname = usePathname();
     const [expandedMenus, setExpandedMenus] = useState<Set<string>>(new Set());
+    const [adminClasses, setAdminClasses] = useState<ClassItem[]>([]);
+
+    useEffect(() => {
+        supabase.from("public_class_sessions").select("slug, course_name").then(({ data }) => {
+            const seen = new Set<string>();
+            const unique = (data || []).filter((r) => {
+                if (seen.has(r.slug)) return false;
+                seen.add(r.slug);
+                return true;
+            });
+            setAdminClasses(unique);
+        });
+    }, []);
     const cursorBallRef = useRef<HTMLDivElement>(null);
+
+    // Defer mobile menu render until after mount to avoid hydration mismatch
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -32,15 +55,11 @@ const Header = () => {
         };
     }, []);
 
-    // Function to restore body scrolling
+    // Function to restore body scrolling (do NOT manually remove backdrop - React controls it)
     const restoreBodyScroll = () => {
         document.body.classList.remove('modal-open');
         document.body.style.overflow = '';
         document.body.style.paddingRight = '';
-        const backdrop = document.querySelector('.modal-backdrop');
-        if (backdrop) {
-            backdrop.remove();
-        }
     };
 
     // Handle modal cleanup on route change
@@ -106,31 +125,45 @@ const Header = () => {
         });
     };
 
+    // Function to open mobile menu
+    const openMobileMenu = () => {
+        setIsMobileMenuOpen(true);
+        document.body.classList.add('modal-open');
+        document.body.style.overflow = 'hidden';
+    };
+
     // Function to close mobile menu modal
     const closeMobileMenu = () => {
-        // Get Bootstrap modal instance
+        setIsMobileMenuOpen(false);
+        // Get Bootstrap modal instance (in case it was opened by Bootstrap)
         const modalElement = document.getElementById('offcanvas-modal');
         if (modalElement) {
-            // Use Bootstrap 5 modal API to hide the modal
             const modal = (window as any).bootstrap?.Modal?.getInstance(modalElement);
             if (modal) {
                 modal.hide();
-            } else {
-                // Fallback: manually hide modal and remove backdrop
-                modalElement.classList.remove('show');
-                modalElement.style.display = 'none';
             }
-            // Always restore body scroll
-            restoreBodyScroll();
         }
-        // Reset expanded menus when closing
+        restoreBodyScroll();
         setExpandedMenus(new Set());
     };
 
-    // Reset expanded menus on route change
+    // Reset expanded menus and close mobile menu on route change
     useEffect(() => {
         setExpandedMenus(new Set());
+        setIsMobileMenuOpen(false);
+        restoreBodyScroll();
     }, [pathname]);
+
+    // Close mobile menu on Escape key
+    useEffect(() => {
+        const handleEscape = (e: KeyboardEvent) => {
+            if (e.key === 'Escape' && isMobileMenuOpen) {
+                closeMobileMenu();
+            }
+        };
+        window.addEventListener('keydown', handleEscape);
+        return () => window.removeEventListener('keydown', handleEscape);
+    }, [isMobileMenuOpen]);
 
     // Re-initialize custom cursor on mount and after client-side navigation
     // (cursor-ball is re-created when Header remounts on each page)
@@ -261,11 +294,21 @@ const Header = () => {
                 <div id="cursor-ball" ref={cursorBallRef} />
             </div>
             {/* Custom Cursor End */}
-            {/* Start Mobile Menu Offcanvas */}
-            <div
-                className="modal mobile-menu-modal offcanvas-modal fade"
-                id="offcanvas-modal"
-            >
+            {/* Start Mobile Menu Offcanvas - only render after mount to avoid hydration error */}
+            {mounted && (
+                <>
+                    {isMobileMenuOpen && (
+                        <div
+                            className="modal-backdrop fade show"
+                            onClick={closeMobileMenu}
+                            aria-hidden="true"
+                        />
+                    )}
+                    <div
+                        className={`modal mobile-menu-modal offcanvas-modal fade ${isMobileMenuOpen ? 'show' : ''}`}
+                        id="offcanvas-modal"
+                        style={isMobileMenuOpen ? { display: 'block' } : { display: 'none' }}
+                    >
                 <div className="modal-dialog offcanvas-dialog">
                     <div className="modal-content">
                         <div className="modal-header offcanvas-header">
@@ -278,7 +321,6 @@ const Header = () => {
                             <button
                                 type="button"
                                 className="btn-close"
-                                data-bs-dismiss="modal"
                                 aria-label="Close"
                                 onClick={closeMobileMenu}
                             >
@@ -297,10 +339,10 @@ const Header = () => {
                                     <li className={`offcanvas__menu_li ${expandedMenus.has('about') ? 'active' : ''}`}>
                                         <a
                                             className="offcanvas__menu_item"
-                                            href="javascript:void(0)"
+                                            href="#"
                                             onClick={(e) => toggleSubmenu('about', e)}
                                         >
-                                            About-us
+                                            About Us
                                             <i className={`fi fi-ss-angle-small-${expandedMenus.has('about') ? 'up' : 'down'}`} />
                                         </a>
                                         <ul className={`offcanvas__sub_menu ${expandedMenus.has('about') ? 'show' : ''}`}>
@@ -310,7 +352,7 @@ const Header = () => {
                                                     className="offcanvas__sub_menu_item"
                                                     onClick={closeMobileMenu}
                                                 >
-                                                    Who We Are
+                                                    About Us
                                                 </Link>
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
@@ -324,7 +366,7 @@ const Header = () => {
                                             </li>
                                             <li className="offcanvas__sub_menu_li">
                                                 <Link
-                                                    href="/10-years"
+                                                    href="/10-Years"
                                                     className="offcanvas__sub_menu_item"
                                                     onClick={closeMobileMenu}
                                                 >
@@ -333,45 +375,19 @@ const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <li className={`offcanvas__menu_li ${expandedMenus.has('solutions') ? 'active' : ''}`}>
-                                        <a
+                                    <li>
+                                        <Link
                                             className="offcanvas__menu_item"
-                                            href="javascript:void(0)"
-                                            onClick={(e) => toggleSubmenu('solutions', e)}
+                                            href="/our-solution"
+                                            onClick={closeMobileMenu}
                                         >
-                                            Solutions
-                                            <i className={`fi fi-ss-angle-small-${expandedMenus.has('solutions') ? 'up' : 'down'}`} />
-                                        </a>
-                                        <ul className={`offcanvas__sub_menu ${expandedMenus.has('solutions') ? 'show' : ''}`}>
-                                            <li className="offcanvas__sub_menu_li">
-                                                <Link href="/our-solution" className="offcanvas__sub_menu_item" onClick={closeMobileMenu}>
-                                                    Overview
-                                                </Link>
-                                            </li>
-                                            <li className="offcanvas__sub_menu_li">
-                                                <Link
-                                                    className="offcanvas__sub_menu_item"
-                                                    href="/our-solution"
-                                                    onClick={closeMobileMenu}
-                                                >
-                                                    Fresh Graduate Onboarding
-                                                </Link>
-                                            </li>
-                                            <li className="offcanvas__sub_menu_li">
-                                                <Link
-                                                    className="offcanvas__sub_menu_item"
-                                                    href="/our-solution"
-                                                    onClick={closeMobileMenu}
-                                                >
-                                                    Training Needs Assessment
-                                                </Link>
-                                            </li>
-                                        </ul>
+                                            Our Solutions
+                                        </Link>
                                     </li>
                                     <li className={`offcanvas__menu_li ${expandedMenus.has('courses') ? 'active' : ''}`}>
                                         <a
                                             className="offcanvas__menu_item"
-                                            href="javascript:void(0)"
+                                            href="#"
                                             onClick={(e) => toggleSubmenu('courses', e)}
                                         >
                                             Courses
@@ -379,26 +395,84 @@ const Header = () => {
                                         </a>
                                         <ul className={`offcanvas__sub_menu ${expandedMenus.has('courses') ? 'show' : ''}`}>
                                             <li className="offcanvas__sub_menu_li">
-                                                <Link href="/" className="offcanvas__sub_menu_item" onClick={closeMobileMenu}>
-                                                    Overview
+                                                <Link href="/domain/embedded-lnux" className="offcanvas__sub_menu_item" onClick={closeMobileMenu}>
+                                                Embedded Linux System Internals
                                                 </Link>
                                             </li>
-                                            <li className="offcanvas__sub_menu_li">
+                                            {/* <li className="offcanvas__sub_menu_li">
                                                 <Link
                                                     href="/Scaled-Agile"
                                                     className="offcanvas__sub_menu_item"
                                                     onClick={closeMobileMenu}
                                                 >
-                                                    SFAe Certification
+                                                    SAFe Certification
                                                 </Link>
+                                            </li> */}
+                                        </ul>
+                                    </li>
+                                    <li className={`offcanvas__menu_li ${expandedMenus.has('training') ? 'active' : ''}`}>
+                                        <a
+                                            className="offcanvas__menu_item"
+                                            href="/training-calendar"
+                                            onClick={(e) => toggleSubmenu('training', e)}
+                                        >
+                                            Training Calendar
+                                            <i className={`fi fi-ss-angle-small-${expandedMenus.has('training') ? 'up' : 'down'}`} />
+                                        </a>
+                                        <ul className={`offcanvas__sub_menu ${expandedMenus.has('training') ? 'show' : ''}`}>
+                                            <li className="offcanvas__sub_menu_li">
+                                                <Link
+                                                    href="/training-calendar"
+                                                    className="offcanvas__sub_menu_item"
+                                                    onClick={closeMobileMenu}
+                                                >
+                                                    Training Calendar
+                                                </Link>
+                                            </li>
+                                            {/* <li className="offcanvas__sub_menu_li">
+                                                <Link
+                                                    href="/training-calendar/in-house-training"
+                                                    className="offcanvas__sub_menu_item"
+                                                    onClick={closeMobileMenu}
+                                                >
+                                                    In-House Trainings
+                                                </Link>
+                                            </li> */}
+                                            <li className={`offcanvas__sub_menu_li ${expandedMenus.has('training-public') ? 'has-sub open' : ''}`}>
+                                                <a
+                                                    href="javascript:void(0)"
+                                                    className="offcanvas__sub_menu_item"
+                                                    onClick={(e) => toggleSubmenu('training-public', e)}
+                                                >
+                                                    Public Classes
+                                                    <i className={`fi fi-ss-angle-small-${expandedMenus.has('training-public') ? 'up' : 'down'}`} />
+                                                </a>
+                                                <ul className={`offcanvas__sub_menu ${expandedMenus.has('training-public') ? 'show' : ''}`} style={{ paddingLeft: '1rem' }}>
+                                                    <li className="offcanvas__sub_menu_li">
+                                                        <Link
+                                                            href="/training-calendar/public-classes"
+                                                            className="offcanvas__sub_menu_item"
+                                                            onClick={closeMobileMenu}
+                                                        >
+                                                            Browse all classes
+                                                        </Link>
+                                                    </li>
+                                                    {adminClasses.map((c) => (
+                                                        <li key={c.slug} className="offcanvas__sub_menu_li">
+                                                            <Link
+                                                                href={`/training-calendar/public-classes/${c.slug}`}
+                                                                className="offcanvas__sub_menu_item"
+                                                                onClick={closeMobileMenu}
+                                                            >
+                                                                {c.course_name}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                                </ul>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li className="offcanvas__menu_li">
-                                        <Link className="offcanvas__menu_item" href="/Contact-us" onClick={closeMobileMenu}>
-                                            Training Calendar
-                                        </Link>
-                                    </li>
+                                    
                                     <li className={`offcanvas__menu_li ${expandedMenus.has('resources') ? 'active' : ''}`}>
                                         <a
                                             className="offcanvas__menu_item"
@@ -410,18 +484,9 @@ const Header = () => {
                                         </a>
                                         <ul className={`offcanvas__sub_menu ${expandedMenus.has('resources') ? 'show' : ''}`}>
                                             <li className="offcanvas__sub_menu_li">
-                                                <Link href="/Case-study" className="offcanvas__sub_menu_item" onClick={closeMobileMenu}>
+                                                <Link href="/case-study" className="offcanvas__sub_menu_item" onClick={closeMobileMenu}>
                                                     Case Studies
                                                 </Link>
-                                            </li>
-                                            <li className="offcanvas__sub_menu_li">
-                                                <a
-                                                    href="#"
-                                                    className="offcanvas__sub_menu_item"
-                                                    onClick={closeMobileMenu}
-                                                >
-                                                    Blog
-                                                </a>
                                             </li>
                                         </ul>
                                     </li>
@@ -436,6 +501,8 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+                </>
+            )}
             {/* End Mobile Menu Offcanvas */}
             {/* Start Header Area */}
             <header className={`ed-header ed-header--style2 ${isSticky ? 'sticky' : ''}`}>
@@ -467,14 +534,14 @@ const Header = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)">
-                                                    About-us
+                                                <a href="/about-us">
+                                                    About Us
                                                     <i className="fi fi-ss-angle-small-down" />
                                                 </a>
                                                 <ul className="sub-menu">
-                                                    <li>
+                                                    {/* <li>
                                                         <Link href="/about-us">Who We Are</Link>
-                                                    </li>
+                                                    </li> */}
                                                     <li>
                                                         <Link href="/our-approach">Our Approach</Link>
                                                     </li>
@@ -484,40 +551,44 @@ const Header = () => {
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)">
-                                                    Solutions
-                                                    <i className="fi fi-ss-angle-small-down" />
+                                                <a href="/our-solution">
+                                                    Our Solutions
                                                 </a>
-                                                <ul className="sub-menu">
-                                                    <li>
-                                                        <Link href="/our-solution">Overview</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/our-solution">Fresh Graduate Onboarding</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/our-solution">Training Needs Assessment</Link>
-                                                    </li>
-                                                </ul>
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0)">
+                                                <a href="/domain/embedded-lnux">
                                                     Courses
                                                     <i className="fi fi-ss-angle-small-down" />
                                                 </a>
                                                 <ul className="sub-menu">
                                                     <li>
-                                                        <Link href="/">Overview</Link>
+                                                        <Link href="/domain/embedded-lnux">Embedded Linux System Internals</Link>
                                                     </li>
-                                                    <li>
+                                                    {/* <li>
                                                         <Link href="/Scaled-Agile">SFAe Certification</Link>
-                                                    </li>
+                                                    </li> */}
                                                 </ul>
                                             </li>
                                             <li>
-                                                <Link href="/contact-us">
+                                                <a href="/training-calendar">
                                                     Training Calendar
-                                                </Link>
+                                                    <i className="fi fi-ss-angle-small-down" />
+                                                </a>
+                                                <ul className="sub-menu">
+                                                    {/* <li>
+                                                        <Link href="/training-calendar/in-house-training">In-House Trainings</Link>
+                                                    </li> */}
+                                                    <li>
+                                                        <Link href="/training-calendar/public-classes">Public Classes</Link>
+                                                        <ul className="third-menu">
+                                                            {adminClasses.map((c) => (
+                                                                <li key={c.slug}>
+                                                                    <Link href={`/training-calendar/public-classes/${c.slug}`}>{c.course_name}</Link>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </li>
+                                                </ul>
                                             </li>
                                             <li>
                                                 <a href="javascript:void(0)">Resources
@@ -526,9 +597,6 @@ const Header = () => {
                                                 <ul className="sub-menu">
                                                     <li>
                                                         <Link href="/case-study">Case Studies</Link>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">Blog</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -541,8 +609,8 @@ const Header = () => {
                                     <button
                                         type="button"
                                         className="mobile-menu-offcanvas-toggler"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#offcanvas-modal"
+                                        onClick={openMobileMenu}
+                                        aria-label="Open menu"
                                     >
                                         <span className="line" />
                                         <span className="line" />

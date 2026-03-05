@@ -295,7 +295,7 @@ const page = () => {
                                 >
                                     <span>{item.question}</span>
                                     <span className="arrow">
-                                        {activeAccordion === index ? "−" : "›"}
+                                        {activeAccordion === index ? "⌃" : "⌄"}
                                     </span>
                                 </div>
 

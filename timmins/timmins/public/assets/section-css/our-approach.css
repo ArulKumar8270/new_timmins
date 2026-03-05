@@ -186,8 +186,10 @@
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .approach-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 40px;
+        order: -1;
+        padding: 20px;
     }
 
     .approach-text h2 {
@@ -324,7 +326,7 @@
 
 .pillar h4 {
     font-family: "Poppins", sans-serif;
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 600;
     margin-bottom: 10px;
     color: #4198c8;
@@ -339,7 +341,7 @@
 /* Outcome */
 .final-outcome {
     font-family: "Inter", sans-serif;
-    font-size: 17px;
+    /* font-size: 17px; */
     color: #212121;
     margin-bottom: 40px;
 }

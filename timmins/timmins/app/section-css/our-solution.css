@@ -38,12 +38,38 @@
     z-index: 1;
 }
 
+.solutions-hero-tagline {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4198c8;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
 .solutions-title {
     font-size: clamp(2rem, 4vw, 2.75rem);
     font-weight: 700;
     color: #fff;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
+}
+
+.solutions-hero-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.75rem;
+    background: #4198c8;
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.solutions-hero-btn:hover {
+    background: white;
+    transform: translateY(-2px);
 }
 
 .solutions-subtitle {
@@ -71,7 +97,7 @@
 }
 
 
-/* ----- Solution offerings: light gradient + pattern, 2x2 cards, Learn more button ----- */
+/* ----- Solution offerings: alternating Text | Image layout ----- */
 .solutions-offerings {
     position: relative;
     padding: 4rem 0;
@@ -79,9 +105,137 @@
     overflow: hidden;
 }
 
+.solutions-offerings.solutions-offerings--alt {
+    background: linear-gradient(180deg, #f8fafc 0%, #eef6fc 100%);
+}
+
 .solutions-offerings .container {
     position: relative;
     z-index: 1;
+}
+
+/* Solution row: Text | Image (default) or Image | Text (reverse) */
+.solution-row {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+}
+
+.solution-row:last-child {
+    margin-bottom: 0;
+}
+
+.solution-row-reverse {
+    grid-template-columns: 0.9fr 1.1fr;
+}
+
+.solution-row-reverse .solution-row-text {
+    order: 2;
+}
+
+.solution-row-reverse .solution-row-image {
+    order: 1;
+}
+
+/* Text column */
+.solution-row-text h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #15314e;
+}
+
+.solution-row-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a5b6b;
+    margin-bottom: 1rem;
+}
+
+.solution-row-text .solution-highlight {
+    font-weight: 600;
+    color: #15314e;
+}
+
+.solution-row-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1rem;
+}
+
+.solution-row-text ul li {
+    font-size: 0.9375rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
+    position: relative;
+    color: #4a5b6b;
+    line-height: 1.55;
+}
+
+.solution-row-text ul li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: #4198c8;
+    font-weight: 600;
+}
+
+.solution-row-text h6 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #15314e;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.solution-outcome {
+    background: #f6f8fa;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #4198c8;
+    border-radius: 6px;
+    font-size: 0.9375rem;
+    color: #212121;
+    margin-top: 1rem !important;
+}
+
+.solution-row-text .solution-link {
+    display: inline-block;
+    margin-top: 1.25rem;
+}
+
+/* Image column */
+.solution-row-image {
+    min-width: 0;
+}
+
+.solution-row-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .solution-row,
+    .solution-row-reverse {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .solution-row-reverse .solution-row-text {
+        order: -1;
+    }
+
+    .solution-row-reverse .solution-row-image {
+        order: 0;
+    }
 }
 
 .section-header h2 {
@@ -99,79 +253,13 @@
     line-height: 1.65;
 }
 
-.solution-card {
-    position: relative;
-    background: #fff;
-    padding: 2rem 1.75rem;
-    border-radius: 24px;
-    box-shadow: 0 10px 40px rgba(21, 49, 78, 0.08);
-    height: 100%;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
+.solution-link,
+button.solution-link {
+    border: none;
+    font: inherit;
+    cursor: pointer;
 }
 
-.solution-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 48px rgba(21, 49, 78, 0.12);
-}
-
-.solution-card h4 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #15314e;
-}
-
-.solution-card h6 {
-    font-size: 0.9375rem;
-    font-weight: 600;
-    color: #15314e;
-    margin: 1rem 0 0.5rem 0;
-}
-
-.solution-card ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0;
-}
-
-.solution-card li {
-    position: relative;
-    padding-left: 1.35rem;
-    margin-bottom: 0.5rem;
-    font-size: 0.9375rem;
-    color: #4a5b6b;
-    line-height: 1.55;
-}
-
-.solution-card li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.55rem;
-    width: 8px;
-    height: 8px;
-    background: #7dd3fc;
-    border-radius: 50%;
-}
-
-.solution-card .highlight {
-    font-size: 0.9375rem;
-    font-weight: 600;
-    color: #15314e;
-    margin-bottom: 0.75rem;
-}
-
-.solution-card .solution-link {
-    margin-top: auto;
-    /* padding-top: 1.25rem; */
-    align-self: flex-end;
-}
-.cardbg {
-    background: #eaf4fa;
-    border: 4px solid white;
-}
 .solution-link {
     color: white !important;
     background: #4189c8;
@@ -198,17 +286,16 @@
     .section-header h2 {
         font-size: 1.5rem;
     }
-    .solution-card {
-        padding: 1.5rem;
-        border-radius: 20px;
+    .solution-row-text h2 {
+        font-size: 1.5rem;
     }
 }
 
 
-/* ----- Consulting: white bg, cards with icon circle + light blue border, Explore button ----- */
+/* ----- Consulting: alternating bg ----- */
 .consulting-section {
     padding: 4rem 0;
-    background: #fff;
+    background: #f8fafc;
 }
 
 .consulting-section .text-center.mb-5 h2 {
@@ -311,7 +398,7 @@
 }
 
 
-/* ----- SAFe: two columns; right = dark blue graphic-style box ----- */
+/* ----- SAFe: two columns; right = dark blue graphic-style box; alternating bg ----- */
 .safe-section {
     padding: 4rem 0;
     background: #fff;
@@ -445,11 +532,11 @@
 }
 
 
-/* ----- Why Timmins: pattern bg, cards with icon circle ----- */
+/* ----- Why Timmins: pattern bg, cards with icon circle; alternating light blue ----- */
 .why-timmins {
     position: relative;
     padding: 4rem 0;
-    background: linear-gradient(180deg, #f8fafc 0%, #f0f8ff 100%);
+    background: linear-gradient(180deg, #f0f8ff 0%, #e8f4fc 100%);
     overflow: hidden;
 }
 
@@ -598,9 +685,21 @@
 }
 
 .btn-primary-cta:hover {
-    background: #4189c8;
+    background: #3380b0;
     color: #fff !important;
     transform: translateY(-2px);
+}
+
+.btn-secondary-cta {
+    background: transparent !important;
+    border: 2px solid #fff;
+    color: #fff !important;
+}
+
+.btn-secondary-cta:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+    border-color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -610,9 +709,9 @@
 }
 
 
-/* ----- FAQ: two-column grid, white bg ----- */
+/* ----- FAQ: two-column grid; alternating bg ----- */
 .ed-faq {
-    background: #fff;
+    background: #f8fafc;
 }
 
 .ed-faq .section-heading-center {
@@ -627,8 +726,9 @@
 
 .ed-faq .faq-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
     gap: 1rem 2rem;
+    grid-row: unset;
 }
 
 @media (max-width: 992px) {

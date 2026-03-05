@@ -84,21 +84,26 @@ const page = () => {
 
             <>
 
-                <section className="about-hero py-5">
-                    <div className="container">
-                        <div className="row justify-content-center">
-                            <div className="col-lg-8 text-center">
-
-                                <h1 className="about-hero-title mb-3">
-                                    About Timmins Training Consulting
-                                </h1>
-
-                                <p className="about-hero-desc">
-                                    A boutique advanced tech capability partner helping teams turn technology
-                                    into real-world delivery capability.
-                                </p>
-
-                            </div>
+                <section className="about-hero">
+                    <div className="about-hero-inner container">
+                        <div className="about-hero-content">
+                            <h1 className="about-hero-title mb-3">
+                                About Timmins Training Consulting
+                            </h1>
+                            <p className="about-hero-desc mb-4">
+                                A boutique advanced tech capability partner helping teams turn technology
+                                into real-world delivery capability.
+                            </p>
+                            <a href="/contact-us" className="about-hero-btn">
+                                Talk to Timmins
+                            </a>
+                        </div>
+                        <div className="about-hero-image">
+                            <img
+                                src="/assets/New_images/About-Us-bg.png"
+                                alt="Timmins Training Consulting"
+                                className="img-fluid"
+                            />
                         </div>
                     </div>
                 </section>
@@ -111,8 +116,8 @@ const page = () => {
                             <div className="about-card">
                                 <div className="row align-items-center g-4">
 
-                                    {/* LEFT IMAGE */}
-                                    <div className="col-lg-4 col-md-12 text-center">
+                                    {/* LEFT IMAGE - order-2 on mobile so content appears first */}
+                                    <div className="col-lg-4 col-12 order-2 order-lg-1 text-center">
                                         <img
                                             src="/assets/New_images/About-us.jpg"
                                             alt="Timmins Consulting"
@@ -126,27 +131,31 @@ const page = () => {
                                     </div>
 
 
-                                    {/* RIGHT CONTENT */}
-                                    <div className="col-lg-8 col-md-12">
+                                    {/* RIGHT CONTENT - order-1 on mobile so it appears first */}
+                                    <div className="col-lg-8 col-12 order-1 order-lg-2">
                                         <div className="mb-4">
                                             <h3 className="fw-bold">Our Purpose & Mission</h3>
                                         </div>
-                                        <div className="align-items-baseline d-flex flex gap-3 mb-4 pb-3 px-4 rounded-2 bg-gray-100">
-                                            <div>
-                                                <h6>Our Purpose</h6>
-                                                <p>
-                                                    Timmins exists to deliver practitioner-led, engineering-grade training
-                                                    that keeps pace with modern technology and translates directly into
-                                                    real-world impact.
-                                                </p>
+                                        <div className="row g-4 mb-4">
+                                            <div className="col-12 col-lg-6">
+                                                <div className="p-3 p-lg-4 rounded-2 bg-gray-100 h-100">
+                                                    <h6 className="fw-bold mb-3">Our Purpose</h6>
+                                                    <p className="mb-0">
+                                                        Timmins exists to deliver practitioner-led, engineering-grade training
+                                                        that keeps pace with modern technology and translates directly into
+                                                        real-world impact.
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <h6 className="mt-3">Our Mission</h6>
-                                                <p>
-                                                    Our mission is to enable organizations to stay competitive in a rapidly
-                                                    evolving tech landscape through practitioner-led training and
-                                                    engineering-grade capability building.
-                                                </p>
+                                            <div className="col-12 col-lg-6">
+                                                <div className="p-3 p-lg-4 rounded-2 bg-gray-100 h-100">
+                                                    <h6 className="fw-bold mb-3">Our Mission</h6>
+                                                    <p className="mb-0">
+                                                        Our mission is to enable organizations to stay competitive in a rapidly
+                                                        evolving tech landscape through practitioner-led training and
+                                                        engineering-grade capability building.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -169,9 +178,9 @@ const page = () => {
                         <div className="container">
                             <div className="text-center mb-5">
                                 <h2 className="fw-bold">Our Values</h2>
-                                <p className="text-muted">
+                                <h3 className="text-muted">
                                     What drives the way we work and deliver impact
-                                </p>
+                                </h3>
                             </div>
                             <div className="row g-4">
                                 {/* Growth */}
@@ -244,9 +253,9 @@ const page = () => {
                         <div className="text-center mb-5">
                             <h1 className="mission-title">Our Approach</h1>
 
-                            <p className="approach-intro">
+                            <h3 className="approach-intro">
                                 We treat capability building as a system, not a one-off event.
-                            </p>
+                            </h3>
                         </div>
                         {/* Vertical Process */}
                         <div className="approach-timeline">
@@ -300,36 +309,34 @@ const page = () => {
                     </div>
                 </section>
 
-                <>
                     {/* 10 Years of Timmins Section */}
-                    <section className="timmins-journey section-gap">
+                    <section className="section-gap about-10-years">
                         <div className="container">
                             <div className="row align-items-center">
                                 {/* Left Content */}
-                                <div className="col-lg-8 col-md-12">
-                                    <h2 className="fw-bold mb-3">
-                                        10 Years of Building Engineering Capability
+                                <div className="col-lg-8 col-12">
+                                    <h2 className="about-10-years__title fw-bold mb-4">
+                                        10 Years of <span>Building</span> Engineering <span>Capability</span>
                                     </h2>
                                     <p className="text-muted">
                                         From a small consulting practice in Malaysia to a capability partner, Timmins has trained professionals across engineering, manufacturing, financial services, and universities. We support teams across the full lifecycle of modern systems, from design and implementation to real-world delivery and operations.
                                     </p>
                                     <p className="text-muted">
                                         Ten years later, our belief remains the same: the right training builds real capability and drives lasting organizational impact.
-
-                                        .
                                     </p>
                                     <br />
 
-                                    <div className="ed-hero__btn ed-btn">
-                                        <a href="#">
-                                            Explore Our Journey →
+                                    <div className="ed-hero__btn ed-btn about-10-years__btn">
+                                        <a href="/10-Years">
+                                            Explore Our Journey
+                                            <i className="bi bi-arrow-right" />
                                         </a>
                                     </div>
 
                                 </div>
 
                                 {/* Right Highlight Box */}
-                                <div className="col-lg-4 col-md-12 mt-4 mt-lg-0">
+                                <div className="col-lg-4 col-12 mt-4 mt-lg-0">
                                     <div className="stats-box text-center">
                                         <h1>12</h1>
                                         <p>Countries</p>
@@ -342,12 +349,10 @@ const page = () => {
                             </div>
                         </div>
                     </section>
-                </>
-
 
                 <>
                     {/* HRDC Claimable Section */}
-                    <section className="about-hrdc py-5">
+                    <section className="timmins-journey about-hrdc py-5">
                         <div className="container">
                             <div className="row justify-content-center text-center">
                                 <div className="col-lg-8">
@@ -360,8 +365,8 @@ const page = () => {
                                         partial or company-funded options when full coverage isn’t available.
                                     </p>
 
-                                    {/* HRDC BADGES */}
-                                    <div className="badge-container hrdc-badges d-flex justify-content-center gap-3 mt-4">
+                                    {/* HRDC BADGES - flex-wrap for small screens */}
+                                    <div className="badge-container hrdc-badges d-flex flex-wrap justify-content-center gap-3 mt-4">
                                         <img
                                             src="/assets/New_images/badge.png"
                                             alt="HRDC Claimable"

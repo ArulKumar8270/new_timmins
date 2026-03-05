@@ -114,7 +114,7 @@ const Footer = () => {
                                         <li><Link href="/our-solution">Fresh Graduate Onboarding</Link></li>
                                         <li><Link href="/our-solution">Technology Stack Programs</Link></li>
                                         <li><Link href="/our-solution">Training Needs Assessments</Link></li>
-                                        <li><Link href="/scaled-agile">View All Solutions</Link></li>
+                                        <li><Link href="/our-solution">View All Solutions</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -132,10 +132,10 @@ const Footer = () => {
                                 <h4 className="footer-column-title desktop-only">Resources</h4>
                                 <div className={`footer-column-content ${openAccordion === 'resources' ? 'open' : ''}`}>
                                     <ul className="footer-links">
-                                        <li><Link href="/courses">Embedded Systems</Link></li>
-                                        <li><Link href="/courses">Business Intelligence</Link></li>
-                                        <li><Link href="/courses">Programming Languages</Link></li>
-                                        <li><Link href="/courses">View All Domains</Link></li>
+                                        <li><Link href="/domain/embedded-lnux/">Embedded Systems</Link></li>
+                                        <li><Link href="/domain/embedded-lnux/">Business Intelligence</Link></li>
+                                        <li><Link href="/domain/embedded-lnux/">Programming Languages</Link></li>
+                                        <li><Link href="/domain/embedded-lnux/">View All Domains</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -163,11 +163,8 @@ const Footer = () => {
                                         <div className="office-item">
                                             <span className="office-flag">🇮🇩</span>
                                             <div className="office-details">
-                                                <strong>Indonesia</strong>
-                                                <p>Jakarta Selatan</p>
-                                                <p>Jakarta
-                                                </p>
-                                                <p>South Jakarta</p>
+                                            Jakarta <br/>
+                                            <p>South Jakarta</p>
                                             </div>
                                         </div>
                                         <div className="office-item">

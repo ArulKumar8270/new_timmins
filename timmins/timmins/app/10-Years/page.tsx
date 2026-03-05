@@ -1,7 +1,70 @@
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 
-const timelineData = [
+type TimelineItemBase = {
+  year: string;
+  title: string;
+  side: "left" | "right";
+  image: string;
+  imageAlt: string;
+};
+
+type TimelineItemPoints = TimelineItemBase & {
+  points: string[];
+};
+
+type TimelineItemTextSection = TimelineItemBase & {
+  format: "text-section";
+  intro: string;
+  bullets: string[];
+  subheading: string;
+  subBullets: string[];
+};
+
+type TimelineItem = TimelineItemPoints | TimelineItemTextSection;
+
+function isTextSection(item: TimelineItem): item is TimelineItemTextSection {
+  return (item as TimelineItemTextSection).format === "text-section";
+}
+
+/** Parses a point string into { year?, bold, rest } for UI formatting */
+function parsePoint(point: string): { year?: string; bold: string; rest: string } {
+  const yearMatch = point.match(/^(\d{4}):\s*(.+)$/);
+  const content = yearMatch ? yearMatch[2] : point;
+
+  // Bold: "X: Y" pattern (bold X), or first phrase until comma (if ≤5 words), else first 3 words
+  let bold = "";
+  let rest = content;
+  const colonIdx = content.indexOf(": ");
+  const commaIdx = content.indexOf(",");
+  if (colonIdx > 0 && (commaIdx < 0 || colonIdx < commaIdx)) {
+    bold = content.slice(0, colonIdx);
+    rest = content.slice(colonIdx + 2);
+  } else if (commaIdx > 0) {
+    const beforeComma = content.slice(0, commaIdx).trim();
+    const wordCount = beforeComma.split(/\s+/).length;
+    if (wordCount <= 4) {
+      bold = beforeComma;
+      rest = content.slice(commaIdx);
+    } else {
+      const words = content.split(/\s+/);
+      bold = words.slice(0, 3).join(" ");
+      rest = " " + words.slice(3).join(" ");
+    }
+  } else {
+    const words = content.split(/\s+/);
+    const take = Math.min(3, words.length);
+    bold = words.slice(0, take).join(" ");
+    rest = words.slice(take).join(" ") ? " " + words.slice(take).join(" ") : "";
+  }
+  return {
+    year: yearMatch ? yearMatch[1] : undefined,
+    bold: bold.trim(),
+    rest: rest.trim() ? (rest.startsWith(" ") ? rest : " " + rest) : "",
+  };
+}
+
+const timelineData: TimelineItem[] = [
   {
     year: "2015–2017",
     title: "Where It All Began",
@@ -19,14 +82,15 @@ const timelineData = [
   },
   {
     year: "2018–2019",
-    title: "Specialization & North America Expansion",
+    title: "Timmins shifted into advanced technical domains: Telecom & 5G capability, Semiconductor & embedded engineering, AI & data foundations, Enterprise software engineering.",
     side: "left" as const,
     image: "/assets/New_images/2018.png",
     imageAlt: "Timmins expansion",
     points: [
-      "Timmins shifted into advanced technical domains: Telecom & 5G, Semiconductor & embedded, AI & data foundations, Enterprise software engineering.",
-      "HRD Corp–recognized Training Provider, enabling HRDC-Claimable Training for Malaysian employers.",
-      "Expanded operations to Canada to access global subject matter experts,Enabled cross-regional knowledge exchange,Broadened delivery of practitioner-led technical upskilling programs.",
+      "2018: HRD Corp–recognized Training Provider, enabling HRDC-Claimable Training for Malaysian employers.",
+      "2019: Expanded operations to Canada to access global subject matter experts.",
+      "Enabled cross-regional knowledge exchange.",
+      "Broadened delivery of practitioner-led technical upskilling programs.",
     ],
   },
   {
@@ -54,14 +118,23 @@ const timelineData = [
   },
   {
     year: "2023–2025",
-    title: "Global Reach , Engineering Depth, & HRDC Recognition",
+    title: "Global Reach, Engineering Depth, and HRDC Recognition",
     side: "right" as const,
     image: "/assets/New_images/2026.jpg",
     imageAlt: "Timmins global capability",
-    points: [
-      "Today, Timmins delivers Engineering-grade capability programs delivered globally supporting organizations through hands-on, practitioner-led learning.Programs delivered in in 11 countries, in English and Mandarin.",
-      "Clients across sectors global tech companies, engineering manufacturers, banks, universities, and public organizations,financial institutions.",
-      "Core capability  areas: Embedded systems  and embedded programming, Telecom,5Gc&  network capability, Cloud,DevOps & automation , technical upskilling for engineering teams.",
+    format: "text-section" as const,
+    intro:
+      "Today, Timmins delivers engineering-grade capability programs globally, supporting organizations through hands-on, practitioner-led learning.",
+    bullets: [
+      "Programs delivered in 11 countries, in English and Mandarin.",
+      "Clients across sectors: global tech companies, engineering manufacturers, banks & financial institutions, universities, and public organizations.",
+    ],
+    subheading: "Core capability areas:",
+    subBullets: [
+      "Embedded systems and embedded programming",
+      "Telecom, 5G, and network capability",
+      "Cloud, DevOps, and automation",
+      "Technical upskilling for engineering teams",
     ],
   },
 ];
@@ -94,13 +167,72 @@ export default function TenYearsPage() {
               <div className="timeline__connector" aria-hidden="true" />
               <span className="timeline__year">{item.year}</span>
 
-              <div className="timeline__card">
-                <h3 className="timeline__card-title">{item.title}</h3>
-                <ul className="timeline__list">
-                  {item.points.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
+              <div
+                className={`timeline__card ${
+                  isTextSection(item) ? "timeline__card--text-section" : ""
+                }`}
+              >
+                <h3 className="timeline__card-title">
+                  {item.title}
+                </h3>
+                {isTextSection(item) ? (
+                  <div className="timeline__text-section">
+                    <p className="timeline__intro">{item.intro}</p>
+                    <ul className="timeline__bullets timeline__bullets--primary">
+                      {item.bullets.map((b, i) => (
+                        <li key={i}>{b}</li>
+                      ))}
+                    </ul>
+                    <h4 className="timeline__subheading">{item.subheading}</h4>
+                    <ul className="timeline__bullets timeline__bullets--secondary">
+                      {item.subBullets.map((b, i) => (
+                        <li key={i}>{b}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : (
+                  <div className="timeline__list">
+                    {(() => {
+                      const groups: { year?: string; points: string[] }[] = [];
+                      let current: { year?: string; points: string[] } = {
+                        points: [],
+                      };
+                      for (const point of (item as TimelineItemPoints).points) {
+                        const parsed = parsePoint(point);
+                        if (parsed.year) {
+                          if (current.points.length) groups.push(current);
+                          current = {
+                            year: parsed.year,
+                            points: [parsed.bold + parsed.rest],
+                          };
+                        } else {
+                          current.points.push(point);
+                        }
+                      }
+                      if (current.points.length) groups.push(current);
+                      return groups.map((g, gi) => (
+                        <div key={gi} className="timeline__year-group">
+                          {g.year && (
+                            <div className="timeline__year-heading">
+                              {g.year}:
+                            </div>
+                          )}
+                          <ul className="timeline__bullets">
+                            {g.points.map((pt, pi) => {
+                              const { bold, rest } = parsePoint(pt);
+                              return (
+                                <li key={pi}>
+                                  {bold && <strong>{bold}</strong>}
+                                  {rest}
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+                      ));
+                    })()}
+                  </div>
+                )}
               </div>
               <div className="timeline__media">
                 <img

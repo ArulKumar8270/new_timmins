@@ -24,9 +24,9 @@ export default function ContactUsPage() {
           <div className="cu-container">
             <a href="tel:+60327850737" className="cu-quick__item">
               <span className="cu-quick__icon" aria-hidden="true">📞</span>
-              <span>+60 3-2785 0737</span>
+              <span>60143953661</span>
             </a>
-            <a href="https://wa.me/601116674727" className="cu-quick__item" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/60143953661" className="cu-quick__item" target="_blank" rel="noopener noreferrer">
               <span className="cu-quick__icon" aria-hidden="true">💬</span>
               <span>WhatsApp</span>
             </a>
@@ -58,25 +58,25 @@ export default function ContactUsPage() {
                   </p>
                   <ul className="cu-office__contact">
                     <li><strong>Phone:</strong> +60 3-2785 0737</li>
-                    <li><strong>WhatsApp:</strong> +60 11-1667 4727</li>
+                    <li><strong>WhatsApp:</strong> +60 143953661</li>
                     <li><strong>Email:</strong> info@timmins-consulting.com</li>
                   </ul>
-                  <a href="#" className="cu-office__link">View on map →</a>
+                  <a href="https://maps.app.goo.gl/36Z867fj5VgwrJU29?g_st=ic" target="_blank" rel="noopener noreferrer" className="cu-office__link">View on map →</a>
                 </div>
 
                 <div className="cu-office">
                   <div className="cu-office__header">
-                    <h3>Penang</h3>
+                  <h3>Malaysia <span className="cu-office__badge">Training Center</span></h3>
                   </div>
                   <p className="cu-office__address">
                     1-3-6, Lintang Mayang Pasir 3, Elite Avenue, 11950 Bayan Lepas, Pulau Pinang, Malaysia
                   </p>
                   <p className="cu-office__hours">9:00 AM – 5:30 PM (Mon–Fri)</p>
                   <ul className="cu-office__contact">
-                    <li><strong>WhatsApp:</strong> +60 11-1667 4727</li>
+                    <li><strong>WhatsApp:</strong> +60 14-395 3661</li>
                     <li><strong>Email:</strong> info@timmins-consulting.com</li>
                   </ul>
-                  <a href="#" className="cu-office__link">View on map →</a>
+                  <a href="https://maps.app.goo.gl/xTg4GoZFLobRJ11J8?g_st=ic" target="_blank" rel="noopener noreferrer" className="cu-office__link">View on map →</a>
                 </div>
 
                 <div className="cu-office">
@@ -85,7 +85,7 @@ export default function ContactUsPage() {
                   </div>
                   <p className="cu-office__address">Toronto, Ontario</p>
                   <ul className="cu-office__contact">
-                    <li><strong>Email:</strong> info@timmins-consulting.com</li>
+                    <li><strong>Email:</strong>  info@timmins-consulting.com</li>
                   </ul>
                 </div>
 
@@ -95,10 +95,10 @@ export default function ContactUsPage() {
                   </div>
                   <p className="cu-office__address">South Jakarta</p>
                   <ul className="cu-office__contact">
-                    <li><strong>WhatsApp:</strong> +60 11-1667 4727</li>
-                    <li><strong>Email:</strong> info@timmins-consulting.com</li>
+                    <li><strong>WhatsApp:</strong> +62 8236 6966 298</li>
+                    <li><strong>Email:</strong>  info@timmins-consulting.com</li>
                   </ul>
-                  <a href="#" className="cu-office__link">View on map →</a>
+                  <a href="https://maps.app.goo.gl/7fLGt4idozEcdLwz8?g_st=ic" target="_blank" rel="noopener noreferrer" className="cu-office__link">View on map →</a>
                 </div>
               </div>
 

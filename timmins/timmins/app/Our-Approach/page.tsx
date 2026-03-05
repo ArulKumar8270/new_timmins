@@ -56,7 +56,7 @@ const page = () => {
                 </div>
             </section>
 
-            <section className="approach-section co-design">
+            <section className="approach-section co-design p-2">
                 <div className="approach-container reverse">
                     {/* LEFT IMAGE */}
                     <div className="approach-image">
@@ -140,11 +140,11 @@ const page = () => {
                             We measure capability uplift, not attendance. Our measurement includes:
                         </p>
                         <ul>
-                            <li>pre/post assessments</li>
-                            <li>individual skill progression</li>
-                            <li>team capability uplift reports</li>
-                            <li>stakeholder summaries</li>
-                            <li>recommended next steps</li>
+                            <li>Pre/post assessments</li>
+                            <li>Individual skill progression</li>
+                            <li>Team capability uplift reports</li>
+                            <li>Stakeholder summaries</li>
+                            <li>Recommended next steps</li>
                         </ul>
                         <p className="approach-outcome">
                             <strong>Outcome:</strong>evidence-based insight into what changed and why it matters.
@@ -188,10 +188,10 @@ const page = () => {
 
             <section className="approach-section final-promise">
                 <div className="final-container">
-                    <h2>Why Our Approach Works</h2>
-                    <p className="final-intro">
+                    <h2 className='mb-5'>Why Our Approach Works</h2>
+                    {/* <p className="final-intro">
                         Because it connects the three foundations of engineering capability:
-                    </p>
+                    </p> */}
                     <div className="final-pillars">
                         <div className="pillar">
                             <h4>Context</h4>
@@ -206,10 +206,10 @@ const page = () => {
                             <p>Execute through real practitioners</p>
                         </div>
                     </div>
-                    <p className="final-outcome">
+                    <h4 className="final-outcome">
                         This is how learning becomes performance. And how training becomes
                         capability.
-                    </p>
+                    </h4>
                     <br />
 
                 </div>

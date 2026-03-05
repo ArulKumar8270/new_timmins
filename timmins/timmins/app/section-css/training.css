@@ -6,7 +6,7 @@
 /* HERO SECTION */
 
 .tc-hero-modern {
-    background: #eaf4fa;
+    background: #4198c8;
     padding: 120px 0;
     position: relative;
     overflow: hidden;
@@ -16,13 +16,13 @@
     font-size: 52px;
     font-weight: 700;
     line-height: 1.2;
-    color: #0f2d2a;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
 .tc-modern-desc {
     font-size: 17px;
-    color: #5f6b7a;
+    color: #ffffff;
     max-width: 500px;
 }
 
@@ -143,8 +143,8 @@
 .tc-pill-btn {
     display: inline-block;
     padding: 14px 28px;
-    background: linear-gradient(135deg, #f59e0b, #f97316);
-    color: #ffffff;
+    background: #faaf2d;
+    color: black !important;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
@@ -154,6 +154,7 @@
 .tc-pill-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
+    color: black !important;
 }
 
 

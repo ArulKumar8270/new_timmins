@@ -383,11 +383,11 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(9, 9, 9, 0) 28.19%,
     rgba(9, 9, 9, 0.85) 89.46%
-  );
+  ); */
   border-radius: 100%;
 }
 
