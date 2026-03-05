@@ -543,7 +543,7 @@ export default function Home() {
                               <div className="row">
                                 {featuredClasses.length > 0 ? (
                                   featuredClasses.map((cls) => {
-                                    const imgSrc = COURSE_IMAGE_MAP[cls.slug] || "/assets/New_images/Thome.png";
+                                    const imgSrc = COURSE_IMAGE_MAP[cls.slug] || "/assets/New_images/Embedded Linux public class at Timmins.png";
                                     const deliveryType = /online|virtual|zoom|webinar/i.test(cls.location) ? "Online" : "Face-to-Face";
                                     return (
                                       <div key={cls.id} className="col-lg-6 col-12">
